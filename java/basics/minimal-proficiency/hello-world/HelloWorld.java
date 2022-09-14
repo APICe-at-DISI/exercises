@@ -9,6 +9,6 @@ class HelloWorld {
         /*
          * Stampa "Hello World!" in standard output
          */
-        System.out.println("Hello, world! The result of 50 + 50 * 50 is" + (50 + 50 * 50));
+        System.out.println("Hello, world!");
     }
 }
