@@ -4,14 +4,11 @@ packages:
     format:
       - zip
     destinations:
-      - DanySK/Courses-OOP-lab01
-    contents:
+      - unibo-oop/lab # to publish as a github repository, use "repo". Can be added.
+    contents: # content priority grows down the list, higher priority contents overwrite existing files
       - from: java/basics/hello-world/hello-world
         to: 00-hello-world
   pss-lab01:
-    <<: *oop01
-    format:
-      - zip
-      - repo
-    destinations:
-      - unibo-lptsi-pss/lab01
+    <<: *oop01 # Import from oop01.
+    destinations: # Overwrite the destination
+      - unibo-lptsi-pss/pss-lab
