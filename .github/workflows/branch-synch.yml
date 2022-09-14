@@ -1,4 +1,4 @@
-name: Synch master -> exercises
+name: branch-synch
 on:
   push:
     branches:
