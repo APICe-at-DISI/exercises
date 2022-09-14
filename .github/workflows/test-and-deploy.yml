@@ -78,7 +78,7 @@ jobs:
       - name: Unpack
         run: tar -xf build.tar
       - name: Deliver an archive
-        if: matrix.type == 'zip'
+        if: matrix.type == 'release'
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: ${{ matrix.target }}
@@ -88,7 +88,7 @@ jobs:
           tag: ${{ matrix.ref }}
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Deliver a branch
-        if: matrix.type == 'release'
+        if: matrix.type == 'repo'
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           folder: ${{ matrix.target }}
