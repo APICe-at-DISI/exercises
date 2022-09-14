@@ -11,6 +11,8 @@ fun ShellScript.gradle(vararg tasks: String) = command("./gradlew", tasks.toList
 fun inside(path: String, run: ShellScript.() -> String) = shellRun {
     val startDirectory = command("pwd")
     changeWorkingDirectory(path)
+    println("Running in ${command("pwd")}")
+    println("Local contents:\n${command("ls", listOf("-ahl"))}")
     val result = run()
     changeWorkingDirectory(startDirectory)
     result
