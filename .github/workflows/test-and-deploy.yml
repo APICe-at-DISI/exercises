@@ -79,7 +79,19 @@ jobs:
         run: tar -xf build.tar
       - name: Deliver an archive
         if: matrix.type == 'zip'
-        run: ${{ matrix.type }} to be sent to ${{ matrix.owner }}/${{ matrix.repo }} on release ${{ matrix.ref }} with files ${{ matrix.target }}
+        uses: ncipollo/release-action@v1.10.0
+        with:
+          artifacts: ${{ matrix.target }}
+          owner: ${{ matrix.owner }}
+          repo: ${{ matrix.repo }}
+          replacesArtifacts: true
+          tag: ${{ matrix.ref }}
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Deliver a branch
         if: matrix.type == 'release'
-        run: ${{ matrix.type }} to be sent to ${{ matrix.owner }}/${{ matrix.repo }} on release ${{ matrix.ref }} with files in ${{ matrix.target }}
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        with:
+          folder: ${{ matrix.target }}
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
+          branch: ${{ matrix.ref }}
+          repository-name: ${{ matrix.owner }}/${{ matrix.repo }}
