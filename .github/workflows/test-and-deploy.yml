@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.0.2
+        with:
+          ref: ${{ github.event.after || master }}
       - id: deliveries
         name: Prepare deliverable packages
         run: ./deployer.main.kts
@@ -45,6 +47,12 @@ jobs:
       - tests # Don't deliver if testing fails
       - prepare-deliveries
     runs-on: ubuntu-latest
+    if: >-
+      !github.event.repository.fork
+      && (
+        github.event_name != 'pull_request'
+        || github.event.pull_request.head.repo.full_name == github.repository
+      )
     strategy:
       matrix: ${{ fromJSON(needs.job1.outputs.matrix) }}
     concurrency:
