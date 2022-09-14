@@ -6,8 +6,10 @@ packages:
     destinations:
       - unibo-oop/lab # to publish as a github repository, use "repo". Can be added.
     contents: # content priority grows down the list, higher priority contents overwrite existing files
-      - from: java/basics/hello-world/hello-world
+      - from: java/basics/minimal-proficiency/hello-world
         to: 00-hello-world
+      - from: java/basics/minimal-proficiency/scopes
+        to: 01-scopes
   pss-lab01:
     <<: *oop01 # Import from oop01.
     destinations: # Overwrite the destination
