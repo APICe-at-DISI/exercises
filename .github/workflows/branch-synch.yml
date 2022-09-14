@@ -1,0 +1,17 @@
+name: Synch master -> exercises
+on:
+  push:
+    branches:
+      - master
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.0.2
+      - name: Merge master -> exercises
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          from_branch: master
+          target_branch: exercises
+          github_token: ${{ github.token }}

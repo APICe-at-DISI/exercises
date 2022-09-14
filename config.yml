@@ -1,0 +1,17 @@
+branch: exercises
+packages:
+  oop-lab01: &oop01
+    format:
+      - zip
+    destinations:
+      - DanySK/Courses-OOP-lab01
+    contents:
+      - from: java/basics/hello-world/hello-world
+        to: 00-hello-world
+  pss-lab01:
+    <<: *oop01
+    format:
+      - zip
+      - repo
+    destinations:
+      - unibo-lptsi-pss/lab01
