@@ -10,6 +10,8 @@ packages:
         to: 00-hello-world
       - from: java/basics/minimal-proficiency/scopes
         to: 01-scopes
+      - from: java/basics/minimal-proficiency/complete-existing-class
+        to: 02-fill-class
   pss-lab01:
     <<: *oop01 # Import from oop01.
     destinations: # Overwrite the destination
