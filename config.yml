@@ -5,7 +5,7 @@ packages:
       - zip
     destinations:
       - unibo-oop/lab # to publish as a github repository, use "repo". Can be added.
-    contents:
+    contents: # content priority grows down the list, higher priority contents overwrite existing files
       - from: java/basics/hello-world/hello-world
         to: 00-hello-world
   pss-lab01:
