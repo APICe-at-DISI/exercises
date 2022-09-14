@@ -14,4 +14,4 @@ jobs:
           type: now
           from_branch: master
           target_branch: exercises
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
