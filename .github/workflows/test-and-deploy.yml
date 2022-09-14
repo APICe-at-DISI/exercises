@@ -28,12 +28,22 @@ jobs:
     outputs:
       matrix: ${{ steps.deliveries.outputs.matrix }}
     steps:
+      - name: Compute ref
+        id: ref
+        run: |
+          ruby -e '\
+          if ${{ github.event_name }} == 'push' && "${{ github.event.ref }}".end_with?("/master") }} then
+            puts "::set-output name=ref::${{ github.event.after }}"
+          else
+            puts "::set-output name=ref::master"
+          end
+          '
       - name: Checkout
         uses: actions/checkout@v3.0.2
         with:
-          ref: ${{ github.event.after || master }}
-      - id: deliveries
-        name: Prepare deliverable packages
+          ref: ${{ steps.ref.outputs.ref }}
+      - name: Prepare deliverable packages
+        id: deliveries
         run: ./deployer.main.kts
       - name: Tar files
         run: tar -cvf build.tar build
@@ -54,7 +64,7 @@ jobs:
         || github.event.pull_request.head.repo.full_name == github.repository
       )
     strategy:
-      matrix: ${{ fromJSON(needs.job1.outputs.matrix) }}
+      matrix: ${{ fromJSON(needs.prepare-deliveries.outputs.matrix) }}
     concurrency:
       group: delivery-${{ matrix.type }}-${{ matrix.owner }}-${{ matrix.repo }}-${{ matrix.ref }}
     steps:
