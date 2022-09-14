@@ -18,5 +18,5 @@ fun inside(path: String, run: ShellScript.() -> String) = shellRun {
 }
 
 inside("java/basics") {
-    gradle("compileJava")
+    gradle("compileJava", "test")
 }
