@@ -44,6 +44,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.0.2
         with:
+          depth: 0
           ref: ${{ steps.ref.outputs.ref }}
       - name: Prepare deliverable packages
         id: deliveries
