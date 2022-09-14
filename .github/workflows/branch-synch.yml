@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - master
+
+concurrency:
+  group: merge
+
 jobs:
   sync-branch:
     runs-on: ubuntu-latest
