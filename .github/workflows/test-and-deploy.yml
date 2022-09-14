@@ -1,0 +1,24 @@
+name: test-and-deploy
+on:
+  push:
+  pull_request:
+  workflow_run:
+    workflows: ["branch-synch"]
+    types:
+      - completed
+
+jobs:
+  tests:
+    strategy:
+      matrix: [ubuntu, windows, macos]
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+    - name: Setup Java
+      uses: actions/setup-java@v3.5.0
+      with:
+        distribution: temurin
+        java-version: 17
+    - name: Checkout
+      uses: actions/checkout@v3.0.2
+    - name: Tests
+      run: ./tests.main.kts
