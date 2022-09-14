@@ -28,9 +28,18 @@ jobs:
     outputs:
       matrix: ${{ steps.deliveries.outputs.matrix }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
       - id: deliveries
         name: Prepare deliverable packages
         run: ./deployer.main.kts
+      - name: Tar files
+        run: tar -cvf build.tar build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: build
+          path: build.tar
   delivery:
     needs:
       - tests # Don't deliver if testing fails
@@ -41,6 +50,12 @@ jobs:
     concurrency:
       group: delivery-${{ matrix.type }}-${{ matrix.owner }}-${{ matrix.repo }}-${{ matrix.ref }}
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: build
+      - name: Unpack
+        run: tar -xf build.tar
       - name: Deliver an archive
         if: matrix.type == 'zip'
         run: ${{ matrix.type }} to be sent to ${{ matrix.owner }}/${{ matrix.repo }} on release ${{ matrix.ref }} with files ${{ matrix.target }}
