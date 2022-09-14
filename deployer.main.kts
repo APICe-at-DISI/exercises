@@ -107,6 +107,8 @@ fun File.cleanup() = apply {
 val exerciseBranch = configuration[Configuration.branch]
 val exercisesDir = File(Dirs.workDirFile, exerciseBranch).cleanup()
 shellRun {
+    git.checkout("exercises")
+    git.checkout("master")
     command("git", listOf("--work-tree=${exercisesDir.absolutePath}", "checkout", exerciseBranch, "--", ".") )
 }
 val version by lazy {
