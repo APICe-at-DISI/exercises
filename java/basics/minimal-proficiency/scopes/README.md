@@ -9,7 +9,7 @@ Si prega di *non modificare*:
 
 ### FASE 1
 
-1. Analizzare il sorgente `TestScopes.java`
+1. Analizzare il sorgente `Scopes.java`
 2. Prima di compilare e lanciare il programma riflettere sul comportamento dei metodi della classe e provare a prevedere l'output di ogni singola stampa,
 scrivendo su un foglio il risultato previsto
 

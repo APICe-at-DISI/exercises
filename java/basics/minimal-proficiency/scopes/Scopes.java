@@ -1,4 +1,4 @@
-class TestScopes {
+class Scopes {
     int a;
     int b;
 
