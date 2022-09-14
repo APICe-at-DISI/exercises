@@ -12,9 +12,6 @@ concurrency:
 
 jobs:
   tests:
-    defaults:
-      run:
-        shell: bash
     strategy:
       matrix:
         os: [ubuntu, windows, macos]
