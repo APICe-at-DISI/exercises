@@ -32,7 +32,7 @@ jobs:
         id: ref
         run: |
           ruby -e '\
-          if ${{ github.event_name }} == 'push' && "${{ github.event.ref }}".end_with?("/master") }} then
+          if "${{ github.event_name }}" == 'push' && "${{ github.event.ref }}".end_with?("/master") then
             puts "::set-output name=ref::${{ github.event.after }}"
           else
             puts "::set-output name=ref::master"
