@@ -15,6 +15,6 @@ fun inside(path: String, run: ShellScript.() -> String) = shellRun {
     result
 }
 
-inside("java/basics") {
+inside("java${File.separator}basics") {
     gradle("compileJava")
 }
