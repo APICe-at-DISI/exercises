@@ -12,6 +12,10 @@ packages:
         to: 01-scopes
       - from: java/basics/minimal-proficiency/complete-existing-class
         to: 02-fill-class
+      - from: java/basics/minimal-proficiency/calculator
+        to: 03-calculator
+      - from: java/basics/minimal-proficiency/train
+        to: 04-train
   pss-lab01:
     <<: *oop01 # Import from oop01.
     destinations: # Overwrite the destination
