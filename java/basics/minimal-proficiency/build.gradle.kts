@@ -2,9 +2,13 @@ sourceSets {
     main {
         java {
             setSrcDirs(
+                /**
+                 * Add a line here if you add an exercise
+                 */
                 listOf(
                     "hello-world",
                     "scopes",
+                    "calculator",
                     "complete-existing-class",
                 )
             )
