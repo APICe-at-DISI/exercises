@@ -9,6 +9,7 @@ sourceSets {
                     "calculator",
                     "complete-existing-class",
                     "hello-world",
+                    "multifilecompilation",
                     "scopes",
                     "train",
                 )
