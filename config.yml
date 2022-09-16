@@ -16,6 +16,8 @@ packages:
         to: 03-calculator
       - from: java/basics/minimal-proficiency/train
         to: 04-train
+      - from: java/basics/minimal-proficiency/multifilecompilation
+        to: 05-multifilecompilation
   pss-lab01:
     <<: *oop01 # Import from oop01.
     destinations: # Overwrite the destination
