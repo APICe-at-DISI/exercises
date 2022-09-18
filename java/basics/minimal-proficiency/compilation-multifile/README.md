@@ -1,6 +1,6 @@
 # Compilazione di file multipli in diverse posizioni del filesystem
 
-Obiettivo: comprende come funziona `javac`, i cui file sorgenti (.java) forniti in input al comando potrebbero trovarsi in posizioni diverse del filesystem.
+Obiettivo: comprende come funziona `javac`, i cui file sorgenti (.java) forniti in input al comando potrebbero trovarsi in posizioni diverse del filesystem, e dove la cartella di output può essere indicata mediante opzione.
 
 1. Si posizioni il terminale nella directory che contiene `src`
 2. Si compilino, con un solo comando, i file `Calculator.java` e `UseCalculator.java` dentro `bin`, tenendo presente che:

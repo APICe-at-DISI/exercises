@@ -12,16 +12,17 @@ packages:
         to: 01-analysis-method-scope-with-multifile-compilation
       - from: java/basics/minimal-proficiency/complete-existing-class-student
         to: 02-fill-class-student
-      - from: java/basics/minimal-proficiency/impl-calculator
-        to: 03-impl-calculator
-      - from: java/basics/minimal-proficiency/impl-train-with-correlated-fields
-        to: 04-train
-      - from: java/basics/minimal-proficiency/compilation-multifile
-        to: 05-multifile-compilation
       - from: java/basics/minimal-proficiency/impl-complex-num
-        to: 06-impl-complexnum
+        to: 03-impl-complexnum
+      - from: java/basics/minimal-proficiency/impl-calculator
+        to: 04-impl-calculator
+      - from: java/basics/minimal-proficiency/impl-train-with-correlated-fields
+        to: 05-train
       - from: java/basics/minimal-proficiency/impl-complex-num-calculator
-        to: 07-impl-complexnum-calculator
+        to: 06-impl-complexnum-calculator
+# NOTE: for the following we need to have explained options of javac (-o, -cp)
+#      - from: java/basics/minimal-proficiency/compilation-multifile
+#        to: 07-multifile-compilation
   pss-lab01:
     format:
       - zip
