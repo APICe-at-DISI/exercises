@@ -8,6 +8,7 @@ sourceSets {
                 listOf(
                     "impl-calculator",
                     "impl-train-with-correlated-fields",
+                    "impl-complex-num",
                     "complete-existing-class-student",
                     "hello-world",
                     "compilation-multifile",
