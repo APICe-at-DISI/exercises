@@ -8,17 +8,31 @@ packages:
     contents: # content priority grows down the list, higher priority contents overwrite existing files
       - from: java/basics/minimal-proficiency/hello-world
         to: 00-hello-world
-      - from: java/basics/minimal-proficiency/scopes
+      - from: java/basics/minimal-proficiency/analysis-method-scope-with-multifile-compilation
         to: 01-scopes
-      - from: java/basics/minimal-proficiency/complete-existing-class
-        to: 02-fill-class
-      - from: java/basics/minimal-proficiency/calculator
+      - from: java/basics/minimal-proficiency/complete-existing-class-student
+        to: 02-fill-class-student
+      - from: java/basics/minimal-proficiency/impl-calculator
         to: 03-calculator
-      - from: java/basics/minimal-proficiency/train
+      - from: java/basics/minimal-proficiency/impl-train-with-correlated-fields
         to: 04-train
-      - from: java/basics/minimal-proficiency/multifilecompilation
+      - from: java/basics/minimal-proficiency/compilation-multifile
         to: 05-multifilecompilation
   pss-lab01:
-    <<: *oop01 # Import from oop01.
+    format:
+      - zip
     destinations: # Overwrite the destination
       - unibo-lptsi-pss/pss-lab
+    contents:
+      - from: java/basics/minimal-proficiency/hello-world
+        to: 00-hello-world
+      - from: java/basics/minimal-proficiency/analysis-method-scope-with-multifile-compilation
+        to: 01-scopes
+      - from: java/basics/minimal-proficiency/complete-existing-class-student
+        to: 02-fill-class-student
+      - from: java/basics/minimal-proficiency/impl-calculator
+        to: 03-calculator
+      - from: java/basics/minimal-proficiency/impl-train-with-correlated-fields
+        to: 04-train
+      - from: java/basics/minimal-proficiency/compilation-multifile
+        to: 05-multifilecompilation
