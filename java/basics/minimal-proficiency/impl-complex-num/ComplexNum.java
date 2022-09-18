@@ -1,30 +1,34 @@
 class ComplexNum {
-    double re;
-    double im;
+    /*
+     * Inserire qui la dichiarazione dei campi della classe
+     */
 
     void build(double re, double im) {
-        this.re = re;
-        this.im = im;
+        /*
+         * Inserire qui l'inizializzazione dei campi con i parametri forniti in input
+         */
     }
 
     boolean equal(ComplexNum num) {
-        return (re == num.re) && (im == num.im);
+        /*
+         * Implementare il metodo in modo che restituisca true se e solo se il
+         * numero complesso è uguale al parametro num passato in input
+         */
+        return false;
     }
 
     void add(ComplexNum num) {
-        re += num.re;
-        im += num.im;
+        /*
+         * Implementare il metodo in modo che venga aggiunto il numero complesso
+         * passato in input - Rif. Appendice A1 (slide)
+         */
     }
 
     String toStringRep() {
-        return im == 0
-            // Special case: real number.
-            ? re + ""
-            // Stringify real part if present
-            : (re == 0 ? "" : re)
-                // Add + signum if required (if negative, - is added automatically)
-                + (re != 0 && im > 0 ? "+" : "")
-                // Add imaginary part, handle +-1
-                + (im == 1 ? "" : (im == -1 ? "-" : im + "")) + "i";
+        /*
+         * Implementare il metodo in modo che restituisca una rappresentazione
+         * testuale del numero complesso
+         */
+        return "";
     }
 }
