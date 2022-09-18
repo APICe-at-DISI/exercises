@@ -1,4 +1,4 @@
-# Implementazione di numeri complessi
+# Implementazione di numeri complessi 
 
 1. Si completi la classe `ComplexNum` aggiungendo:
   * Campi:
