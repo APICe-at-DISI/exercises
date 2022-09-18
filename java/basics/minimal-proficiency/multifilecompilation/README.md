@@ -1,5 +1,4 @@
-# Programmazione ad Oggetti - Laboratorio 02
-## Esercizio 3 - multifile compilation
+# Multifile compilation
 
 #### Compilazione da multipli percorsi
 
