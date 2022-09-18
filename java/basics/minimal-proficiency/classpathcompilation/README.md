@@ -1,7 +1,6 @@
-# Programmazione ad Oggetti - Laboratorio 02
-## Esercizio 2 - classpath compilation
+# Compilazion e classpath
 
-#### Uso del classpath in fase di compilazione e classpath multipercorso
+## Uso del classpath in fase di compilazione e classpath multipercorso
 
 1. Si provi a compilare il file `UseComplex.java` dentro la cartella `bin` (da creare).
   - Oh-oh... Errore.

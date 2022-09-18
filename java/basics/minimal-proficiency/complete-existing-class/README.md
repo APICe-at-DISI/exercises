@@ -1,11 +1,11 @@
-# Completamento dei membri di una classe
+# Completamento di una classe mediante aggiunta/implementazione di membri (campi, metodi)
 
 Si prega di *non modificare*:
 
 * I nomi dei metodi
 * Il tipo di ritorno dei metodi
 
-#### FASE 1
+## FASE 1
 
 1. Si completi la classe `Student` aggiungendo:
   * Campi:
@@ -27,7 +27,7 @@ Si prega di *non modificare*:
       - l'anno di immatricolazione)
 2. Si compili la classe `Student` verificando che non vi siano problemi di compilazione
 
-#### FASE 2
+## FASE 2
 
 1. Si modifichi il metodo `main` della classe `TestStudent` come segue:
   - Creare dei nuovi oggetti relativi agli studenti:

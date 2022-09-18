@@ -1,7 +1,6 @@
-# Programmazione ad Oggetti - Laboratorio 02
-## Esercizio 1 - packages
+# Compilazione e package
 
-#### Esecuzione da posizioni arbitrarie
+## Compilazione ed esecuzione da posizioni arbitrarie di classi contenute in package
 
 1. Si osservi il contenuto della cartella `src`. Si noti come non contenga direttamente sorgenti Java ma una gerarchia di cartelle; all'interno dell'ultima cartella è presente un file sorgente.
 2. Si visualizzi il contenuto del file sorgente (ad es. con `cat`/`head` in Unix o `type` in Windows) e si noti come il package della classe corrisponda alla struttura delle directory che contengono il file sorgente
