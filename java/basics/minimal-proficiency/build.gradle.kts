@@ -6,12 +6,14 @@ sourceSets {
                  * Add a line here if you add an exercise
                  */
                 listOf(
-                    "calculator",
-                    "complete-existing-class",
+                    "impl-calculator",
+                    "impl-train-with-correlated-fields",
+                    "complete-existing-class-student",
                     "hello-world",
-                    "multifilecompilation",
-                    "scopes",
-                    "train",
+                    "compilation-multifile",
+                    "compilation-classpath",
+                    "compilation-and-packages",
+                    "analysis-method-scope-with-multifile-compilation"
                 )
             )
         }
