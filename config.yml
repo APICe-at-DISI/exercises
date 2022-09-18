@@ -20,6 +20,8 @@ packages:
         to: 05-multifile-compilation
       - from: java/basics/minimal-proficiency/impl-complex-num
         to: 06-impl-complexnum
+      - from: java/basics/minimal-proficiency/impl-complex-num-calculator
+        to: 07-impl-complexnum-calculator
   pss-lab01:
     format:
       - zip
