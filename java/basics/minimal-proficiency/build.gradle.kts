@@ -22,18 +22,24 @@ sourceSets {
     }
 }
 
+/*
+ * roughly matches classes with a main method
+ */
 val mainRegex = "public\\s+static\\s+void\\s+main\\s*\\(String(\\[\\]|\\.\\.\\.)\\s+\\w+\\)\\s*\\{"
 val main = Regex(mainRegex)
+/*
+ * extracts the class names from files with a main method
+ */
 val classFinder = Regex("class\\s+(\\w+)\\s*\\{.*$mainRegex", RegexOption.DOT_MATCHES_ALL)
 
-projectDir.walkTopDown()
-    .filter { it.isFile && it.extension == "java" }
-    .map { it.readText() }
-    .filter { main.find(it) != null }
-    .map { classFinder.findAll(it).toList() }
-    .onEach { require(it.size == 1) }
-    .map { it.first().destructured.component1() }
-    .forEach { className ->
+projectDir.walkTopDown() // For all the directories in this project
+    .filter { it.isFile && it.extension == "java" } // find all java files
+    .map { it.readText() } // whose text
+    .filter { main.find(it) != null } // contains a main method
+    .map { classFinder.findAll(it).toList() } // and search for the class names
+    .onEach { require(it.size == 1) } // make sure there is only one
+    .map { it.first().destructured.component1() } // pick it
+    .forEach { className -> // create a task that launches the main
         val testTask = project.tasks.register<JavaExec>("run$className") {
             group = "test by plain java launch"
             description = "Runs $className"
