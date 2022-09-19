@@ -3,9 +3,9 @@ class TestComplexNumCalculator {
       ComplexNumCalculator calculator = new ComplexNumCalculator();
       calculator.build();
 
-      ComplexNum n1 = new ComplexNum();
-      ComplexNum n2 = new ComplexNum();
-      ComplexNum result;
+      ComplexNumber n1 = new ComplexNumber();
+      ComplexNumber n2 = new ComplexNumber();
+      ComplexNumber result;
 
       // add(1+2i, 2+3i) = 3+5i
       n1.build(1, 2);

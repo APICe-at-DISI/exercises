@@ -1,4 +1,4 @@
-class ComplexNum {
+class ComplexNumber {
     double re;
     double im;
 

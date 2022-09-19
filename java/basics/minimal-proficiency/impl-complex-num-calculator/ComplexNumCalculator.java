@@ -1,38 +1,38 @@
 class ComplexNumCalculator {
     int nOpDone;
-    ComplexNum lastRes;
+    ComplexNumber lastRes;
 
     void build() {
         nOpDone = 0;
     }
 
-    ComplexNum add(ComplexNum n1, ComplexNum n2) {
-        ComplexNum returnValue = new ComplexNum();
+    ComplexNumber add(ComplexNumber n1, ComplexNumber n2) {
+        ComplexNumber returnValue = new ComplexNumber();
         returnValue.build(n1.re + n2.re, n1.im + n2.im);
         return doOp(returnValue);
     }
 
-    ComplexNum sub(ComplexNum n1, ComplexNum n2) {
-        ComplexNum returnValue = new ComplexNum();
+    ComplexNumber sub(ComplexNumber n1, ComplexNumber n2) {
+        ComplexNumber returnValue = new ComplexNumber();
         returnValue.build(n1.re - n2.re, n1.im - n2.im);
         return doOp(returnValue);
     }
 
-    ComplexNum mul(ComplexNum n1, ComplexNum n2) {
-        ComplexNum returnValue = new ComplexNum();
+    ComplexNumber mul(ComplexNumber n1, ComplexNumber n2) {
+        ComplexNumber returnValue = new ComplexNumber();
         returnValue.build(n1.re * n2.re - n1.im * n2.im, n1.im * n2.re + n1.re * n2.im);
         return doOp(returnValue);
     }
 
-    ComplexNum div(ComplexNum n1, ComplexNum n2) {
-        ComplexNum returnValue = new ComplexNum();
+    ComplexNumber div(ComplexNumber n1, ComplexNumber n2) {
+        ComplexNumber returnValue = new ComplexNumber();
         double re = (n1.re * n2.re + n1.im * n2.im) / (n2.re * n2.re + n2.im * n2.im);
         double im = (n1.im * n2.re - n1.re * n2.im) / (n2.re * n2.re + n2.im * n2.im);
         returnValue.build(re, im);
         return doOp(returnValue);
     }
 
-    ComplexNum doOp(ComplexNum result) {
+    ComplexNumber doOp(ComplexNumber result) {
         nOpDone++;
         lastRes = result;
         return lastRes;
