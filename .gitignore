@@ -1,7 +1,12 @@
+# hidden files
 .idea
 .gradle/
+.vscode/
+
+# output folders
+bin/
 build/
+
+# files ignored by extension
 *.class
 *.DS_Store
-bin/
-.vscode/
