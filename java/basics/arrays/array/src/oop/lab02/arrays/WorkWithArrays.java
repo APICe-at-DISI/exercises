@@ -2,12 +2,9 @@ package oop.lab02.arrays;
 
 import java.util.Arrays;
 
-public class WorkWithArrays {
+class WorkWithArrays {
 
-    private WorkWithArrays() {
-    }
-
-    public static int countOccurrencies(final int[] array, final int elem) {
+    static int countOccurrencies(final int[] array, final int elem) {
         int nOccur = 0;
         for (final int currElem : array) {
             if (currElem == elem) {
@@ -17,7 +14,7 @@ public class WorkWithArrays {
         return nOccur;
     }
 
-    public static int[] evenElements(final int[] array) {
+    static int[] evenElements(final int[] array) {
         final int resultLength = array.length % 2 == 0 ? array.length / 2  : array.length / 2 + 1;
         final int[] resultArray = new int[resultLength];
         for (int i = 0; i < array.length; i += 2) {
@@ -26,7 +23,7 @@ public class WorkWithArrays {
         return resultArray;
     }
 
-    public static int[] oddElements(final int[] array) {
+    static int[] oddElements(final int[] array) {
         final int[] resultArray = new int[array.length / 2];
         for (int i = 1; i < array.length; i += 2) {
             resultArray[i / 2] = array[i];
@@ -34,14 +31,14 @@ public class WorkWithArrays {
         return resultArray;
     }
 
-    public static int mostRecurringElement(final int[] array) {
+    static int mostRecurringElement(final int[] array) {
         int maxNumOccur = 0;
         int currMostRecurring = 0;
         final int[] temp = Arrays.copyOf(array, array.length);
         Arrays.sort(temp);
         /*
         * The Arrays.sort(...) method modifies its input array.
-        * Modifying some method input array if considered a bad practice.
+        * Modifying some method input array is considered a bad practice.
         * To avoid this, we will sort the `temp` array which is actually
         * a clone of this method input array.
         */
@@ -57,7 +54,7 @@ public class WorkWithArrays {
         return currMostRecurring;
     }
 
-    public static int[] sortArray(final int[] array, final boolean desc) {
+    static int[] sortArray(final int[] array, final boolean desc) {
         boolean swap = true;
         int temp;
         while (swap) {
@@ -75,7 +72,7 @@ public class WorkWithArrays {
         return array;
     }
 
-    public static double computeVariance(final int[] array) {
+    static double computeVariance(final int[] array) {
         double returnValue = 0;
         double mean = 0;
         for (final int elem : array) {
@@ -89,7 +86,7 @@ public class WorkWithArrays {
         return returnValue;
     }
 
-    public static int[] revertUpTo(final int[] array, final int elem) {
+    static int[] revertUpTo(final int[] array, final int elem) {
         int elemPos = 0;
         final int[] returnValue = new int[array.length];
         for (; elemPos < array.length && array[elemPos] != elem; elemPos++);
@@ -103,7 +100,7 @@ public class WorkWithArrays {
         return returnValue;
     }
 
-    public static int[] duplicateElements(final int[] array, final int nTimes) {
+    static int[] duplicateElements(final int[] array, final int nTimes) {
         final int[] returnValue = new int[array.length * nTimes];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < nTimes; j++) {
@@ -116,7 +113,7 @@ public class WorkWithArrays {
     /** Testing methods **/
 
     /* Utility method for testing countOccurr method */
-    public static boolean testCountOccurrencies() {
+    static boolean testCountOccurrencies() {
         return countOccurrencies(new int[] { 1, 2, 3, 4 }, 1) == 1
                 && countOccurrencies(new int[] { 0, 2, 3, 4 }, 1) == 0
                 && countOccurrencies(new int[] { 7, 4, 1, 9, 3, 1, 5 }, 2) == 0
@@ -124,7 +121,7 @@ public class WorkWithArrays {
     }
 
     /* Utility method for testing evenElems method */
-    public static boolean testEvenElements() {
+    static boolean testEvenElements() {
         return Arrays.equals(evenElements(new int[] { 1, 2, 3, 4 }), new int[] { 1, 3 })
                 && Arrays.equals(evenElements(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }), new int[] { 1, 3, 5, 7, 9 })
                 && Arrays.equals(evenElements(new int[] { 4, 6, 7, 9, 1, 5, 23, 11, 73 }), new int[] { 4, 7, 1, 23, 73 })
@@ -134,7 +131,7 @@ public class WorkWithArrays {
     }
 
     /* Utility method for testing oddElems method */
-    public static boolean testOddElements() {
+    static boolean testOddElements() {
         return Arrays.equals(oddElements(new int[] { 1, 2, 3, 4 }), new int[] { 2, 4 })
                 && Arrays.equals(oddElements(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }), new int[] { 2, 4, 6, 8 })
                 && Arrays.equals(oddElements(new int[] { 4, 6, 7, 9, 1, 5, 23, 11, 73 }), new int[] { 6, 9, 5, 11 })
@@ -144,7 +141,7 @@ public class WorkWithArrays {
     }
 
     /* Utility method for testing getMostRecurringElem method */
-    public static boolean testMostRecurringElement() {
+    static boolean testMostRecurringElement() {
         return mostRecurringElement(new int[] { 1, 2, 1, 3, 4 }) == 1
                 && mostRecurringElement(new int[] { 7, 1, 5, 7, 7, 9 }) == 7
                 && mostRecurringElement(new int[] { 1, 2, 3, 1, 2, 3, 3 }) == 3
@@ -152,7 +149,7 @@ public class WorkWithArrays {
     }
 
     /* Utility method for testing sortArray method */
-    public static boolean testSortArray() {
+    static boolean testSortArray() {
         return Arrays.equals(sortArray(new int[] { 3, 2, 1 }, false), new int[] { 1, 2, 3 })
                 && Arrays.equals(sortArray(new int[] { 1, 2, 3 }, true), new int[] { 3, 2, 1 })
                 && Arrays.equals(
@@ -161,14 +158,14 @@ public class WorkWithArrays {
     }
 
     /* Utility method for testing computeVariance method */
-    public static boolean testComputeVariance() {
+    static boolean testComputeVariance() {
         return computeVariance(new int[] { 1, 2, 3, 4 }) == 1.25
                 && computeVariance(new int[] { 1, 1, 1, 1 }) == 0
                 && computeVariance(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }) == 8.25;
     }
 
     /* Utility method for testing revertUpTo method */
-    public static boolean testRevertUpTo() {
+    static boolean testRevertUpTo() {
         return Arrays.equals(
                     revertUpTo(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, 5),
                     new int[] { 5, 4, 3, 2, 1, 6, 7, 8, 9, 10 })
@@ -181,7 +178,7 @@ public class WorkWithArrays {
     }
 
     /* Utility method for testing dupElems method */
-    public static boolean testDuplicateElements() {
+    static boolean testDuplicateElements() {
         return Arrays.equals(duplicateElements(new int[] { 1, 2, 3 }, 2), new int[] { 1, 1, 2, 2, 3, 3 })
                 && Arrays.equals(duplicateElements(new int[] { 1, 2 }, 5), new int[] { 1, 1, 1, 1, 1, 2, 2, 2, 2, 2 });
     }
