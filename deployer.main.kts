@@ -45,7 +45,7 @@ sealed interface DataPacker {
         val exerciseFolder: File,
         val solutionFolder: File,
         val version: String,
-        val outputFolder: File = Dirs.mkTempDir(packageName),
+        val outputFolder: File = Dirs.mkTempDir("$packageName-zip"),
     ) : DataPacker {
 
         override fun packFor(owner: String, repo: String): List<Deployment> {
@@ -97,14 +97,18 @@ data class Deployment(
     fun toJson() = """{"type":"$type","owner":"$owner","repo":"$repo","ref":"$ref","target":"$target"}"""
 }
 
-val yamlFile = File("config.yml")
-val configuration = Config { addSpec(Configuration) }.from.yaml.file(yamlFile)
 fun File.cleanup() = apply {
     check(deleteRecursively() && mkdirs()) {
         "$absolutePath could not be reset"
     }
 }
+
+// Actual algorithm
+
+val yamlFile = File("config.yml")
+val configuration = Config { addSpec(Configuration) }.from.yaml.file(yamlFile)
 val exerciseBranch = configuration[Configuration.branch]
+Dirs.workDirFile.cleanup()
 val exercisesDir = File(Dirs.workDirFile, exerciseBranch).cleanup()
 shellRun {
     command(
@@ -139,7 +143,9 @@ val deployments = packages.flatMap { (name, pack) ->
     pack.contents.forEach { descriptor ->
         val solFrom = File(descriptor.from)
         val exFrom = File(exercisesDir, descriptor.from)
+        println("Copying '$solFrom' to '${solutionFolder}'")
         solFrom.copyRecursively(File(solutionFolder, descriptor.to))
+        println("Copying '$exFrom' to '${exerciseFolder}'")
         exFrom.copyRecursively(File(exerciseFolder, descriptor.to))
         descriptor.excluding.forEach { notIncluded ->
             listOf(solutionFolder, exerciseFolder).forEach { folder ->
