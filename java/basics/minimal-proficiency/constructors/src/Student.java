@@ -1,6 +1,6 @@
 package oop.lab02.constructors;
 
-public class Student {
+class Student {
 
     final String name;
     final String surname;
