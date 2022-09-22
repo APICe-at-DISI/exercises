@@ -6,9 +6,9 @@ class Train {
     static final int DEFAULT_N_SC_SEATS = 100;
     static final int DEFAULT_TOT_SEATS = 150;
 
-    final int seats;
-    final int firstClassSeats;
-    final int secondClassSeats;
+    int seats;
+    int firstClassSeats;
+    int secondClassSeats;
     int firstClassReserved;
     int secondClassReserved;
 
