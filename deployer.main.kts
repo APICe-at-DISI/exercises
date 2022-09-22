@@ -108,6 +108,7 @@ fun File.cleanup() = apply {
 val yamlFile = File("config.yml")
 val configuration = Config { addSpec(Configuration) }.from.yaml.file(yamlFile)
 val exerciseBranch = configuration[Configuration.branch]
+shellRun { command("git", listOf("fetch")) }
 Dirs.workDirFile.cleanup()
 val exercisesDir = File(Dirs.workDirFile, exerciseBranch).cleanup()
 shellRun {
@@ -142,13 +143,13 @@ val deployments = packages.flatMap { (name, pack) ->
     val solutionFolder = Dirs.mkTempDir(name)
     pack.contents.forEach { descriptor ->
         val solFrom = File(descriptor.from)
+        val solTo = File(solutionFolder, descriptor.to)
+        solFrom.copyRecursively(solTo, overwrite = true)
         val exFrom = File(exercisesDir, descriptor.from)
-        println("Copying '$solFrom' to '${solutionFolder}'")
-        solFrom.copyRecursively(File(solutionFolder, descriptor.to))
-        println("Copying '$exFrom' to '${exerciseFolder}'")
-        exFrom.copyRecursively(File(exerciseFolder, descriptor.to))
+        val exTo = File(exerciseFolder, descriptor.to)
+        exFrom.copyRecursively(exTo, overwrite = true)
         descriptor.excluding.forEach { notIncluded ->
-            listOf(solutionFolder, exerciseFolder).forEach { folder ->
+            listOf(exTo, solTo).forEach { folder ->
                 File(folder, notIncluded).deleteRecursively()
             }
         }
