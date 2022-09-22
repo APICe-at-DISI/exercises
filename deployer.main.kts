@@ -26,7 +26,7 @@ object Dirs {
 /**
  * DSL / YAML parser
  */
-data class Contents(val from: String, val to: String)
+data class Contents(val from: String, val to: String, val excluding: List<String> = emptyList())
 data class Package(val format: List<String>, val destinations: List<String>, val contents: List<Contents>)
 object Configuration : ConfigSpec("") {
     val branch by optional("exercises")
@@ -136,11 +136,16 @@ val deployments = packages.flatMap { (name, pack) ->
     check(pack.destinations.isNotEmpty())
     val exerciseFolder = Dirs.mkTempDir(name)
     val solutionFolder = Dirs.mkTempDir(name)
-    pack.contents.forEach {
-        val solFrom = File(it.from)
-        val exFrom = File(exercisesDir, it.from)
-        solFrom.copyRecursively(File(solutionFolder, it.to))
-        exFrom.copyRecursively(File(exerciseFolder, it.to))
+    pack.contents.forEach { descriptor ->
+        val solFrom = File(descriptor.from)
+        val exFrom = File(exercisesDir, descriptor.from)
+        solFrom.copyRecursively(File(solutionFolder, descriptor.to))
+        exFrom.copyRecursively(File(exerciseFolder, descriptor.to))
+        descriptor.excluding.forEach { notIncluded ->
+            listOf(solutionFolder, exerciseFolder).forEach { folder ->
+                File(folder, notIncluded).deleteRecursively()
+            }
+        }
     }
     pack.format.flatMap { format ->
         pack.destinations.flatMap { destination ->
