@@ -15,7 +15,7 @@ sourceSets {
                     "compilation-multifile",
                     "compilation-classpath",
                     "compilation-and-packages",
-                    "analysis-method-scope-with-multifile-compilation"
+                    "analysis-method-scope-with-multifile-compilation",
                 )
             )
         }
