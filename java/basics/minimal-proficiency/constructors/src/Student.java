@@ -2,10 +2,10 @@ package oop.lab02.constructors;
 
 public class Student {
 
-    final String name;
-    final String surname;
-    final int id;
-    final int matriculationYear;
+    String name;
+    String surname;
+    int id;
+    int matriculationYear;
 
     void build(final int id, final String name, final String surname, final int matriculationYear) {
         this.id = id;
