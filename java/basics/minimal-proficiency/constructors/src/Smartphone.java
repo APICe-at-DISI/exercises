@@ -9,14 +9,14 @@ class Smartphone {
     static final int DEF_RAM_SIZE = 1024;
     static final int DEF_N_CPU = 2;
 
-    final int nCPU;
-    final int ram;
-    final int sdSize;
-    final String brand;
-    final String model;
-    final boolean hasGPS;
-    final boolean has3G;
-    final boolean hasNFC;
+    int nCPU;
+    int ram;
+    int sdSize;
+    String brand;
+    String model;
+    boolean hasGPS;
+    boolean has3G;
+    boolean hasNFC;
 
     void printStringRep() {
         System.out.println("Smartphone info:");
