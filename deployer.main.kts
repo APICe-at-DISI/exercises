@@ -110,7 +110,7 @@ val configuration = Config { addSpec(Configuration) }.from.yaml.file(yamlFile)
 val exerciseBranch = configuration[Configuration.branch]
 shellRun { command("git", listOf("fetch")) }
 Dirs.workDirFile.cleanup()
-val exercisesDir = File(Dirs.workDirFile, exerciseBranch).cleanup()
+val exercisesDir = createTempDirectory(exerciseBranch).toFile().cleanup()
 shellRun {
     command(
         "git",
