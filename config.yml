@@ -49,7 +49,7 @@ packages:
     contents:
       - from: java/basics/minimal-proficiency/code-organization
         to: 00-code-organization
-      - from: java/basics/minimal-proficiency/packages
+      - from: java/basics/minimal-proficiency/compilation-and-packages
         to: 01-packages
       - from: java/basics/minimal-proficiency/compilation-classpath
         to: 02-compilation-classpath
