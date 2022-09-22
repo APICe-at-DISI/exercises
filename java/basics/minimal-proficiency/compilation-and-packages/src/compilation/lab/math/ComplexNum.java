@@ -1,4 +1,4 @@
-package pss.lab.math;
+package compilation.lab.math;
 
 class ComplexNum {
 

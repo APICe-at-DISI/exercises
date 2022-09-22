@@ -47,14 +47,21 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab
     contents:
-      - from: java/basics/minimal-proficiency/code-organization
-        to: 00-code-organization
+      - from: gradle-wrapper
+        to: .
+        excluding:
+          - .git
+          - .gitignore
+          - .gitattributes
+          - renovate.json
+      - from: java/basics/minimal-proficiency/compilation-source-folder
+        to: 00-compilation-basics
       - from: java/basics/minimal-proficiency/compilation-and-packages
-        to: 01-packages
+        to: 01-compilation-with-packages
       - from: java/basics/minimal-proficiency/compilation-classpath
         to: 02-compilation-classpath
-      - from: java/basics/minimal-proficiency/command-line
-        to: 03-command-line
+      - from: java/basics/minimal-proficiency/command-line-arguments
+        to: 03-program-arguments
       - from: java/basics/minimal-proficiency/reference-value
         to: 04-reference-value
       - from: java/basics/minimal-proficiency/constructors
