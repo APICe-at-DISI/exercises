@@ -44,6 +44,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ steps.ref.outputs.ref }}
+          submodules: recursive
       - name: Prepare deliverable packages
         id: deliveries
         run: ./deployer.main.kts

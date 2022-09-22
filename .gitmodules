@@ -1,0 +1,3 @@
+[submodule "gradle-wrapper"]
+	path = gradle-wrapper
+	url = https://github.com/DanySK/Gradle-Wrapper.git
