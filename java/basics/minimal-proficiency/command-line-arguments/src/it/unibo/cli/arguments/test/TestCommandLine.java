@@ -22,13 +22,5 @@ class TestCommandLine {
          *  * the, 3 characters long
          *  * lab, 3 characters long
          */
-        if (args.length == 0) {
-            System.out.println("No argument has been provided.");
-        } else {
-            System.out.println("The provided arguments are:");
-            for (final String arg: args) {
-                System.out.println(" * " + arg + ", " + arg.length() + " characters long");
-            }
-        }
     }
 }
