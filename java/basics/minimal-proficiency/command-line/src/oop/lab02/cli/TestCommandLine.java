@@ -1,6 +1,6 @@
 package oop.lab02.cli;
 
-public class TestCommandLine {
+class TestCommandLine {
 
     public static void main(final String[] args) {
         /*

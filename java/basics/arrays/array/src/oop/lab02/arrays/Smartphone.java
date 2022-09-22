@@ -1,4 +1,4 @@
-package oop.lab02.constructors;
+package oop.lab02.arrays;
 
 class Smartphone {
 
@@ -46,16 +46,48 @@ class Smartphone {
         this(DEF_N_CPU, DEF_RAM_SIZE, sdSize, brand, model, DEF_HAS_GPS, DEF_HAS_3G, DEF_HAS_NFC);
     }
 
+    int getCPUs() {
+        return this.nCPU;
+    }
+
+    int getRam() {
+        return this.ram;
+    }
+
+    int getSdSize() {
+        return this.sdSize;
+    }
+
+    String getBrand() {
+        return this.brand;
+    }
+
+    String getModel() {
+        return this.model;
+    }
+
+    boolean hasGPS() {
+        return this.hasGPS;
+    }
+
+    boolean has3G() {
+        return this.has3G;
+    }
+
+    boolean hasNFC() {
+        return this.hasNFC;
+    }
+
     void printStringRep() {
         System.out.println("Smartphone info:");
-        System.out.println("n CPU(s): " + this.nCPU);
-        System.out.println("RAM amount: " + this.ram);
-        System.out.println("SD size: " + this.sdSize);
-        System.out.println("brand: " + this.brand);
-        System.out.println("model: " + this.model);
-        System.out.println("hasGPS: " + this.hasGPS);
-        System.out.println("has3G: " + this.has3G);
-        System.out.println("hasNFC: " + this.hasNFC + "\n");
+        System.out.println("-n CPU(s): " + this.nCPU);
+        System.out.println("-RAM amount: " + this.ram);
+        System.out.println("-SD size: " + this.sdSize);
+        System.out.println("-brand: " + this.brand);
+        System.out.println("-model: " + this.model);
+        System.out.println("-hasGPS: " + this.hasGPS);
+        System.out.println("-has3G: " + this.has3G);
+        System.out.println("-hasNFC: " + this.hasNFC + "\n");
     }
 
     public static void main(final String[] args) {
