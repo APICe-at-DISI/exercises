@@ -4,7 +4,7 @@
 
 #### FASE 1 - Costruttori
 
-1. Si osservi e poi si rimuova dalle classi `Train` e `Student` il metodo `void main(String[])` ed il metodo `void build(...)`
+1. Si osservino e poi si rimuovano dalla classe `Student` il metodo `void main(String[])` ed il metodo `void build(...)`
     - Si noti come tra l'istanziazione di uno `Student` e la sua "costruzione" mediante `build` l'oggetto si trovi in uno stato semanticamente inconsistente
 2. Si implementi un costruttore a zero argomenti per `Train`
     - I campi dovranno essere inizializzati con valori di default *sensati* a vostra scelta
@@ -17,7 +17,7 @@
 
 #### FASE 2 - Esercizio più avanzato
 
-1. Si completi la classe `oop.lab02.constructors.Smartphone` con i campi:
+1. Si completi la classe `Smartphone` con i campi:
     - `int nCPU, ram, sdSize`
     - `String brand, model`
     - `boolean hasGPS, hasNFC, has3G`
