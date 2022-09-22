@@ -1,6 +1,6 @@
 package oop.lab02.constructors;
 
-public class Train {
+class Train {
 
     static final int DEFAULT_N_FC_SEATS = 50;
     static final int DEFAULT_N_SC_SEATS = 100;
