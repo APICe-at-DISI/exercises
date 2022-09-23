@@ -63,9 +63,27 @@ class SeqRecognizer {
                 && !checkSeq3(new int[] { 1, 2, 2, 3, 4, 4, 4, 5, 6 });
     }
 
+    static boolean testCheckSeq4() {
+        return checkSeq4(new int[] { 2, 5 })
+            && checkSeq4(new int[] { 5 })
+            && checkSeq4(new int[] { 3, 5 })
+            && checkSeq4(new int[] { 4, 5 })
+            && checkSeq4(new int[] { 2, 4, 4, 4, 4, 4, 5 })
+            && checkSeq4(new int[] { 3, 4, 5 })
+            && checkSeq4(new int[] { 3, 4, 4, 4, 4, 4, 5 })
+            && checkSeq4(new int[] { 4, 4, 4, 4, 4, 5 })
+            && !checkSeq4(new int[] { })
+            && !checkSeq4(new int[] { 2 })
+            && !checkSeq4(new int[] { 3 })
+            && !checkSeq4(new int[] { 3, 4 })
+            && !checkSeq4(new int[] { 2, 4 })
+            && !checkSeq4(new int[] { 4, 4, 4 });
+    }
+
     public static void main(final String[] args) {
         System.out.println("testCheckSeq1: " + testCheckSeq1());
         System.out.println("testCheckSeq2: " + testCheckSeq2());
         System.out.println("testCheckSeq3: " + testCheckSeq3());
+        System.out.println("testCheckSeq4: " + testCheckSeq4());
     }
 }
