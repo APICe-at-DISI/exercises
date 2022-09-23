@@ -2,14 +2,23 @@
 
 # FASE 1 - Arrays, le basi
 
-1. Si analizzi il metodo `countOccurencies(int[]. int)` della classe `WorkWithArrays`, aiutandosi con l'utilità di test `boolean testCountOccurrencies()`
+1. Si analizzi il metodo `countOccurencies(int[]. int)` della classe `WorkWithArrays`,
+aiutandosi con l'utilità di test `boolean testCountOccurrencies()`
 2. Si compili ed esegua la classe
-3. Si aggiunga un nuovo test al metodo `testCountOccurr()`
+3. Si aggiunga un nuovo test al metodo `testCountOccurrencies()`
 4. Si compili e si esegua nuovamente
 5. Si completino i seguenti metodi statici nella classe `WorkWithArrays`:
-    - `static int[] evenElements(int[] array)`, che restituisce un array con i soli elementi in posizione (indice) *pari* dell'array fornito in input, ad esempio `evenElems([1, 2, 3, 4]) => [1, 3]`
-    - `static int[] oddElements(int[] array)` che restituisce un array con i soli elementi in posizione (indice) *dispari* dell'array fornito in input, ad esempio `oddElems([1, 2, 3, 4] => [2,4]`
-    - `static int mostRecurringElement(int[] array)` che restituisce l'elemento che viene ripetuto più volte all'interno `array`, ad esempio p.e. `mostRecurringElement([1, 2, 1, 3, 4] => 1`, `mostRecurringElement([7,1,5,7,7,9]) => 7`
+   - `static int[] evenElements(int[] array)`,
+   che restituisce un array con i soli elementi in posizione (indice) *pari* dell'array fornito in input,
+   ad esempio: `evenElems([1, 2, 3, 4]) => [1, 3]`
+   - `static int[] oddElements(int[] array)`,
+   che restituisce un array con i soli elementi in posizione (indice) *dispari*
+   dell'array fornito in input, ad esempio: `oddElems([1, 2, 3, 4] => [2,4]`
+   - `static int mostRecurringElement(int[] array)`,
+   che restituisce l'elemento che viene ripetuto più volte all'interno dell'`array`,
+   - ad esempio:
+     - `mostRecurringElement([1, 2, 1, 3, 4] => 1`,
+     - `mostRecurringElement([7,1,5,7,7,9]) => 7`
 
 #### FASE 2 - Riconoscitore di sequenze
 
@@ -28,6 +37,8 @@ che riconosce la sequenza 1{2}3{4}[5],
 ossia una occorrenza di 1 , seguita da una qualunque sequenza (anche vuota) di 2, seguita da un 3,
 seguita da una qualunque sequenza (anche vuota) di 4,
 seguita opzionalmente da un 5
+4. Si scriva il metodo `static boolean checkSeq4(int[] array)`,
+che riconosce la sequenza [2|3]{4}5
 
 #### FASE 3 - Inversione e duplicazione
 
