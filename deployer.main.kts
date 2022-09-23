@@ -117,6 +117,7 @@ shellRun {
         listOf(
             "--work-tree=${exercisesDir.absolutePath}",
             "checkout",
+            "--recurse-submodules",
             "origin/$exerciseBranch",
             "--",
             "."
