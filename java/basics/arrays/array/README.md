@@ -2,7 +2,7 @@
 
 # FASE 1 - Arrays, le basi
 
-1. Si analizzi il metodo `countOccurencies()` della classe `WorkWithArrays`, aiutandosi con l'utilità di test `boolean testCountOccurrencies()`
+1. Si analizzi il metodo `countOccurencies(int[]. int)` della classe `WorkWithArrays`, aiutandosi con l'utilità di test `boolean testCountOccurrencies()`
 2. Si compili ed esegua la classe
 3. Si aggiunga un nuovo test al metodo `testCountOccurr()`
 4. Si compili e si esegua nuovamente
@@ -46,11 +46,13 @@ implementando i seguenti metodi che restituiscono il numero di smartphone che ri
 
 #### FASE 5 - Algoritmica su array
 
-1. Implementare `static int[] sortArray(int[] array,boolean desc)`,
-che ordina l'array fornito in input (ordinamento crescente/descrescente a seconda del valore del parametro `desc`.
+1. Implementare `static int[] sortArray(int[] array,boolean isDescending)`,
+che ordina l'array fornito in input
+(ordinamento crescente/descrescente a seconda del valore del parametro `isDescending`.
     - Si può far riferimento all'algoritmo bubble sort
     - è proibito l'uso del metodo di libreria `Arrays.sort()` :)
-2. Implementare `static double computeVariance(double[] array)`, che calcola la varianza degli elementi di un array
+2. Implementare `static double computeVariance(double[] array)`,
+che calcola la varianza degli elementi di un array
 
 #### FASE 6 - Array circolare
 
