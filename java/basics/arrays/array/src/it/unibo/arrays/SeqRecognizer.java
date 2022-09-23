@@ -1,4 +1,4 @@
-package oop.lab02.arrays;
+package it.unibo.arrays;
 
 class SeqRecognizer {
 
