@@ -1,5 +1,4 @@
-# Programmazione ad Oggetti - Laboratorio 02
-## Esercizio 0 - organizzazione di codice sorgente e bytecode
+# Organizzazione di codice sorgente e bytecode
 
 #### FASE 1 - Compilazione in percorsi arbitrari
 
