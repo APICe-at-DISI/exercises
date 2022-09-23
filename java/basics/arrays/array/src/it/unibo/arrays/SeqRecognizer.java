@@ -2,7 +2,7 @@ package it.unibo.arrays;
 
 class SeqRecognizer {
 
->    /*
+    /*
      * Recognizes: {1}{2|3}.
      */
     static boolean checkSeq1(final int[] array) {
