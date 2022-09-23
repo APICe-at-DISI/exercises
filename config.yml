@@ -89,5 +89,11 @@ packages:
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 05-constructors/build.gradle.kts
         # Arrays + Gradle
-      - from: java/basics/arrays/array
+      - from: java/basics/arrays/array/README.md
+        to: 06-array/README.md
+      - from: java/basics/arrays/array/src
+        to: 06-array/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 06-array
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 06-array
