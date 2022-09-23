@@ -18,16 +18,7 @@ class SeqRecognizer {
     }
 
     static boolean checkSeq4(final int[] array) {
-        if (array.length >= 1) {
-            int index = 0;
-            if (array[0] == 2 || array[0] == 3) {
-                index = 1;
-            }
-            for (; index < array.length - 1 && array[index] == 4; index++);
-            return index == array.length - 1 && array[index] == 5;
-        } else {
-            return false;
-        }
+        return false;
     }
 
     /** Testing methods **/
