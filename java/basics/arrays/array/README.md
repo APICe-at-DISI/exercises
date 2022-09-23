@@ -42,8 +42,8 @@ che riconosce la sequenza [2|3]{4}5
 
 #### FASE 3 - Inversione e duplicazione
 
-Implementare il metodo `static int[] revertUpTo(int[] array, int stopElement)`,
-che inverte gli elementi di `array` dall'inizio fino alla prima occorrenza dell'elemento `stopElement` *inclusa*.
+Implementare il metodo `static int[] revertUpTo(int[] array, int element)` in `WorkWithArrays`,
+che inverte gli elementi di `array` dall'inizio fino alla prima occorrenza dell'elemento `element` *inclusa*.
 Gli elementi successivi alla suddetta occorrenza devono rimanere invariati, per esempio `revertUpTo([1,2,3,4,5,6,7], 5) => [5,4,3,2,1,6,7]`
 
 #### FASE 4 - Array di oggetti
@@ -57,7 +57,7 @@ implementando i seguenti metodi che restituiscono il numero di smartphone che ri
 
 #### FASE 5 - Algoritmica su array
 
-1. Implementare `static int[] sortArray(int[] array,boolean isDescending)`,
+1. Implementare `static int[] sortArray(int[] array, boolean isDescending)` all'interno di `WorkWithArrays`,
 che ordina l'array fornito in input
 (ordinamento crescente/descrescente a seconda del valore del parametro `isDescending`.
     - Si può far riferimento all'algoritmo bubble sort
@@ -68,12 +68,12 @@ che calcola la varianza degli elementi di un array
 #### FASE 6 - Array circolare
 
 Completare la classe `MyCircularArray` che implementa un array circolare, contenente:
-    - Un campo `int[] array`
-    - Costruttore `MyCircularArray(int size)`
-    - Costruttore `MyCircularArray()`
-    - metodo `void addElem(int element)`, che aggiunge `element` all'interno di `array` in modo che,
+    - Un campo `int[] array`;
+    - Costruttore `MyCircularArray(int size)` che crea un array circolare di dimensione `size`;
+    - Costruttore `MyCircularArray()` che crea un array circolare di 10 elementi;
+    - metodo `void add(int element)`, che aggiunge `element` all'interno di `array` in modo che,
     una volta raggiunta la dimensione massima dell'array,
-    i nuovi valori vadano a sovrascrivere quelli precedentemente memorizzati.
-    - metodo `void reset()`, che reinizializza a zero tutti gli elementi di `array`
+    i nuovi valori vadano a sovrascrivere quelli precedentemente memorizzati;
+    - metodo `void reset()`, che reinizializza a zero tutti gli elementi di `array`.
 
 *Nota*: è possibile aggiungere campi e metodi a piacimento al fine di realizzare quanto richiesto.
