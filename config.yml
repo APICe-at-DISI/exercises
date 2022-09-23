@@ -96,4 +96,4 @@ packages:
       - <<: *clean-gradle-wrapper
         to: 06-array
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 06-array
+        to: 06-array/build.gradle.kts
