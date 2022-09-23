@@ -15,43 +15,15 @@ class WorkWithArrays {
     }
 
     static int[] evenElements(final int[] array) {
-        final int resultLength = array.length % 2 == 0 ? array.length / 2  : array.length / 2 + 1;
-        final int[] resultArray = new int[resultLength];
-        for (int i = 0; i < array.length; i += 2) {
-            resultArray[i / 2] = array[i];
-        }
-        return resultArray;
+        return null;
     }
 
     static int[] oddElements(final int[] array) {
-        final int[] resultArray = new int[array.length / 2];
-        for (int i = 1; i < array.length; i += 2) {
-            resultArray[i / 2] = array[i];
-        }
-        return resultArray;
+        return null;
     }
 
     static int mostRecurringElement(final int[] array) {
-        int maxOccurrencies = 0;
-        int currentlyMostOccurring = 0;
-        final int[] defensiveCopy = Arrays.copyOf(array, array.length);
-        Arrays.sort(defensiveCopy);
-        /*
-        * The Arrays.sort(...) method modifies its input array.
-        * Modifying some method input array is considered a bad practice.
-        * To avoid this, we will sort the `defensiveCopy` array which is actually
-        * a clone of this method input array.
-        */
-        for (int i = 0; i < defensiveCopy.length;) {
-            final int currentElement = defensiveCopy[i];
-            int occurrencies = 0;
-            for (i++; i < defensiveCopy.length && defensiveCopy[i] == currentElement; i++, occurrencies++);
-            if (occurrencies > maxOccurrencies) {
-                maxOccurrencies = occurrencies;
-                currentlyMostOccurring = currentElement;
-            }
-        }
-        return currentlyMostOccurring;
+        return 0;
     }
 
     static int[] sortArray(final int[] array, final boolean isDescending) {
