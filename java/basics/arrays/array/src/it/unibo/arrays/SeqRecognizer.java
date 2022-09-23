@@ -2,6 +2,9 @@ package it.unibo.arrays;
 
 class SeqRecognizer {
 
+>    /*
+     * Recognizes: {1}{2|3}.
+     */
     static boolean checkSeq1(final int[] array) {
         int i = 0;
         for (; i < array.length && array[i] == 1; i++);
@@ -9,14 +12,23 @@ class SeqRecognizer {
         return i == array.length;
     }
 
+    /*
+     * Recognizes: 1{2}3.
+     */
     static boolean checkSeq2(final int[] array) {
         return false;
     }
 
+    /*
+     * Recognizes: 1{2}3{4}[5].
+     */
     static boolean checkSeq3(final int[] array) {
         return false;
     }
 
+    /*
+     * Recognizes: [2|3]{4}5.
+     */
     static boolean checkSeq4(final int[] array) {
         return false;
     }
