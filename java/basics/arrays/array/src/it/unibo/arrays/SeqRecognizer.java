@@ -10,23 +10,10 @@ class SeqRecognizer {
     }
 
     static boolean checkSeq2(final int[] array) {
-        if (array.length >= 2 && array[0] == 1 && array[array.length - 1] == 3) {
-            int i = 1;
-            for (; i < array.length - 1 && array[i] == 2; i++);
-            return i == array.length - 1;
-        }
         return false;
     }
 
     static boolean checkSeq3(final int[] array) {
-        if (array.length >= 2 && array[0] == 1) {
-            int i = 1;
-            for (; i < array.length - 1 && array[i] == 2; i++);
-            if (array[i] == 3) {
-                for (i++; i < array.length && array[i] == 4; i++);
-                return i == array.length || i == array.length - 1 && array[array.length - 1] == 5;
-            }
-        }
         return false;
     }
 
