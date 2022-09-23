@@ -27,51 +27,15 @@ class WorkWithArrays {
     }
 
     static int[] sortArray(final int[] array, final boolean isDescending) {
-        boolean swap = true;
-        int temp;
-        while (swap) {
-            swap = false;
-            for (int i = 0; i < array.length - 1; i++) {
-                var current = array[i];
-                var next = array[i + 1];
-                // If the array is decending and the next element is smaller
-                // Or if the array is ascending and the next element is greater
-                if ((isDescending && current < next) || (!isDescending && current > next)) {
-                    array[i] = next;
-                    array[i + 1] = current;
-                    swap = true; // We swapped at least once, so we need another round
-                }
-            }
-        }
         return array;
     }
 
     static double computeVariance(final int[] array) {
-        double returnValue = 0;
-        double mean = 0;
-        for (final int element : array) {
-            mean += element;
-        }
-        mean /= array.length;
-        for (final int element : array) {
-            returnValue += Math.pow(element - mean, 2);
-        }
-        returnValue /= array.length;
-        return returnValue;
+        return 0;
     }
 
     static int[] revertUpTo(final int[] array, final int element) {
-        int elemPos = 0;
-        final int[] returnValue = new int[array.length];
-        for (; elemPos < array.length && array[elemPos] != element; elemPos++);
-        int i = 0;
-        for (; i <= elemPos; i++) {
-            returnValue[i] = array[elemPos - i];
-        }
-        for (; i < array.length; i++) {
-            returnValue[i] = array[i];
-        }
-        return returnValue;
+        return null;
     }
 
     static int[] duplicateElements(final int[] array, final int times) {
