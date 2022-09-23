@@ -58,26 +58,36 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab
     contents:
+        # Compilation
       - from: java/basics/minimal-proficiency/compilation-source-folder
         to: 00-compilation-basics
       - from: java/basics/minimal-proficiency/compilation-and-packages
         to: 01-compilation-with-packages
       - from: java/basics/minimal-proficiency/compilation-classpath
         to: 02-compilation-classpath
-
+        # Reference vs. value
+      - from: java/basics/minimal-proficiency/reference-value
+        to: 03-reference-value
+        # Arrays + command line + Gradle
       - from: java/basics/minimal-proficiency/command-line-arguments
-        to: 03-program-arguments
+        to: 04-program-arguments
         excluding: src
       - from: java/basics/minimal-proficiency/command-line-arguments/src
-        to: 03-program-arguments/src/main/java
+        to: 04-program-arguments/src/main/java
         excluding: README.md
       - <<: *clean-gradle-wrapper
-        to: 03-program-arguments
+        to: 04-program-arguments
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 03-program-arguments/build.gradle.kts
-      - from: java/basics/minimal-proficiency/reference-value
-        to: 04-reference-value
-      - from: java/basics/minimal-proficiency/constructors
+        to: 04-program-arguments/build.gradle.kts
+        # Constructors + Gradle
+      - from: java/basics/minimal-proficiency/constructors/README.md
+        to: 05-constructors/README.md
+      - from: java/basics/minimal-proficiency/constructors/src
+        to: 05-constructors/src/main/java
+      - <<: *clean-gradle-wrapper
         to: 05-constructors
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 05-constructors/build.gradle.kts
+        # Arrays + Gradle
       - from: java/basics/arrays/array
         to: 06-array
