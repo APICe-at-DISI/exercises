@@ -34,6 +34,38 @@ packages:
 # NOTE: for the following we need to have explained options of javac (-o, -cp)
 #      - from: java/basics/minimal-proficiency/compilation-multifile
 #        to: 07-multifile-compilation
+  oop-lab02:
+    format:
+      - zip
+    destinations:
+      - unibo-oop/lab
+    contents:
+        # Compilation
+      - from: java/basics/minimal-proficiency/compilation-source-folder
+        to: 10-compilation-basics
+      - from: java/basics/minimal-proficiency/compilation-and-packages
+        to: 11-compilation-with-packages
+      - from: java/basics/minimal-proficiency/compilation-classpath
+        to: 12-compilation-classpath
+        # Reference vs. value
+      - from: java/basics/minimal-proficiency/reference-value
+        to: 13-reference-value
+        # Arrays + command line
+      - from: java/basics/minimal-proficiency/command-line-arguments
+        to: 14-program-arguments
+        excluding: src
+      - from: java/basics/minimal-proficiency/command-line-arguments/src
+        to: 14-program-arguments/src/main/java
+        # Constructors
+      - from: java/basics/minimal-proficiency/constructors/README.md
+        to: 15-constructors/README.md
+      - from: java/basics/minimal-proficiency/constructors/src
+        to: 15-constructors/src/main/java
+        # Arrays
+      - from: java/basics/arrays/array/README.md
+        to: 16-array/README.md
+      - from: java/basics/arrays/array/src
+        to: 16-array/src/main/java
   pss-lab01:
     format:
       - zip
