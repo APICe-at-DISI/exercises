@@ -7,12 +7,14 @@
     - In Unix: usare il comando `mkdir`
     - In Windows: usare il comando `md`
     - non usare il file manager!
-3. Si esegua la compilazione dentro bin
+3. Si esegua la compilazione indicando `bin` come destinazione dell'output di compilazione
     - In Unix: `javac -d bin src/Calculator.java`
     - In Windows: `javac -d bin src\Calculator.java`
     - si noti il diverso separatore di percorso
 4. Si verifichi la presenza di `Calculator.class` all'interno di `bin`
-5. Si sposti il terminale dentro `bin`
+    - In Unix: `ls bin`
+    - In Windows: `dir bin`
+5. Si sposti il terminale dentro `bin` (comando `cd`)
 6. Si esegua la classe `Calculator`
 
 #### FASE 2 - Esecuzione con classpath esplicito
