@@ -5,7 +5,7 @@
 1. Si provi a compilare il file `UseComplex.java` dentro la cartella `bin` (da creare).
   - Oh-oh... Errore.
 2. Si legga attentamente l'errore: di cosa si lamenta il compilatore?
-3. La classe fornita richiede `ComplexNum` per poter funzionare, ma `ComplexNum` è fornito nel precedente esercizio: utilizzando appropriatamente l'opzione `-cp` di `javac`, si compili `UseComplex.java` dentro la cartella `bin`, sfruttando la classe *compilata* nell'esercizio precedente.
+3. La classe fornita richiede `ComplexNum` per poter funzionare, ma `ComplexNum` è fornito nel precedente esercizio: utilizzando appropriatamente l'opzione `-cp` di `javac`, si compili `UseComplex.java` dentro la cartella `bin`, sfruttando la classe *compilata* nell'esercizio precedente. Si considerino i seguenti vincoli.
   - È vietato SPOSTARE file (sorgenti o compilati)
   - È vietato ricompilare il sorgente di `ComplexNum`
   - Si lasci il terminale posizionato nella cartella che contiene src
