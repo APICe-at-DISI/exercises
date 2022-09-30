@@ -129,3 +129,17 @@ packages:
         to: 06-array
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 06-array/build.gradle.kts
+  pss-lab03:
+    format:
+      - zip
+    destinations:
+      - unibo-lptsi-pss/pss-lab
+    contents:
+      - from: java/basics/minimal-proficiency/constructors/README-with-build-and-test.md
+        to: 01-constructors/README.md
+      - from: java/basics/minimal-proficiency/constructors/src
+        to: 01-constructors/src/main/java
+      - from: java/basics/arrays/array/README-with-build-and-test.md
+        to: 02-array/README.md
+      - from: java/basics/arrays/array/src
+        to: 02-array/src/main/java
