@@ -1,4 +1,4 @@
-package oop.lab02.constructors;
+package it.unibo.constructors;
 
 class Student {
 
