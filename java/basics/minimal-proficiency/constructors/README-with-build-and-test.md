@@ -11,9 +11,17 @@
 7. Si crei (se non già realizzato) un costruttore `Train(int, int)` dove gli argomenti passati siano i posti in prima e seconda classe, rispettivamente.
 8. Si seguano le istruzioni in `UseConstructorsEvolved` per effettuare il test.
 
-# FASE 2 - Aggiungere build automation
+# FASE 2 - Aggiungere la build Gradle al progetto
+
+1. Scaricare il Gradle Wrapper (il link è disponibile alla slide 34 del blocco di slide 05)
+2. Configurare correttamente il file build.gradle.kts
+3. Lanciare l'applicazione prima tramite java e poi da Gradle
 
 # FASE 3 - Importare test su JUnit
+
+1. Sviluppare un JUnit test per verificare che struttura e dinamica degli oggetti della classe Student siano compatibili con le specifiche 
+2. Configurare correttamente il file build.gradle.kts affinché gestisca i test
+3. Lanciare il test da Gradle
 
 # FASE 4 - Esercizio più avanzato
 
