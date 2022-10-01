@@ -1,7 +1,7 @@
 #!/usr/bin/env kotlin
 @file:Repository("https://repo.maven.apache.org/maven2")
 @file:DependsOn("com.uchuhimo:konf:1.1.2")
-@file:DependsOn("com.lordcodes.turtle:turtle:0.7.0")
+@file:DependsOn("com.lordcodes.turtle:turtle:0.8.0")
 @file:OptIn(ExperimentalPathApi::class)
 
 import com.lordcodes.turtle.shellRun
