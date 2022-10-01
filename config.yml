@@ -76,7 +76,7 @@ packages:
       - from: java/basics/arrays/array/README-add-build.md
         to: 31-gradleization/README.md
       - from: java/basics/arrays/array/src/it/unibo/arrays/WorkWithArrays.java
-        to: 31-array/src/it/unibo/arrays/WorkWithArrays.java
+        to: 31-gradleization/src/it/unibo/arrays/WorkWithArrays.java
         # toString
       - from: java/basics/minimal-proficiency/tostring/README.md
         to: 32-toString/README.md
@@ -85,7 +85,7 @@ packages:
       - <<: *clean-gradle-wrapper
         to: 32-toString
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 32-toString
+        to: 32-toString/build.gradle.kts
         # Public to private fields
       - from: java/basics/interfaces-encapsulation/public-to-private/README.md
         to: 33-encapsulation/README.md
@@ -94,7 +94,7 @@ packages:
       - <<: *clean-gradle-wrapper
         to: 33-encapsulation
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 33-encapsulation
+        to: 33-encapsulation/build.gradle.kts
         # Implement interfaces
       - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
         to: 34-interfaces/README.md
@@ -103,7 +103,7 @@ packages:
       - <<: *clean-gradle-wrapper
         to: 34-interfaces
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 34-interfaces
+        to: 34-interfaces/build.gradle.kts
         # Composition of interfaces
       - from: java/basics/interfaces-encapsulation/interface-composition/README.md
         to: 35-composition/README.md
@@ -112,7 +112,7 @@ packages:
       - <<: *clean-gradle-wrapper
         to: 35-composition
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 35-composition
+        to: 35-composition/build.gradle.kts
         # Design from scratch
       - from: java/basics/interfaces-encapsulation/from-scratch/README.md
         to: 36-design-from-scratch/README.md
@@ -121,7 +121,7 @@ packages:
       - <<: *clean-gradle-wrapper
         to: 36-design-from-scratch
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 36-design-from-scratch
+        to: 36-design-from-scratch/build.gradle.kts
   pss-lab01:
     format:
       - zip
