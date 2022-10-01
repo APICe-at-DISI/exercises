@@ -20,6 +20,9 @@ jobs:
       with:
         distribution: temurin
         java-version: 17
+    - name: Setup WSL
+      if: runner.os == 'Linux'
+      uses: Vampire/setup-wsl@v1.3.1
     - name: Checkout
       uses: actions/checkout@v3.0.2
     - name: Tests
