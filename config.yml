@@ -75,8 +75,8 @@ packages:
         # Gradle-ize
       - from: java/basics/arrays/array/README-add-build.md
         to: 31-gradleization/README.md
-      - from: java/basics/arrays/array/src/WorkWithArrays.java
-        to: 31-array/src/WorkWithArrays.java
+      - from: java/basics/arrays/array/src/it/unibo/arrays/WorkWithArrays.java
+        to: 31-array/src/it/unibo/arrays/WorkWithArrays.java
         # toString
       - from: java/basics/minimal-proficiency/tostring/README.md
         to: 32-toString/README.md
