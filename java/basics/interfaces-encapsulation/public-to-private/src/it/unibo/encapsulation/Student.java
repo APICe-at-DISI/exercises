@@ -2,10 +2,10 @@ package it.unibo.encapsulation;
 
 public class Student {
 
-    private final String name;
-    private final String surname;
-    private final int id;
-    private final int matriculationYear;
+    final String name;
+    final String surname;
+    final int id;
+    final int matriculationYear;
 
     public Student(final int id, final String name, final String surname, final int matriculationYear) {
         this.id = id;
