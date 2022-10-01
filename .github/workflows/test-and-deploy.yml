@@ -28,7 +28,9 @@ jobs:
     - name: Configure WSL
       if: runner.os == 'Windows'
       shell: wsl-bash {0}
-      run: sudo apt install openjdk-17-jre-headless
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openjdk-17-jre-headless
     - name: Checkout
       uses: actions/checkout@v3.0.2
     - name: Tests
