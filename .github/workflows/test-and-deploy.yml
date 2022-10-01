@@ -79,8 +79,7 @@ jobs:
       )
     strategy:
       matrix: ${{ fromJSON(needs.prepare-deliveries.outputs.matrix) }}
-    concurrency:
-      group: delivery-${{ matrix.type }}-${{ matrix.owner }}-${{ matrix.repo }}
+      max-parallel: 1
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3.0.0
