@@ -104,6 +104,24 @@ packages:
         to: 34-interfaces
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 34-interfaces
+        # Composition of interfaces
+      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
+        to: 35-composition/README.md
+      - from: java/basics/interfaces-encapsulation/interface-composition/src
+        to: 35-composition/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 35-composition
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 35-composition
+        # Design from scratch
+      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
+        to: 36-design-from-scratch/README.md
+      - from: java/basics/interfaces-encapsulation/from-scratch/src
+        to: 36-design-from-scratch/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 36-design-from-scratch
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 36-design-from-scratch
   pss-lab01:
     format:
       - zip
