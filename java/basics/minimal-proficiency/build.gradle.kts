@@ -14,14 +14,15 @@ sourceSets {
                     "compilation-classpath/src",
                     "compilation-multifile/src",
                     "compilation-source-folder/src",
+                    "complete-existing-class-student",
+                    "constructors/src",
+                    "hello-world",
                     "impl-calculator",
                     "impl-train-with-correlated-fields",
                     "impl-complex-num",
                     "impl-complex-num-calculator",
-                    "complete-existing-class-student",
-                    "hello-world",
                     "reference-value/src",
-                    "constructors/src",
+                    "tostring/src"
                 )
             )
         }

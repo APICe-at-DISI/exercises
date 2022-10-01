@@ -66,6 +66,62 @@ packages:
         to: 16-array/README.md
       - from: java/basics/arrays/array/src
         to: 16-array/src/main/java
+  oop-lab03:
+    format:
+      - zip
+    destinations:
+      - unibo-oop/lab
+    contents:
+        # Gradle-ize
+      - from: java/basics/arrays/array/README-add-build.md
+        to: 31-gradleization/README.md
+      - from: java/basics/arrays/array/src/WorkWithArrays.java
+        to: 31-array/src/WorkWithArrays.java
+        # toString
+      - from: java/basics/minimal-proficiency/tostring/README.md
+        to: 32-toString/README.md
+      - from: java/basics/minimal-proficiency/tostring/src
+        to: 32-toString/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 32-toString
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 32-toString
+        # Public to private fields
+      - from: java/basics/interfaces-encapsulation/public-to-private/README.md
+        to: 33-encapsulation/README.md
+      - from: java/basics/interfaces-encapsulation/public-to-private/src
+        to: 33-encapsulation/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 33-encapsulation
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 33-encapsulation
+        # Implement interfaces
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
+        to: 34-interfaces/README.md
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
+        to: 34-interfaces/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 34-interfaces
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 34-interfaces
+        # Composition of interfaces
+      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
+        to: 35-composition/README.md
+      - from: java/basics/interfaces-encapsulation/interface-composition/src
+        to: 35-composition/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 35-composition
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 35-composition
+        # Design from scratch
+      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
+        to: 36-design-from-scratch/README.md
+      - from: java/basics/interfaces-encapsulation/from-scratch/src
+        to: 36-design-from-scratch/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 36-design-from-scratch
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 36-design-from-scratch
   pss-lab01:
     format:
       - zip
