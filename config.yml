@@ -86,7 +86,7 @@ packages:
         to: 32-toString
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 32-toString
-        # Encapsulation (private fields)
+        # Public to private fields
       - from: java/basics/interfaces-encapsulation/public-to-private/README.md
         to: 33-encapsulation/README.md
       - from: java/basics/interfaces-encapsulation/public-to-private/src
@@ -95,6 +95,15 @@ packages:
         to: 33-encapsulation
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 33-encapsulation
+        # Implement interfaces
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
+        to: 34-interfaces/README.md
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
+        to: 34-interfaces/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 34-interfaces
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 34-interfaces
   pss-lab01:
     format:
       - zip

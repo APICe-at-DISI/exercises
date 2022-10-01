@@ -8,7 +8,8 @@ sourceSets {
                  * Add a line here if you add an exercise
                  */
                 listOf(
-                    "public-to-private/src"
+                    "implement-interfaces/src",
+                    "public-to-private/src",
                 )
             )
         }
