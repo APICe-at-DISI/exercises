@@ -8,7 +8,9 @@ sourceSets {
                  * Add a line here if you add an exercise
                  */
                 listOf(
+                    "from-scratch/src",
                     "implement-interfaces/src",
+                    "interface-composition/src",
                     "public-to-private/src",
                 )
             )

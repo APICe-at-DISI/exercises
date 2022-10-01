@@ -41,8 +41,8 @@ public class Calculator {
     }
 
     private static void printCalculatorStatus(final Calculator calc) {
-        System.out.println("nOpDone=" + calc.operationsPerformed);
-        System.out.println("lastRes=" + calc.lastResult + "\n");
+        System.out.println("operations performed: " + calc.operationsPerformed);
+        System.out.println("last result" + calc.lastResult + "\n");
     }
 
     public static void main(final String[] args) {
