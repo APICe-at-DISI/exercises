@@ -73,10 +73,6 @@ public class SimpleBankAccount implements BankAccount {
          */
     }
 
-    private void incTransactions() {
-        this.transactions++;
-    }
-
     public void chargeManagementFees(final int id) {
         /*
          * Riduce il bilancio del conto di un ammontare pari alle spese di gestione
