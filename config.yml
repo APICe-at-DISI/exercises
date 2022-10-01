@@ -77,6 +77,15 @@ packages:
         to: 31-gradleization/README.md
       - from: java/basics/arrays/array/src/WorkWithArrays.java
         to: 31-array/src/WorkWithArrays.java
+        # toString
+      - from: java/basics/minimal-proficiency/tostring/README.md
+        to: 32-toString/README.md
+      - from: java/basics/minimal-proficiency/tostring/src
+        to: 32-toString/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 32-toString
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 32-toString
   pss-lab01:
     format:
       - zip
