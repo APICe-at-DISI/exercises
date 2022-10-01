@@ -9,6 +9,11 @@ public interface BankAccount {
 
     void withdrawFromATM(int id, double amount);
 
+    /*
+     * This method is used to charge the management fees on the account balance
+     * (they are computed every few months). This method does not return the amount
+     * computed, it directly collects the amount from the balance.
+     */
     void chargeManagementFees(int id);
 
     double getBalance();
