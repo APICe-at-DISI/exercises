@@ -66,6 +66,17 @@ packages:
         to: 16-array/README.md
       - from: java/basics/arrays/array/src
         to: 16-array/src/main/java
+  oop-lab03:
+    format:
+      - zip
+    destinations:
+      - unibo-oop/lab
+    contents:
+        # Gradle-ize
+      - from: java/basics/arrays/array/README-add-build.md
+        to: 31-gradleization/README.md
+      - from: java/basics/arrays/array/src/WorkWithArrays.java
+        to: 31-array/src/WorkWithArrays.java
   pss-lab01:
     format:
       - zip
