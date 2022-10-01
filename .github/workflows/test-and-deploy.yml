@@ -23,6 +23,12 @@ jobs:
     - name: Setup WSL
       if: runner.os == 'Windows'
       uses: Vampire/setup-wsl@v1.3.1
+      with:
+        distribution: Ubuntu-22.04
+    - name: Configure WSL
+      if: runner.os == 'Windows'
+      shell: wsl-bash {0}
+      run: sudo apt install openjdk-17-jre-headless
     - name: Checkout
       uses: actions/checkout@v3.0.2
     - name: Tests
