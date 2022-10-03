@@ -1,6 +1,6 @@
 #### Il metodo `toString()`
 
-* Analizzare `AccountHolder` contenuta nel package `oop.lab03.bank`
+* Analizzare `AccountHolder`
 * Modella un generico utilizzatore di conto bancario, identificato da un id
 * È realizzata applicando i principi di incapsulamento e information hiding
 (che andranno applicati *sempre* d'ora in poi ad *ogni* classe che costruiremo).
