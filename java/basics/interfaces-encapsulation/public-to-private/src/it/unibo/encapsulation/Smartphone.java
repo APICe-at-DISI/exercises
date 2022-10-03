@@ -65,38 +65,6 @@ public class Smartphone {
         System.out.println("hasNFC: " + hasNFC + "\n");
     }
 
-    public int getCPUCount() {
-        return cpuCount;
-    }
-
-    public int getRam() {
-        return ram;
-    }
-
-    public int getSdSize() {
-        return sdSize;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public boolean isGPSSupported() {
-        return hasGPS;
-    }
-
-    public boolean is3GSupported() {
-        return has3G;
-    }
-
-    public boolean isNFCSupported() {
-        return hasNFC;
-    }
-
     public static void main(final String[] args) {
         // 1) Creare lo smarthpone HTC One sdSize:1024
         final Smartphone htcOne = new Smartphone("HTC", "One", 1024);
