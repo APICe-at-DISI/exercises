@@ -10,14 +10,6 @@ public class Calculator {
         this.lastResult = 0;
     }
 
-    public int getOperationsCount() {
-        return this.operationsPerformed;
-    }
-
-    public double getLastResult() {
-        return this.lastResult;
-    }
-
     private double updateStatus(final double val) {
         this.lastResult = val;
         this.operationsPerformed++;
