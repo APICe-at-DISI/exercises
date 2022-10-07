@@ -209,3 +209,5 @@ packages:
         to: Esercizio1.md
       - from: git/merge-conflict.md
         to: Esercizio2.md
+      - from: git/group-exercise.md
+        to: Esercizio-in-Gruppo.md
