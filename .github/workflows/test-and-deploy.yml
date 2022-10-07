@@ -15,7 +15,7 @@ jobs:
         os: 
           - ubuntu
           # - windows
-          - macos
+          # - macos
     runs-on: ${{ matrix.os }}-latest
     steps:
     - name: Setup Java
