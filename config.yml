@@ -206,4 +206,6 @@ packages:
       - unibo-lptsi-pss/pss-lab-git
     contents:
       - from: git/local.md
-        to: README.md
+        to: Esercizio1.md
+      - from: git/merge-conflict.md
+        to: Esercizio2.md
