@@ -101,6 +101,18 @@ jobs:
           replacesArtifacts: true
           tag: ${{ matrix.ref }}
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
+      - name: Checkout the target repo
+        if: matrix.type == 'repo'
+        uses: actions/checkout@v3.1.0
+        with:
+          repository: ${{ matrix.owner }}/${{ matrix.repo }}
+          path: target
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
+      - name: Create branches if they do not exist
+        working-directory: target
+        run: |
+          git fetch
+          git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || (git checkout -b ${{ matrix.ref }} && git push)
       - name: Deliver a branch
         if: matrix.type == 'repo'
         uses: JamesIves/github-pages-deploy-action@v4.4.0
