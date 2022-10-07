@@ -109,6 +109,7 @@ jobs:
           path: target
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Create branches if they do not exist
+        if: matrix.type == 'repo'
         working-directory: target
         run: |
           git fetch
