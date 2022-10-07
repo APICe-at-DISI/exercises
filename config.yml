@@ -199,3 +199,11 @@ packages:
         to: 02-array/README.md
       - from: java/basics/arrays/array/src
         to: 02-array/src/main/java
+  pss-lab04:
+    format:
+      - repo
+    destinations:
+      - unibo-lptsi-pss/pss-lab-git
+    contents:
+      - from: git/local.md
+        to: README.md
