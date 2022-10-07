@@ -101,6 +101,9 @@ jobs:
           replacesArtifacts: true
           tag: ${{ matrix.ref }}
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
+      - name: Checkout the local repo
+        if: matrix.type == 'repo'
+        uses: actions/checkout@v3.1.0
       - name: Checkout the target repo
         if: matrix.type == 'repo'
         uses: actions/checkout@v3.1.0
