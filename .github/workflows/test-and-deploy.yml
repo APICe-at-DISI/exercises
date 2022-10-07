@@ -84,6 +84,16 @@ jobs:
       matrix: ${{ fromJSON(needs.prepare-deliveries.outputs.matrix) }}
       max-parallel: 1
     steps:
+      - name: Checkout the local repo
+        if: matrix.type == 'repo'
+        uses: actions/checkout@v3.1.0
+      - name: Checkout the target repo
+        if: matrix.type == 'repo'
+        uses: actions/checkout@v3.1.0
+        with:
+          repository: ${{ matrix.owner }}/${{ matrix.repo }}
+          path: target
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Download artifact
         uses: actions/download-artifact@v3.0.0
         with:
@@ -100,16 +110,6 @@ jobs:
           repo: ${{ matrix.repo }}
           replacesArtifacts: true
           tag: ${{ matrix.ref }}
-          token: ${{ secrets.DEPLOYMENT_TOKEN }}
-      - name: Checkout the local repo
-        if: matrix.type == 'repo'
-        uses: actions/checkout@v3.1.0
-      - name: Checkout the target repo
-        if: matrix.type == 'repo'
-        uses: actions/checkout@v3.1.0
-        with:
-          repository: ${{ matrix.owner }}/${{ matrix.repo }}
-          path: target
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Create branches if they do not exist
         if: matrix.type == 'repo'
