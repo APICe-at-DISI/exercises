@@ -113,7 +113,7 @@ jobs:
         working-directory: target
         run: |
           git fetch
-          git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || (git checkout -b ${{ matrix.ref }} && git push)
+          git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || (git checkout -b ${{ matrix.ref }} && git push -u origin/${{ matrix.ref }})
       - name: Deliver a branch
         if: matrix.type == 'repo'
         uses: JamesIves/github-pages-deploy-action@v4.4.0
