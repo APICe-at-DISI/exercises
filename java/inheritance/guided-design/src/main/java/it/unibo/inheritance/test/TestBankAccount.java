@@ -2,9 +2,7 @@ package it.unibo.inheritance.test;
 
 import it.unibo.inheritance.api.AccountHolder;
 import it.unibo.inheritance.api.BankAccount;
-import it.unibo.inheritance.impl.ClassicBankAccount;
 import it.unibo.inheritance.impl.ExtendedStrictBankAccount;
-import it.unibo.inheritance.impl.RestrictedBankAccount;
 import it.unibo.inheritance.impl.SimpleBankAccount;
 
 public class TestBankAccount {
@@ -66,10 +64,10 @@ public class TestBankAccount {
         /*
          * Change the two accounts to verify that the behaviour of restricted and simple bank account are preserved
          */
-        final BankAccount restricted = new RestrictedBankAccount(aRossi, 0);
+        final BankAccount restricted = null;
         final BankAccount extendedStrict = new ExtendedStrictBankAccount(aBianchi, 0);
         final BankAccount simpleBankAccount = new SimpleBankAccount(aRossi, 0);
-        final BankAccount classicBankAccount = new ClassicBankAccount(aBianchi, 0);
+        final BankAccount classicBankAccount = null;
         requireAccountsToWorkTheSameWay(restricted, extendedStrict);
         requireAccountsToWorkTheSameWay(simpleBankAccount, classicBankAccount);
     }
