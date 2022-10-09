@@ -32,12 +32,12 @@ public class TestBankAccount {
         }
     }
 
-    private static void requireSameAmount(BankAccount account1, BankAccount account2) {
+    private static void requireSameAmount(final BankAccount account1, final BankAccount account2) {
         requireSame("amount in account", account1.getBalance(), account2.getBalance());
         requireSame("transactions count", account1.getTransactionsCount(), account2.getTransactionsCount());
     }
 
-    private static void requireAccountsToWorkTheSameWay(BankAccount account1, BankAccount account2) {
+    private static void requireAccountsToWorkTheSameWay(final BankAccount account1, final BankAccount account2) {
         // First deposit
         account1.deposit(account1.getAccountHolder().getUserID(), INTIAL_AMOUNT);
         account2.deposit(account2.getAccountHolder().getUserID(), INTIAL_AMOUNT);
