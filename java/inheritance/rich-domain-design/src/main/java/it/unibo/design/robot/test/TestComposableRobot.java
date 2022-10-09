@@ -1,6 +1,6 @@
 package it.unibo.design.robot.test;
 
-import it.unibo.design.robot.api.CommandableRobotPart;
+import it.unibo.design.robot.components.api.CommandableRobotPart;
 import it.unibo.design.robot.components.api.ComposableRobot;
 import it.unibo.design.robot.components.api.RobotPart;
 import it.unibo.design.robot.components.impl.AtomicBattery;

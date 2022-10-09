@@ -1,6 +1,4 @@
-package it.unibo.design.robot.api;
-
-import it.unibo.design.robot.components.api.RobotPart;
+package it.unibo.design.robot.components.api;
 
 public interface CommandableRobotPart extends RobotPart {
 
