@@ -134,9 +134,19 @@ packages:
         # DRY with extension
       - from: java/inheritance/improve-design/
         to: 41-dry/
-        # DRY with extension
+        # Design with abstract classes
       - from: java/inheritance/guided-design/
         to: 42-abstract-classes/
+        # Design with abstract classes
+      - from: java/inheritance/rich-domain-design/
+        to: 43-44-rich-design/
+        excluding:
+          - README-domain.md
+          - README-extension.md
+      - from: java/inheritance/rich-domain-design/README-extension.md
+        to: 43-extend-a-design/Esercizio 43.md
+      - from: java/inheritance/rich-domain-design/README-domain.md
+        to: 44-extend-a-design/Esercizio 44.md
 
   ###################################################
   #                      PSS                        #
