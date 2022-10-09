@@ -11,6 +11,9 @@ clean-gradle-wrapper: &clean-gradle-wrapper
 # Configuration
 branch: exercises
 packages:
+  ###################################################
+  #                      OOP                        #
+  ###################################################
   oop-lab01: &oop01
     format:
       - zip
@@ -122,6 +125,19 @@ packages:
         to: 36-design-from-scratch
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 36-design-from-scratch/build.gradle.kts
+  oop-lab04:
+    format:
+      - zip
+    destinations:
+      - unibo-oop/lab
+    contents:
+        # DRY with extension
+      - from: java/inheritance/improve-design/
+        to: 41-dry/
+
+  ###################################################
+  #                      PSS                        #
+  ###################################################
   pss-lab01:
     format:
       - zip
