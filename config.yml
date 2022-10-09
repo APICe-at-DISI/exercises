@@ -237,7 +237,7 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab-git
     contents:
-      - from: git/local.md
+      - from: git/branching.md
         to: Esercizio1.md
       - from: git/merge-conflict.md
         to: Esercizio2.md
