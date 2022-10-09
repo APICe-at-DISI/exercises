@@ -1,10 +1,9 @@
-package it.unibo.design.robot.impl;
+package it.unibo.design.robot.components.impl;
 
 import java.util.Arrays;
 
 import it.unibo.design.robot.components.api.RobotPart;
 import it.unibo.design.robot.components.api.RobotPartCollection;
-import it.unibo.design.robot.components.impl.AbstractArrayBasedPartCollection;
 
 /**
  * More efficient {@link RobotPartCollection} implementation. Starts with a
