@@ -17,6 +17,14 @@ fun inside(path: String, run: ShellScript.() -> String) = shellRun {
     result
 }
 
+fun inside(path: File, run: ShellScript.() -> String) = inside(path.absolutePath, run)
+
 inside("java/basics") {
     gradle("compileJava", "test")
+}
+
+File("java/inheritance/").listFiles()?.filter { it.isDirectory }?.forEach { folder ->
+    inside(folder) {
+        gradle("compileJava")
+    }
 }
