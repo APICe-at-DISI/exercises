@@ -14,7 +14,7 @@ packages:
   ###################################################
   #                      OOP                        #
   ###################################################
-  oop-lab01: &oop01
+  oop-lab01:
     format:
       - zip
     destinations:
@@ -134,6 +134,9 @@ packages:
         # DRY with extension
       - from: java/inheritance/improve-design/
         to: 41-dry/
+        # DRY with extension
+      - from: java/inheritance/guided-design/
+        to: 42-abstract-classes/
 
   ###################################################
   #                      PSS                        #
