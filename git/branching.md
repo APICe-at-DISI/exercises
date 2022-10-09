@@ -342,3 +342,90 @@ HEAD is now at c8fdbb3 create the attribute files
 HEAD detached at c8fdbb3
 nothing to commit, working tree clea
 ```
+
+### Si crei un nuovo branch di nome `experiment` e si agganci la `HEAD` al nuovo branch
+
+```
+❯ git branch experiment
+❯ git status
+HEAD detached at c8fdbb3
+nothing to commit, working tree clea
+❯ git checkout experiment
+Switched to branch 'experiment'
+❯ git status
+On branch experiment
+nothing to commit, working tree clean
+```
+
+Alternativa valida: `git checkout -b experiment`
+
+### Si crei un file README.md con contenuto a piacere, e si faccia un commit che lo includa
+
+```
+❯ echo 'this is a readme' >> README.md
+❯ cat README.md
+this is a readme
+❯ git status
+On branch experiment
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+❯ git add README.md
+❯ git status
+On branch experiment
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)
+new file:   README.md
+
+❯ git commit -m 'create a README file'
+[experiment 901ce27] create a README file
+1 file changed, 1 insertion(+)
+create mode 100644 README.md
+❯ git status
+On branch experiment
+nothing to commit, working tree clean
+```
+
+### Si torni sul branch master e si elenchino i branch disponibili
+
+```
+❯ git checkout master
+Switched to branch 'master'
+❯ git status
+On branch master
+nothing to commit, working tree clean
+❯ git branch -v
+experiment 901ce27 create a README file
+* master     dbe6d06 remove ToDeleTe.java
+```
+
+### Si unisca il branch experiment al branch master (si faccia un merge in cui experiment viene messo dentro master, e non viceversa)
+
+```
+❯ git merge experiment
+Merge made by the 'ort' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+❯ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+### Si osservi la storia del repository
+
+```
+❯ git log --all --graph --oneline
+*   a8cbe9c (HEAD -> master) Merge branch 'experiment'
+    |\  
+    | * 901ce27 (experiment) create a README file
+* | dbe6d06 remove ToDeleTe.java
+* | e8f6321 rename Mistake into ToDelete
+* | 777b6d5 add Mistake.java
+  |/
+* c8fdbb3 create the attribute files
+* ad267b4 create an ignore list
+* d82cd28 create HelloWorld.java
+```
