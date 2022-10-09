@@ -1,13 +1,13 @@
 package it.unibo.design.robot.test;
 
 import it.unibo.design.robot.api.CommandableRobotPart;
-import it.unibo.design.robot.api.ComposableRobot;
+import it.unibo.design.robot.components.api.ComposableRobot;
 import it.unibo.design.robot.components.api.RobotPart;
 import it.unibo.design.robot.components.impl.AtomicBattery;
 import it.unibo.design.robot.components.impl.BorderNavigator;
 import it.unibo.design.robot.components.impl.RobotArm;
 import it.unibo.design.robot.impl.BaseRobot;
-import it.unibo.design.robot.impl.SimpleComposableRobot;
+import it.unibo.design.robot.components.impl.SimpleComposableRobot;
 
 /**
  * Utility class for testing composable robots

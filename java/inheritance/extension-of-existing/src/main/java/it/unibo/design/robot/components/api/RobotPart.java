@@ -1,11 +1,9 @@
 package it.unibo.design.robot.components.api;
 
-import it.unibo.design.robot.api.ComposableRobot;
 import it.unibo.design.robot.api.Robot;
 
 /**
- * Models a generic robot part
- *
+ * Models a generic robot part.
  */
 public interface RobotPart {
 

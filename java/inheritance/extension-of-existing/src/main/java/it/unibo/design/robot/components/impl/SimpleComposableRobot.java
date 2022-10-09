@@ -1,10 +1,12 @@
-package it.unibo.design.robot.impl;
+package it.unibo.design.robot.components.impl;
 
 import java.util.Objects;
 
-import it.unibo.design.robot.api.ComposableRobot;
+import it.unibo.design.robot.components.api.ComposableRobot;
 import it.unibo.design.robot.components.api.RobotPart;
 import it.unibo.design.robot.components.api.RobotPartCollection;
+import it.unibo.design.robot.impl.AdvancedArrayBasedPartCollection;
+import it.unibo.design.robot.impl.BaseRobot;
 
 public class SimpleComposableRobot extends BaseRobot implements ComposableRobot {
 
