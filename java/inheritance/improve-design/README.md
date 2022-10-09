@@ -5,9 +5,11 @@ Look at `SimpleBankAccount` and `StrictBankAccount`.
 1. Create a new class `ExtendedStrictBankAccount` that extends `SimpleBankAccount`,
   with the same behavior of `StrictBankAccount` (provided by us).
   Your goal is to reduce, as much as possible, code duplications.
-  *Note:* modifying `SimpleBankAccount` is forbidden. There must be **NO** change.
+  *Note:* modifying `BankAccount`, `AccountHolder`, or `SimpleBankAccount` is *forbidden*.
 
-2. Answer the following question:
+2. Change the type of the class created in `TestBankAccount` and use it to test your implementation
+
+3. Answer the following question:
 
 We used inheritance in order to improve a sub-optimal design (of course it was sub-optimal, we didn't know inheritance existed!).
 How would you have designed the application,
