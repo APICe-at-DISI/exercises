@@ -14,9 +14,11 @@ jobs:
       matrix:
         os: 
           - ubuntu
-          # - windows
-          # - macos
+          - windows
+          - macos
     runs-on: ${{ matrix.os }}-latest
+    concurrency:
+      group: test-${{ matrix.os }}
     steps:
     - name: Setup Java
       uses: actions/setup-java@v3.5.1
@@ -37,7 +39,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3.1.0
     - name: Tests
-      run: echo skip # ./tests.main.kts
+      run: ./tests.main.kts
   prepare-deliveries:
     runs-on: ubuntu-latest
     outputs:
