@@ -1,6 +1,6 @@
-package it.unibo.design.robot.api;
+package it.unibo.design.robot.components.api;
 
-import it.unibo.design.robot.components.api.RobotPart;
+import it.unibo.design.robot.api.Robot;
 
 public interface ComposableRobot extends Robot {
 
