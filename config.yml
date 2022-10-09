@@ -131,22 +131,25 @@ packages:
     destinations:
       - unibo-oop/lab
     contents:
+        # Git local
+      - from: git/local.md
+        to: 41-git/README.md
         # DRY with extension
       - from: java/inheritance/improve-design/
-        to: 41-dry/
+        to: 42-dry/
         # Design with abstract classes
       - from: java/inheritance/guided-design/
-        to: 42-abstract-classes/
+        to: 43-abstract-classes/
         # Design with abstract classes
       - from: java/inheritance/rich-domain-design/
-        to: 43-44-rich-design/
+        to: 44-45-rich-design/
         excluding:
           - README-domain.md
           - README-extension.md
       - from: java/inheritance/rich-domain-design/README-extension.md
-        to: 43-extend-a-design/Esercizio 43.md
+        to: 44-45-rich-design/Esercizio 44.md
       - from: java/inheritance/rich-domain-design/README-domain.md
-        to: 44-extend-a-design/Esercizio 44.md
+        to: 44-45-rich-design/Esercizio 45.md
 
   ###################################################
   #                      PSS                        #
