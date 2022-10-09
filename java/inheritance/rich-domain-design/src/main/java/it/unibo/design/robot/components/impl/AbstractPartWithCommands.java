@@ -1,6 +1,6 @@
 package it.unibo.design.robot.components.impl;
 
-import it.unibo.design.robot.api.CommandableRobotPart;
+import it.unibo.design.robot.components.api.CommandableRobotPart;
 
 import java.util.Arrays;
 
