@@ -131,15 +131,15 @@ packages:
     destinations:
       - unibo-oop/lab
     contents:
-        # Git local
-      - from: git/local.md
-        to: 43-git/README.md
         # DRY with extension
       - from: java/inheritance/improve-design/
         to: 41-dry/
         # Design with abstract classes
       - from: java/inheritance/guided-design/
         to: 42-abstract-classes/
+        # Git local
+      - from: git/local.md
+        to: 43-git/README.md
         # Design with abstract classes
       - from: java/inheritance/rich-domain-design/
         to: 44-45-rich-design/
