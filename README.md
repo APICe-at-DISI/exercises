@@ -53,7 +53,7 @@ Either way, at this point you have your solution on exercises with instructions,
 and it is just a matter of adding the changes to make your solution an exercise;
 but you did that already! It's just matter of.
 
-``git shash pop``
+``git stash pop``
 
 Fix any conflict that may arise (though none should),
 then commit, and push to exercises.
