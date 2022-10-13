@@ -243,3 +243,14 @@ packages:
         to: Esercizio2.md
       - from: git/group-exercise.md
         to: Esercizio-in-Gruppo.md
+  pss-lab05:
+    format:
+      - repo
+    destinations:
+      - unibo-lptsi-pss/pss-lab05
+    contents:
+       # Public to private fields
+      - from: java/basics/interfaces-encapsulation/public-to-private/README.md
+        to: 01-encapsulation/README.md
+      - from: java/basics/interfaces-encapsulation/public-to-private/src
+        to: 01-encapsulation/src/main/java
