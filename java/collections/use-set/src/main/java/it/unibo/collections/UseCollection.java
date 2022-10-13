@@ -7,7 +7,6 @@ import java.util.List;
 import static it.unibo.collections.test.Assertions.assertContentEqualsInAnyOrder;
 import static it.unibo.collections.test.Assertions.assertTrue;
 
-//CHECKSTYLE: MagicNumber OFF
 /**
  * Example class using {@link java.util.Collection}.
  */

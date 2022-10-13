@@ -55,7 +55,7 @@ public final class Assertions {
     }
 
     private static void confirmOK(final Object expected, final Object actual) {
-        System.out.println(EXPECTED_HEADER + expected + " expected, and " + actual + " received."); // NOPMD
+        System.out.println(EXPECTED_HEADER + expected + " expected, and " + actual + " received.");
     }
 
     private static void onNotEquals(final Object expected, final Object actual) {
@@ -71,7 +71,7 @@ public final class Assertions {
             .append(error)
             .append('\n')
             .append(decoration);
-        System.err.println(builder); // NOPMD
+        System.err.println(builder);
         System.exit(errorCode);
     }
 }
