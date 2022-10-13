@@ -31,5 +31,6 @@ File("java/inheritance/").inAllDirectories {
 }
 
 File("java/collections").inAllDirectories {
-    gradle("build", "check")
+    val tasks = arrayOf("build", "check") + if (git.currentBranch() == "master") arrayOf("run") else emptyArray()
+    gradle(*tasks)
 }
