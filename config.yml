@@ -161,8 +161,10 @@ packages:
         to: 51-set/
       - from: java/collections/custom-comparator/
         to: 52-comparator/
+      - from: java/collections/design/
+        to: 53-implement-with-collections/
       - from: git/branching.md
-        to: 53-branching/README.md
+        to: 54-branching/README.md
 
   ###################################################
   #                      PSS                        #
