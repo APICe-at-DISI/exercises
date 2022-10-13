@@ -159,8 +159,10 @@ packages:
       # Sets
       - from: java/collections/use-set/
         to: 51-set/
+      - from: java/collections/custom-comparator/
+        to: 52-comparator/
       - from: git/branching.md
-        to: 52-branching/README.md
+        to: 53-branching/README.md
 
   ###################################################
   #                      PSS                        #
