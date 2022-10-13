@@ -10,12 +10,13 @@ repositories {
     mavenCentral()
 }
 
-val runSet = tasks.registering(JavaExec::class) {
+val runSet by tasks.registering(JavaExec::class) {
     mainClass.set("it.unibo.collections.sets.UseSet")
+    classpath(sourceSets.main.get().runtimeClasspath)
 }
 
-val runCollection = tasks.registering(JavaExec::class) {
-    mainClass.set("it.unibo.collections.collections.UseCollection")
-}
+tasks.run.get().dependsOn(runSet)
 
-tasks.run.get().dependsOn(runSet, runCollection)
+application {
+    mainClass.set("it.unibo.collections.UseCollection")
+}
