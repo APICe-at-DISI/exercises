@@ -40,21 +40,21 @@ public final class UseOrderedWarehouse {
         final Product p1 = new ComparableProduct("Apple", 100);
         final Product p2 = new ComparableProduct("Banana", 30);
         final Product p3 = new ComparableProduct("Watermelon", 10);
-        final Warehouse w = new OrderedWarehouse();
+        final Warehouse warehouse = new OrderedWarehouse();
         // Populate the warehouse
-        w.addProduct(p3);
-        assertContentEqualsInOrder(List.of(p3), w.allProducts());
-        w.addProduct(p1);
-        assertContentEqualsInOrder(List.of(p1, p3), w.allProducts());
-        w.addProduct(p2);
+        warehouse.addProduct(p3);
+        assertContentEqualsInOrder(List.of(p3), warehouse.allProducts());
+        warehouse.addProduct(p1);
+        assertContentEqualsInOrder(List.of(p1, p3), warehouse.allProducts());
+        warehouse.addProduct(p2);
         // Check that the products get sorted correctly
-        assertContentEqualsInOrder(List.of(p1, p2, p3), w.allProducts());
-        assertContentEqualsInAnyOrder(Set.of(p1.getName(), p2.getName(), p3.getName()), w.allNames());
+        assertContentEqualsInOrder(List.of(p1, p2, p3), warehouse.allProducts());
+        assertContentEqualsInAnyOrder(Set.of(p1.getName(), p2.getName(), p3.getName()), warehouse.allNames());
         // Changes to the returned set should not affect the warehouse
-        final var modifiedProductSet = w.allProducts();
+        final var modifiedProductSet = warehouse.allProducts();
         modifiedProductSet.remove(p1);
         assertContentEqualsInAnyOrder(List.of(p2, p3), modifiedProductSet);
-        assertContentEqualsInAnyOrder(Set.of(p1.getName(), p2.getName(), p3.getName()), w.allNames());
-        assertContentEqualsInOrder(List.of(p1, p2, p3), w.allProducts());
+        assertContentEqualsInAnyOrder(Set.of(p1.getName(), p2.getName(), p3.getName()), warehouse.allNames());
+        assertContentEqualsInOrder(List.of(p1, p2, p3), warehouse.allProducts());
     }
 }
