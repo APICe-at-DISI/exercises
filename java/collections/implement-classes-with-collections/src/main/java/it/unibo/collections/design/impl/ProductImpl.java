@@ -6,7 +6,7 @@ import it.unibo.collections.design.api.Product;
  * Product implementation.
  * 
  */
-public final class ProductImpl implements Product {
+public class ProductImpl implements Product {
 
     private final String name;
     private final double quantity;
@@ -27,7 +27,7 @@ public final class ProductImpl implements Product {
      * {@inheritDoc}
      */
     @Override
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
@@ -35,7 +35,7 @@ public final class ProductImpl implements Product {
      * {@inheritDoc}
      */
     @Override
-    public double getQuantity() {
+    public final double getQuantity() {
         return quantity;
     }
 
@@ -43,7 +43,7 @@ public final class ProductImpl implements Product {
      * {@inheritDoc}
      */
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         return name.hashCode();
     }
 
@@ -51,8 +51,11 @@ public final class ProductImpl implements Product {
      * {@inheritDoc}
      */
     @Override
-    public boolean equals(final Object obj) {
-        return obj == this || obj instanceof ProductImpl p && p.name.equals(name);
+    public final boolean equals(final Object obj) {
+        return obj == this
+            || obj instanceof ProductImpl p
+            && p.getClass().equals(this.getClass()) // Breaks the symmetry otherwise
+            && p.name.equals(name);
     }
 
     /**
@@ -60,6 +63,6 @@ public final class ProductImpl implements Product {
      */
     @Override
     public String toString() {
-        return "ProductImpl [name=" + name + ", quantity=" + quantity + "]";
+        return "Product[name=" + name + ", quantity=" + quantity + "]";
     }
 }
