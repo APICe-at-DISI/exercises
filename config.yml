@@ -150,6 +150,19 @@ packages:
         to: 44-45-rich-design/Esercizio 44.md
       - from: java/inheritance/rich-domain-design/README-domain.md
         to: 44-45-rich-design/Esercizio 45.md
+  oop-lab05:
+    format:
+      - zip
+    destinations:
+      - unibo-oop/lab
+    contents:
+      # Sets
+      - from: java/collections/use-set/
+        to: 51-set/
+      - from: java/collections/custom-comparator/
+        to: 52-comparator/
+      - from: git/branching.md
+        to: 53-branching/README.md
 
   ###################################################
   #                      PSS                        #

@@ -8,6 +8,9 @@ import java.io.File
 
 // DSL
 fun ShellScript.gradle(vararg tasks: String) = command("bash", listOf("gradlew") + tasks.toList())
+fun File.inAllDirectories(run: ShellScript.() -> String) = requireNotNull(listFiles()) { "not a directory: $this" }
+    .filter { it.isDirectory }
+    .forEach { inside(it, run) }
 
 fun inside(path: String, run: ShellScript.() -> String) = shellRun {
     val startDirectory = command("pwd")
@@ -23,8 +26,11 @@ inside("java/basics") {
     gradle("compileJava", "test")
 }
 
-File("java/inheritance/").listFiles()?.filter { it.isDirectory }?.forEach { folder ->
-    inside(folder) {
-        gradle("compileJava")
-    }
+File("java/inheritance/").inAllDirectories {
+    gradle("compileJava")
+}
+
+File("java/collections").inAllDirectories {
+    val tasks = arrayOf("build", "check") + if (git.currentBranch() == "master") arrayOf("run") else emptyArray()
+    gradle(*tasks)
 }
