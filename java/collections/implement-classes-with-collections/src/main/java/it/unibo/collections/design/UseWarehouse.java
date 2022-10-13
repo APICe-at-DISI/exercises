@@ -24,7 +24,7 @@ public final class UseWarehouse {
         /*
          * Realize the classes:
          *
-         * 1) WarehouseImpl implements Warehouse. Such class should use internally
+         * 1. WarehouseImpl implements Warehouse. Such class should use internally
          * a java.util.LinkedHashSet. Differently from HashSet the iteration order
          * of LinkedHashSet is predictable and reproducible even when using object
          * that don't implement a custom hashCode.
@@ -32,10 +32,13 @@ public final class UseWarehouse {
          * https://www.artima.com/weblogs/viewpost.jsp?thread=122295
          */
         /*
-         * 2) ProductImpl implements Product. Remember that two products are the
+         * 2. ProductImpl implements Product. Remember that two products are the
          * same if their name is the same.
          *
-         * Read VERY carefully the comments in the interfaces and use them to run the test.
+         * Read VERY carefully the comments in the interfaces and use them to prepare the implementations.
+         */
+        /*
+         * 3. Fix the construction of objects in this test.
          */
         final Product p1 = null; // new ProductImpl("p1", 100);
         final Product p2 = null; // new ProductImpl("p2", 30);

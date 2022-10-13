@@ -2,6 +2,7 @@ package it.unibo.collections.test;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Objects;
 
 /**
  * Utilities for testing.
@@ -42,6 +43,7 @@ public final class Assertions {
     }
 
     private static boolean checkContentEqualsInAnyOrder(final Collection<?> expected, final Collection<?> actual) {
+        Objects.requireNonNull(expected);
         if (actual == null || expected.size() != actual.size()) {
             return false;
         }
@@ -53,6 +55,38 @@ public final class Assertions {
         }
         return expectedCopy.isEmpty();
     }
+
+    /**
+     * Exits with an error if the two collections do not contain the same elements (except for the order).
+     *
+     * @param expected the expected collection
+     * @param actual the actual collection
+     */
+    public static void assertContentEqualsInOrder(final Collection<?> expected, final Collection<?> actual) {
+        if (checkContentEqualsInOrder(expected, actual)) {
+            confirmOK(expected, actual);
+        } else {
+            onNotEquals(expected, actual);
+        }
+    }
+
+    private static boolean checkContentEqualsInOrder(final Collection<?> expected, final Collection<?> actual) {
+        Objects.requireNonNull(expected);
+        if (actual == null || expected.size() != actual.size()) {
+            return false;
+        }
+        final var expectedIterator = expected.iterator();
+        final var actualIterator = actual.iterator();
+        while (expectedIterator.hasNext()) {
+            final var actualElement = actualIterator.next();
+            final var expectedElement = expectedIterator.next();
+            if (!expectedElement.equals(actualElement)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     private static void confirmOK(final Object expected, final Object actual) {
         System.out.println(EXPECTED_HEADER + expected + " expected, and " + actual + " received."); // NOPMD
