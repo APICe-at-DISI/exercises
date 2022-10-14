@@ -287,7 +287,7 @@ packages:
         to: 03-composition/README.md
       - from: java/basics/interfaces-encapsulation/interface-composition/src
         to: 03-composition/src/main/java
-     - <<: *clean-gradle-wrapper
+      - <<: *clean-gradle-wrapper
         to: 03-composition
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 03-composition/build.gradle.kts
