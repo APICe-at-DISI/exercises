@@ -269,11 +269,19 @@ packages:
         to: 01-encapsulation/README.md
       - from: java/basics/interfaces-encapsulation/public-to-private/src
         to: 01-encapsulation/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 01-encapsulation
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 01-encapsulation/build.gradle.kts
       # Implement interfaces
       - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
         to: 02-interfaces/README.md
       - from: java/basics/interfaces-encapsulation/implement-interfaces/src
         to: 02-interfaces/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 02-interfaces
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 02-interfaces/build.gradle.kts
       # Composition of interfaces
       - from: java/basics/interfaces-encapsulation/interface-composition/README.md
         to: 03-composition/README.md
