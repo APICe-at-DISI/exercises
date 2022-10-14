@@ -287,8 +287,17 @@ packages:
         to: 03-composition/README.md
       - from: java/basics/interfaces-encapsulation/interface-composition/src
         to: 03-composition/src/main/java
+     - <<: *clean-gradle-wrapper
+        to: 03-composition
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 03-composition/build.gradle.kts
       # Design from scratch
       - from: java/basics/interfaces-encapsulation/from-scratch/README.md
         to: 04-design-from-scratch/README.md
       - from: java/basics/interfaces-encapsulation/from-scratch/src
         to: 04-design-from-scratch/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 04-design-from-scratch
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 04-design-from-scratch/build.gradle.kts
+
