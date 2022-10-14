@@ -269,3 +269,18 @@ packages:
         to: 01-encapsulation/README.md
       - from: java/basics/interfaces-encapsulation/public-to-private/src
         to: 01-encapsulation/src/main/java
+      # Implement interfaces
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
+        to: 02-interfaces/README.md
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
+        to: 02-interfaces/src/main/java
+      # Composition of interfaces
+      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
+        to: 03-composition/README.md
+      - from: java/basics/interfaces-encapsulation/interface-composition/src
+        to: 03-composition/src/main/java
+      # Design from scratch
+      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
+        to: 04-design-from-scratch/README.md
+      - from: java/basics/interfaces-encapsulation/from-scratch/src
+        to: 04-design-from-scratch/src/main/java
