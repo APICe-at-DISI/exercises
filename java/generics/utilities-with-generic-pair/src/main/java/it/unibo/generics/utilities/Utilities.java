@@ -62,7 +62,7 @@ public final class Utilities {
      * @return a random element from the collection
      *
      */
-    public static <X> X getRandomElement(final Collection<X> coll) {
+    public static <X> X randomElement(final Collection<X> coll) {
         return null;
     }
 
@@ -77,7 +77,7 @@ public final class Utilities {
      *            Second collection type
      * @return a pair with two random elements
      */
-    public static <X, Y> Pair<X, Y> getRandomPair(final Collection<X> first, final Collection<Y> second) {
+    public static <X, Y> Pair<X, Y> randomPair(final Collection<X> first, final Collection<Y> second) {
         return null;
     }
 }

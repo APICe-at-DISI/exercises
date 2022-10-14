@@ -24,14 +24,14 @@ public final class UseUtilities {
         assertEquals(Set.of("a", "b", "e"), Utilities.symmetricDifference(setA, setB));
         final var extractedA = new HashSet<String>();
         while (!extractedA.equals(setA)) {
-            final var random = Utilities.getRandomElement(setA);
+            final var random = Utilities.randomElement(setA);
             assertContains(setA, random);
             extractedA.add(random);
         }
         extractedA.clear();
         final var extractedB = new HashSet<String>();
         while (!(extractedA.equals(setA) && extractedB.equals(setB))) {
-            final var randomPair =  Utilities.getRandomPair(setA, setB);
+            final var randomPair =  Utilities.randomPair(setA, setB);
             extractedA.add(randomPair.getFirst());
             extractedB.add(randomPair.getSecond());
             assertContains(setA, randomPair.getFirst());
