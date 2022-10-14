@@ -40,8 +40,10 @@ public final class Utilities {
      */
     public static <X> Set<X> intersection(final Set<? extends X> setA, final Set<? extends X> setB) {
         final Set<X> res = new LinkedHashSet<>();
-        for (final X elem: setA) {
-            if (setB.contains(elem)) {
+        final var smaller = setA.size() > setB.size() ? setB : setA;
+        final var larger = setA.size() > setB.size() ? setA : setB;
+        for (final X elem: smaller) {
+            if (larger.contains(elem)) {
                 res.add(elem);
             }
         }
@@ -71,7 +73,7 @@ public final class Utilities {
      * @return a random element from the collection
      *
      */
-    public static <X> X getRandomElement(final Collection<X> coll) {
+    public static <X> X randomElement(final Collection<X> coll) {
         int n = RANDOM_GENERATOR.nextInt(coll.size());
         for (final X x : coll) {
             if (n == 0) {
@@ -93,7 +95,7 @@ public final class Utilities {
      *            Second collection type
      * @return a pair with two random elements
      */
-    public static <X, Y> Pair<X, Y> getRandomPair(final Collection<X> first, final Collection<Y> second) {
-        return new Pair<>(getRandomElement(first), getRandomElement(second));
+    public static <X, Y> Pair<X, Y> randomPair(final Collection<X> first, final Collection<Y> second) {
+        return new Pair<>(randomElement(first), randomElement(second));
     }
 }
