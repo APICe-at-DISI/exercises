@@ -161,7 +161,7 @@ packages:
         to: 51-set/
       - from: java/collections/custom-comparator/
         to: 52-comparator/
-      - from: java/collections/design/
+      - from: java/collections/implement-classes-with-collections/
         to: 53-implement-with-collections/
       - from: git/branching.md
         to: 54-branching/README.md
