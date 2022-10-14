@@ -265,39 +265,39 @@ packages:
       - unibo-lptsi-pss/pss-lab05
     contents:
        # Public to private fields
-      - from: java/basics/interfaces-encapsulation/public-to-private/README.md
-        to: 01-encapsulation/README.md
-      - from: java/basics/interfaces-encapsulation/public-to-private/src
-        to: 01-encapsulation/src/main/java
       - <<: *clean-gradle-wrapper
         to: 01-encapsulation
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 01-encapsulation/build.gradle.kts
+      - from: java/basics/interfaces-encapsulation/public-to-private/README.md
+        to: 01-encapsulation/README.md
+      - from: java/basics/interfaces-encapsulation/public-to-private/src
+        to: 01-encapsulation/src/main/java
       # Implement interfaces
-      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
-        to: 02-interfaces/README.md
-      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
-        to: 02-interfaces/src/main/java
       - <<: *clean-gradle-wrapper
         to: 02-interfaces
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 02-interfaces/build.gradle.kts
-      # Composition of interfaces
-      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
-        to: 03-composition/README.md
-      - from: java/basics/interfaces-encapsulation/interface-composition/src
-        to: 03-composition/src/main/java
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
+        to: 02-interfaces/README.md
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
+        to: 02-interfaces/src/main/java
+         # Composition of interfaces
       - <<: *clean-gradle-wrapper
         to: 03-composition
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 03-composition/build.gradle.kts
-      # Design from scratch
-      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
-        to: 04-design-from-scratch/README.md
-      - from: java/basics/interfaces-encapsulation/from-scratch/src
-        to: 04-design-from-scratch/src/main/java
+      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
+        to: 03-composition/README.md
+      - from: java/basics/interfaces-encapsulation/interface-composition/src
+        to: 03-composition/src/main/java
+        # Design from scratch
       - <<: *clean-gradle-wrapper
         to: 04-design-from-scratch
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 04-design-from-scratch/build.gradle.kts
-
+      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
+        to: 04-design-from-scratch/README.md
+      - from: java/basics/interfaces-encapsulation/from-scratch/src
+        to: 04-design-from-scratch/src/main/java
+     
