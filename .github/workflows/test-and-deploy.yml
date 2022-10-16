@@ -123,7 +123,7 @@ jobs:
           git checkout ${{ matrix.ref }} || git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || (git checkout -b ${{ matrix.ref }} && git push --set-upstream target ${{ matrix.ref }})
       - name: Deliver a branch
         if: matrix.type == 'repo'
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           folder: ${{ matrix.target }}
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
