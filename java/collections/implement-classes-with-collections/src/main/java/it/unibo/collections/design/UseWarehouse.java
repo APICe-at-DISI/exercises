@@ -36,12 +36,6 @@ public final class UseWarehouse {
          * same if their name is the same.
          *
          * Read VERY carefully the comments in the interfaces and use them to prepare the implementations.
-<<<<<<< HEAD
-=======
-         */
-        /*
-         * 3. Fix the construction of objects in this test.
->>>>>>> master
          */
         /*
          * 3. Fix the construction of objects in this test.
