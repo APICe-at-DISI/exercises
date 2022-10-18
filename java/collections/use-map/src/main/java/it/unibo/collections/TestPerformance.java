@@ -33,13 +33,13 @@ public final class TestPerformance {
         for (int i = 1; i <= ELEMS; i++) {
             set.add(Integer.toString(i));
         }
-        System.out.println(set);
+        System.out.println(set); // NOPMD
         /*
          * Compute the time and print result
          */
         time = System.nanoTime() - time;
         final var millis = TimeUnit.NANOSECONDS.toMillis(time);
-        System.out.println(
+        System.out.println(// NOPMD
             "Converting " + ELEMS + " int to String and inserting them in a Set took " + time + "ns (" + millis + "ms)"
         );
     }

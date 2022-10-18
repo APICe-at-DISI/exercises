@@ -20,3 +20,7 @@ tasks.run.get().dependsOn(runSet)
 application {
     mainClass.set("it.unibo.collections.UseCollection")
 }
+
+spotbugs {
+    omitVisitors.set(listOf("MethodReturnCheck"))
+}
