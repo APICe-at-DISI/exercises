@@ -135,12 +135,12 @@ public final class UseListsAndMaps {
         /*
          * 8) Compute the population of the world
          */
-        long totPop = 0;
+        long worldPopulation = 0;
         for (final long population : world.values()) {
-            totPop += population;
+            worldPopulation += population;
         }
         log(
-            "We are ~" + totPop + " human beings on this pale blue dot (enough people to overflow integers :D)."
+            "We are ~" + worldPopulation + " humans beings on this pale blue dot (just enough to overflow integers :D)."
         );
     }
 
