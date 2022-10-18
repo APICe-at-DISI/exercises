@@ -145,7 +145,7 @@ public final class UseListsAndMaps {
         );
     }
 
-    private static String timeAsString(long nanoseconds) {
+    private static String timeAsString(final long nanoseconds) {
         return nanoseconds + "ns (" + NANOSECONDS.toMillis(nanoseconds) + "ms)";
     }
 
