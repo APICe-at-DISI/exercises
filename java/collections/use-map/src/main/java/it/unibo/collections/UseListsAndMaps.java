@@ -1,12 +1,7 @@
 package it.unibo.collections;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
-import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
 /**
  * Example class using {@link List} and {@link Map}.
@@ -55,17 +50,17 @@ public final class UseListsAndMaps {
         /*
          * 7) Build a new Map that associates to each continent's name its
          * population:
-         * 
+         *
          * Africa -> 1,110,635,000
-         * 
+         *
          * Americas -> 972,005,000
-         * 
+         *
          * Antarctica -> 0
-         * 
+         *
          * Asia -> 4,298,723,000
-         * 
+         *
          * Europe -> 742,452,000
-         * 
+         *
          * Oceania -> 38,304,000
          */
         /*
