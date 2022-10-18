@@ -7,7 +7,11 @@ import com.lordcodes.turtle.shellRun
 import java.io.File
 
 // DSL
-fun ShellScript.gradle(vararg tasks: String) = command("bash", listOf("gradlew") + tasks.toList())
+fun ShellScript.gradle(vararg tasks: String) = tasks.toList().let { tasksList ->
+    command("bash", listOf("gradlew") + tasksList)
+        .also { println("$ ./gradlew ${tasksList.joinToString(" ") }") }
+}
+
 fun File.inAllDirectories(run: ShellScript.() -> String) = requireNotNull(listFiles()) { "not a directory: $this" }
     .filter { it.isDirectory }
     .forEach { inside(it, run) }
@@ -15,6 +19,7 @@ fun File.inAllDirectories(run: ShellScript.() -> String) = requireNotNull(listFi
 fun inside(path: String, run: ShellScript.() -> String) = shellRun {
     val startDirectory = command("pwd")
     changeWorkingDirectory(path)
+    println("Running in $path")
     val result = run()
     changeWorkingDirectory(startDirectory)
     result

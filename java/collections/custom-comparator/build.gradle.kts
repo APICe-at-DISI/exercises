@@ -11,3 +11,7 @@ repositories {
 application {
     mainClass.set("it.unibo.collections.comparators.UseSetWithOrder")
 }
+
+spotbugs {
+    omitVisitors.set(listOf("ComparatorIdiom"))
+}

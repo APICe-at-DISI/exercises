@@ -33,7 +33,6 @@ public final class TestPerformance {
         for (int i = 1; i <= ELEMS; i++) {
             set.add(Integer.toString(i));
         }
-        System.out.println(set); // NOPMD
         /*
          * Compute the time and print result
          */

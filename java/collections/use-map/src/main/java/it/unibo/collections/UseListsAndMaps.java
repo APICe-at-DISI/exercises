@@ -64,6 +64,9 @@ public final class UseListsAndMaps {
             builder.append(i);
             builder.append(", ");
         }
+        if (builder.length() > 0) {
+            builder.delete(builder.length() - 2, builder.length());
+        }
         log(builder);
         /*
          * 5) Measure the performance of inserting new elements in the head of
@@ -77,17 +80,13 @@ public final class UseListsAndMaps {
             arrayList.add(0, i);
         }
         time = System.nanoTime() - time;
-        log(// NOPMD
-            "Inserting " + ELEMENTS + " elements as first in an ArrayList took " + timeAsString(time)
-        );
+        log("Inserting " + ELEMENTS + " elements as first in an ArrayList took " + timeAsString(time));
         time = System.nanoTime();
         for (int i = 0; i < ELEMENTS; i++) {
             linkedList.add(0, i);
         }
         time = System.nanoTime() - time;
-        log(
-            "Inserting " + ELEMENTS + " elements as first in a LinkedList took " + timeAsString(time)
-        );
+        log("Inserting " + ELEMENTS + " elements as first in a LinkedList took " + timeAsString(time));
         /*
          * 6) Measure the performance of reading 1000 times an element whose
          * position is in the middle of the collection for both ArrayList and
