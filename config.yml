@@ -173,6 +173,8 @@ packages:
     contents:
       - from: git/merge-conflict.md
         to: 61-git-remotes-merge-conflict/README.md
+      - from: java/collections/use-map/
+        to: 62-use-lists-and-maps/
 
   ###################################################
   #                      PSS                        #
