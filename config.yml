@@ -165,6 +165,14 @@ packages:
         to: 53-implement-with-collections/
       - from: git/branching.md
         to: 54-branching/README.md
+  oop-lab06:
+    format:
+      - repo
+    destinations:
+      - unibo-oop/lab06
+    contents:
+      - from: git/merge-conflict.md
+        to: 61-git-remotes-merge-conflict/README.md
 
   ###################################################
   #                      PSS                        #
