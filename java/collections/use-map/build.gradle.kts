@@ -10,13 +10,17 @@ repositories {
     mavenCentral()
 }
 
-val runSet by tasks.registering(JavaExec::class) {
-    mainClass.set("it.unibo.collections.sets.UseSet")
+val runPerformance by tasks.registering(JavaExec::class) {
+    mainClass.set("it.unibo.collections.TestPerformance")
     classpath(sourceSets.main.get().runtimeClasspath)
 }
 
-tasks.run.get().dependsOn(runSet)
+tasks.run.get().dependsOn(runPerformance)
 
 application {
-    mainClass.set("it.unibo.collections.UseCollection")
+    mainClass.set("it.unibo.collections.UseListsAndMaps")
+}
+
+spotbugs {
+    omitVisitors.set(listOf("MethodReturnCheck"))
 }

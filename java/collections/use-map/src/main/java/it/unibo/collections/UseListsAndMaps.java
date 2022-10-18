@@ -6,20 +6,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import static java.util.concurrent.TimeUnit.NANOSECONDS;
+
 /**
  * Example class using {@link List} and {@link Map}.
  *
  */
 public final class UseListsAndMaps {
 
-    private static final int TO_MS = 1_000_000;
-    private static final int ELEMS = 100_000;
+    private static final int ELEMENTS = 100_000;
     private static final int READS = 10_000;
     private static final int START = 1000;
     private static final int END = 2000;
-    private static final String NS = "ns (";
-    private static final String MS = "ms).";
-
     private static final long AFRICA_POPULATION = 1_110_635_000L;
     private static final long AMERICAS_POPULATION = 972_005_000L;
     private static final long ANTARCTICA_POPULATION = 0L;
@@ -66,6 +64,9 @@ public final class UseListsAndMaps {
             builder.append(i);
             builder.append(", ");
         }
+        if (builder.length() > 0) {
+            builder.delete(builder.length() - 2, builder.length());
+        }
         log(builder);
         /*
          * 5) Measure the performance of inserting new elements in the head of
@@ -75,21 +76,17 @@ public final class UseListsAndMaps {
          * TestPerformance.java.
          */
         long time = System.nanoTime();
-        for (int i = 0; i < ELEMS; i++) {
+        for (int i = 0; i < ELEMENTS; i++) {
             arrayList.add(0, i);
         }
         time = System.nanoTime() - time;
-        log(// NOPMD
-            "Inserting " + ELEMS + " elements as first in an ArrayList took " + time + NS + time / TO_MS + MS
-        );
+        log("Inserting " + ELEMENTS + " elements as first in an ArrayList took " + timeAsString(time));
         time = System.nanoTime();
-        for (int i = 0; i < ELEMS; i++) {
+        for (int i = 0; i < ELEMENTS; i++) {
             linkedList.add(0, i);
         }
         time = System.nanoTime() - time;
-        log(
-            "Inserting " + ELEMS + " elements as first in a LinkedList took " + time + NS + time / TO_MS + MS
-        );
+        log("Inserting " + ELEMENTS + " elements as first in a LinkedList took " + timeAsString(time));
         /*
          * 6) Measure the performance of reading 1000 times an element whose
          * position is in the middle of the collection for both ArrayList and
@@ -102,8 +99,7 @@ public final class UseListsAndMaps {
         }
         time = System.nanoTime() - time;
         log(
-            "Reading " + READS + " elements in the middle of an ArrayList took "
-            + time + NS + time / TO_MS + MS
+            "Reading " + READS + " elements in the middle of an ArrayList took " + timeAsString(time)
         );
         time = System.nanoTime();
         for (int i = 0; i < READS; i++) {
@@ -111,8 +107,7 @@ public final class UseListsAndMaps {
         }
         time = System.nanoTime() - time;
         log(
-            "Reading " + READS + " elements in the middle of a LinkedList took "
-            + time + NS + time / TO_MS + MS
+            "Reading " + READS + " elements in the middle of a LinkedList took " + timeAsString(time)
         );
         /*
          * 7) Build a new Map that associates to each continent's name its
@@ -145,9 +140,12 @@ public final class UseListsAndMaps {
             totPop += population;
         }
         log(
-            "We are ~" + totPop + " human beings on this pale blue dot"
-            + " (enough people to overflow integers :D)."
+            "We are ~" + totPop + " human beings on this pale blue dot (enough people to overflow integers :D)."
         );
+    }
+
+    private static String timeAsString(final long nanoseconds) {
+        return nanoseconds + "ns (" + NANOSECONDS.toMillis(nanoseconds) + "ms)";
     }
 
     private static void log(final Object message) {
