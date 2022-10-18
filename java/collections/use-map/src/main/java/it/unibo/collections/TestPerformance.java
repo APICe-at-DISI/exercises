@@ -39,7 +39,13 @@ public final class TestPerformance {
         time = System.nanoTime() - time;
         final var millis = TimeUnit.NANOSECONDS.toMillis(time);
         System.out.println(// NOPMD
-            "Converting " + ELEMS + " int to String and inserting them in a Set took " + time + "ns (" + millis + "ms)"
+            "Converting "
+                + set.size()
+                + " ints to String and inserting them in a Set took "
+                + time
+                + "ns ("
+                + millis
+                + "ms)"
         );
     }
 }
