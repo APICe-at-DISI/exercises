@@ -101,7 +101,7 @@ public class UserImpl implements User {
      * {@inheritDoc}
      */
     @Override
-    public boolean equals(final Object o) {
+    public final boolean equals(final Object o) {
         if (this == o) {
             /*
              * Performance optimization
@@ -122,7 +122,7 @@ public class UserImpl implements User {
      * {@inheritDoc}
      */
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         /*
          * All fields are final and immutable: lazy initialization allowed.
          */
