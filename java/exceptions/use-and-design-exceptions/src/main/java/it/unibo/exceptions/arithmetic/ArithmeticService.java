@@ -2,6 +2,7 @@ package it.unibo.exceptions.arithmetic;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import static it.unibo.exceptions.arithmetic.ArithmeticUtil.nullIfNumberOrException;
@@ -45,7 +46,7 @@ public final class ArithmeticService {
      * @param commands the commands to interpret.
      */
     public ArithmeticService(final List<String> commands) {
-        commandQueue = new ArrayList<>(commands); // Defensive mutable copy
+        commandQueue = new ArrayList<>(Objects.requireNonNull(commands)); // Defensive mutable copy
     }
 
     /**
