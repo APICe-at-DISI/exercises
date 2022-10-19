@@ -25,6 +25,11 @@ public final class UseArithmeticService {
      * @param args unused
      */
     public static void main(final String[] args) {
+        try {
+            new ServiceBehindUnstableNetwork(1);
+        } catch (final IllegalArgumentException e) {
+            LOG.println("Correct: a service with 100% failures cannot be created.");
+        }
         final NetworkComponent server = new ServiceBehindUnstableNetwork();
         assertComputeResult(server, "1", "1");
         assertComputeResult(server, "2", "1", PLUS, "1");
@@ -37,6 +42,10 @@ public final class UseArithmeticService {
     }
 
     private static void retrySendOnNetworkError(final NetworkComponent server, final String message) {
+        /*
+         * This method should re-try to send message to the provided server, catching all IOExceptions,
+         * until it succeeds.
+         */
         while (true) {
             try {
                 server.sendData(message);
@@ -48,6 +57,10 @@ public final class UseArithmeticService {
     }
 
     private static String retryReceiveOnNetworkError(final NetworkComponent server) {
+        /*
+         * This method should re-try to retrieve information from the provided server, catching all IOExceptions,
+         * until it succeeds.
+         */
         while (true) {
             try {
                 return server.receiveResponse();
@@ -84,6 +97,7 @@ public final class UseArithmeticService {
     ) {
         try {
             assertComputeResult(server, null, operation);
+            throw new AssertionError(expected.getSimpleName() + " expected, but no exception was thrown");
         } catch (final Throwable error) { // NOPMD **never** catch generic exceptions in real life
             assertExceptionIs(expected, error);
         }
