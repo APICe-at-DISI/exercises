@@ -27,6 +27,7 @@ public final class UseArithmeticService {
     public static void main(final String[] args) {
         try {
             new ServiceBehindUnstableNetwork(1);
+            throw new AssertionError("Expected an IllegalArgumentException, but no Exception was thrown");
         } catch (final IllegalArgumentException e) {
             LOG.println("Correct: a service with 100% failures cannot be created.");
         }
