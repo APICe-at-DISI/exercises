@@ -66,7 +66,7 @@ public final class SocialNetworkUserImpl<U extends User> extends UserImpl implem
     }
 
     /*
-     * 2) Define a further constructor where age is defaulted to -1
+     * 2) Define a further constructor where the age defaults to -1
      */
 
     /*
