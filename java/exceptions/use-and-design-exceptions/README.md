@@ -8,7 +8,9 @@ If the check fails, it must throw an `IllegalArgumentExeption` with an appropria
 
 ### Catch existing exceptions
 
-Implement the methods `retrySendOnNetworkError` and `retryReceiveOnNetworkError` as described in the source code.
+Implement the methods `UseArithmeticService.retrySendOnNetworkError`
+and `UseArithmeticService.retryReceiveOnNetworkError`
+as described in the source code.
 
 ### Design new exceptions
 
