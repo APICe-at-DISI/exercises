@@ -177,6 +177,8 @@ packages:
         to: 62-use-lists-and-maps/
       - from: java/exceptions/use-and-design-exceptions
         to: 63-exceptions/
+      - from: java/collections/implement-classes-with-maps
+        to: 64-design-with-maps/
 
   ###################################################
   #                      PSS                        #
