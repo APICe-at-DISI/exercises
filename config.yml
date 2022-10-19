@@ -175,6 +175,8 @@ packages:
         to: 61-git-remotes-merge-conflict/README.md
       - from: java/collections/use-map/
         to: 62-use-lists-and-maps/
+      - from: java/exceptions/use-and-design-exceptions
+        to: 63-exceptions/
 
   ###################################################
   #                      PSS                        #
