@@ -179,6 +179,8 @@ packages:
         to: 63-exceptions/
       - from: java/collections/implement-classes-with-maps
         to: 64-design-with-maps/
+      - from: java/generics/implement-generic-interface
+        to: 65-implement-generic-class/
 
   ###################################################
   #                      PSS                        #
