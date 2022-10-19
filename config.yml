@@ -181,6 +181,8 @@ packages:
         to: 64-design-with-maps/
       - from: java/generics/implement-generic-interface
         to: 65-implement-generic-class/
+      - from: git/instructions-clone.md
+        to: README.md
 
   ###################################################
   #                      PSS                        #
