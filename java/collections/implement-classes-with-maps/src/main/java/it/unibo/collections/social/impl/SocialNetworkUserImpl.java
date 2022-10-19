@@ -70,7 +70,7 @@ public final class SocialNetworkUserImpl<U extends User> extends UserImpl implem
     }
 
     /*
-     * 2) Define a further constructor where age is defaulted to -1
+     * 2) Define a further constructor where the age defaults to -1
      */
     /**
      * Builds a user participating is a social network (age won't be set).
@@ -86,7 +86,6 @@ public final class SocialNetworkUserImpl<U extends User> extends UserImpl implem
     public SocialNetworkUserImpl(final String firstName, final String lastName, final String username) {
         this(firstName, lastName, username, -1);
     }
-
 
     /*
      * [METHODS]
