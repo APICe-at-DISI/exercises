@@ -62,7 +62,7 @@ public final class TestSocialNetworkUser {
         dwashington.addFollowedUser("colleagues", kbacon);
         dwashington.addFollowedUser(WRITERS, mgladwell);
         /*
-         * All tests must print true
+         * No test should fail
          */
         assertTrue("smith has not set any age at all", !asmith.isAgeDefined());
         final Collection<User> kbaconFriends = kbacon.getFollowedUsersInGroup("Malcom");
@@ -72,7 +72,7 @@ public final class TestSocialNetworkUser {
         final Collection<User> dwashFriends = dwashington.getFollowedUsersInGroup(WRITERS);
         assertTrue("Denzel has 2 followed people in group \"" + WRITERS + "\"",  dwashFriends.size() == 2);
         /*
-         * Adding another friend to Denzel's "writers" group...
+         * Adding another friend to Denzel's "writers" group
          */
         dwashFriends.add(asmith);
         /*

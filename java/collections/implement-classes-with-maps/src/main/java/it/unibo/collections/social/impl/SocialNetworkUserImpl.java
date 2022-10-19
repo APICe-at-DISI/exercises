@@ -27,27 +27,33 @@ import java.util.Set;
  */
 public final class SocialNetworkUserImpl<U extends User> extends UserImpl implements SocialNetworkUser<U> {
 
+    /*
+     *
+     * [FIELDS]
+     *
+     * Define any necessary field
+     *
+     * In order to save the people followed by a user organized in groups, adopt
+     * a generic-type Map:
+     *
+     * think of what type of keys and values would best suit the requirements
+     */
     private final Map<String, Set<U>> friends;
 
-    /**
-     * Builds a user participating is a social network (age won't be set).
+    /*
+     * [CONSTRUCTORS]
      *
-     * @param firstName
-     *            the user firstname
-     * @param lastName
-     *            the user lastname
-     * @param username
-     *            alias of the user, i.e. the way a user is identified on an
-     *            application
+     * 1) Complete the definition of the constructor below, for building a user
+     * participating in a social network, with 4 parameters, initializing:
+     *
+     * - firstName
+     * - lastName
+     * - username
+     * - age and every other necessary field
      */
-    public SocialNetworkUserImpl(final String firstName, final String lastName, final String username) {
-        this(firstName, lastName, username, -1);
-
-    }
-
     /**
      * Builds a user participating in a social network.
-     * 
+     *
      * @param name
      *            the user firstname
      * @param surname
@@ -63,6 +69,30 @@ public final class SocialNetworkUserImpl<U extends User> extends UserImpl implem
         this.friends = new HashMap<>(); // inference of type variables
     }
 
+    /*
+     * 2) Define a further constructor where age is defaulted to -1
+     */
+    /**
+     * Builds a user participating is a social network (age won't be set).
+     *
+     * @param firstName
+     *            the user firstname
+     * @param lastName
+     *            the user lastname
+     * @param username
+     *            alias of the user, i.e. the way a user is identified on an
+     *            application
+     */
+    public SocialNetworkUserImpl(final String firstName, final String lastName, final String username) {
+        this(firstName, lastName, username, -1);
+    }
+
+
+    /*
+     * [METHODS]
+     *
+     * Implements the methods below
+     */
     /**
      * {@inheritDoc}
      */
