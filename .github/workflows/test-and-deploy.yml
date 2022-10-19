@@ -18,7 +18,7 @@ jobs:
           - macos
     runs-on: ${{ matrix.os }}-latest
     concurrency:
-      group: test-${{ matrix.os }}
+      group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ github.event.number || github.ref }}
     steps:
     - name: Setup Java
       uses: actions/setup-java@v3.5.1
