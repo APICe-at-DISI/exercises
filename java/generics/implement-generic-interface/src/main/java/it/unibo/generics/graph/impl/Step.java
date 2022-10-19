@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * It takes into account the previous steps and the final position.
  * The initial position is a step having no previous steps.
  * Each step can be easily flatten into a list (i.e. path) of visited nodes.
- * NOTE: such a class is a facility of the  method.
+ * NOTE: this a class is an internal facility.
  * It would be great if we could "hide" this class within {@link GraphImpl}
  *
  * @param <N> the type of the nodes of the graph/tree
