@@ -97,7 +97,7 @@ jobs:
           path: target
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Download artifact
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v3.0.1
         with:
           name: build
       - name: Unpack
