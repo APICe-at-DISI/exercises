@@ -318,4 +318,19 @@ packages:
         to: 04-design-from-scratch/README.md
       - from: java/basics/interfaces-encapsulation/from-scratch/src
         to: 04-design-from-scratch/src/main/java
+pss-lab07:
+    format:
+      - repo
+    destinations:
+      - unibo-lptsi-pss/pss-lab07
+    contents:
+      # DRY with extension
+      - <<: *clean-gradle-wrapper
+        to: 01-dry
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 01-dry/build.gradle.kts
+      - from: java/inheritance/improve-design/
+        to: 01-dry/
+      
+
      
