@@ -17,8 +17,7 @@ packages:
   oop-lab01:
     format:
       - zip
-    destinations:        to: 04-design-from-scratch/src/main/java
-pss-lab07:
+    destinations:
       - unibo-oop/lab # to publish as a github repository, use "repo". Can be added.
     contents: # content priority grows down the list, higher priority contents overwrite existing files
       - from: java/basics/minimal-proficiency/hello-world
