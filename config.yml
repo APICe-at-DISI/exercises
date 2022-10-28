@@ -331,6 +331,13 @@ pss-lab07:
         to: 01-dry/build.gradle.kts
       - from: java/inheritance/improve-design/
         to: 01-dry/
-      
+      # Analysis and design with extension
+      - from: java/inheritance/rich-domain-design/
+        to: 02-rich-design/
+        excluding:
+          - README-domain.md
+          - README-extension.md
+      - from: java/inheritance/rich-domain-design/README-extension.md
+        to: 02-rich-design/Esercizio 02.md 
 
      
