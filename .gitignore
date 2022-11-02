@@ -2,6 +2,7 @@
 .idea
 .gradle/
 .vscode/
+*.iml
 
 # output folders
 bin/
