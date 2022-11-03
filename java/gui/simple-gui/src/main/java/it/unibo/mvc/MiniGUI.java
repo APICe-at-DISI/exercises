@@ -35,7 +35,7 @@ public class MiniGUI {
         final JPanel canvas = new JPanel();
         canvas.setLayout(new BorderLayout());
         /*
-         * EX 01.01
+         * Part 1
          */
         final JPanel aPanel = new JPanel();
         aPanel.setLayout(new BoxLayout(aPanel, BoxLayout.LINE_AXIS));
@@ -43,7 +43,7 @@ public class MiniGUI {
         final JButton write = new JButton("Print a random number on standard output");
         aPanel.add(write);
         /*
-         * EX 01.02
+         * Part 2
          */
         final JTextField result = new JTextField(RESULT_TXT_CONTENT);
         canvas.add(result, BorderLayout.NORTH);
@@ -56,10 +56,10 @@ public class MiniGUI {
             @Override
             public void actionPerformed(final ActionEvent e) {
                 /*
-                 * EX 01.03
+                 * Part 3
                  */
                 final int res = rng.nextInt();
-                System.out.println(res);
+                System.out.println(res); // NOPMD
                 result.setText(RESULT_TXT_CONTENT + ": " + Integer.toString(res));
             }
         });
