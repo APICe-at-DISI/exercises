@@ -33,7 +33,7 @@ public class BadIOGUI {
             + System.getProperty("file.separator")
             + BadIOGUI.class.getSimpleName() + ".txt";
     private static final int PROPORTION = 5;
-    private final Random rng = new Random();
+    private final Random randomGenerator = new Random();
     private final JFrame frame = new JFrame(TITLE);
 
     /**
@@ -65,7 +65,7 @@ public class BadIOGUI {
                  * your UI becomes completely unresponsive.
                  */
                 try (PrintStream ps = new PrintStream(PATH)) {
-                    ps.print(rng.nextInt());
+                    ps.print(randomGenerator.nextInt());
                 } catch (FileNotFoundException e1) {
                     JOptionPane.showMessageDialog(frame, e1, "Error", JOptionPane.ERROR_MESSAGE);
                     e1.printStackTrace();
