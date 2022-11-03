@@ -89,13 +89,20 @@ jobs:
       - name: Checkout the local repo
         if: matrix.type == 'repo'
         uses: actions/checkout@v3.1.0
-      - name: Checkout the target repo
+      - name: Checkout the target repo if it exists, otherwise initialize it
         if: matrix.type == 'repo'
-        uses: actions/checkout@v3.1.0
-        with:
-          repository: ${{ matrix.owner }}/${{ matrix.repo }}
-          path: target
-          token: ${{ secrets.DEPLOYMENT_TOKEN }}
+        run: |
+          git clone https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} target || (
+            mkdir target &&
+            cd target &&
+            git init &&
+            git checkout ${{ matrix.ref }} &&
+            git config user.name 'pianinator[bot]' &&
+            git config user.email 'noreply@unibo.it' &&
+            git commit --allow-empty -m 'initialize the repository' &&
+            git remote add origin https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} &&
+            git push -u origin ${{ matrix.ref }}
+          )
       - name: Download artifact
         uses: actions/download-artifact@v3.0.1
         with:
