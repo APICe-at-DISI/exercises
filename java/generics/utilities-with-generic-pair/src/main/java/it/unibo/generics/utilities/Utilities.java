@@ -2,7 +2,6 @@ package it.unibo.generics.utilities;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
 
