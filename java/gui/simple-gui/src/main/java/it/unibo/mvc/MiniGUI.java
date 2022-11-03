@@ -1,5 +1,8 @@
 package it.unibo.mvc;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -7,15 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
 /**
  * This class is a simple application that writes a random number on a file.
- * 
  * This application does not exploit the model-view-controller pattern, and as
  * such is just to be used to learn the basics, not as a template for your
  * applications.
@@ -23,7 +19,6 @@ import javax.swing.JTextField;
 public class MiniGUI {
 
     private static final String TITLE = "A very simple GUI application";
-    private static final String RESULT_TXT_CONTENT = "Result";
     private static final int PROPORTION = 5;
     private final Random rng = new Random();
     private final JFrame frame = new JFrame(TITLE);
@@ -34,19 +29,8 @@ public class MiniGUI {
     public MiniGUI() {
         final JPanel canvas = new JPanel();
         canvas.setLayout(new BorderLayout());
-        /*
-         * Part 1
-         */
-        final JPanel aPanel = new JPanel();
-        aPanel.setLayout(new BoxLayout(aPanel, BoxLayout.LINE_AXIS));
-        canvas.add(aPanel, BorderLayout.CENTER);
         final JButton write = new JButton("Print a random number on standard output");
-        aPanel.add(write);
-        /*
-         * Part 2
-         */
-        final JTextField result = new JTextField(RESULT_TXT_CONTENT);
-        canvas.add(result, BorderLayout.NORTH);
+        canvas.add(write, BorderLayout.CENTER);
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         /*
@@ -55,12 +39,7 @@ public class MiniGUI {
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                /*
-                 * Part 3
-                 */
-                final int res = rng.nextInt();
-                System.out.println(res); // NOPMD
-                result.setText(RESULT_TXT_CONTENT + ": " + Integer.toString(res));
+                System.out.println(rng.nextInt());
             }
         });
     }
