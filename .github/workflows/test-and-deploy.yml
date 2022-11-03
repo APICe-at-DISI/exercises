@@ -124,10 +124,9 @@ jobs:
         if: matrix.type == 'repo'
         working-directory: target
         run: |
-          URL="https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }}"
-          git remote add target $URL
-          git fetch target
-          git checkout ${{ matrix.ref }} || git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || (git checkout -b ${{ matrix.ref }} && git push --set-upstream target ${{ matrix.ref }})
+          git checkout ${{ matrix.ref }} ||
+          git checkout -b ${{ matrix.ref }} origin/${{ matrix.ref }} ||
+          (git checkout -b ${{ matrix.ref }} && git push --set-upstream origin ${{ matrix.ref }})
       - name: Deliver a branch
         if: matrix.type == 'repo'
         uses: JamesIves/github-pages-deploy-action@v4.4.1
