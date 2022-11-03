@@ -35,7 +35,19 @@ File("java/inheritance/").inAllDirectories {
     gradle("compileJava")
 }
 
-File("java/collections").inAllDirectories {
-    val tasks = arrayOf("build", "check") + if (git.currentBranch() == "master") arrayOf("run") else emptyArray()
-    gradle(*tasks)
+listOf("collections", "generics", "exceptions").forEach {
+    File("java/$it").inAllDirectories {
+        val tasks = arrayOf("build") + if (git.currentBranch() == "master") arrayOf("run") else emptyArray()
+        gradle(*tasks)
+    }
+}
+
+listOf(
+    "gui",
+    // "mvc-io" Temporarily disabled, Roby enable it for lab08
+).forEach {
+    File("java/$it").inAllDirectories {
+        val tasks = arrayOf("build", "javadoc") // Don't run, as it would open a GUI and stall
+        gradle(*tasks)
+    }
 }
