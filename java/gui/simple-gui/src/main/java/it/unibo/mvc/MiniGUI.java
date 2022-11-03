@@ -25,7 +25,7 @@ public class MiniGUI {
     private static final String TITLE = "A very simple GUI application";
     private static final String RESULT_TXT_CONTENT = "Result";
     private static final int PROPORTION = 5;
-    private final Random rng = new Random();
+    private final Random randomGenerator = new Random();
     private final JFrame frame = new JFrame(TITLE);
 
     /**
@@ -58,7 +58,7 @@ public class MiniGUI {
                 /*
                  * Part 3
                  */
-                final int res = rng.nextInt();
+                final int res = randomGenerator.nextInt();
                 System.out.println(res); // NOPMD
                 result.setText(RESULT_TXT_CONTENT + ": " + Integer.toString(res));
             }
