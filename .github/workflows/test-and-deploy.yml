@@ -14,7 +14,7 @@ jobs:
       matrix:
         os: 
           - ubuntu
-          - windows
+#          - windows
           - macos
     runs-on: ${{ matrix.os }}-latest
     concurrency:
