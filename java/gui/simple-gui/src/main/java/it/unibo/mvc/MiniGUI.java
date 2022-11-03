@@ -20,7 +20,7 @@ public class MiniGUI {
 
     private static final String TITLE = "A very simple GUI application";
     private static final int PROPORTION = 5;
-    private final Random rng = new Random();
+    private final Random randomGenerator = new Random();
     private final JFrame frame = new JFrame(TITLE);
 
     /**
@@ -39,7 +39,7 @@ public class MiniGUI {
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                System.out.println(rng.nextInt());
+                System.out.println(randomGenerator.nextInt());
             }
         });
     }
