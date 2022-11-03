@@ -189,7 +189,7 @@ packages:
     destinations:
       - unibo-oop/lab07
     contents:
-      - from: gui/simple-gui
+      - from: java/gui/simple-gui
         to: 61-simple-gui
 
   ###################################################
