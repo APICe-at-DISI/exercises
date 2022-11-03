@@ -183,6 +183,14 @@ packages:
         to: 65-implement-generic-class/
       - from: git/instructions-clone.md
         to: README.md
+  oop-lab07:
+    format:
+      - repo
+    destinations:
+      - unibo-oop/lab07
+    contents:
+      - from: gui/simple-gui
+        to: 61-simple-gui
 
   ###################################################
   #                      PSS                        #
