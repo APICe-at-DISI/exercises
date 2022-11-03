@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.registering
-
 plugins {
     application
     java
