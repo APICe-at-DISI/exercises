@@ -7,14 +7,6 @@ Note that the controller can be reused across *any* kind of view,
 whether graphical or on command line (or network, or whatever).
 `DrawNumberView` represents the view interface (Boundary in ECB).
 
-## Prepare the UI to show errors
-
-The I/O access is source of new possible unpredicted situations, that should be reported to the user as errors via the UI.
-As a first step, we will add to the view the ability to display errors generated in the controller.
-
-* Add a method void displayError(String message) in `DrawNumberView`
-* Implement the method in `DrawNumberSwingView`, using `JOptionPane.showMessageDialog()` to display the error
-
 ## Multiple views
 
 * Modify the architecture in such a way that multiple views are supported at the same time.
