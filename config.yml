@@ -349,5 +349,24 @@ packages:
           - README-extension.md
       - from: java/inheritance/rich-domain-design/README-extension.md
         to: 02-rich-design/Esercizio 02.md 
-
-     
+  pss-lab08:
+    format:
+      - repo
+    destinations:
+      - unibo-lptsi-pss/pss-lab08
+    contents:
+      # DRY with extension
+      - from: java/inheritance/improve-design/
+        to: 01-dry/
+        # Design with abstract classes
+      - from: java/inheritance/guided-design/
+        to: 02-abstract-classes/
+      - from: java/inheritance/rich-domain-design/
+        to: 03-04-rich-design/
+        excluding:
+          - README-domain.md
+          - README-extension.md
+      - from: java/inheritance/rich-domain-design/README-extension.md
+        to: 03-04-rich-design/Esercizio 44.md
+      - from: java/inheritance/rich-domain-design/README-domain.md
+        to: 03-04-rich-design/Esercizio 45.md
