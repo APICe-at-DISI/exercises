@@ -15,7 +15,7 @@ import static java.lang.System.out;
 public final class DrawNumberStandardOutputView implements DrawNumberView {
 
     @Override
-    public void addViewObserver(final DrawNumberController observer) {
+    public void setController(final DrawNumberController observer) {
         /*
          * This UI is output only.
          */
@@ -26,11 +26,6 @@ public final class DrawNumberStandardOutputView implements DrawNumberView {
         /*
          * PrintStreams are always ready.
          */
-    }
-
-    @Override
-    public void numberIncorrect() {
-        out.println("You must enter a number");
     }
 
     @Override

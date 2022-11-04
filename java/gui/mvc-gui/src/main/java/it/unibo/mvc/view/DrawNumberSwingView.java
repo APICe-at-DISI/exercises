@@ -91,17 +91,8 @@ public final class DrawNumberSwingView implements DrawNumberView {
     }
 
     @Override
-    public void addViewObserver(final DrawNumberController observer) {
+    public void setController(final DrawNumberController observer) {
         this.controller = observer;
-    }
-
-    @Override
-    public void numberIncorrect() {
-        showMessageDialog(
-            frame,
-            "Incorrect Number... try again", "Incorrect Number",
-            JOptionPane.ERROR_MESSAGE
-        );
     }
 
     @Override
