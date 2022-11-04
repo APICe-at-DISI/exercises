@@ -29,21 +29,15 @@ public final class DrawNumberControllerImpl implements DrawNumberController {
     @Override
     public void addView(final DrawNumberView view) {
         views.add(view);
-        view.addViewObserver(this);
+        view.setController(this);
         view.start();
     }
 
     @Override
     public void newAttempt(final int n) {
-        try {
-            final DrawResult result = model.attempt(n);
-            for (final DrawNumberView view: views) {
-                view.result(result);
-            }
-        } catch (IllegalArgumentException e) {
-            for (final DrawNumberView view: views) {
-                view.numberIncorrect();
-            }
+        final DrawResult result = model.attempt(n);
+        for (final DrawNumberView view: views) {
+            view.result(result);
         }
     }
 
