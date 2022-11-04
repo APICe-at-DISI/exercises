@@ -1,0 +1,36 @@
+# Work with MVC
+
+This application is a simple "draw number" game with an MVC architecture (ECB-like).
+`DrawNumber` is the application model (Entity in ECB).
+`DrawNumberController` represents the controller (Control in ECB).
+Note that the controller can be reused across *any* kind of view,
+whether graphical or on command line (or network, or whatever).
+`DrawNumberView` represents the view interface (Boundary in ECB).
+
+## Prepare the UI to show errors
+
+The I/O access is source of new possible unpredicted situations, that should be reported to the user as errors via the UI.
+As a first step, we will add to the view the ability to display errors generated in the controller.
+
+* Add a method void displayError(String message) in `DrawNumberView`
+* Implement the method in `DrawNumberSwingView`, using `JOptionPane.showMessageDialog()` to display the error
+
+## Multiple views
+
+* Modify the architecture in such a way that multiple views are supported at the same time.
+* Develop two new views (classes extending `DrawNumberView`):
+  one that writes the match log on file, another that writes on stdout.
+  Those views are *output only* (they do not send new input to the controller).
+* Extend the controller to support multiple views.
+  To doing so, make sure that the controller has a list of views (and not a single one),
+  and that it notifies all of them (for instance with a `for` cicle) every time a new event should be displayed.
+* Attach at the same time two graphical views, the file logger, and the console view, and verify that the application works as expected
+
+## Reflection loading
+
+Instead of hard-coding the implementation of the views, in `LaunchApp` do as follows:
+* Via reflection, load the classes that implement `DrawNumberView` by their name
+  * Note: you need the *qualified* name
+* Find the 0-ary constructor
+* Using a `for` cycle, attach three graphical and three command line views built with the previously found constructor
+* Launch the application
