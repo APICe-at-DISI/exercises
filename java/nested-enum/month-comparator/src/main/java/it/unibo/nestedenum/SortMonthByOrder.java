@@ -3,7 +3,21 @@ package it.unibo.nestedenum;
 import java.util.*;
 
 public class SortMonthByOrder implements MonthSorter {
-    private final List<String> months = List.of("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december");
+    private final List<String> months = List.of(
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+    );
+
     private final Comparator<String> orderComparator = new Comparator<String>() {
         @Override
         public int compare(String s, String t1) {
