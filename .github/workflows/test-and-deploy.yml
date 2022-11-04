@@ -15,7 +15,7 @@ jobs:
         os: 
           - ubuntu
 #          - windows
-#          - macos
+          - macos
     runs-on: ${{ matrix.os }}-latest
     concurrency:
       group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ github.event.number || github.ref }}
@@ -36,10 +36,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y openjdk-17-jre-headless
-#    - name: Checkout
-#      uses: actions/checkout@v3.1.0
-#    - name: Tests
-#      run: ./tests.main.kts
+    - name: Checkout
+      uses: actions/checkout@v3.1.0
+    - name: Tests
+      run: ./tests.main.kts
   prepare-deliveries:
     runs-on: ubuntu-latest
     outputs:
