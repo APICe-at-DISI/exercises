@@ -93,6 +93,7 @@ jobs:
         if: matrix.type == 'repo'
         run: |
           git clone https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} target
+          cd target
           git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || git checkout -b ${{ matrix.ref }}
           if git rev-parse HEAD &> /dev/null; then
             echo 'The repository is empty, creating the target branch and adding a first commit'
