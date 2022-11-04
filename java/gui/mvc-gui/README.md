@@ -10,13 +10,12 @@ whether graphical or on command line (or network, or whatever).
 ## Multiple views
 
 * Modify the architecture in such a way that multiple views are supported at the same time.
-* Develop two new views (classes extending `DrawNumberView`):
-  one that writes the match log on file, another that writes on stdout.
-  Those views are *output only* (they do not send new input to the controller).
+* Develop a new view (class implementing `DrawNumberView`) that writes on stdout.
+  This view is *output only* (it does not send new input to the controller).
 * Extend the controller to support multiple views.
-  To doing so, make sure that the controller has a list of views (and not a single one),
+  To doing so, make sure that the controller has a collection of views (and not a single one),
   and that it notifies all of them (for instance with a `for` cicle) every time a new event should be displayed.
-* Attach at the same time two graphical views, the file logger, and the console view, and verify that the application works as expected
+* Attach at the same time two graphical views and a console view, and verify that the application works as expected.
 
 ## Reflection loading
 
