@@ -15,6 +15,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import static javax.swing.JOptionPane.showConfirmDialog;
+import static javax.swing.JOptionPane.showMessageDialog;
+
 /**
  * Graphical {@link DrawNumberView} implementation.
  */
@@ -53,7 +56,7 @@ public final class DrawNumberSwingView implements DrawNumberView {
                 try {
                     controller.newAttempt(Integer.parseInt(tNumber.getText()));
                 } catch (NumberFormatException exception) {
-                    JOptionPane.showMessageDialog(frame, "An integer please..");
+                    showMessageDialog(frame, "An integer please..");
                 }
             }
         });
@@ -84,8 +87,7 @@ public final class DrawNumberSwingView implements DrawNumberView {
     }
 
     private boolean confirmDialog(final String question, final String name) {
-        return JOptionPane.showConfirmDialog(frame, question, name,
-                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
+        return showConfirmDialog(frame, question, name, JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
     }
 
     @Override
@@ -95,7 +97,7 @@ public final class DrawNumberSwingView implements DrawNumberView {
 
     @Override
     public void numberIncorrect() {
-        JOptionPane.showMessageDialog(
+        showMessageDialog(
             frame,
             "Incorrect Number... try again", "Incorrect Number",
             JOptionPane.ERROR_MESSAGE
@@ -110,7 +112,7 @@ public final class DrawNumberSwingView implements DrawNumberView {
                 return;
             }
             case YOU_WON -> plainMessage(res.getDescription() + NEW_GAME);
-            case YOU_LOST -> JOptionPane.showMessageDialog(
+            case YOU_LOST -> showMessageDialog(
                 frame,
                 res.getDescription() + NEW_GAME, "Lost",
                 JOptionPane.WARNING_MESSAGE
@@ -121,6 +123,6 @@ public final class DrawNumberSwingView implements DrawNumberView {
     }
 
     private void plainMessage(final String msg) {
-        JOptionPane.showMessageDialog(frame, msg, "Result", JOptionPane.PLAIN_MESSAGE);
+        showMessageDialog(frame, msg, "Result", JOptionPane.PLAIN_MESSAGE);
     }
 }
