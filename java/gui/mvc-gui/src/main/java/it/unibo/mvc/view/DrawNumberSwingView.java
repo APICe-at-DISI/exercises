@@ -108,7 +108,7 @@ public final class DrawNumberSwingView implements DrawNumberView {
                 res.getDescription() + NEW_GAME, "Lost",
                 JOptionPane.WARNING_MESSAGE
             );
-            default -> throw new IllegalStateException("Unexpected result: " + res);
+            default -> throw new IllegalStateException("Unknown game state");
         }
         controller.resetGame();
     }
