@@ -15,7 +15,7 @@ jobs:
         os: 
           - ubuntu
 #          - windows
-          - macos
+#          - macos
     runs-on: ${{ matrix.os }}-latest
     concurrency:
       group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ github.event.number || github.ref }}
@@ -36,10 +36,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y openjdk-17-jre-headless
-    - name: Checkout
-      uses: actions/checkout@v3.1.0
-    - name: Tests
-      run: ./tests.main.kts
+#    - name: Checkout
+#      uses: actions/checkout@v3.1.0
+#    - name: Tests
+#      run: ./tests.main.kts
   prepare-deliveries:
     runs-on: ubuntu-latest
     outputs:
@@ -94,7 +94,7 @@ jobs:
         run: |
           git clone https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} target
           cd target
-          git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || git checkout -b ${{ matrix.ref }}
+          git checkout ${{ matrix.ref }} || git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || git checkout -b ${{ matrix.ref }}
           if git rev-parse HEAD &> /dev/null; then
             echo 'The repository is empty, creating the target branch and adding a first commit'
             git config user.name 'pianinator[bot]'
