@@ -191,6 +191,8 @@ packages:
     contents:
       - from: java/gui/simple-gui
         to: 61-simple-gui
+      - from: java/gui/mvc-gui
+        to: 62-mvc-gui-reflection
 
   ###################################################
   #                      PSS                        #
