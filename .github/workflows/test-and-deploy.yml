@@ -89,20 +89,18 @@ jobs:
       - name: Checkout the local repo
         if: matrix.type == 'repo'
         uses: actions/checkout@v3.1.0
-      - name: Checkout the target repo if it exists, otherwise initialize it
+      - name: Checkout the target repo if it exists, initialize if needed
         if: matrix.type == 'repo'
         run: |
-          git clone https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} target || (
-            mkdir target &&
-            cd target &&
-            git init &&
-            git checkout ${{ matrix.ref }} &&
-            git config user.name 'pianinator[bot]' &&
-            git config user.email 'noreply@unibo.it' &&
-            git commit --allow-empty -m 'initialize the repository' &&
-            git remote add origin https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} &&
-            git push -u origin ${{ matrix.ref }}
-          )
+          git clone https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} target
+          git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || git checkout -b ${{ matrix.ref }}
+          if git rev-parse HEAD &> /dev/null; then
+            echo 'The repository is empty, creating the target branch and adding a first commit'
+            git config user.name 'pianinator[bot]'
+            git config user.email 'noreply@unibo.it'
+            git commit --allow-empty -m 'initialize the repository'
+          fi
+          git push -u origin ${{ matrix.ref }}
       - name: Download artifact
         uses: actions/download-artifact@v3.0.1
         with:
@@ -120,13 +118,6 @@ jobs:
           replacesArtifacts: true
           tag: ${{ matrix.ref }}
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
-      - name: Create branches if they do not exist
-        if: matrix.type == 'repo'
-        working-directory: target
-        run: |
-          git checkout ${{ matrix.ref }} ||
-          git checkout -b ${{ matrix.ref }} origin/${{ matrix.ref }} ||
-          (git checkout -b ${{ matrix.ref }} && git push --set-upstream origin ${{ matrix.ref }})
       - name: Deliver a branch
         if: matrix.type == 'repo'
         uses: JamesIves/github-pages-deploy-action@v4.4.1
