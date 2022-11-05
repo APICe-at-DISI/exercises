@@ -189,10 +189,14 @@ packages:
     destinations:
       - unibo-oop/lab07
     contents:
+      - from: java/nested-enum/anonymous-nested-enum
+        to: 61-anonymous-nested-enum
       - from: java/gui/simple-gui
-        to: 61-simple-gui
+        to: 62-simple-gui
       - from: java/gui/mvc-gui
-        to: 62-mvc-gui-reflection
+        to: 63-mvc-gui-reflection
+      - from: git/instructions-clone.md
+        to: README.md
 
   ###################################################
   #                      PSS                        #
@@ -370,3 +374,5 @@ packages:
         to: 03-04-rich-design/Esercizio 44.md
       - from: java/inheritance/rich-domain-design/README-domain.md
         to: 03-04-rich-design/Esercizio 45.md
+      - from: git/instructions-clone.md
+        to: README.md
