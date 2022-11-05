@@ -22,3 +22,7 @@ tasks.test {
 spotbugs {
     omitVisitors.set(listOf("ComparatorIdiom"))
 }
+
+tasks.javadoc {
+    isFailOnError = false
+}

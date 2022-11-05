@@ -23,11 +23,15 @@ import java.util.Comparator;
 public interface MonthSorter {
 
     /**
+     * Provides a comparator that sorts months by number of days.
+     *
      * @return a comparator that sorts the Strings based on the number of days.
      */
     Comparator<String> sortByDays();
 
     /**
+     * Provides a comparator that sorts months by their order in time.
+     *
      * @return a comparator that sorts the Strings based on their order in time.
      */
     Comparator<String> sortByOrder();
