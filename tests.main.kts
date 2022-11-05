@@ -52,5 +52,3 @@ listOf(
         gradle(*tasks)
     }
 }
-
-inside("java/nested-enum/month-comparator") { gradle("build") }
