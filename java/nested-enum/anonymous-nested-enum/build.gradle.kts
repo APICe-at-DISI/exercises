@@ -17,3 +17,7 @@ tasks.test {
     testLogging { events("passed", "skipped", "failed") }
     testLogging.showStandardStreams = true
 }
+
+tasks.javadoc {
+    isFailOnError = false
+}
