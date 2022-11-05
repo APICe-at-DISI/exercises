@@ -43,11 +43,12 @@ listOf("collections", "generics", "exceptions").forEach {
 }
 
 listOf(
-    "gui",
+    "gui", "nested-enum"
     // "mvc-io" Temporarily disabled, Roby enable it for lab08
 ).forEach {
     File("java/$it").inAllDirectories {
-        val tasks = arrayOf("build", "javadoc") // Don't run, as it would open a GUI and stall
+        val tasks = arrayOf("assemble", "javadoc") +
+            if (git.currentBranch() == "master") arrayOf("build") else emptyArray()
         gradle(*tasks)
     }
 }
