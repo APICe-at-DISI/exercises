@@ -197,6 +197,22 @@ packages:
         to: 63-mvc-gui-reflection
       - from: git/instructions-clone.md
         to: README.md
+  oop-lab08:
+    format:
+      - repo
+    destinations:
+      - unibo-oop/lab08
+    contents:
+      - from: java/mvc-io/bad-gui-io
+        to: 81-bad-gui-io
+      - from: java/mvc-io/simple-mvc-io
+        to: 82-simple-mvc-io
+      - from: java/mvc-io/mvc-io
+        to: 83-mvc-io 
+      - from: java/mvc-io/advanced-mvc
+        to: 84-advanced-mvc
+      - from: git/instructions-clone.md
+        to: README.md
 
   ###################################################
   #                      PSS                        #

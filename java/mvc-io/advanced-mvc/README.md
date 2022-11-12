@@ -7,7 +7,7 @@ We will enrich the example by adding I/O.
 
 The I/O access is source of new possible unpredicted situations, that should be reported to the user as errors via the UI. As a first step, we will add to the view the ability to display errors generated in the controller.
 
-* Add a method void displayError(String message) in `DrawNumberView`
+* Add a method `void displayError(String message)` in `DrawNumberView`
 * Implement the method in `DrawNumberViewImpl`, using `JOptionPane.showMessageDialog()` to display the error
 
 ## Configuration file

@@ -5,9 +5,9 @@
 2. Read the comments carefully
 3. Note how ``System.getProperties()`` is used to obtain properties of the current system
 4. Note how these properties are used to produce multi-platform code
-   **NOTE**: ``write once, run everywhere`` is true only if the code is maeant to be multiplatform!
+   **NOTE**: "write once, run everywhere" is true only if the code is designed to be multiplatform!
 5. Note the use of ``Toolkit`` to get the current screen resolution, and dimension the window correctly
-6. Note the use of ``JFrame. setLocationByPlatform()`` to delegate the window positioning to the system composer (the part of the graphical stack in charge of effectively drawing windows, borders, decorations and effects).
+6. Note the use of ``JFrame.setLocationByPlatform()`` to delegate the window positioning to the system composer (the part of the graphical stack in charge of effectively drawing windows, borders, decorations and effects).
 
 ## Do
 ### Ex 01.01
