@@ -213,6 +213,18 @@ packages:
         to: 84-advanced-mvc
       - from: git/instructions-clone.md
         to: README.md
+  oop-lab09:
+    format:
+      - repo
+    destinations:
+      - unibo-oop/lab09
+    contents:
+      - from: java/concurrency/reactive-gui
+        to: 91-reactive-guis
+      - from: java/concurrency/workers
+        to: 92-workers
+      - from: git/instructions-clone.md
+        to: README.md
 
   ###################################################
   #                      PSS                        #
