@@ -24,6 +24,7 @@ public final class LineNumbers {
      * </ul>
      *
      * @param file the file on which the function should operate
+     * @throws IOException if something very bad happens to the file system while operating
      */
     public static void addLineNumbersToTextFile(final File file) throws IOException {
     }
