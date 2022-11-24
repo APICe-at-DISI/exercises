@@ -1,9 +1,8 @@
-import org.gradle.kotlin.dsl.registering
-
 plugins {
     application
     java
     id("org.danilopianini.gradle-java-qa") version "0.40.0"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 repositories {
@@ -11,5 +10,5 @@ repositories {
 }
 
 application {
-    mainClass.set("it.unibo.exceptions.UseArithmeticService")
+    mainClass.set("it.unibo.io.TarantulaNebula")
 }
