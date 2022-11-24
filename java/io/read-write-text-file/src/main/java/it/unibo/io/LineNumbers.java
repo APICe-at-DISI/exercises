@@ -1,6 +1,7 @@
 package it.unibo.io;
 
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Simple utility class that adds line numbers to files.
