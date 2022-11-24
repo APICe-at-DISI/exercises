@@ -411,6 +411,8 @@ packages:
       - unibo-lptsi-pss/pss-lab09
     contents:
       # Sets
+      - from: git/instructions-clone.md
+        to: README.md
       - from: java/collections/use-set/
         to: 01-set/
       - from: java/collections/custom-comparator/
@@ -423,6 +425,8 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab10
     contents:
+      - from: git/instructions-clone.md
+        to: README.md
       - from: java/exceptions/use-and-design-exceptions
         to: 01-exceptions/
       - from: java/io/read-write-text-file
