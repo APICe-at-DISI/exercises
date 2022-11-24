@@ -431,5 +431,5 @@ packages:
         to: 01-exceptions/
       - from: java/io/read-write-text-file
         to: 02-read-write-files/
-#      - from: java/io/from-classpath-to-files
-#        to: 03-read-write-files/
+      - from: java/io/from-classpath-to-files
+        to: 03-read-classpath-write-file/
