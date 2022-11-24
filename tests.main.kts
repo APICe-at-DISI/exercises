@@ -43,7 +43,7 @@ listOf("collections", "generics", "exceptions").forEach {
 }
 
 listOf(
-    "mvc-io", "gui", "nested-enum"
+    "mvc-io", "gui", "nested-enum", "io"
     // "mvc-io" Temporarily disabled, Roby enable it for lab08
 ).forEach {
     File("java/$it").inAllDirectories {
@@ -52,3 +52,5 @@ listOf(
         gradle(*tasks)
     }
 }
+
+
