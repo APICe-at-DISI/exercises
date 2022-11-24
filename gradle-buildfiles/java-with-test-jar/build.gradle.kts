@@ -17,7 +17,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    testLogging { events(TestLogEvent.values()) }
+    testLogging { events(*TestLogEvent.values()) }
     testLogging.showStandardStreams = true
 }
 
