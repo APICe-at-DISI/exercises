@@ -2,6 +2,9 @@ package it.unibo.io;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.util.ArrayList;
 
 /**
  * Simple utility class that adds line numbers to files.
