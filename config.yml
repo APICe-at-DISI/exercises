@@ -225,6 +225,20 @@ packages:
         to: 92-workers
       - from: git/instructions-clone.md
         to: README.md
+  oop-lab10:
+    format:
+      - repo
+    destinations:
+      - unibo-oop/lab10
+    contents:
+      - from: java/lambdas/utilities-for-lists-and-maps
+        to: 101-lambda-utilities-for-lists-and-maps
+      - from: java/streams/utilities-for-music-model
+        to: 102-stream-utilities-for-music-model
+      - from: java/streams/utilities-for-text-processing
+        to: 103-stream-utilities-for-text-processing
+      - from: git/instructions-clone.md
+        to: README.md
 
   ###################################################
   #                      PSS                        #
