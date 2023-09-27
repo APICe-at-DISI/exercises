@@ -51,6 +51,7 @@ public final class Pair<X, Y> {
      * 
      * @return a string representing this pair's state
      */
+    @Override
     public String toString() {
         return "Pair [first=" + first + ", second=" + second + "]";
     }
@@ -58,6 +59,7 @@ public final class Pair<X, Y> {
     /**
      * {@inheritDoc}
      */
+    @Override
     public int hashCode() {
         /*
          * Library hashing function. Decent, but not particularly good.
@@ -77,6 +79,7 @@ public final class Pair<X, Y> {
      * 
      * @return true if the given pair is equal to this pair
      */
+    @Override
     public boolean equals(final Object other) {
         return this == other
             || other instanceof final Pair<?, ?> otherPair
