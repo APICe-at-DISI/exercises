@@ -2,7 +2,7 @@
 
 # FASE 1 - Arrays, le basi
 
-1. Si analizzi il metodo `countOccurencies(int[]. int)` della classe `WorkWithArrays`,
+1. Si analizzi il metodo `countOccurencies(int[] int, int element)` della classe `WorkWithArrays`,
 aiutandosi con l'utilità di test `boolean testCountOccurrencies()`
 2. Si compili ed esegua la classe
 3. Si aggiunga un nuovo test al metodo `testCountOccurrencies()`
