@@ -58,20 +58,20 @@ packages:
         to: 24-program-arguments
         excluding: src
       - from: java/basics/minimal-proficiency/command-line-arguments/src
-        to: 25-program-arguments/src/main/java
+        to: 24-program-arguments/src/main/java
         # Constructors
       - from: java/basics/minimal-proficiency/constructors/README.md
-        to: 26-constructors/README.md
+        to: 25-constructors/README.md
       - from: java/basics/minimal-proficiency/constructors/src
-        to: 27-constructors/src/main/java
+        to: 25-constructors/src/main/java
         # Arrays
       - from: java/basics/arrays/array/README.md
-        to: 28-array/README.md
+        to: 26-array/README.md
       - from: java/basics/arrays/array/src
-        to: 28-array/src/main/java
+        to: 26-array/src/main/java
         # Debug
       - from: java/basics/debug/src
-        to: 29-debug/src/main/java
+        to: 27-debug/src/main/java
   oop-lab03:
     format:
       - zip
