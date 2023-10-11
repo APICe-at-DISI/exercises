@@ -7,10 +7,8 @@ public class SimpleBankAccount implements BankAccount {
      * - double balance: ammontare del conto
      * - int transactions: numero delle operazioni effettuate
      * - static double ATM_TRANSACTION_FEE = 1: costo delle operazioni via ATM
-     * - static double MANAGEMENT_FEE = 5: costo della gestione conto
      */
     private static final double ATM_TRANSACTION_FEE = 1;
-    private static final double MANAGEMENT_FEE = 5;
 
     private final int id;
     private double balance;
@@ -94,14 +92,7 @@ public class SimpleBankAccount implements BankAccount {
         this.transactions++;
     }
 
-    public void chargeManagementFees(final int id) {
-        /*
-         * Riduce il bilancio del conto di un ammontare pari alle spese di gestione
-         */
-        if (checkUser(id)) {
-            this.balance -= SimpleBankAccount.MANAGEMENT_FEE;
-        }
-    }
+    public void chargeManagementFees(final int id) { }
 
     private boolean checkUser(final int id) {
         return this.id == id;
