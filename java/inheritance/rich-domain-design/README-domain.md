@@ -31,7 +31,7 @@ Alla ricezione del comando, se esso è fra quelli supportati, il componente coma
 
 Si desidera testare l'infrastruttura creando un robot componibile ed assegnandogli i seguenti componenti:
 
-* *Batteria atomica*. È un componente non comandabile, alimentato ad uranio-239, che ricarica istantaneamente il robot. In fase di test, per evitare il surriscaldamento, la batteria si attivi esclusivamente qualora la batteria del robot fosse al di sotto del 50% di carica.
+* *Batteria atomica*. È un componente non comandabile, alimentato ad uranio-239, che ricarica istantaneamente il robot. In fase di test, per evitare il surriscaldamento, la batteria si attiva esclusivamente qualora la batteria del robot fosse al di sotto del 50% di carica.
 
 * *Navigatore di confine*. È un componente non comandabile che, una volta avviato, fa sì che il robot raggiunga il bordo del `RobotEnvironment` e continui ad esplorarlo. Ossia, fa sì che il robot proceda in una direzione, fino ad arrivare al bordo, quindi ruoti di 90° e continui ad esplorare lungo il bordo, al raggiungimento di un nuovo bordo, si orienti in modo da poter proseguire l'esplorazione e prosegua.
 
