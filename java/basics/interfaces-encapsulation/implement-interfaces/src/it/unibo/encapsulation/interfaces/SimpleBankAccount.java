@@ -7,9 +7,7 @@ public class SimpleBankAccount implements BankAccount {
      * - double balance: ammontare del conto
      * - int transactions: numero delle operazioni effettuate
      * - static double ATM_TRANSACTION_FEE = 1: costo delle operazioni via ATM
-     * - static double MANAGEMENT_FEE = 5: costo della gestione conto
      */
-
     private final int id;
 
     /*
