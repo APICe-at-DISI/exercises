@@ -11,6 +11,7 @@ jobs:
       run:
         shell: bash
     strategy:
+      fail-fast: false
       matrix:
         os: 
           - ubuntu
@@ -83,6 +84,7 @@ jobs:
         || github.event.pull_request.head.repo.full_name == github.repository
       )
     strategy:
+      fail-fast: false
       matrix: ${{ fromJSON(needs.prepare-deliveries.outputs.matrix) }}
       max-parallel: 1
     steps:
