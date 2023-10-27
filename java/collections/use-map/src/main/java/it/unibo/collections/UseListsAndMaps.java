@@ -45,7 +45,7 @@ public final class UseListsAndMaps {
          * 6) Measure the performance of reading 1000 times an element whose
          * position is in the middle of the collection for both ArrayList and
          * LinkedList, using the collections of point 5. In order to measure
-         * times, use as example PerfTest.java.
+         * times, use as example TestPerformance.java.
          */
         /*
          * 7) Build a new Map that associates to each continent's name its
