@@ -2,9 +2,9 @@
 
 ### Check arguments correctness and throw RuntimeExceptions
 
-Inside the constuctor `ServiceBehindUnstableNetwork(double, int)`,
+Inside the constructor `ServiceBehindUnstableNetwork(double, int)`,
 add a check that the probability is within 0 (included) and 1 (excluded).
-If the check fails, it must throw an `IllegalArgumentExeption` with an appropriate message.
+If the check fails, it must throw an `IllegalArgumentException` with an appropriate message.
 
 ### Catch existing exceptions
 
@@ -18,7 +18,7 @@ Create a `NetworkException extends IOException` with two constructors.
 The 0-ary constructor must create an Exception whose message is "Network error: no response".
 The 1-ary constructor must take a String as input, and create a message "Network error while sending message: <message>"
 
-Modify `ServiceBehindUnstableNetwork.accessTheNework()`
+Modify `ServiceBehindUnstableNetwork.accessTheNetwork()`
 in such a way that it throws the new Exception.
 Notice that the blocks that used to catch `IOException` still work.
 

@@ -49,7 +49,7 @@ public final class ServiceBehindUnstableNetwork implements NetworkComponent {
 
     @Override
     public void sendData(final String data) throws IOException {
-        accessTheNework(data);
+        accessTheNetwork(data);
         final var exceptionWhenParsedAsNumber = nullIfNumberOrException(data);
         if (KEYWORDS.contains(data) || exceptionWhenParsedAsNumber == null) {
             commandQueue.add(data);
@@ -69,7 +69,7 @@ public final class ServiceBehindUnstableNetwork implements NetworkComponent {
 
     @Override
     public String receiveResponse() throws IOException {
-        accessTheNework(null);
+        accessTheNetwork(null);
         try {
             return new ArithmeticService(Collections.unmodifiableList(commandQueue)).process();
         } finally {
@@ -77,7 +77,7 @@ public final class ServiceBehindUnstableNetwork implements NetworkComponent {
         }
     }
 
-    private void accessTheNework(final String message) throws IOException {
+    private void accessTheNetwork(final String message) throws IOException {
         if (randomGenerator.nextDouble() < failProbability) {
             throw new IOException("Generic I/O error");
         }
