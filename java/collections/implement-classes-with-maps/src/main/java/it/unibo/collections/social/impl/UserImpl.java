@@ -127,7 +127,7 @@ public class UserImpl implements User {
          * All fields are final and immutable: lazy initialization allowed.
          */
         if (hash == 0) {
-            hash = Objects.hash(firstName, lastName, username,  age);
+            hash = Objects.hash(firstName, lastName, username, age);
         }
         return hash;
     }
