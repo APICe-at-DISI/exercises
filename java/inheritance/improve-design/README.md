@@ -9,7 +9,9 @@ Look at `SimpleBankAccount` and `StrictBankAccount`.
 
 2. Change the type of the class created in `TestBankAccount` and use it to test your implementation
 
-3. Answer the following question:
+3. Analyse what you just did: compare your `ExtendedStrictBankAccount` with `StrictBankAccount`. See how much code you *reused*.
+
+4. Answer the following question:
 
 We used inheritance in order to improve a sub-optimal design (of course it was sub-optimal, we didn't know inheritance existed!).
 How would you have designed the application,
