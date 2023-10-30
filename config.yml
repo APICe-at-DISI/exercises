@@ -392,27 +392,27 @@ packages:
         to: 03-design-from-scratch/README.md
       - from: java/basics/interfaces-encapsulation/from-scratch/src
         to: 03-design-from-scratch/src/main/java
-  pss-lab07:
+  pss-lab06:
     format:
       - repo
     destinations:
-      - unibo-lptsi-pss/pss-lab07
+      - unibo-lptsi-pss/pss-lab06
     contents:
       # DRY with extension
       - <<: *clean-gradle-wrapper
-        to: 01-dry
+        to: 01-inheritance-dry
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 01-dry/build.gradle.kts
+        to: 01-inheritance-dry/build.gradle.kts
       - from: java/inheritance/improve-design/
-        to: 01-dry/
+        to: 01-inheritance-dry/
       # Analysis and design with extension
       - from: java/inheritance/rich-domain-design/
-        to: 02-rich-design/
+        to: 02-inheritance-rich-design/
         excluding:
           - README-domain.md
           - README-extension.md
       - from: java/inheritance/rich-domain-design/README-extension.md
-        to: 02-rich-design/Esercizio 02.md 
+        to: 02-inheritance-rich-design/Esercizio 02.md 
   pss-lab08:
     format:
       - repo
