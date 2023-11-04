@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T> {
-    private T[] elements;
+    private final T[] elements;
     private Predicate<T> filter;
 
     /**
