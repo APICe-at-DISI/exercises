@@ -34,34 +34,6 @@ public final class Assertions {
      * @param expected the expected collection
      * @param actual the actual collection
      */
-    public static void assertContentEqualsInAnyOrder(final Collection<?> expected, final Collection<?> actual) {
-        if (checkContentEqualsInAnyOrder(expected, actual)) {
-            confirmOK(expected, actual);
-        } else {
-            onNotEquals(expected, actual);
-        }
-    }
-
-    private static boolean checkContentEqualsInAnyOrder(final Collection<?> expected, final Collection<?> actual) {
-        Objects.requireNonNull(expected);
-        if (actual == null || expected.size() != actual.size()) {
-            return false;
-        }
-        final Collection<?> expectedCopy = new ArrayList<>(expected);
-        for (final var elem : actual) {
-            if (!expectedCopy.remove(elem)) {
-                return false;
-            }
-        }
-        return expectedCopy.isEmpty();
-    }
-
-    /**
-     * Exits with an error if the two collections do not contain the same elements (except for the order).
-     *
-     * @param expected the expected collection
-     * @param actual the actual collection
-     */
     public static void assertContentEqualsInOrder(final Iterable<?> expected, final Collection<?> actual) {
         if (checkContentEqualsInOrder(expected, actual)) {
             confirmOK(expected, actual);
