@@ -9,7 +9,7 @@ import java.util.Objects;
  */
 public final class Assertions {
 
-    private static final String ERROR_HEADER = "# ERRROR! ";
+    private static final String ERROR_HEADER = "# ERROR! ";
     private static final String ERROR_FOOTER = " #";
     private static final String EXPECTED_HEADER = "- As expected: ";
 
