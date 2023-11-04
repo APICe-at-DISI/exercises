@@ -192,12 +192,10 @@ packages:
     destinations:
       - unibo-oop/lab07
     contents:
+      - from: java/inner-class/custom-iterable
+        to: 71-custom-iterable
       - from: java/nested-enum/anonymous-nested-enum
-        to: 61-anonymous-nested-enum
-      - from: java/gui/simple-gui
-        to: 62-simple-gui
-      - from: java/gui/mvc-gui
-        to: 63-mvc-gui-reflection
+        to: 72-anonymous-nested-enum
       - from: git/instructions-clone.md
         to: README.md
   oop-lab08:
@@ -206,14 +204,18 @@ packages:
     destinations:
       - unibo-oop/lab08
     contents:
+      - from: java/gui/simple-gui
+        to: 81-simple-gui
+      - from: java/gui/mvc-gui
+        to: 82-mvc-gui-reflection
       - from: java/mvc-io/bad-gui-io
-        to: 81-bad-gui-io
+        to: 83-bad-gui-io
       - from: java/mvc-io/simple-mvc-io
-        to: 82-simple-mvc-io
+        to: 84-simple-mvc-io
       - from: java/mvc-io/mvc-io
-        to: 83-mvc-io 
+        to: 85-mvc-io 
       - from: java/mvc-io/advanced-mvc
-        to: 84-advanced-mvc
+        to: 86-advanced-mvc
       - from: git/instructions-clone.md
         to: README.md
   oop-lab09:
