@@ -426,7 +426,7 @@ packages:
       - from: java/testing/junit/
         to: 01-junit-bankaccounts/
       - from: java/testing/tdd/
-        to: 01-tdd/
+        to: 02-tdd/
       - from: readmes/pss-lab-testing.md
         to: README.md
   pss-lab08:
@@ -445,7 +445,7 @@ packages:
           - README-domain.md
           - README-extension.md
       - from: java/inheritance/rich-domain-design/README-domain.md
-        to: README.md
+        to: 02-rich-design/README.md
   pss-lab09:
     format:
       - repo
