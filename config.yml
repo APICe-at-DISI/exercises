@@ -417,28 +417,32 @@ packages:
         to: 02-inheritance-rich-design/README.md 
       - from: readmes/pss-lab-inheritance.md
         to: README.md
+  pss-lab07:
+    format:
+      - repo
+    destinations:
+      - unibo-lptsi-pss/pss-lab07
+    contents:
+      - from: java/testing/junit/
+        to: 01-junit-bankaccounts/
+      - from: java/testing/tdd/
+        to: 01-tdd/
   pss-lab08:
     format:
       - repo
     destinations:
       - unibo-lptsi-pss/pss-lab08
     contents:
-      # DRY with extension
-      - from: java/inheritance/improve-design/
-        to: 01-dry/
       # Design with abstract classes
       - from: java/inheritance/guided-design/
-        to: 02-abstract-classes/
+        to: 01-abstract-classes/
+      # Note: Solutions of the following exercise make use of abstract classes
       - from: java/inheritance/rich-domain-design/
-        to: 03-04-rich-design/
+        to: 02-rich-design/
         excluding:
           - README-domain.md
           - README-extension.md
-      - from: java/inheritance/rich-domain-design/README-extension.md
-        to: 03-04-rich-design/Esercizio 44.md
       - from: java/inheritance/rich-domain-design/README-domain.md
-        to: 03-04-rich-design/Esercizio 45.md
-      - from: git/instructions-clone.md
         to: README.md
   pss-lab09:
     format:
