@@ -427,6 +427,8 @@ packages:
         to: 01-junit-bankaccounts/
       - from: java/testing/tdd/
         to: 01-tdd/
+      - from: readmes/pss-lab-testing.md
+        to: README.md
   pss-lab08:
     format:
       - repo
