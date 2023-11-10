@@ -15,17 +15,21 @@ public class StrictBankAccount extends SimpleBankAccount {
         if (checkUser(usrID) && isWithdrawAllowed(feeAmount)) {
             setBalance(getBalance() - feeAmount);
             resetTransactions();
+        } else {
+            throw new IllegalArgumentException("ID not corresponding: cannot charge management fees.");
         }
     }
 
     public void withdraw(final int usrID, final double amount) {
         if (isWithdrawAllowed(amount)) {
             super.withdraw(usrID, amount);
+        } else {
+            throw new IllegalStateException("Not enough balance: cannot withdraw.");
         }
     }
 
     protected boolean isWithdrawAllowed(final double amount) {
-        return getBalance() > amount;
+        return (amount > 0 && getBalance() > amount);
     }
 
 }
