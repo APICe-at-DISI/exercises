@@ -4,7 +4,7 @@ import it.unibo.bank.api.AccountHolder;
 
 public class StrictBankAccount extends SimpleBankAccount {
 
-    private static final double TRANSACTION_FEE = 0.1;
+    public static final double TRANSACTION_FEE = 0.1;
 
     public StrictBankAccount(final AccountHolder accountHolder, final double balance) {
         super(accountHolder, balance);
@@ -16,15 +16,18 @@ public class StrictBankAccount extends SimpleBankAccount {
             setBalance(getBalance() - feeAmount);
             resetTransactions();
         } else {
-            throw new IllegalArgumentException("ID not corresponding: cannot charge management fees.");
+            throw new IllegalArgumentException("ID not corresponding: cannot charge management fees");
         }
     }
 
     public void withdraw(final int usrID, final double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Cannot withdraw a negative amount");
+        }
         if (isWithdrawAllowed(amount)) {
             super.withdraw(usrID, amount);
         } else {
-            throw new IllegalStateException("Not enough balance: cannot withdraw.");
+            throw new IllegalArgumentException("Insufficient balance");
         }
     }
 

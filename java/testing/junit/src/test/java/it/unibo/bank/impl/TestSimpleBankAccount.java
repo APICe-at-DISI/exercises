@@ -57,6 +57,7 @@ public class TestSimpleBankAccount {
         } catch (IllegalArgumentException e) {
             Assertions.assertEquals("ID not corresponding: cannot perform transaction.", e.getMessage());
         }
+        // Alternative (with reflection): Assertions.assertThrows
     }
 
 }

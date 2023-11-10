@@ -5,8 +5,8 @@ import it.unibo.bank.api.BankAccount;
 
 public class SimpleBankAccount implements BankAccount {
 
-    protected static final double ATM_TRANSACTION_FEE = 1;
-    protected static final double MANAGEMENT_FEE = 5;
+    public static final double ATM_TRANSACTION_FEE = 1;
+    public static final double MANAGEMENT_FEE = 5;
 
     private final AccountHolder holder;
     private double balance;
