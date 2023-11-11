@@ -94,7 +94,8 @@ public interface DeathNote {
      *
      * @param cause the cause of the human's death
      * @return true if the cause was written within 40 milliseconds, false otherwise
-     * @throws IllegalStateException if there is no name written in this DeathNote
+     * @throws IllegalStateException if there is no name written in this DeathNote,
+     * or the cause is null
      */
     boolean writeDeathCause(String cause);
 
@@ -104,7 +105,8 @@ public interface DeathNote {
      *
      * @param details the details of the human's death
      * @return true if the details were written within 6 seconds and 40 milliseconds, false otherwise
-     * @throws IllegalStateException if there is no name written in this DeathNote
+     * @throws IllegalStateException if there is no name written in this DeathNote,
+     * or the details are null
      */
     boolean writeDetails(String details);
 

@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class DeathNoteImplementation implements DeathNote {
 
-    private Map<String, Death> deaths = new LinkedHashMap<>(); // Predictable iteration order
+    private final Map<String, Death> deaths = new LinkedHashMap<>(); // Predictable iteration order
     private String lastWrittenName;
 
     @Override
@@ -29,6 +29,7 @@ public class DeathNoteImplementation implements DeathNote {
     @Override
     public boolean writeDeathCause(final String cause) {
         return updateDeath(
+            cause,
             new DeathTransformer() {
                 @Override
                 public Death call(Death input) {
@@ -40,6 +41,7 @@ public class DeathNoteImplementation implements DeathNote {
     @Override
     public boolean writeDetails(final String details) {
         return updateDeath(
+            details,
             new DeathTransformer() {
                 @Override
                 public Death call(Death input) {
@@ -72,9 +74,12 @@ public class DeathNoteImplementation implements DeathNote {
         return death;
     }
 
-    private boolean updateDeath(DeathTransformer operation) {
+    private boolean updateDeath(String update, DeathTransformer operation) {
         if (lastWrittenName == null) {
-            throw new IllegalStateException("No name written");
+            throw new IllegalStateException("No name written yet");
+        }
+        if (update == null) {
+            throw new IllegalStateException("No update provided");
         }
         final var previous = deaths.get(lastWrittenName);
         final var updated = operation.call(previous);
@@ -97,6 +102,9 @@ public class DeathNoteImplementation implements DeathNote {
         private final String cause;
         private final String details;
         private final long timeOfDeath;
+
+        // This object is immutable, so we can cache the hash
+        private int hash;
 
         private Death(final String cause, final String details) {
             this.cause = cause;
@@ -131,6 +139,14 @@ public class DeathNoteImplementation implements DeathNote {
             return Objects.equals(cause, other.cause)
                 && Objects.equals(details, other.details)
                 && timeOfDeath == other.timeOfDeath;
+        }
+
+        @Override
+        public int hashCode() {
+            if (hash == 0) {
+                hash = Objects.hash(cause, details, timeOfDeath);
+            }
+            return hash;
         }
     }
 }
