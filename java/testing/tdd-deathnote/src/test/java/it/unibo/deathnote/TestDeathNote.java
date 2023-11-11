@@ -1,17 +1,15 @@
-package it.unibo.tdd;
+package it.unibo.deathnote;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import it.unibo.deathnote.api.DeathNote;
+import it.unibo.deathnote.impl.DeathNoteImplementation;
 
-import static it.unibo.tdd.DeathNote.RULES;
+import static it.unibo.deathnote.api.DeathNote.RULES;
 import static java.lang.Thread.sleep;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 class TestDeathNote {
 

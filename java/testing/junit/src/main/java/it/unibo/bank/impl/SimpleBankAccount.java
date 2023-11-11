@@ -23,7 +23,7 @@ public class SimpleBankAccount implements BankAccount {
             this.balance -= SimpleBankAccount.MANAGEMENT_FEE;
             resetTransactions();
         } else {
-            throw new IllegalArgumentException("ID not corresponding: cannot charge management fees.");
+            throw new IllegalArgumentException("ID not corresponding: cannot charge management fees");
         }
     }
 
@@ -77,7 +77,7 @@ public class SimpleBankAccount implements BankAccount {
             this.balance += amount;
             this.incrementTransactions();
         } else {
-            throw new IllegalArgumentException("ID not corresponding: cannot perform transaction.");
+            throw new IllegalArgumentException("ID not corresponding: cannot perform transaction");
         }
     }
 }

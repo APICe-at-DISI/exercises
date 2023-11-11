@@ -1,4 +1,6 @@
-package it.unibo.tdd;
+package it.unibo.deathnote.impl;
+
+import it.unibo.deathnote.api.DeathNote;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -23,8 +25,6 @@ public class DeathNoteImplementation implements DeathNote {
         lastWrittenName = name;
         deaths.put(name, new Death());
     }
-
-
 
     @Override
     public boolean writeDeathCause(final String cause) {

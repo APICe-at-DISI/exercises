@@ -1,4 +1,4 @@
-package it.unibo.tdd;
+package it.unibo.deathnote.api;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public interface DeathNote {
         """,
         """
         After writing the cause of death, details of the death should be written in the next 6
-        minutes and 40 seconds.
+        seconds and 40 milliseconds.
         """,
         """
         The human who touches the Death Note can recognize the image and voice of its original
@@ -83,8 +83,8 @@ public interface DeathNote {
 
     /**
      * The human whose name is written in this DeathNote will die.
-     *
      * @param name the name of the human to kill
+     * @throws NullPointerException if the given name is null.
      */
     void writeName(String name);
 
