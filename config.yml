@@ -204,30 +204,34 @@ packages:
     destinations:
       - unibo-oop/lab08
     contents:
+      - from: java/testing/junit
+        to: 81-junit
       - from: java/gui/simple-gui
-        to: 81-simple-gui
-      - from: java/gui/mvc-gui
-        to: 82-mvc-gui-reflection
-      - from: java/mvc-io/bad-gui-io
-        to: 83-bad-gui-io
-      - from: java/mvc-io/simple-mvc-io
-        to: 84-simple-mvc-io
-      - from: java/mvc-io/mvc-io
-        to: 85-mvc-io 
-      - from: java/mvc-io/advanced-mvc
-        to: 86-advanced-mvc
-      - from: git/instructions-clone.md
-        to: README.md
+        to: 82-simple-gui
+      - from: java/testing/tdd-deathnote
+        to: 83-tdd-deathnote
   oop-lab09:
     format:
       - repo
     destinations:
       - unibo-oop/lab09
     contents:
+      - from: java/gui/mvc-gui
+        to: 91-mvc-gui-reflection
+      - from: java/mvc-io/bad-gui-io
+        to: 92-bad-gui-io
+      - from: java/mvc-io/simple-mvc-io
+        to: 93-simple-mvc-io
+      - from: java/mvc-io/mvc-io
+        to: 94-mvc-io 
+      - from: java/mvc-io/advanced-mvc
+        to: 95-advanced-mvc
+      - from: git/instructions-clone.md
+        to: README.md
       - from: java/concurrency/reactive-gui
-        to: 91-reactive-guis
+        to: 96-reactive-guis
       - from: java/concurrency/workers
-        to: 92-workers
+        to: 97-workers
       - from: git/instructions-clone.md
         to: README.md
   oop-lab10:
