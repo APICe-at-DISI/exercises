@@ -47,7 +47,7 @@ class TestDeathNote {
         for (int i = 1; i <= RULES.size(); i++) {
             final var rule = deathNote.getRule(i);
             assertNotNull(rule);
-            assertFalse(rule.isEmpty());
+            assertFalse(rule.isBlank());
         }
     }
 
@@ -86,7 +86,7 @@ class TestDeathNote {
         // Wait for more than 40 ms
         sleep(100);
         assertFalse(deathNote.writeDeathCause("Spontaneous human combustion"));
-        assertEquals("heart attack", deathNote.getDeathCause(LIGHT_YAGAMI));
+        assertEquals("karting accident", deathNote.getDeathCause(DANILO_PIANINI));
     }
 
     /**
@@ -108,7 +108,7 @@ class TestDeathNote {
         assertTrue(deathNote.writeDetails("ran for too long"));
         // Assuming the method can be executed in less than 6040ms
         assertEquals("ran for too long", deathNote.getDeathDetails(LIGHT_YAGAMI));
-        // Wait for more than 40 ms
+        // Wait for more than 6040 ms
         deathNote.writeName(DANILO_PIANINI);
         sleep(6100);
         assertFalse(deathNote.writeDetails("wrote many tests before dying"));
