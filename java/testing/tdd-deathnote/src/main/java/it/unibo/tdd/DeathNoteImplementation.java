@@ -1,13 +1,13 @@
 package it.unibo.tdd;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Objects;
+
 public class DeathNoteImplementation implements DeathNote {
 
-    public static class Death {
-        private final String name;
-
-    }
-
-    private final String owner;
+    private Map<String, Death> deaths = new LinkedHashMap<>(); // Predictable iteration order
+    private String lastWrittenName;
 
     @Override
     public String getRule(int ruleNumber) {
@@ -19,31 +19,118 @@ public class DeathNoteImplementation implements DeathNote {
 
     @Override
     public void writeName(String name) {
+        Objects.requireNonNull(name);
+        lastWrittenName = name;
+        deaths.put(name, new Death());
+    }
 
+
+
+    @Override
+    public boolean writeDeathCause(final String cause) {
+        return updateDeath(
+            new DeathTransformer() {
+                @Override
+                public Death call(Death input) {
+                    return input.writeCause(cause);
+                }
+            });
     }
 
     @Override
-    public boolean writeDeathCause(String cause) {
-        return false;
+    public boolean writeDetails(final String details) {
+        return updateDeath(
+            new DeathTransformer() {
+                @Override
+                public Death call(Death input) {
+                    return input.writeDetails(details);
+                }
+            }
+        );
     }
 
     @Override
-    public boolean writeDetails(String details) {
-        return false;
+    public String getDeathCause(final String name) {
+        return getDeath(name).cause;
     }
 
     @Override
-    public String getDeathCause(String name) {
-        return null;
+    public String getDeathDetails(final String name) {
+        return getDeath(name).details;
     }
 
     @Override
-    public String getDeathDetails(String name) {
-        return null;
+    public boolean isNameWritten(final String name) {
+        return deaths.containsKey(name);
     }
 
-    @Override
-    public boolean isNameWritten(String name) {
-        return false;
+    private Death getDeath(final String name) {
+        final var death = deaths.get(name);
+        if (death == null) {
+            throw new IllegalArgumentException(name + " has never been written in this notebook");
+        }
+        return death;
+    }
+
+    private boolean updateDeath(DeathTransformer operation) {
+        if (lastWrittenName == null) {
+            throw new IllegalStateException("No name written");
+        }
+        final var previous = deaths.get(lastWrittenName);
+        final var updated = operation.call(previous);
+        if (previous.equals(updated)) {
+            return false;
+        } else {
+            deaths.put(lastWrittenName, updated);
+            return true;
+        }
+    }
+
+    private interface DeathTransformer {
+        Death call(Death input);
+    }
+
+    private static final class Death {
+        private static final String DEFAULT_CAUSE = "heart attack";
+        private static final byte VALID_CAUSE_TIMEOUT = 40;
+        private static final short VALID_DETAILS_TIMEOUT = 6000 + VALID_CAUSE_TIMEOUT;
+        private final String cause;
+        private final String details;
+        private final long timeOfDeath;
+
+        private Death(final String cause, final String details) {
+            this.cause = cause;
+            this.details = details;
+            timeOfDeath = System.currentTimeMillis();
+        }
+
+        Death() {
+            this(DEFAULT_CAUSE, "");
+        }
+
+        private Death writeCause(final String cause) {
+            return System.currentTimeMillis() < timeOfDeath + VALID_CAUSE_TIMEOUT
+                ? new Death(cause, this.details)
+                : this;
+        }
+
+        private Death writeDetails(final String details) {
+            return System.currentTimeMillis() < timeOfDeath + VALID_DETAILS_TIMEOUT
+                ? new Death(this.cause, details)
+                : this;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (!(obj instanceof Death other)) {
+                return false;
+            }
+            return Objects.equals(cause, other.cause)
+                && Objects.equals(details, other.details)
+                && timeOfDeath == other.timeOfDeath;
+        }
     }
 }

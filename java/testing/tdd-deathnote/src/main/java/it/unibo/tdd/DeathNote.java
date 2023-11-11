@@ -104,7 +104,7 @@ public interface DeathNote {
      *
      * @param details the details of the human's death
      * @return true if the details were written within 6 seconds and 40 milliseconds, false otherwise
-     * @throws IllegalStateException if there is no cause associated with the name written last
+     * @throws IllegalStateException if there is no name written in this DeathNote
      */
     boolean writeDetails(String details);
 
