@@ -210,6 +210,8 @@ packages:
         to: 82-simple-gui
       - from: java/testing/tdd-deathnote
         to: 83-tdd-deathnote
+      - from: git/instructions-clone.md
+        to: README.md
   oop-lab09:
     format:
       - repo
