@@ -1,6 +1,6 @@
 #!/usr/bin/env kotlin
 @file:Repository("https://repo.maven.apache.org/maven2")
-@file:DependsOn("com.lordcodes.turtle:turtle:0.8.0")
+@file:DependsOn("com.lordcodes.turtle:turtle:0.9.0")
 
 import com.lordcodes.turtle.ShellScript
 import com.lordcodes.turtle.shellRun
