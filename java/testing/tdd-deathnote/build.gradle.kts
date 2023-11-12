@@ -1,7 +1,6 @@
 plugins {
     java
     application
-    id("org.danilopianini.gradle-java-qa") version "1.24.1"
 }
 
 tasks.javadoc {
@@ -10,7 +9,6 @@ tasks.javadoc {
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
