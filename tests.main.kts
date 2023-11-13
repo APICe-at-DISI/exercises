@@ -43,8 +43,7 @@ listOf("collections", "generics", "exceptions").forEach {
 }
 
 listOf(
-    "mvc-io", "gui", "nested-enum", "io"
-    // "mvc-io" Temporarily disabled, Roby enable it for lab08
+    "mvc-io", "gui", "nested-enum", "io", "testing"
 ).forEach {
     File("java/$it").inAllDirectories {
         val tasks = arrayOf("assemble", "javadoc") +
