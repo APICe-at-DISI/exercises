@@ -86,7 +86,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.prepare-deliveries.outputs.matrix) }}
-      max-parallel: 1
+    concurrency:
+      group: ${{ github.workflow }}-delivery-${{ matrix.type }}-${{ matrix.ref }}-${{ matrix.target }}-${{ matrix.owner }}-${{ matrix.repo }}-${{ github.event.number || github.ref }}
+      cancel-in-progress: false
     steps:
       - name: Checkout the local repo
         if: matrix.type == 'repo'
