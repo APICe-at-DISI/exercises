@@ -38,7 +38,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y openjdk-17-jre-headless
     - name: Checkout
-      uses: actions/checkout@v4.1.3
+      uses: actions/checkout@v4.1.4
     - name: Tests
       run: ./tests.main.kts
   prepare-deliveries:
@@ -57,7 +57,7 @@ jobs:
           end
           '
       - name: Checkout
-        uses: actions/checkout@v4.1.3
+        uses: actions/checkout@v4.1.4
         with:
           fetch-depth: 0
           ref: ${{ steps.ref.outputs.ref }}
@@ -93,7 +93,7 @@ jobs:
     steps:
       - name: Checkout the local repo
         if: matrix.type == 'repo'
-        uses: actions/checkout@v4.1.3
+        uses: actions/checkout@v4.1.4
       - name: Checkout the target repo if it exists, initialize if needed
         if: matrix.type == 'repo'
         run: |
