@@ -131,7 +131,7 @@ jobs:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Deliver a branch
         if: matrix.type == 'repo'
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
           folder: ${{ matrix.target }}
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
