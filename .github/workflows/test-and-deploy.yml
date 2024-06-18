@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: 
+        os:
           - ubuntu
 #          - windows
           - macos
@@ -46,6 +46,11 @@ jobs:
     outputs:
       matrix: ${{ steps.deliveries.outputs.matrix }}
     steps:
+      - name: Setup Java
+        uses: actions/setup-java@v4.2.1
+        with:
+          distribution: temurin
+          java-version: 17
       - name: Compute ref
         id: ref
         run: |
