@@ -10,6 +10,7 @@ import static it.unibo.exceptions.arithmetic.ArithmeticService.DIVIDED;
 import static it.unibo.exceptions.arithmetic.ArithmeticService.MINUS;
 import static it.unibo.exceptions.arithmetic.ArithmeticService.PLUS;
 import static it.unibo.exceptions.arithmetic.ArithmeticService.TIMES;
+import static java.lang.Double.parseDouble;
 
 /**
  * Tests the service.
@@ -73,7 +74,12 @@ public final class UseArithmeticService {
 
     private static void assertEqualsAsDouble(final String expected, final String actual) {
         final var message = ": expected " + expected + " and received " + actual;
-        if (Double.parseDouble(expected) == Double.parseDouble(actual)) {
+        /*
+         * Never call equality on doubles. If you need exact equality, then you can rely on the compare method,
+         * which internally uses the ULPs (Units in the Last Place) to compare the two doubles to support NaNs,
+         * negative zeros, and similar corner cases.
+         */
+        if (Double.compare(parseDouble(expected), parseDouble(actual)) == 0) {
             LOG.println("Success" + message);
         } else {
             throw new AssertionError("ERROR" + message);
