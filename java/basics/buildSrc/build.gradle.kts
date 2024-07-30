@@ -1,6 +1,6 @@
 plugins {
     `kotlin-dsl`
-    id("org.danilopianini.gradle-kotlin-qa") version "0.64.0"
+    id("org.danilopianini.gradle-kotlin-qa") version "0.64.1"
 }
 
 repositories {
