@@ -117,6 +117,7 @@ jobs:
           echo "can-release=${{endsWith(github.ref, '/master') || endsWith(github.ref, '/exercises')}}" >> $GITHUB_OUTPUT
       - name: Push the repo
         if: matrix.type == 'repo' && steps.can-release.outputs.can-release == 'true'
+        working-directory: target
         run: |
           git push -u origin ${{ matrix.ref }}
       - name: Download artifact
