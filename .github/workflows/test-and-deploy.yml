@@ -111,8 +111,12 @@ jobs:
             git config user.email 'noreply@unibo.it'
             git commit --allow-empty -m 'initialize the repository'
           fi
+      - name: Check if the branch can release
+        id: can-release
+        run: |
+          echo "can-release=${{endsWith(github.ref, '/master') || endsWith(github.ref, '/exercises')}}" >> $GITHUB_OUTPUT
       - name: Push the repo
-        if: matrix.type == 'repo' && endsWith(github.ref, '/master')
+        if: matrix.type == 'repo' && steps.can-release.outputs.can-release == 'true'
         run: |
           git push -u origin ${{ matrix.ref }}
       - name: Download artifact
@@ -122,7 +126,7 @@ jobs:
       - name: Unpack
         run: tar -xf build.tar
       - name: Deliver an archive
-        if: matrix.type == 'release' && endsWith(github.ref, '/master')
+        if: matrix.type == 'release' && steps.can-release.outputs.can-release == 'true'
         uses: ncipollo/release-action@v1.14.0
         with:
           allowUpdates: true
@@ -133,7 +137,7 @@ jobs:
           tag: ${{ matrix.ref }}
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Deliver a branch
-        if: matrix.type == 'repo' && endsWith(github.ref, '/master')
+        if: matrix.type == 'repo' && steps.can-release.outputs.can-release == 'true'
         uses: JamesIves/github-pages-deploy-action@v4.6.3
         with:
           folder: ${{ matrix.target }}
