@@ -53,8 +53,8 @@ public final class UseListsAndMaps {
          * element of the first list. You can not use any "magic number".
          * (Suggestion: use a temporary variable)
          */
-        final int el = arrayList.get(arrayList.size() - 1);
-        arrayList.set(arrayList.size() - 1, arrayList.get(0));
+        final int el = arrayList.getLast();
+        arrayList.set(arrayList.size() - 1, arrayList.getFirst());
         arrayList.set(0, el);
         /*
          * 4) Using a single for-each, print the contents of the arraylist.
@@ -63,7 +63,7 @@ public final class UseListsAndMaps {
         for (final int i : arrayList) {
             builder.append(i).append(", ");
         }
-        if (builder.length() > 0) {
+        if (!builder.isEmpty()) {
             builder.delete(builder.length() - 2, builder.length());
         }
         log(builder);
@@ -76,13 +76,13 @@ public final class UseListsAndMaps {
          */
         long time = System.nanoTime();
         for (int i = 0; i < ELEMENTS; i++) {
-            arrayList.add(0, i);
+            arrayList.addFirst(i);
         }
         time = System.nanoTime() - time;
         log("Inserting " + ELEMENTS + " elements as first in an ArrayList took " + timeAsString(time));
         time = System.nanoTime();
         for (int i = 0; i < ELEMENTS; i++) {
-            linkedList.add(0, i);
+            linkedList.addFirst(i);
         }
         time = System.nanoTime() - time;
         log("Inserting " + ELEMENTS + " elements as first in a LinkedList took " + timeAsString(time));
