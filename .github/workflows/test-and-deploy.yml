@@ -140,3 +140,16 @@ jobs:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
           branch: ${{ matrix.ref }}
           repository-name: ${{ matrix.owner }}/${{ matrix.repo }}
+  success:
+    runs-on: ubuntu-22.04
+    needs:
+      - delivery
+      - tests
+    if: >-
+      always() && (
+        contains(join(needs.*.result, ','), 'failure')
+        || !contains(join(needs.*.result, ','), 'cancelled')
+      )
+    steps:
+      - name: Verify that there were no failures
+        run: ${{ !contains(join(needs.*.result, ','), 'failure') }}
