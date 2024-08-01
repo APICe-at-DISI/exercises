@@ -61,8 +61,7 @@ public final class UseListsAndMaps {
          */
         final var builder = new StringBuilder();
         for (final int i : arrayList) {
-            builder.append(i);
-            builder.append(", ");
+            builder.append(i).append(", ");
         }
         if (builder.length() > 0) {
             builder.delete(builder.length() - 2, builder.length());
@@ -112,17 +111,17 @@ public final class UseListsAndMaps {
         /*
          * 7) Build a new Map that associates to each continent's name its
          * population:
-         * 
+         *
          * Africa -> 1,110,635,000
-         * 
+         *
          * Americas -> 972,005,000
-         * 
+         *
          * Antarctica -> 0
-         * 
+         *
          * Asia -> 4,298,723,000
-         * 
+         *
          * Europe -> 742,452,000
-         * 
+         *
          * Oceania -> 38,304,000
          */
         final Map<String, Long> world = new HashMap<>();
