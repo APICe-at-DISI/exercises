@@ -53,8 +53,7 @@ public final class UseSet {
          */
         final StringBuilder builder = new StringBuilder();
         for (final var element: set) {
-            builder.append(element);
-            builder.append(' ');
+            builder.append(element).append(' ');
         }
         System.out.println(builder); // NOPMD
         /*
