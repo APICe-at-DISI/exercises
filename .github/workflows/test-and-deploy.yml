@@ -14,10 +14,10 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu
+          - ubuntu-22.04
 #          - windows
-          - macos
-    runs-on: ${{ matrix.os }}-latest
+          - macos-14
+    runs-on: ${{ matrix.os }}
     concurrency:
       group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ github.event.number || github.ref }}
     steps:
@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-java@v4.2.1
       with:
         distribution: temurin
-        java-version: 17
+        java-version: 21
     - name: Setup WSL
       if: runner.os == 'Windows'
       uses: Vampire/setup-wsl@v3.1.1
@@ -36,7 +36,7 @@ jobs:
       shell: wsl-bash {0}
       run: |
         sudo apt-get update
-        sudo apt-get install -y openjdk-17-jre-headless
+        sudo apt-get install -y openjdk-21-jre-headless
     - name: Checkout
       uses: actions/checkout@v4.1.7
     - name: Tests
@@ -50,7 +50,7 @@ jobs:
         uses: actions/setup-java@v4.2.1
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 21
       - name: Compute ref
         id: ref
         run: |
