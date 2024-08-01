@@ -16,10 +16,6 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.3")
 }
 
-spotbugs {
-    omitVisitors.set(listOf("UnreadFields"))
-}
-
 tasks.withType<Test> {
     // Use junit platform for unit tests
     useJUnitPlatform()
