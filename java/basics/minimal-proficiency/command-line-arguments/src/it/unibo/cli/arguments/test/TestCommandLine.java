@@ -14,7 +14,7 @@ class TestCommandLine {
          *
          * Example output:
          *
-         * $ java oop.lab02.cli.TestCommandLine Welcome to the lab
+         * $ java it.unibo.cli.arguments.test.TestCommandLine Welcome to the lab
          *
          * The provided arguments are:
          *  * Welcome, 7 characters long
