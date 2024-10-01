@@ -59,11 +59,13 @@ class SeqRecognizer {
 
     /* Utility method for testing checkSeq1 method */
     static boolean testCheckSeq1() {
-        return checkSeq1(new int[] { 1, 1 })
-                && checkSeq1(new int[] { 1, 1, 1, 2 })
-                && checkSeq1(new int[] { 1, 1, 1, 2, 3, 2, 3 })
-                && !checkSeq1(new int[] { 1, 1, 1, 2, 3, 1, 3 })
-                && !checkSeq1(new int[] { 3, 2, 1, 1 });
+        return checkSeq1(new int[] { })
+            && checkSeq1(new int[] { 1, 1 })
+            && checkSeq1(new int[] { 1, 1, 1, 2 })
+            && checkSeq1(new int[] { 1, 1, 1, 2, 3, 2, 3 })
+            && !checkSeq1(new int[] { 1, 1, 1, 2, 3, 1, 3 })
+            && !checkSeq1(new int[] { 1, 1, 1, 2, 3, 1, 3 })
+            && !checkSeq1(new int[] { 3, 2, 1, 1 });
     }
 
     /* Utility method for testing checkSeq2 method */
@@ -71,6 +73,7 @@ class SeqRecognizer {
         return checkSeq2(new int[] { 1, 3 })
                 && checkSeq2(new int[] { 1, 2, 3 })
                 && checkSeq2(new int[] { 1, 2, 2, 2, 2, 2, 2, 3 })
+                && !checkSeq2(new int[] { })
                 && !checkSeq2(new int[] { 1, 2, 2 })
                 && !checkSeq2(new int[] { 2, 2, 2, 2, 3 });
     }
@@ -83,6 +86,7 @@ class SeqRecognizer {
                 && checkSeq3(new int[] { 1, 2, 3, 4, 5 })
                 && checkSeq3(new int[] { 1, 2, 2, 3, 4, 4, 4, 5 })
                 && checkSeq3(new int[] { 1, 2, 2, 2, 3 })
+                && !checkSeq3(new int[] { })
                 && !checkSeq3(new int[] { 1, 2, 2, 2 })
                 && !checkSeq3(new int[] { 2, 2, 3, 4, 4, 4 })
                 && !checkSeq3(new int[] { 1, 2, 2, 3, 4, 4, 4, 5, 6 });
