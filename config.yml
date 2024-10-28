@@ -210,6 +210,8 @@ packages:
         to: 81-simple-gui
       - from: java/testing/tdd-deathnote
         to: 82-tdd-deathnote
+      - from: java/gui/mvc-gui
+        to: 83-mvc-gui-reflection
       - from: git/instructions-clone.md
         to: README.md
   oop-lab09:
@@ -218,14 +220,12 @@ packages:
     destinations:
       - unibo-oop/lab09
     contents:
-      - from: java/gui/mvc-gui
-        to: 91-mvc-gui-reflection
       - from: java/mvc-io/bad-gui-io
-        to: 92-bad-gui-io
+        to: 91-bad-gui-io
       - from: java/mvc-io/simple-mvc-io
-        to: 93-simple-mvc-io
+        to: 92-simple-mvc-io
       - from: java/mvc-io/mvc-io
-        to: 94-mvc-io
+        to: 93-mvc-io
       - from: git/instructions-clone.md
         to: README.md
   oop-lab10:
