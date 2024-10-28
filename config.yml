@@ -198,18 +198,18 @@ packages:
         to: 72-anonymous-nested-enum
       - from: git/instructions-clone.md
         to: README.md
+      - from: java/testing/junit
+        to: 73-junit
   oop-lab08:
     format:
       - repo
     destinations:
       - unibo-oop/lab08
     contents:
-      - from: java/testing/junit
-        to: 81-junit
       - from: java/gui/simple-gui
-        to: 82-simple-gui
+        to: 81-simple-gui
       - from: java/testing/tdd-deathnote
-        to: 83-tdd-deathnote
+        to: 82-tdd-deathnote
       - from: git/instructions-clone.md
         to: README.md
   oop-lab09:
@@ -426,7 +426,7 @@ packages:
           - README-domain.md
           - README-extension.md
       - from: java/inheritance/rich-domain-design/README-extension.md
-        to: 02-inheritance-rich-design/README.md 
+        to: 02-inheritance-rich-design/README.md
       - from: readmes/pss-lab-inheritance.md
         to: README.md
   pss-lab07:
