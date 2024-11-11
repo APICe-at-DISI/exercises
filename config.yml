@@ -420,14 +420,11 @@ packages:
       - from: java/inheritance/improve-design/
         to: 01-inheritance-dry/
       # Analysis and design with extension
-      - from: java/inheritance/rich-domain-design/
-        to: 02-inheritance-rich-design/
-        excluding:
-          - README-domain.md
-          - README-extension.md
-      - from: java/inheritance/rich-domain-design/README-extension.md
-        to: 02-inheritance-rich-design/README.md
-      - from: readmes/pss-lab-inheritance.md
+      - from: java/testing/junit/
+        to: 02-junit-bankaccounts/
+      - from: java/testing/tdd/
+        to: 03-tdd/
+      - from: readmes/pss-lab-testing.md
         to: README.md
   pss-lab07:
     format:
