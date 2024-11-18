@@ -432,12 +432,9 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab07
     contents:
-      - from: java/testing/junit/
-        to: 01-junit-bankaccounts/
-      - from: java/testing/tdd/
-        to: 02-tdd/
-      - from: readmes/pss-lab-testing.md
-        to: README.md
+      # Design with abstract classes
+      - from: java/inheritance/guided-design/
+        to: 01-abstract-classes/
   pss-lab08:
     format:
       - repo
