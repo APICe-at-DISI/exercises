@@ -441,17 +441,14 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab08
     contents:
-      # Design with abstract classes
-      - from: java/inheritance/guided-design/
-        to: 01-abstract-classes/
-      # Note: Solutions of the following exercise make use of abstract classes
-      - from: java/inheritance/rich-domain-design/
-        to: 02-rich-design/
-        excluding:
-          - README-domain.md
-          - README-extension.md
-      - from: java/inheritance/rich-domain-design/README-domain.md
-        to: 02-rich-design/README.md
+      - from: java/collections/use-set/
+        to: 01-use-set/
+      - from: java/collections/custom-comparator/
+        to: 02-custom-comparator/
+      - from: java/generics/utilities-with-generic-pair/
+        to: 03-generic-pair/
+      - from: java/exceptions/use-and-design-exceptions/
+        to: 04-exceptions/
   pss-lab09:
     format:
       - repo
