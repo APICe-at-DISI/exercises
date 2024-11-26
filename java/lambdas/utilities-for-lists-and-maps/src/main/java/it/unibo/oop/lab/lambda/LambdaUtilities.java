@@ -1,13 +1,13 @@
 package it.unibo.oop.lab.lambda;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -85,12 +85,14 @@ public final class LambdaUtilities {
          * Suggestion: consider Map.merge
          */
         final Map<R, Set<T>> map = new HashMap<>();
-        list.forEach(t -> {
-            map.merge(op.apply(t), new HashSet<>(Arrays.asList(t)), (t1, t2) -> {
-                t1.addAll(t2);
-                return t1;
-            });
-        });
+        // Set union. Could be implemented as a separate function.
+        // Better implementation available in Google Guava
+        final BiFunction<Set<T>, Set<T>, Set<T>> union = (s1, s2) -> {
+            final var result = new LinkedHashSet<>(s1);
+            result.addAll(s2);
+            return result;
+        };
+        list.forEach(t -> map.merge(op.apply(t), Set.of(t), union));
         return map;
     }
 
