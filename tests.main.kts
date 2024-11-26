@@ -37,7 +37,10 @@ File("java/inheritance/").inAllDirectories {
 
 listOf("collections", "generics", "exceptions", "lambdas").forEach {
     File("java/$it").inAllDirectories {
-        val tasks = arrayOf("build") + if (git.currentBranch() == "master") arrayOf("run") else emptyArray()
+        val tasks = arrayOf("build") + when (git.currentBranch()) {
+            "exercises" -> arrayOf("-x", "test")
+            else -> emptyArray()
+        }
         gradle(*tasks)
     }
 }
