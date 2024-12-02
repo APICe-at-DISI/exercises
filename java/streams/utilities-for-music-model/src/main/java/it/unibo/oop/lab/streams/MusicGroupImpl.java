@@ -54,14 +54,11 @@ public final class MusicGroupImpl implements MusicGroup {
 
     @Override
     public int countSongs(final String albumName) {
-        final long result = this.songs.stream()
+        return this.songs.stream()
             .filter(s -> s.getAlbumName().isPresent())
             .filter(s -> s.getAlbumName().get().equals(albumName))
-            .count();
-        if (result > Integer.MAX_VALUE) {
-            throw new IllegalStateException("Too many songs");
-        }
-        return (int) result;
+            .mapToInt(it -> 1)
+            .sum();
     }
 
     @Override
