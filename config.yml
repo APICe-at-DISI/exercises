@@ -455,15 +455,8 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab09
     contents:
-      # Sets
-      - from: git/instructions-clone.md
-        to: README.md
-      - from: java/collections/use-set/
-        to: 01-set/
-      - from: java/collections/custom-comparator/
-        to: 02-comparator/
-      - from: java/collections/implement-classes-with-collections/
-        to: 03-implement-with-collections/
+      - from: java/lambdas/utilities-for-lists-and-maps/
+        to: 01-lambda/
   pss-lab10:
     format:
       - repo
