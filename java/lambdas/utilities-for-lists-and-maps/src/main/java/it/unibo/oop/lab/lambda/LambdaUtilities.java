@@ -51,6 +51,7 @@ public final class LambdaUtilities {
     /**
      * @param list
      *            input list
+
      * @param pre
      *            predicate to execute
      * @param <T>
