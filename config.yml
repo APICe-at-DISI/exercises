@@ -256,6 +256,14 @@ packages:
         to: 114-workers
       - from: git/instructions-clone.md
         to: README.md
+  oop-lab12:
+    format:
+      - repo
+    destinations:
+      - unibo-oop/lab12
+    contents:
+      - from: java/exams/es1
+        to: 121-es1
 
   ###################################################
   #                      PSS                        #
