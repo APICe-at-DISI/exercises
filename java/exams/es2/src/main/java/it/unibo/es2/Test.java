@@ -3,7 +3,7 @@ package it.unibo.es2;
 public class Test {
 
     /*
-     * Scopo di questo esercizio è realizzare una GUI con l'aspetto mostrato nell'immagine test/resources/fig.png, fornita, 
+     * Scopo di questo esercizio è realizzare una GUI con l'aspetto mostrato nell'immagine fig.png, fornita, 
      * che contiene una griglia quadrata di pulsanti inizialmente senza label. Il costruttore di GUI deve prendere in 
      * ingresso il numero di righe (o colonne)---e quindi dovra funzionare per qualunque numero (diciamo fra 3 e 7).
      * Alla pressione di un pulsante la sua label diventi "*", se viene ripremuto torni a " ", e così via.
