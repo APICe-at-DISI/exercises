@@ -264,6 +264,12 @@ packages:
     contents:
       - from: java/exams/es1
         to: 121-es1
+      - from: java/exams/es2
+        to: 122-es2
+      - from: java/exams/es3
+        to: 123-es3
+      - from: git/instructions-clone.md
+        to: README.md
 
   ###################################################
   #                      PSS                        #
