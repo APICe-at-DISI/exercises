@@ -477,11 +477,7 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab10
     contents:
-      - from: git/instructions-clone.md
-        to: README.md
-      - from: java/exceptions/use-and-design-exceptions
-        to: 01-exceptions/
-      - from: java/io/read-write-text-file
-        to: 02-read-write-files/
-      - from: java/io/from-classpath-to-files
-        to: 03-read-classpath-write-file/
+      - from: java/collections/use-map/
+        to: 01-maps/
+      - from: java/collections/implement-classes-with-maps/
+        to: 02-maps-advanced/
