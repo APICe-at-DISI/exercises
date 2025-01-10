@@ -3,7 +3,7 @@ import org.gradle.kotlin.dsl.registering
 plugins {
     application
     java
-    id("org.danilopianini.gradle-java-qa") version "1.83.0"
+    id("org.danilopianini.gradle-java-qa") version "1.84.0"
 }
 
 repositories {
