@@ -22,13 +22,13 @@ jobs:
       group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ github.event.number || github.ref }}
     steps:
     - name: Setup Java
-      uses: actions/setup-java@v4.5.0
+      uses: actions/setup-java@v4.7.0
       with:
         distribution: temurin
         java-version: 21
     - name: Setup WSL
       if: runner.os == 'Windows'
-      uses: Vampire/setup-wsl@v4.0.0
+      uses: Vampire/setup-wsl@v4.1.0
       with:
         distribution: Ubuntu-22.04
     - name: Configure WSL
@@ -47,7 +47,7 @@ jobs:
       matrix: ${{ steps.deliveries.outputs.matrix }}
     steps:
       - name: Setup Java
-        uses: actions/setup-java@v4.5.0
+        uses: actions/setup-java@v4.7.0
         with:
           distribution: temurin
           java-version: 21
@@ -73,7 +73,7 @@ jobs:
       - name: Tar files
         run: tar -cvf build.tar build
       - name: Upload artifact
-        uses: actions/upload-artifact@v4.4.3
+        uses: actions/upload-artifact@v4.6.0
         with:
           name: build
           path: build.tar
@@ -128,7 +128,7 @@ jobs:
         run: tar -xf build.tar
       - name: Deliver an archive
         if: matrix.type == 'release' && steps.can-release.outputs.can-release == 'true'
-        uses: ncipollo/release-action@v1.14.0
+        uses: ncipollo/release-action@v1.15.0
         with:
           allowUpdates: true
           artifacts: ${{ matrix.target }}
