@@ -50,7 +50,7 @@ listOf(
 ).forEach {
     File("java/$it").inAllDirectories {
         val tasks = arrayOf("assemble", "javadoc") +
-            if (git.currentBranch() == "master") arrayOf("build") else emptyArray()
+            if ("master" in git.currentBranch()) arrayOf("build") else emptyArray()
         gradle(*tasks)
     }
 }
