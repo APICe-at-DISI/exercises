@@ -1,7 +1,7 @@
 plugins {
     java
     application
-    id("org.danilopianini.gradle-java-qa") version "1.91.0"
+    id("org.danilopianini.gradle-java-qa") version "1.95.2-dev02-963370e"
 }
 
 tasks.javadoc {
@@ -32,5 +32,5 @@ val test by tasks.getting(Test::class) {
     testLogging {
         events(*(org.gradle.api.tasks.testing.logging.TestLogEvent.values())) // events("passed", "skipped", "failed")
     }
-    testLogging.showStandardStreams = true    
+    testLogging.showStandardStreams = true
 }

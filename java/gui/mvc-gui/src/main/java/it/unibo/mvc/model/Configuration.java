@@ -53,6 +53,15 @@ public final class Configuration {
     }
 
     /**
+     * Produces a new instance of the builder.
+     *
+     * @return a new instance of the builder
+     */
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    /**
      * Pattern <i>builder</i> used here because:
      * <ul>
      * <li>
@@ -73,7 +82,7 @@ public final class Configuration {
      * </li>
      * </ul>
      */
-    public static class Builder {
+    public static final class Builder {
 
         private static final int MIN = 0;
         private static final int MAX = 100;
@@ -83,6 +92,9 @@ public final class Configuration {
         private int max = MAX;
         private int attempts = ATTEMPTS;
         private boolean consumed;
+
+        private Builder() {
+        }
 
         /**
          * Sets the minimum value.
@@ -122,7 +134,7 @@ public final class Configuration {
          *
          * @return a {@code Configuration}
          */
-        public final Configuration build() {
+        public Configuration build() {
             if (consumed) {
                 throw new IllegalStateException("The builder can only be used once");
             }
