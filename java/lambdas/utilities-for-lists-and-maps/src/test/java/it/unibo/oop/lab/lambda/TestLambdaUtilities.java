@@ -19,6 +19,13 @@ import java.util.Set;
  */
 final class TestLambdaUtilities {
 
+    private static final String A = "a";
+    private static final String P_1 = "p1";
+    private static final String P_2 = "p2";
+    private static final String P_3 = "p3";
+    private static final String N_1 = "n1";
+    private static final String N_2 = "n2";
+
     /**
      * Test dup method.
      */
@@ -26,11 +33,11 @@ final class TestLambdaUtilities {
     void testDup() {
         assertEquals(
             List.of(1, 101, 2, 102, 3, 103, 4, 104, 5, 105),
-            LambdaUtilities.dup(List.of(1, 2, 3, 4, 5), x -> x + 100) 
+            LambdaUtilities.dup(List.of(1, 2, 3, 4, 5), x -> x + 100)
         );
         assertEquals(
-            List.of("a", "aa", "b", "bb", "c", "cc"),
-            LambdaUtilities.dup(List.of("a", "b", "c"), x -> x + x)
+            List.of(A, "aa", "b", "bb", "c", "cc"),
+            LambdaUtilities.dup(List.of(A, "b", "c"), x -> x + x)
         );
     }
 
@@ -45,7 +52,7 @@ final class TestLambdaUtilities {
         );
         assertEquals(
             List.of(Optional.empty(), Optional.of("bcd"), Optional.of("qw"), Optional.empty(), Optional.empty()),
-            LambdaUtilities.optFilter(List.of("a", "bcd", "qw", "e", ""), x -> x.length() > 1)
+            LambdaUtilities.optFilter(List.of(A, "bcd", "qw", "e", ""), x -> x.length() > 1)
         );
     }
 
@@ -79,19 +86,19 @@ final class TestLambdaUtilities {
         final var random = new Random();
         final var map = LambdaUtilities.fill(
             Map.of(
-                "p1", Optional.of(1),
-                "p2", Optional.of(2),
-                "n1", Optional.empty(),
-                "p3", Optional.of(3),
-                "n2", Optional.empty()
+                P_1, Optional.of(1),
+                P_2, Optional.of(2),
+                N_1, Optional.empty(),
+                P_3, Optional.of(3),
+                N_2, Optional.empty()
             ),
             () -> random.nextInt(10) - 10
         );
-        assertEquals(map.keySet(), Set.of("p1", "p2", "p3", "n1", "n2"));
-        assertEquals(map.get("p1"), 1);
-        assertEquals(map.get("p2"), 2);
-        assertEquals(map.get("p3"), 3);
-        assertTrue(map.get("n1") < 0);
-        assertTrue(map.get("n2") < 0);
+        assertEquals(map.keySet(), Set.of(P_1, P_2, P_3, N_1, N_2));
+        assertEquals(map.get(P_1), 1);
+        assertEquals(map.get(P_2), 2);
+        assertEquals(map.get(P_3), 3);
+        assertTrue(map.get(N_1) < 0);
+        assertTrue(map.get(N_2) < 0);
     }
 }

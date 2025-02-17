@@ -4,7 +4,8 @@ import java.util.Objects;
 
 /**
  * A class used to enclose two objects.
- * 
+ *
+ * <p>
  * Important note: when creating real projects, it is much, much, much better
  * to rely on widely used libraries than to write tons of boilerplate code
  * yourself (or copy the code we provide you). Good implementations of mutable
@@ -48,7 +49,7 @@ public final class Pair<X, Y> {
 
     /**
      * Returns a string representation of the pair.
-     * 
+     *
      * @return a string representing this pair's state
      */
     @Override
@@ -74,9 +75,9 @@ public final class Pair<X, Y> {
      * Compares this pair to the specified object. The result is true if and
      * only if the argument is not null and is a Pair object containing the same
      * pair of object.
-     * 
+     *
      * @param other the object to compare this pair against
-     * 
+     *
      * @return true if the given pair is equal to this pair
      */
     @Override
