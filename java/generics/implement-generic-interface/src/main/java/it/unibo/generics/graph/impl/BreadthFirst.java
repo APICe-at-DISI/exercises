@@ -6,7 +6,7 @@ import java.util.Deque;
 
 /**
  * Breadth first accumulation.
- * 
+ *
  * @param <S>
  *            step type
  */

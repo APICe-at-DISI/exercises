@@ -87,7 +87,6 @@ public final class Assertions {
         return true;
     }
 
-
     private static void confirmOK(final Object expected, final Object actual) {
         System.out.println(EXPECTED_HEADER + expected + " expected, and " + actual + " received."); // NOPMD
     }

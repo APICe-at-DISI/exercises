@@ -20,7 +20,7 @@ class Step<N> {
 
     /**
      * Creates an initial step on node {@code position} with no previous steps.
-     * 
+     *
      * @param position is the initial node
      */
     Step(final N position) {
@@ -40,7 +40,7 @@ class Step<N> {
 
     /**
      * Flattens the step into a path (i.e. a list of nodes), from the initial one to the last one
-     * 
+     *
      * @return a list of visited nodes
      */
     public List<N> getPath() {

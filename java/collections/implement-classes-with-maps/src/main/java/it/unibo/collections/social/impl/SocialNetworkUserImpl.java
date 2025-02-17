@@ -1,6 +1,7 @@
 /**
- * 
+ *
  */
+
 package it.unibo.collections.social.impl;
 
 import it.unibo.collections.social.api.SocialNetworkUser;
@@ -16,12 +17,11 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 
  * This will be an implementation of
  * {@link SocialNetworkUser}:
  * 1) complete the definition of the methods by following the suggestions
  * included in the comments below.
- * 
+ *
  * @param <U>
  *            Specific {@link User} type
  */
@@ -106,9 +106,9 @@ public final class SocialNetworkUserImpl<U extends User> extends UserImpl implem
     }
 
     /**
-     *
      * [NOTE] If no group with groupName exists yet, this implementation must
      * return an empty Collection.
+     *
      * {@inheritDoc}
      */
     @Override

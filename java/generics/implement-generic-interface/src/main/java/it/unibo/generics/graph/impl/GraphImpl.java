@@ -26,7 +26,7 @@ public final class GraphImpl<N> implements Graph<N> {
 
     /**
      * Builds a new Graph with the provided strategy.
-     * 
+     *
      * @param strategy
      *            the strategy to be used to search in the graph
      */

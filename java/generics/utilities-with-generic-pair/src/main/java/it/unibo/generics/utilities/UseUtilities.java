@@ -10,6 +10,12 @@ import java.util.Set;
  */
 public final class UseUtilities {
 
+    private static final String A = "a";
+    private static final String B = "b";
+    private static final String C = "c";
+    private static final String D = "d";
+    private static final String E = "e";
+
     private UseUtilities() { }
 
     /**
@@ -17,11 +23,11 @@ public final class UseUtilities {
      *            unused
      */
     public static void main(final String[] s) {
-        final var setA = Set.of("a", "b", "c", "d");
-        final var setB = Set.of("c", "d", "e");
-        assertEquals(Set.of("a", "b", "c", "d", "e"), Utilities.union(setA, setB));
-        assertEquals(Set.of("c", "d"), Utilities.intersection(setA, setB));
-        assertEquals(Set.of("a", "b", "e"), Utilities.symmetricDifference(setA, setB));
+        final var setA = Set.of(A, B, C, D);
+        final var setB = Set.of(C, D, E);
+        assertEquals(Set.of(A, B, C, D, E), Utilities.union(setA, setB));
+        assertEquals(Set.of(C, D), Utilities.intersection(setA, setB));
+        assertEquals(Set.of(A, B, E), Utilities.symmetricDifference(setA, setB));
         final var extractedA = new HashSet<String>();
         while (!extractedA.equals(setA)) {
             final var random = Utilities.randomElement(setA);
@@ -31,7 +37,7 @@ public final class UseUtilities {
         extractedA.clear();
         final var extractedB = new HashSet<String>();
         while (!(extractedA.equals(setA) && extractedB.equals(setB))) {
-            final var randomPair =  Utilities.randomPair(setA, setB);
+            final var randomPair = Utilities.randomPair(setA, setB);
             extractedA.add(randomPair.getFirst());
             extractedB.add(randomPair.getSecond());
             assertContains(setA, randomPair.getFirst());
