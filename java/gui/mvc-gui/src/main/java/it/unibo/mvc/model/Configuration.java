@@ -1,6 +1,5 @@
 package it.unibo.mvc.model;
 
-
 /**
  * Encapsulates the concept of configuration.
  */
@@ -99,33 +98,33 @@ public final class Configuration {
         /**
          * Sets the minimum value.
          *
-         * @param min the minimum value
+         * @param minimum the minimum value
          * @return this builder, for method chaining
          */
-        public Builder withMin(final int min) {
-            this.min = min;
+        public Builder withMin(final int minimum) {
+            this.min = minimum;
             return this;
         }
 
         /**
          * Sets the maximum value.
          *
-         * @param max the maximum value
+         * @param maximum the maximum value
          * @return this builder, for method chaining
          */
-        public Builder withMax(final int max) {
-            this.max = max;
+        public Builder withMax(final int maximum) {
+            this.max = maximum;
             return this;
         }
 
         /**
          * Sets the minimum number of attempts.
          *
-         * @param attempts the attempts count
+         * @param maxAttempts the attempts count
          * @return this builder, for method chaining
          */
-        public Builder withMaxAttempts(final int attempts) {
-            this.attempts = attempts;
+        public Builder withMaxAttempts(final int maxAttempts) {
+            this.attempts = maxAttempts;
             return this;
         }
 

@@ -1,6 +1,7 @@
 /**
  *
  */
+
 package it.unibo.mvc.view;
 
 import it.unibo.mvc.api.DrawNumberView;
@@ -13,7 +14,6 @@ import static java.lang.System.out;
  * This class implements a view that can write on any PrintStream.
  */
 public final class DrawNumberStandardOutputView implements DrawNumberView {
-
 
     /**
      * Builds a new {@link DrawNumberStandardOutputView}.
