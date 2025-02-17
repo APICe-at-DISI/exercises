@@ -17,11 +17,12 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class TestDeathNote {
 
-    private DeathNote deathNote;
     private static final String DANILO_PIANINI = "Danilo Pianini";
     private static final String LIGHT_YAGAMI = "Light Yagami";
     private static final int INVALID_CAUSE_TIME = 100;
     private static final int INVALID_DETAILS_TIME = 6000 + INVALID_CAUSE_TIME;
+
+    private DeathNote deathNote;
 
     @BeforeEach
     void init() {

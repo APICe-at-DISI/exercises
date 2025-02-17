@@ -33,7 +33,7 @@ public final class SimpleGUI {
      * @param controller the controller instance.
      */
     @SuppressFBWarnings(
-        value = { "EI_EXPOSE_REP2" },
+        value = "EI_EXPOSE_REP2",
         justification = "The controller is designed to be manipulated this way."
     )
     public SimpleGUI(final Controller controller) {

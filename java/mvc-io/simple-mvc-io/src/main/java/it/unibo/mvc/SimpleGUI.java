@@ -16,7 +16,7 @@ import javax.swing.JTextArea;
 
 /**
  * A very simple program using a graphical interface.
- * 
+ *
  */
 public final class SimpleGUI {
 
@@ -35,7 +35,7 @@ public final class SimpleGUI {
             public void actionPerformed(final ActionEvent event) {
                 try {
                     ctrl.save(text.getText());
-                } catch (IOException e) {
+                } catch (final IOException e) {
                     JOptionPane.showMessageDialog(null, e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
                 }
             }

@@ -26,7 +26,7 @@ public final class Exporter {
             BufferedInputStream in = new BufferedInputStream(resourceStream)
         ) {
             Files.write(destination.toPath(), in.readAllBytes());
-        } catch (IOException e) {
+        } catch (final IOException e) {
             throw new IllegalStateException(e); // Rethrow, always preserve the stacktrace!
         }
     }

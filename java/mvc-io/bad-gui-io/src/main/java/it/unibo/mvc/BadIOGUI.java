@@ -20,7 +20,7 @@ import java.util.Random;
 
 /**
  * This class is a simple application that writes a random number on a file.
- * 
+ *
  * This application does not exploit the model-view-controller pattern, and as
  * such is just to be used to learn the basics, not as a template for your
  * applications.
@@ -58,14 +58,14 @@ public class BadIOGUI {
             public void actionPerformed(final ActionEvent e) {
                 /*
                  * This would be VERY BAD in a real application.
-                 * 
+                 *
                  * This makes the Event Dispatch Thread (EDT) work on an I/O
                  * operation. I/O operations may take a long time, during which
                  * your UI becomes completely unresponsive.
                  */
                 try (PrintStream ps = new PrintStream(PATH, StandardCharsets.UTF_8)) {
                     ps.print(randomGenerator.nextInt());
-                } catch (IOException e1) {
+                } catch (final IOException e1) {
                     JOptionPane.showMessageDialog(frame, e1, "Error", JOptionPane.ERROR_MESSAGE);
                     e1.printStackTrace(); // NOPMD: allowed as this is just an exercise
                 }
@@ -79,7 +79,7 @@ public class BadIOGUI {
                     for (final String line: lines) {
                         System.out.println(line); // NOPMD: allowed as this is just an exercise
                     }
-                } catch (IOException e1) {
+                } catch (final IOException e1) {
                     JOptionPane.showMessageDialog(frame, e1, "Error", JOptionPane.ERROR_MESSAGE);
                     e1.printStackTrace(); // NOPMD: allowed as this is just an exercise
                 }

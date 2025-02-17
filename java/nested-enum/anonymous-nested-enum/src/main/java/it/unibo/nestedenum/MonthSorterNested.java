@@ -47,7 +47,7 @@ public final class MonthSorterNested implements MonthSorter {
             Objects.requireNonNull(name);
             try {
                 return valueOf(name);
-            } catch (IllegalArgumentException e) {
+            } catch (final IllegalArgumentException e) {
                 // Fallback to manual scan before giving up
                 Month match = null;
                 for (final Month month: values()) {

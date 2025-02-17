@@ -66,7 +66,7 @@ class TestStrictBankAccount {
     void testNegativeWithdraw() {
         try {
             bankAccount.withdraw(mRossi.getUserID(), -INITIAL_AMOUNT);
-        } catch (IllegalArgumentException e) {
+        } catch (final IllegalArgumentException e) {
             assertNotNull(e.getMessage());
             assertFalse(e.getMessage().isBlank());
         }
@@ -79,7 +79,7 @@ class TestStrictBankAccount {
     void testWithdrawingTooMuch() {
         try {
             bankAccount.withdraw(mRossi.getUserID(), INITIAL_AMOUNT);
-        } catch (IllegalArgumentException e) {
+        } catch (final IllegalArgumentException e) {
             assertNotNull(e.getMessage());
             assertFalse(e.getMessage().isBlank());
         }
