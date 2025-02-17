@@ -52,7 +52,7 @@ public final class AnotherConcurrentGUIWithLambdas extends JFrame {
         new Thread(() -> {
             try {
                 Thread.sleep(WAITING_TIME);
-            } catch (InterruptedException ex) {
+            } catch (final InterruptedException ex) {
                 ex.printStackTrace();
             }
             this.stopCounting();

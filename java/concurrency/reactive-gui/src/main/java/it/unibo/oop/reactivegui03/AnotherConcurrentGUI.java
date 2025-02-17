@@ -67,7 +67,7 @@ public final class AnotherConcurrentGUI extends JFrame {
             public void run() {
                 try {
                     Thread.sleep(WAITING_TIME);
-                } catch (InterruptedException ex) {
+                } catch (final InterruptedException ex) {
                     ex.printStackTrace();
                 }
                 AnotherConcurrentGUI.this.stopCounting();

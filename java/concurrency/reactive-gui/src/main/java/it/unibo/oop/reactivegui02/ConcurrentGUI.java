@@ -61,7 +61,7 @@ public final class ConcurrentGUI extends JFrame {
                     counter += up ? 1 : -1;
                     /*
                      * Copy-pass + asynchronous update
-                     * 
+                     *
                      * All the processing happens in the local thread, EDT is only given charge to
                      * update the UI. It may lose graphical updates, but frees the current thread
                      * immediately and does not overload EDT
@@ -78,7 +78,7 @@ public final class ConcurrentGUI extends JFrame {
                      * SwingUtilities.invokeLater(() -> display.setText(todisplay));
                      */
                     Thread.sleep(100);
-                } catch (InterruptedException ex) {
+                } catch (final InterruptedException ex) {
                     ex.printStackTrace();
                 }
             }
