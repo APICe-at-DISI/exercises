@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * This is a standard implementation of the calculation.
- * 
+ *
  */
 
 public class MultiThreadedSumMatrixClassic implements SumMatrix {
@@ -14,7 +14,7 @@ public class MultiThreadedSumMatrixClassic implements SumMatrix {
 
     /**
      * Construct a multithreaded matrix sum.
-     * 
+     *
      * @param nthread
      *            no. threads to be adopted to perform the operation
      */
@@ -24,45 +24,6 @@ public class MultiThreadedSumMatrixClassic implements SumMatrix {
             throw new IllegalArgumentException();
         }
         this.nthread = nthread;
-    }
-
-    private static final class Worker extends Thread {
-
-        private final double[][] matrix;
-        private final int startpos;
-        private final int nelem;
-        private double res;
-
-        /**
-         * Builds a new worker.
-         * 
-         * @param matrix
-         *            the matrix to be summed
-         * @param startpos
-         *            the start position for the sum in charge to this worker
-         * @param nelem
-         *            the no. of element for him to sum
-         */
-        private Worker(final double[][] matrix, final int startpos, final int nelem) {
-            super();
-            this.matrix = matrix;
-            this.startpos = startpos;
-            this.nelem = nelem;
-        }
-
-        @Override
-        public void run() {
-            for (int i = startpos; i < matrix.length && i < startpos + nelem; i++) {
-                for (final double d : this.matrix[i]) {
-                    this.res += d;
-                }
-            }
-        }
-
-        public double getResult() {
-            return this.res;
-        }
-
     }
 
     /**
@@ -83,10 +44,49 @@ public class MultiThreadedSumMatrixClassic implements SumMatrix {
             try {
                 worker.join();
                 sum += worker.getResult();
-            } catch (InterruptedException e) {
+            } catch (final InterruptedException e) {
                 throw new IllegalStateException(e);
             }
         }
         return sum;
+    }
+
+    private static final class Worker extends Thread {
+
+        private final double[][] matrix;
+        private final int startpos;
+        private final int nelem;
+        private double res;
+
+        /**
+         * Builds a new worker.
+         *
+         * @param matrix
+         *            the matrix to be summed
+         * @param startpos
+         *            the start position for the sum in charge to this worker
+         * @param nelem
+         *            the no. of element for him to sum
+         */
+        private Worker(final double[][] matrix, final int startpos, final int nelem) {
+            super();
+            this.matrix = matrix;
+            this.startpos = startpos;
+            this.nelem = nelem;
+        }
+
+        @Override
+        public synchronized void run() {
+            for (int i = startpos; i < matrix.length && i < startpos + nelem; i++) {
+                for (final double d : this.matrix[i]) {
+                    this.res += d;
+                }
+            }
+        }
+
+        public synchronized double getResult() {
+            return this.res;
+        }
+
     }
 }

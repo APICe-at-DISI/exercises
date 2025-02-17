@@ -9,7 +9,7 @@ import java.util.concurrent.Future;
 
 /**
  * This is a standard implementation of the calculation.
- * 
+ *
  */
 @SuppressWarnings("CPD-START")
 public class MultiThreadedSumMatrixWithFutures implements SumMatrix {
@@ -18,7 +18,7 @@ public class MultiThreadedSumMatrixWithFutures implements SumMatrix {
 
     /**
      * Construct a multithreaded matrix sum.
-     * 
+     *
      * @param nthread
      *            no. threads to be adopted to perform the operation
      */
@@ -30,6 +30,40 @@ public class MultiThreadedSumMatrixWithFutures implements SumMatrix {
         this.nthread = nthread;
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public double sum(final double[][] matrix) {
+        final int size = matrix.length / nthread + matrix.length % nthread;
+        /*
+         * This kind of execution requires at least two control flows, or it will
+         * inevitably lead to deadlock (the outermost work occupies the executor, but
+         * requires the innermost workers to get scheduled and complete).
+         *
+         * When there are many, possibly interdependent small tasks that need to be
+         * executed in parallel, a good choice is using a fork-join thread pool.
+         */
+        final var executor = ForkJoinPool.commonPool();
+        final Collection<Future<Double>> futureResults = new ArrayList<>(nthread);
+        final var futureFinalResult = executor.submit(() -> {
+            for (int start = 0; start < matrix.length; start += size) {
+                futureResults.add(executor.submit(new Worker(matrix, start, size)));
+            }
+            double sum = 0;
+            for (final Future<Double> result: futureResults) {
+                sum += result.get();
+            }
+            executor.shutdown();
+            return sum;
+        });
+        try {
+            return futureFinalResult.get();
+        } catch (InterruptedException | ExecutionException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+
     private static final class Worker implements Callable<Double> {
 
         private final double[][] matrix;
@@ -38,7 +72,7 @@ public class MultiThreadedSumMatrixWithFutures implements SumMatrix {
 
         /**
          * Builds a new worker.
-         * 
+         *
          * @param matrix
          *            the matrix to be summed
          * @param startpos
@@ -64,39 +98,5 @@ public class MultiThreadedSumMatrixWithFutures implements SumMatrix {
             return result;
         }
 
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public double sum(final double[][] matrix) {
-        final int size = matrix.length / nthread + matrix.length % nthread;
-        /*
-         * This kind of execution requires at least two control flows, or it will
-         * inevitably lead to deadlock (the outermost work occupies the executor, but
-         * requires the innermost workers to get scheduled and complete).
-         * 
-         * When there are many, possibly interdependent small tasks that need to be
-         * executed in parallel, a good choice is using a fork-join thread pool.
-         */
-        final var executor = ForkJoinPool.commonPool();
-        final Collection<Future<Double>> futureResults = new ArrayList<>(nthread);
-        final var futureFinalResult = executor.submit(() -> {
-            for (int start = 0; start < matrix.length; start += size) {
-                futureResults.add(executor.submit(new Worker(matrix, start, size)));
-            }
-            double sum = 0;
-            for (final Future<Double> result: futureResults) {
-                sum += result.get();
-            }
-            executor.shutdown();
-            return sum;
-        });
-        try {
-            return futureFinalResult.get();
-        } catch (InterruptedException | ExecutionException e) {
-            throw new IllegalStateException(e);
-        }
     }
 }
