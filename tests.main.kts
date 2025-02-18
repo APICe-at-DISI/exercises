@@ -2,6 +2,7 @@
 @file:Repository("https://repo.maven.apache.org/maven2")
 @file:DependsOn("com.lordcodes.turtle:turtle:0.10.0")
 
+import com.lordcodes.turtle.GitCommands
 import com.lordcodes.turtle.ShellScript
 import com.lordcodes.turtle.shellRun
 import java.io.File
@@ -35,10 +36,12 @@ File("java/inheritance/").inAllDirectories {
     gradle("compileJava")
 }
 
+fun GitCommands.branchContains(name: String) = name in currentBranch() || name in System.getenv("BRANCH").orEmpty()
+
 listOf("collections", "generics", "exceptions", "lambdas", "streams", "concurrency").forEach {
     File("java/$it").inAllDirectories {
         val tasks = arrayOf("build") + when {
-            "exercises" in git.currentBranch() -> arrayOf("-x", "test")
+            git.branchContains("exercises") -> arrayOf("-x", "test")
             else -> emptyArray()
         }
         gradle(*tasks)
@@ -50,7 +53,7 @@ listOf(
 ).forEach {
     File("java/$it").inAllDirectories {
         val tasks = arrayOf("assemble", "javadoc") +
-            if ("master" in git.currentBranch()) arrayOf("build") else emptyArray()
+            if (git.branchContains("master")) arrayOf("build") else emptyArray()
         gradle(*tasks)
     }
 }
