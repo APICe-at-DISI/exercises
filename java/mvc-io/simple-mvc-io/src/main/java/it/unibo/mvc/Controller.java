@@ -35,7 +35,7 @@ public class Controller {
 
     /**
      * Saves some text on the designed file.
-     * 
+     *
      * @param text
      *            the text to save
      * @throws IOException

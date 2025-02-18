@@ -73,7 +73,7 @@ public final class ConcurrentGUI extends JFrame {
                             display.setText(todisplay);
                         }
                     });
-                    /**
+                    /*
                      * With lambdas instead:
                      * SwingUtilities.invokeLater(() -> display.setText(todisplay));
                      */

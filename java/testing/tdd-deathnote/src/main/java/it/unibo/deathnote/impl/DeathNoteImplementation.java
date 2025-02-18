@@ -139,15 +139,15 @@ public final class DeathNoteImplementation implements DeathNote {
             this(DEFAULT_CAUSE, "");
         }
 
-        Death writeCause(final String cause) {
+        Death writeCause(final String deathCause) {
             return System.currentTimeMillis() < timeOfDeath + VALID_CAUSE_TIMEOUT
-                ? new Death(cause, this.details)
+                ? new Death(deathCause, this.details)
                 : this;
         }
 
-        Death writeDetails(final String details) {
+        Death writeDetails(final String deathDetails) {
             return System.currentTimeMillis() < timeOfDeath + VALID_DETAILS_TIMEOUT
-                ? new Death(this.cause, details)
+                ? new Death(this.cause, deathDetails)
                 : this;
         }
 

@@ -113,12 +113,15 @@ public final class AnotherConcurrentGUI extends JFrame {
                 }
             }
         }
+
         public void stopCounting() {
             this.stop = true;
         }
+
         public void upCounting() {
             this.up = true;
         }
+
         public void downCounting() {
             this.up = false;
         }

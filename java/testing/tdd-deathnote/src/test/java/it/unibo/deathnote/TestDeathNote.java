@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 class TestDeathNote {
 
     private static final String DANILO_PIANINI = "Danilo Pianini";
+    private static final String KARTING_ACCIDENT = "karting accident";
     private static final String LIGHT_YAGAMI = "Light Yagami";
     private static final int INVALID_CAUSE_TIME = 100;
     private static final int INVALID_DETAILS_TIME = 6000 + INVALID_CAUSE_TIME;
@@ -87,13 +88,13 @@ class TestDeathNote {
         deathNote.writeName(LIGHT_YAGAMI);
         assertEquals("heart attack", deathNote.getDeathCause(LIGHT_YAGAMI));
         deathNote.writeName(DANILO_PIANINI);
-        assertTrue(deathNote.writeDeathCause("karting accident"));
+        assertTrue(deathNote.writeDeathCause(KARTING_ACCIDENT));
         // Assuming the method can be executed in less than 40ms
-        assertEquals("karting accident", deathNote.getDeathCause(DANILO_PIANINI));
+        assertEquals(KARTING_ACCIDENT, deathNote.getDeathCause(DANILO_PIANINI));
         // Wait for more than 40 ms
         sleep(INVALID_CAUSE_TIME);
         assertFalse(deathNote.writeDeathCause("Spontaneous human combustion"));
-        assertEquals("karting accident", deathNote.getDeathCause(DANILO_PIANINI));
+        assertEquals(KARTING_ACCIDENT, deathNote.getDeathCause(DANILO_PIANINI));
     }
 
     /**

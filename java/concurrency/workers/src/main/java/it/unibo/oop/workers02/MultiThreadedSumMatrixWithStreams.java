@@ -4,7 +4,7 @@ import java.util.stream.IntStream;
 
 /**
  * This is a standard implementation of the calculation.
- * 
+ *
  */
 @SuppressWarnings("CPD-START")
 public class MultiThreadedSumMatrixWithStreams implements SumMatrix {
@@ -13,7 +13,7 @@ public class MultiThreadedSumMatrixWithStreams implements SumMatrix {
 
     /**
      * Construct a multithreaded matrix sum.
-     * 
+     *
      * @param nthread
      *            no. threads to be adopted to perform the operation
      */

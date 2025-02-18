@@ -30,6 +30,7 @@ public final class SimpleGUI {
 
     /**
      * builds a new {@link SimpleGUI}.
+     *
      * @param controller the controller instance.
      */
     @SuppressFBWarnings(
@@ -106,7 +107,6 @@ public final class SimpleGUI {
     }
 
     /**
-     *
      * @param args
      *            ignored
      */

@@ -17,6 +17,7 @@ public final class TarantulaNebula {
 
     /**
      * Application entry point. Creates documentation about the Tarantula Nebula in the target folder.
+     *
      * @param args one mandatory argument representing the destination path
      */
     public static void main(final String[] args) {

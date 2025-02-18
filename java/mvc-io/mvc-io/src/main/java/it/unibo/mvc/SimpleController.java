@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * 
+ *
  *
  */
 public final class SimpleController implements Controller {
@@ -15,8 +15,8 @@ public final class SimpleController implements Controller {
     private String nextString;
 
     @Override
-    public void setNextStringToPrint(final String nextString) {
-        this.nextString = Objects.requireNonNull(nextString, "This method does not accept null values.");
+    public void setNextStringToPrint(final String nextStringToPrint) {
+        this.nextString = Objects.requireNonNull(nextStringToPrint, "This method does not accept null values.");
     }
 
     @Override
