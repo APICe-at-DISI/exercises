@@ -54,5 +54,3 @@ listOf(
         gradle(*tasks)
     }
 }
-
-
