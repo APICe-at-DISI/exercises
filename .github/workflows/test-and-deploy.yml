@@ -39,7 +39,12 @@ jobs:
         sudo apt-get install -y openjdk-21-jre-headless
     - name: Checkout
       uses: actions/checkout@v4.2.2
+    - name: Get branch names
+      id: branch-names
+      uses: tj-actions/branch-names@v8.0.1
     - name: Tests
+      env:
+        BRANCH: ${{ steps.branch-names.outputs.current_branch }}
       run: ./tests.main.kts
   prepare-deliveries:
     runs-on: ubuntu-latest
