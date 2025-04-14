@@ -8,6 +8,7 @@ import java.util.Deque;
  * @param <S>
  *            the step type
  */
+@SuppressWarnings("PMD.ImplicitFunctionalInterface")
 public interface FringeAccumulationStrategy<S> {
 
     /**

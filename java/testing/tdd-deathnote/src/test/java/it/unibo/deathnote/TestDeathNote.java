@@ -137,11 +137,14 @@ class TestDeathNote {
         }
     }
 
+    @FunctionalInterface
     private interface RuntimeExceptionThrower {
         void run();
     }
 
+    @FunctionalInterface
     private interface IllegalStateThrower extends RuntimeExceptionThrower { }
 
+    @FunctionalInterface
     private interface IllegalArgumentThrower extends RuntimeExceptionThrower { }
 }

@@ -114,6 +114,7 @@ public final class DeathNoteImplementation implements DeathNote {
         }
     }
 
+    @FunctionalInterface
     private interface DeathTransformer {
         Death call(Death input);
     }
