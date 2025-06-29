@@ -21,8 +21,6 @@ public final class AnotherConcurrentGUIWithLambdas extends JFrame {
 
     @Serial
     private static final long serialVersionUID = 1L;
-    private static final double WIDTH_PERC = 0.2;
-    private static final double HEIGHT_PERC = 0.1;
     private static final long WAITING_TIME = TimeUnit.SECONDS.toMillis(10);
 
     private final JLabel display = new JLabel();
