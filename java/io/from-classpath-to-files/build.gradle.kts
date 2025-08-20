@@ -2,7 +2,7 @@ plugins {
     application
     java
     id("org.danilopianini.gradle-java-qa") version "1.130.0"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("com.gradleup.shadow") version "9.0.2"
 }
 
 repositories {
