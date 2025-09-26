@@ -16,7 +16,7 @@ jobs:
         os:
           - ubuntu-24.04
 #          - windows
-          - macos-14
+          - macos-15
     runs-on: ${{ matrix.os }}
     concurrency:
       group: ${{ github.workflow }}-test-${{ matrix.os }}-${{ github.event.number || github.ref }}
