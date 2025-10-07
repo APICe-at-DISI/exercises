@@ -69,9 +69,6 @@ packages:
         to: 26-array/README.md
       - from: java/basics/arrays/array/src
         to: 26-array/src/main/java
-        # Debug
-      - from: java/basics/debug/src
-        to: 27-debug/src/main/java
   oop-lab03:
     format:
       - zip
