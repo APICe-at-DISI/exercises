@@ -94,7 +94,7 @@ public final class UseListsAndMaps {
          */
         time = System.nanoTime();
         for (int i = 0; i < READS; i++) {
-            arrayList.get(arrayList.size() / 2); // Warning OK: we are just benchmarking
+            arrayList.get(arrayList.size() / 2); // NOPMD - Warning OK: we are just benchmarking
         }
         time = System.nanoTime() - time;
         log(
@@ -102,7 +102,7 @@ public final class UseListsAndMaps {
         );
         time = System.nanoTime();
         for (int i = 0; i < READS; i++) {
-            linkedList.get(linkedList.size() / 2);
+            linkedList.get(linkedList.size() / 2); // NOPMD - Warning OK: we are just benchmarking
         }
         time = System.nanoTime() - time;
         log(
