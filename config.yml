@@ -77,7 +77,7 @@ packages:
     contents:
         # Debug
       - from: java/basics/debug/src
-      - to: 30-debug/src/main/java
+        to: 30-debug/src/main/java
         # Gradle-ize
       - from: java/basics/arrays/array/README-add-build.md
         to: 31-gradleization/README.md
