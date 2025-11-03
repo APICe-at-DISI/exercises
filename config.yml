@@ -369,15 +369,12 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab04
     contents:
-       # Public to private fields
-      - <<: *clean-gradle-wrapper
-        to: 01-encapsulation
-      - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 01-encapsulation/build.gradle.kts
-      - from: java/basics/interfaces-encapsulation/public-to-private/README.md
-        to: 01-encapsulation/README.md
-      - from: java/basics/interfaces-encapsulation/public-to-private/src
-        to: 01-encapsulation/src/main/java
+      - from: java/collections/use-set/
+        to: 01-use-set/
+      - from: java/collections/custom-comparator/
+        to: 02-custom-comparator/
+      - from: java/generics/utilities-with-generic-pair/
+        to: 03-generic-pair/
   pss-lab05:
     format:
       - repo
