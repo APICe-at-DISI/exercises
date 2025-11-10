@@ -390,6 +390,8 @@ packages:
         to: 01-inheritance-dry/
       - from: java/inheritance/guided-design/
         to: 02-abstract-classes/
+      - from: java/exceptions/use-and-design-exceptions/
+        to: 03-exceptions/
   pss-lab06:
     format:
       - repo
