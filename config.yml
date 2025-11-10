@@ -381,42 +381,15 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab05
     contents:
-       # Public to private fields
-      # - <<: *clean-gradle-wrapper
-      #   to: 01-encapsulation
-      # - from: gradle-buildfiles/java-minimal/build.gradle.kts
-      #   to: 01-encapsulation/build.gradle.kts
-      # - from: java/basics/interfaces-encapsulation/public-to-private/README.md
-      #   to: 01-encapsulation/README.md
-      # - from: java/basics/interfaces-encapsulation/public-to-private/src
-      #   to: 01-encapsulation/src/main/java
-      # Implement interfaces
+      # DRY with extension
       - <<: *clean-gradle-wrapper
-        to: 01-interfaces
+        to: 01-inheritance-dry
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 01-interfaces/build.gradle.kts
-      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
-        to: 01-interfaces/README.md
-      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
-        to: 01-interfaces/src/main/java
-         # Composition of interfaces
-      - <<: *clean-gradle-wrapper
-        to: 02-composition
-      - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 02-composition/build.gradle.kts
-      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
-        to: 02-composition/README.md
-      - from: java/basics/interfaces-encapsulation/interface-composition/src
-        to: 02-composition/src/main/java
-        # Design from scratch
-      - <<: *clean-gradle-wrapper
-        to: 03-design-from-scratch
-      - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 03-design-from-scratch/build.gradle.kts
-      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
-        to: 03-design-from-scratch/README.md
-      - from: java/basics/interfaces-encapsulation/from-scratch/src
-        to: 03-design-from-scratch/src/main/java
+        to: 01-inheritance-dry/build.gradle.kts
+      - from: java/inheritance/improve-design/
+        to: 01-inheritance-dry/
+      - from: java/inheritance/guided-design/
+        to: 02-abstract-classes/
   pss-lab06:
     format:
       - repo
