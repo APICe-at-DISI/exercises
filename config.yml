@@ -398,20 +398,12 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab06
     contents:
-      # DRY with extension
-      - <<: *clean-gradle-wrapper
-        to: 01-inheritance-dry
-      - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 01-inheritance-dry/build.gradle.kts
-      - from: java/inheritance/improve-design/
-        to: 01-inheritance-dry/
-      # Analysis and design with extension
       - from: java/testing/junit/
-        to: 02-junit-bankaccounts/
-      - from: java/testing/tdd/
-        to: 03-tdd/
-      - from: readmes/pss-lab-testing.md
-        to: README.md
+        to: 01-junit-bankaccounts/
+      - from: java/nested-enum/anonymous-nested-enum
+        to: 02-anonymous-nested-enum
+      - from: java/lambdas/utilities-for-lists-and-maps
+        to: 03-lambda-utilities-for-list
   pss-lab07:
     format:
       - repo
