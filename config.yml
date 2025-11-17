@@ -400,10 +400,10 @@ packages:
     contents:
       - from: java/testing/junit/
         to: 01-junit-bankaccounts/
-      - from: java/nested-enum/anonymous-nested-enum
-        to: 02-anonymous-nested-enum
       - from: java/lambdas/utilities-for-lists-and-maps
-        to: 03-lambda-utilities-for-list
+        to: 02-lambda-utilities
+      - from: java/nested-enum/anonymous-nested-enum
+        to: 03-anonymous-nested-enum
   pss-lab07:
     format:
       - repo
