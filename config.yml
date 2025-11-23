@@ -238,6 +238,8 @@ packages:
         to: 101-lambda-utilities-for-lists-and-maps
       - from: java/mvc-io/advanced-mvc
         to: 102-advanced-mvc
+      - from: java/streams/utilities-for-music-model
+        to: 103-stream-utilities-for-music-model
       - from: git/instructions-clone.md
         to: README.md
   oop-lab11:
@@ -246,14 +248,12 @@ packages:
     destinations:
       - unibo-oop/lab11
     contents:
-      - from: java/streams/utilities-for-music-model
-        to: 111-stream-utilities-for-music-model
       - from: java/streams/utilities-for-text-processing
-        to: 112-stream-utilities-for-text-processing
+        to: 111-stream-utilities-for-text-processing
       - from: java/concurrency/reactive-gui
-        to: 113-reactive-guis
+        to: 112-reactive-guis
       - from: java/concurrency/workers
-        to: 114-workers
+        to: 113-workers
       - from: git/instructions-clone.md
         to: README.md
   oop-lab12:
@@ -381,48 +381,6 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab05
     contents:
-       # Public to private fields
-      # - <<: *clean-gradle-wrapper
-      #   to: 01-encapsulation
-      # - from: gradle-buildfiles/java-minimal/build.gradle.kts
-      #   to: 01-encapsulation/build.gradle.kts
-      # - from: java/basics/interfaces-encapsulation/public-to-private/README.md
-      #   to: 01-encapsulation/README.md
-      # - from: java/basics/interfaces-encapsulation/public-to-private/src
-      #   to: 01-encapsulation/src/main/java
-      # Implement interfaces
-      - <<: *clean-gradle-wrapper
-        to: 01-interfaces
-      - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 01-interfaces/build.gradle.kts
-      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
-        to: 01-interfaces/README.md
-      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
-        to: 01-interfaces/src/main/java
-         # Composition of interfaces
-      - <<: *clean-gradle-wrapper
-        to: 02-composition
-      - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 02-composition/build.gradle.kts
-      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
-        to: 02-composition/README.md
-      - from: java/basics/interfaces-encapsulation/interface-composition/src
-        to: 02-composition/src/main/java
-        # Design from scratch
-      - <<: *clean-gradle-wrapper
-        to: 03-design-from-scratch
-      - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 03-design-from-scratch/build.gradle.kts
-      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
-        to: 03-design-from-scratch/README.md
-      - from: java/basics/interfaces-encapsulation/from-scratch/src
-        to: 03-design-from-scratch/src/main/java
-  pss-lab06:
-    format:
-      - repo
-    destinations:
-      - unibo-lptsi-pss/pss-lab06
-    contents:
       # DRY with extension
       - <<: *clean-gradle-wrapper
         to: 01-inheritance-dry
@@ -430,13 +388,22 @@ packages:
         to: 01-inheritance-dry/build.gradle.kts
       - from: java/inheritance/improve-design/
         to: 01-inheritance-dry/
-      # Analysis and design with extension
+      - from: java/inheritance/guided-design/
+        to: 02-abstract-classes/
+      - from: java/exceptions/use-and-design-exceptions/
+        to: 03-exceptions/
+  pss-lab06:
+    format:
+      - repo
+    destinations:
+      - unibo-lptsi-pss/pss-lab06
+    contents:
       - from: java/testing/junit/
-        to: 02-junit-bankaccounts/
-      - from: java/testing/tdd/
-        to: 03-tdd/
-      - from: readmes/pss-lab-testing.md
-        to: README.md
+        to: 01-junit-bankaccounts/
+      - from: java/nested-enum/anonymous-nested-enum
+        to: 02-anonymous-nested-enum
+      - from: java/lambdas/utilities-for-lists-and-maps
+        to: 03-lambda-utilities-for-list
   pss-lab07:
     format:
       - repo
