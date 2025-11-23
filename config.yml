@@ -238,6 +238,8 @@ packages:
         to: 101-lambda-utilities-for-lists-and-maps
       - from: java/mvc-io/advanced-mvc
         to: 102-advanced-mvc
+      - from: java/streams/utilities-for-music-model
+        to: 103-stream-utilities-for-music-model
       - from: git/instructions-clone.md
         to: README.md
   oop-lab11:
@@ -246,14 +248,12 @@ packages:
     destinations:
       - unibo-oop/lab11
     contents:
-      - from: java/streams/utilities-for-music-model
-        to: 111-stream-utilities-for-music-model
       - from: java/streams/utilities-for-text-processing
-        to: 112-stream-utilities-for-text-processing
+        to: 111-stream-utilities-for-text-processing
       - from: java/concurrency/reactive-gui
-        to: 113-reactive-guis
+        to: 112-reactive-guis
       - from: java/concurrency/workers
-        to: 114-workers
+        to: 113-workers
       - from: git/instructions-clone.md
         to: README.md
   oop-lab12:
