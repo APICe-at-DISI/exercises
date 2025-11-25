@@ -1,6 +1,8 @@
 package it.unibo.oop.reactivegui03;
 
 import it.unibo.oop.JFrameUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,11 +20,11 @@ import javax.swing.SwingUtilities;
 /**
  * Third experiment with reactive gui.
  */
-@SuppressWarnings("PMD.AvoidPrintStackTrace")
 public final class AnotherConcurrentGUI extends JFrame {
 
     private static final long serialVersionUID = 1L;
     private static final long WAITING_TIME = TimeUnit.SECONDS.toMillis(10);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AnotherConcurrentGUI.class);
 
     private final JLabel display = new JLabel();
     private final JButton stop = new JButton("stop");
@@ -68,7 +70,7 @@ public final class AnotherConcurrentGUI extends JFrame {
                 try {
                     Thread.sleep(WAITING_TIME);
                 } catch (final InterruptedException ex) {
-                    ex.printStackTrace();
+                    LOGGER.error(ex.getMessage(), ex);
                 }
                 AnotherConcurrentGUI.this.stopCounting();
             }
@@ -109,7 +111,7 @@ public final class AnotherConcurrentGUI extends JFrame {
                     counter += up ? 1 : -1;
                     Thread.sleep(100);
                 } catch (InterruptedException | InvocationTargetException ex) {
-                    ex.printStackTrace();
+                    LOGGER.error(ex.getMessage(), ex);
                 }
             }
         }

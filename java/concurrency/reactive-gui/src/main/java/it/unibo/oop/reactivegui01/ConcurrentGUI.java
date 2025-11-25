@@ -1,6 +1,8 @@
 package it.unibo.oop.reactivegui01;
 
 import it.unibo.oop.JFrameUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serial;
 import java.lang.reflect.InvocationTargetException;
@@ -15,11 +17,11 @@ import javax.swing.SwingUtilities;
  * This is a first example on how to realize a reactive GUI.
  * This shows an alternative solutions using lambdas
  */
-@SuppressWarnings("PMD.AvoidPrintStackTrace")
 public final class ConcurrentGUI extends JFrame {
 
     @Serial
     private static final long serialVersionUID = 1L;
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConcurrentGUI.class);
     private final JLabel display = new JLabel();
 
     /**
@@ -75,11 +77,7 @@ public final class ConcurrentGUI extends JFrame {
                     this.counter++;
                     Thread.sleep(100);
                 } catch (InvocationTargetException | InterruptedException ex) {
-                    /*
-                     * This is just a stack trace print, in a real program there
-                     * should be some logging and decent error reporting
-                     */
-                    ex.printStackTrace();
+                    LOGGER.error(ex.getMessage(), ex);
                 }
             }
         }

@@ -1,6 +1,8 @@
 package it.unibo.oop.reactivegui02;
 
 import it.unibo.oop.JFrameUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serial;
 
@@ -13,12 +15,11 @@ import javax.swing.SwingUtilities;
 /**
  * Second example of reactive GUI.
  */
-@SuppressWarnings("PMD.AvoidPrintStackTrace")
 public final class ConcurrentGUI extends JFrame {
 
     @Serial
     private static final long serialVersionUID = -6218820567019985015L;
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConcurrentGUI.class);
     private final JLabel display = new JLabel();
 
     /**
@@ -79,7 +80,7 @@ public final class ConcurrentGUI extends JFrame {
                      */
                     Thread.sleep(100);
                 } catch (final InterruptedException ex) {
-                    ex.printStackTrace();
+                    LOGGER.error(ex.getMessage(), ex);
                 }
             }
         }
