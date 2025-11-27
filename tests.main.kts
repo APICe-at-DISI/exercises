@@ -49,7 +49,7 @@ listOf("collections", "generics", "exceptions", "lambdas", "streams", "concurren
 }
 
 listOf(
-    "mvc-io", "gui", "nested-enum", "io", "testing",
+    "exams", "gui", "io", "mvc-io", "nested-enum", "testing",
 ).forEach {
     File("java/$it").inAllDirectories {
         val tasks = arrayOf("assemble", "javadoc") +

@@ -1,43 +1,53 @@
 package it.unibo.es1;
 
-import java.awt.*;
-import java.awt.event.ActionListener;
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A simple GUI class that creates a window with buttons based on the Logics implementation.
+ */
+public final class GUI extends JFrame {
 
-public class GUI extends JFrame{
-	
-	final List<JButton> jbs = new ArrayList<>();
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private final List<JButton> buttons = new ArrayList<>();
 
-	public GUI(int size){
-		final Logics logics = new LogicsImpl(size);
-		this.setSize(500, 100);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.getContentPane().setLayout(new FlowLayout());
-		
-		ActionListener ac = e -> {
-			final JButton buttonClicked = (JButton)e.getSource();
-			final int buttonPosition = jbs.indexOf(buttonClicked);
-			buttonClicked.setText(String.valueOf(logics.hit(buttonPosition)));
-			buttonClicked.setEnabled(logics.enablings().get(buttonPosition));
-			if (logics.toQuit()) {
-				System.exit(0);
-			}
-		};
-		logics.values().forEach(v -> {
-			JButton jb = new JButton(String.valueOf(v));
-			jbs.add(jb);
-			jb.addActionListener(ac);
-			this.getContentPane().add(jb);
-		});
-		final JButton ok = new JButton("Print");
-		this.getContentPane().add(ok);
-		ok.addActionListener(e -> System.out.println(logics.result()));
-		
-		this.setVisible(true);
-	}
+    /**
+     * Constructor that initializes the GUI with a specified number of buttons.
+     *
+     * @param size the number of buttons to create
+     */
+    public GUI(final int size) {
+        final Logics logics = new LogicsImpl(size);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.getContentPane().setLayout(new FlowLayout());
+        // ActionListener for the buttons
+        logics.values().forEach(v -> {
+            final JButton jb = new JButton(String.valueOf(v));
+            buttons.add(jb);
+            jb.addActionListener(e -> {
+                final JButton buttonClicked = (JButton) e.getSource();
+                final int buttonPosition = buttons.indexOf(buttonClicked);
+                buttonClicked.setText(String.valueOf(logics.hit(buttonPosition)));
+                buttonClicked.setEnabled(logics.enabledStates().get(buttonPosition));
+                if (logics.toQuit()) {
+                    this.dispose();
+                    // System.exit(0); // Too abrupt!
+                }
+            });
+            this.getContentPane().add(jb);
+        });
+        final JButton ok = new JButton("Print");
+        this.getContentPane().add(ok);
+        ok.addActionListener(e -> System.out.println(logics.result())); // NOPMD: required by the exercise
+        // Make the frame visible
+        pack();
+        this.setVisible(true);
+    }
 
 }

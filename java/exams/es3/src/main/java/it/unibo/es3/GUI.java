@@ -1,48 +1,62 @@
 package it.unibo.es3;
 
-import javax.swing.*;
-import java.util.*;
-import java.awt.*;
-import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.io.Serial;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
 
-public class GUI extends JFrame {
-    
-    private static final long serialVersionUID = -6218820567019985015L;
-    private final Map<JButton,Pair<Integer,Integer>> cells = new HashMap<>();
-    private final JButton moveButton = new JButton(">");
+/**
+ * GUI for the game.
+ */
+public final class GUI extends JFrame {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private final Map<JButton, Pair<Integer, Integer>> cells = new LinkedHashMap<>();
     private final Logics logics;
-    
-    public GUI(int size) {
+
+    /**
+     * Constructor.
+     *
+     * @param size the size of the grid
+     */
+    public GUI(final int size) {
         this.logics = new LogicsImpl(size);
+        // JFrame settings
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(100*size, 100*size);
-        
-        JPanel panel = new JPanel(new GridLayout(size,size));
-        this.getContentPane().add(BorderLayout.CENTER,panel);
-        this.getContentPane().add(BorderLayout.SOUTH,moveButton);
-        
+        this.setSize(100 * size, 100 * size);
+        // Layout
+        final var panel = new JPanel(new GridLayout(size, size));
+        this.getContentPane().add(BorderLayout.CENTER, panel);
+        final var moveButton = new JButton(">");
+        this.getContentPane().add(BorderLayout.SOUTH, moveButton);
+        // Button action
         moveButton.addActionListener(e -> {
-        	logics.tick();
-        	this.updateView();
-        	if (logics.isOver()) {
-        		System.exit(0);
-        	}
+            logics.tick();
+            this.updateView();
+            if (logics.isOver()) {
+                dispose();
+            }
         });
-                
-        for (int i=0; i<size; i++){
-            for (int j=0; j<size; j++){
+        // Create grid buttons
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
                 final JButton jb = new JButton(" ");
-                this.cells.put(jb,new Pair<>(j,i));
+                this.cells.put(jb, new Pair<>(j, i));
                 panel.add(jb);
             }
         }
         this.updateView();
         this.setVisible(true);
     }
-    
+
     private void updateView() {
-    	Set<Pair<Integer,Integer>> set = logics.getPositions();
-    	cells.forEach((b,p)-> b.setText( set.contains(p) ? "*" : " "));
+        final Set<Pair<Integer, Integer>> positions = logics.getPositions();
+        cells.forEach((b, p) -> b.setText(positions.contains(p) ? "*" : " "));
     }
-    
 }

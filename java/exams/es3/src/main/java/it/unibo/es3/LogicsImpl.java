@@ -1,47 +1,75 @@
 package it.unibo.es3;
 
-import java.util.*;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
-public class LogicsImpl implements Logics {
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.Random;
+import java.util.Set;
 
-	private final int gridSize;
-	private Set<Pair<Integer, Integer>> set = new HashSet<>();
-	private Random random = new Random();
+/**
+ * Logics implementation.
+ */
+public class LogicsImpl implements Logics, Serializable {
 
-	public LogicsImpl(int gridSize) {
-		this.gridSize = gridSize;
-		while (set.size() < 3) {
-			this.set.add(new Pair<>(random.nextInt(gridSize), random.nextInt(gridSize)));
-		}
-	}
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private final int gridSize;
+    private final Set<Pair<Integer, Integer>> set = new LinkedHashSet<>();
 
-	private boolean neighbours(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2) {
-		return Math.abs(p1.getX() - p2.getX()) <= 1 &&
-				Math.abs(p1.getY() - p2.getY()) <= 1 &&
-				!p1.equals(p2);
-	}
+    /**
+     * Constructor.
+     *
+     * @param gridSize the size of the grid
+     */
+    @SuppressFBWarnings(
+        value = "DMI_RANDOM_USED_ONLY_ONCE",
+        justification = "False positive, see: https://github.com/spotbugs/spotbugs/issues/3830"
+    )
+    public LogicsImpl(final int gridSize) {
+        this.gridSize = gridSize;
+        final Random random = new Random(0);
+        while (set.size() < 3) {
+            this.set.add(new Pair<>(random.nextInt(gridSize), random.nextInt(gridSize)));
+        }
+    }
 
-	@Override
-	public void tick() {
-		Set<Pair<Integer, Integer>> s = new HashSet<>();
-		for (int x = 0; x < gridSize; x++) {
-			for (int y = 0; y < gridSize; y++) {
-				var p = new Pair<>(x, y);
-				if (set.stream().anyMatch(pp -> neighbours(p, pp))) {
-					s.add(p);
-				}
-			}
-		}
-		set.addAll(s);
-	}
+    private boolean neighbors(final Pair<Integer, Integer> p1, final Pair<Integer, Integer> p2) {
+        return Math.abs(p1.x() - p2.x()) <= 1 && Math.abs(p1.y() - p2.y()) <= 1 && !p1.equals(p2);
+    }
 
-	@Override
-	public Set<Pair<Integer, Integer>> getPositions() {
-		return Collections.unmodifiableSet(this.set);
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void tick() {
+        final Set<Pair<Integer, Integer>> s = new LinkedHashSet<>();
+        for (int x = 0; x < gridSize; x++) {
+            for (int y = 0; y < gridSize; y++) {
+                final var p = new Pair<>(x, y);
+                if (set.stream().anyMatch(pp -> neighbors(p, pp))) {
+                    s.add(p);
+                }
+            }
+        }
+        set.addAll(s);
+    }
 
-	@Override
-	public boolean isOver() {
-		return this.set.size() == this.gridSize * this.gridSize;
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Set<Pair<Integer, Integer>> getPositions() {
+        return Collections.unmodifiableSet(this.set);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean isOver() {
+        return this.set.size() == this.gridSize * this.gridSize;
+    }
 }

@@ -1,49 +1,76 @@
 package it.unibo.es1;
 
-import java.util.*;
-import java.util.stream.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
+/**
+ * Implementation of the Logics interface.
+ */
 public class LogicsImpl implements Logics {
-	
-	private final List<Integer> values;
-	
-	public LogicsImpl(int size) {
-		this.values = new ArrayList<>(Collections.nCopies(size,0));
-	}
-	
-	@Override
-	public int size() {
-		return this.values.size();
-	}
 
-	@Override
-	public List<Integer> values() {
-		return Collections.unmodifiableList(values);
-	}
+    private final List<Integer> values;
 
-	@Override
-	public List<Boolean> enablings() {
-		return values.stream().map(x -> x < values.size()).toList();
-	}
+    /**
+     * Constructor.
+     *
+     * @param size the size of the logics
+     */
+    public LogicsImpl(final int size) {
+        this.values = new ArrayList<>(Collections.nCopies(size, 0));
+    }
 
-	@Override
-	public int hit(int elem) {
-		int n = this.values.get(elem);
-		this.values.set(elem, ++n);
-		return n;
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int size() {
+        return this.values.size();
+    }
 
-	@Override
-	public String result() {
-		return this.values
-				.stream()
-				.map(String::valueOf)
-				.collect(Collectors.joining("|", "<<", ">>"));
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Integer> values() {
+        return Collections.unmodifiableList(values);
+    }
 
-	@Override
-	public boolean toQuit() {
-		return this.values.stream().allMatch(i -> i == this.values.get(0));
-	}
-	
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Boolean> enabledStates() {
+        return values.stream().map(x -> x < values.size()).toList();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int hit(final int elem) {
+        final int n = this.values.get(elem) + 1;
+        this.values.set(elem, n);
+        return n;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String result() {
+        return this.values.stream()
+            .map(String::valueOf)
+            .collect(Collectors.joining("|", "<<", ">>"));
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean toQuit() {
+        return this.values.stream().allMatch(i -> Objects.equals(i, this.values.getFirst()));
+    }
 }
