@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * Application entry point for DrawNumber game.
  */
 public final class DrawNumberApp implements DrawNumberViewObserver {
     private static final int MIN = 0;
@@ -17,6 +18,10 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
     private final List<DrawNumberView> views;
 
     /**
+     * Constructor.
+     *
+     * @param configFile
+     *            the configuration file path
      * @param views
      *            the views to attach
      */
@@ -67,6 +72,8 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
     }
 
     /**
+     * Application entry point.
+     *
      * @param args
      *            ignored
      * @throws FileNotFoundException if the configuration file cannot be fetched

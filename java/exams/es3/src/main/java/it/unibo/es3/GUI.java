@@ -1,37 +1,45 @@
 package it.unibo.es3;
 
-import javax.swing.*;
-import java.awt.event.*;
-import java.awt.*;
-import java.util.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
+import java.io.Serial;
+import java.util.ArrayList;
 import java.util.List;
 
-public class GUI extends JFrame {
-    
+/**
+ * GUI for the game.
+ */
+public final class GUI extends JFrame {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
     private final List<JButton> cells = new ArrayList<>();
-    
-    public GUI(int width) {
+
+    /**
+     * Constructor.
+     *
+     * @param width the size of the grid
+     */
+    public GUI(final int width) {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(70*width, 70*width);
-        
-        JPanel panel = new JPanel(new GridLayout(width,width));
+        // Create a panel with a grid layout
+        final JPanel panel = new JPanel(new GridLayout(width, width));
         this.getContentPane().add(panel);
-        
-        ActionListener al = e -> {
-            var jb = (JButton)e.getSource();
-        	jb.setText(String.valueOf(cells.indexOf(jb)));
-        };
-                
-        for (int i=0; i<width; i++){
-            for (int j=0; j<width; j++){
-            	var pos = new Pair<>(j,i);
-                final JButton jb = new JButton(pos.toString());
-                this.cells.add(jb);
-                jb.addActionListener(al);
-                panel.add(jb);
+        // Create buttons and add them to the panel
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < width; j++) {
+                final var pos = new Pair<>(j, i);
+                final JButton button = new JButton(pos.toString());
+                this.cells.add(button);
+                button.addActionListener(e -> {
+                    button.setText(String.valueOf(cells.indexOf(button)));
+                });
+                panel.add(button);
             }
         }
+        pack();
         this.setVisible(true);
     }
-    
 }

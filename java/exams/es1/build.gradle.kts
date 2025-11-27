@@ -1,7 +1,7 @@
 plugins {
     application
     java
-    id("org.danilopianini.gradle-java-qa") version "1.156.0"
+    id("org.danilopianini.gradle-java-qa") version "1.155.0"
 }
 
 repositories {
@@ -13,7 +13,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("it.unibo.mvc.SimpleGUI")
+    mainClass.set("it.unibo.es1.Test")
 }
 
 tasks.javadoc {

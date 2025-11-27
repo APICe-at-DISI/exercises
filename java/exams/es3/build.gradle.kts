@@ -8,8 +8,12 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    compileOnly("com.github.spotbugs:spotbugs-annotations:4.9.8")
+}
+
 application {
-    mainClass.set("it.unibo.mvc.LaunchApp")
+    mainClass.set("it.unibo.es3.Test")
 }
 
 tasks.javadoc {

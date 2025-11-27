@@ -3,7 +3,7 @@ package it.unibo.mvc;
 import java.util.Random;
 
 /**
- *
+ * Implementation of DrawNumber.
  */
 public final class DrawNumberImpl implements DrawNumber {
 
@@ -15,6 +15,8 @@ public final class DrawNumberImpl implements DrawNumber {
     private final Random random = new Random();
 
     /**
+     * Constructor.
+     *
      * @param min The minimum allowed number
      * @param max The maximum allowed number
      * @param attempts The maximum attempts count

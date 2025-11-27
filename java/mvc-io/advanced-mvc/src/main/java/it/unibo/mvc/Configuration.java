@@ -5,7 +5,7 @@ package it.unibo.mvc;
  */
 public final class Configuration {
 
-    private final int max; 
+    private final int max;
     private final int min;
     private final int attempts;
 
@@ -16,6 +16,8 @@ public final class Configuration {
     }
 
     /**
+     * The maximum value.
+     *
      * @return the maximum value
      */
     public int getMax() {
@@ -23,6 +25,8 @@ public final class Configuration {
     }
 
     /**
+     * The minium value.
+     *
      * @return the minimum value
      */
     public int getMin() {
@@ -30,6 +34,8 @@ public final class Configuration {
     }
 
     /**
+     * The number of attempts.
+     *
      * @return the number of attempts
      */
     public int getAttempts() {
@@ -37,6 +43,8 @@ public final class Configuration {
     }
 
     /**
+     * Checks whether the configuration is consistent.
+     *
      * @return true if the configuration is consistent
      */
     public boolean isConsistent() {
@@ -71,6 +79,15 @@ public final class Configuration {
         private boolean consumed;
 
         /**
+         * Default constructor. Produces a builder with the default configuration.
+         */
+        public Builder() {
+            // Default constructor
+        }
+
+        /**
+         * Sets the minimum value.
+         *
          * @param min the minimum value
          * @return this builder, for method chaining
          */
@@ -80,6 +97,8 @@ public final class Configuration {
         }
 
         /**
+         * Sets the maximum value.
+         *
          * @param max the maximum value
          * @return this builder, for method chaining
          */
@@ -89,6 +108,8 @@ public final class Configuration {
         }
 
         /**
+         * Sets the attempts count.
+         *
          * @param attempts the attempts count
          * @return this builder, for method chaining
          */
@@ -98,6 +119,8 @@ public final class Configuration {
         }
 
         /**
+         * Builds the configuration.
+         *
          * @return a configuration
          */
         public final Configuration build() {

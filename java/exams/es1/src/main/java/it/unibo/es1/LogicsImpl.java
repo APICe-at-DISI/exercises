@@ -2,45 +2,67 @@ package it.unibo.es1;
 
 import java.util.List;
 
+/**
+ * Implementation of the Logics interface.
+ */
 public class LogicsImpl implements Logics {
 
-	public LogicsImpl(int size) {
-		//TODO Auto-generated constructor stub
-	}
+    private static final String ERROR_MESSAGE = "Unimplemented method";
 
-	@Override
-	public int size() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'size'");
-	}
+    /**
+     * Constructor.
+     *
+     * @param size the size of the logics
+     */
+    public LogicsImpl(final int size) {
+        throw new UnsupportedOperationException(ERROR_MESSAGE);
+    }
 
-	@Override
-	public List<Integer> values() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'values'");
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int size() {
+        throw new UnsupportedOperationException(ERROR_MESSAGE);
+    }
 
-	@Override
-	public List<Boolean> enablings() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'enablings'");
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Integer> values() {
+        throw new UnsupportedOperationException(ERROR_MESSAGE);
+    }
 
-	@Override
-	public int hit(int elem) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'hit'");
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Boolean> enabledStates() {
+        throw new UnsupportedOperationException(ERROR_MESSAGE);
+    }
 
-	@Override
-	public String result() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'result'");
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int hit(final int elem) {
+        throw new UnsupportedOperationException(ERROR_MESSAGE);
+    }
 
-	@Override
-	public boolean toQuit() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'toQuit'");
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String result() {
+        throw new UnsupportedOperationException(ERROR_MESSAGE);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean toQuit() {
+        throw new UnsupportedOperationException(ERROR_MESSAGE);
+    }
 }
