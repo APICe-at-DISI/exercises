@@ -33,18 +33,17 @@ public final class GUI extends JFrame {
         // Buttons
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                final JButton jb = new JButton(" ");
-                jb.addActionListener(e -> {
-                    final JButton bt = (JButton) e.getSource();
-                    final Pair<Integer, Integer> p = buttons.get(bt);
-                    bt.setText(logics.hit(p.x(), p.y()) ? "*" : " ");
+                final JButton button = new JButton(" ");
+                button.addActionListener(e -> {
+                    final Pair<Integer, Integer> p = buttons.get(button);
+                    button.setText(logics.hit(p.x(), p.y()) ? "*" : " ");
                     if (logics.isAnyRowFull() || logics.isAnyColumnFull()) {
                         // System.exit(1); // Too brutal!
                         dispose();
                     }
                 });
-                this.buttons.put(jb, new Pair<>(i, j));
-                panel.add(jb);
+                this.buttons.put(button, new Pair<>(i, j));
+                panel.add(button);
             }
         }
         this.setVisible(true);
