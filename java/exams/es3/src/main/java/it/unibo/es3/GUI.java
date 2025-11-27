@@ -29,7 +29,6 @@ public final class GUI extends JFrame {
         this.logics = new LogicsImpl(size);
         // JFrame settings
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(100 * size, 100 * size);
         // Layout
         final var panel = new JPanel(new GridLayout(size, size));
         this.getContentPane().add(BorderLayout.CENTER, panel);
@@ -52,6 +51,7 @@ public final class GUI extends JFrame {
             }
         }
         this.updateView();
+        pack();
         this.setVisible(true);
     }
 
