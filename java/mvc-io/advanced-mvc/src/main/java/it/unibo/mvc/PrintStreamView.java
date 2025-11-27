@@ -15,6 +15,8 @@ public final class PrintStreamView implements DrawNumberView {
     private final PrintStream out;
 
     /**
+     * Builds a {@link PrintStreamView} that writes on the given {@link PrintStream}.
+     *
      * @param stream the {@link PrintStream} where to write
      */
     @SuppressFBWarnings(
@@ -27,7 +29,7 @@ public final class PrintStreamView implements DrawNumberView {
 
     /**
      * Builds a {@link PrintStreamView} that writes on file, given a path.
-     * 
+     *
      * @param path a file path
      * @throws FileNotFoundException if the file is not present
      */

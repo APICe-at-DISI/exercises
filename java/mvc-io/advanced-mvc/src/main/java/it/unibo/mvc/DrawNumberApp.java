@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Application entry point for DrawNumber game.
  */
 public final class DrawNumberApp implements DrawNumberViewObserver {
 
@@ -19,6 +20,8 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
     private final List<DrawNumberView> views;
 
     /**
+     * Constructor.
+     *
      * @param configFile
      *            the configuration file path
      * @param views
@@ -113,6 +116,8 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
     }
 
     /**
+     * Application entry point.
+     *
      * @param args
      *            ignored
      * @throws FileNotFoundException if the configuration file cannot be fetched

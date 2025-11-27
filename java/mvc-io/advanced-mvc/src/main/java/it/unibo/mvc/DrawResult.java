@@ -30,6 +30,8 @@ public enum DrawResult {
     }
 
     /**
+     * Translates the draw result to a human-readable description.
+     *
      * @return a description of the draw result
      */
     public String getDescription() {
