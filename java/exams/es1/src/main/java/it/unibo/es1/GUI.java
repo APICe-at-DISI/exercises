@@ -28,19 +28,18 @@ public final class GUI extends JFrame {
         this.getContentPane().setLayout(new FlowLayout());
         // ActionListener for the buttons
         logics.values().forEach(v -> {
-            final JButton jb = new JButton(String.valueOf(v));
-            buttons.add(jb);
-            jb.addActionListener(e -> {
-                final JButton buttonClicked = (JButton) e.getSource();
-                final int buttonPosition = buttons.indexOf(buttonClicked);
-                buttonClicked.setText(String.valueOf(logics.hit(buttonPosition)));
-                buttonClicked.setEnabled(logics.enabledStates().get(buttonPosition));
+            final JButton button = new JButton(String.valueOf(v));
+            buttons.add(button);
+            button.addActionListener(e -> {
+                final int buttonPosition = buttons.indexOf(button);
+                button.setText(String.valueOf(logics.hit(buttonPosition)));
+                button.setEnabled(logics.enabledStates().get(buttonPosition));
                 if (logics.toQuit()) {
                     this.dispose();
                     // System.exit(0); // Too abrupt!
                 }
             });
-            this.getContentPane().add(jb);
+            this.getContentPane().add(button);
         });
         final JButton ok = new JButton("Print");
         this.getContentPane().add(ok);
