@@ -53,9 +53,9 @@ public final class LogicsImpl implements Logics {
      */
     @Override
     public boolean isAnyColumnFull() {
-        return IntStream.range(0, grid.size())
-                .anyMatch(index -> this.grid.stream()
-                        .allMatch(l -> l.get(index)));
+        return IntStream.range(0, grid.size()).anyMatch(index ->
+            this.grid.stream().allMatch(l -> l.get(index))
+        );
     }
 
 }
