@@ -9,10 +9,10 @@ public final class Test {
 
     /*
      * Scopo di questo esercizio è realizzare una GUI con l'aspetto mostrato nell'immagine fig1.png, fornita,
-     * che realizza una semplice animazione, che effettua uno scatto ad ogni pressione del pulsante ">", mostrata nella
+     * che realizza una semplice animazione, che effettua uno scatto a ogni pressione del pulsante ">", mostrata nella
      * sequenza delle immagini fig1.png, fig2.png, fig3.png, fig4.png,...
      * 1 - all'inizio la griglia è vuota, con tre celle attive (con asterisco) scelte in modo random
-     * 2 - ad ogni pressione si attiva anche ogni cella che abbia una cella vicina già attiva
+     * 2 - a ogni pressione si attiva anche ogni cella che abbia una cella vicina già attiva
      *     (vicina orizzontalmente, verticalmente, o diagonalmente)
      * 3 - quando tutte le celle sono attive si esca
      *
