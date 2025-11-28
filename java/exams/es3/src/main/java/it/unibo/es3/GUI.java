@@ -33,9 +33,7 @@ public final class GUI extends JFrame {
                 final var pos = new Pair<>(j, i);
                 final JButton button = new JButton(pos.toString());
                 this.cells.add(button);
-                button.addActionListener(e -> {
-                    button.setText(String.valueOf(cells.indexOf(button)));
-                });
+                button.addActionListener(e -> button.setText(String.valueOf(cells.indexOf(button))));
                 panel.add(button);
             }
         }
