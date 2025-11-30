@@ -54,24 +54,26 @@ public class BadIOGUI {
         /*
          * Handlers
          */
-        write.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(final ActionEvent ignored) {
-                /*
-                 * This would be VERY BAD in a real application.
-                 *
-                 * This makes the Event Dispatch Thread (EDT) work on an I/O
-                 * operation. I/O operations may take a long time, during which
-                 * your UI becomes completely unresponsive.
-                 */
-                try (PrintStream ps = new PrintStream(PATH, StandardCharsets.UTF_8)) {
-                    ps.print(randomGenerator.nextInt());
-                } catch (final IOException e) {
-                    JOptionPane.showMessageDialog(frame, e, "Error", JOptionPane.ERROR_MESSAGE);
-                    e.printStackTrace(); // NOPMD: allowed as this is just an exercise
+        write.addActionListener(
+            new ActionListener() {
+                @Override
+                public void actionPerformed(final ActionEvent ignored) {
+                    /*
+                     * This would be VERY BAD in a real application.
+                     *
+                     * This makes the Event Dispatch Thread (EDT) work on an I/O
+                     * operation. I/O operations may take a long time, during which
+                     * your UI becomes completely unresponsive.
+                     */
+                    try (PrintStream ps = new PrintStream(PATH, StandardCharsets.UTF_8)) {
+                        ps.print(randomGenerator.nextInt());
+                    } catch (final IOException e) {
+                        JOptionPane.showMessageDialog(frame, e, "Error", JOptionPane.ERROR_MESSAGE);
+                        e.printStackTrace(); // NOPMD: allowed as this is just an exercise
+                    }
                 }
             }
-        });
+        );
         read.addActionListener(
             new ActionListener() {
                 @Override
