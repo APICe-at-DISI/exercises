@@ -72,20 +72,22 @@ public class BadIOGUI {
                 }
             }
         });
-        read.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(final ActionEvent ignored) {
-                try {
-                    final List<String> lines = Files.readAllLines(new File(PATH).toPath());
-                    for (final String line: lines) {
-                        System.out.println(line); // NOPMD: allowed as this is just an exercise
+        read.addActionListener(
+            new ActionListener() {
+                @Override
+                public void actionPerformed(final ActionEvent ignored) {
+                    try {
+                        final List<String> lines = Files.readAllLines(new File(PATH).toPath());
+                        for (final String line: lines) {
+                            System.out.println(line); // NOPMD: allowed as this is just an exercise
+                        }
+                    } catch (final IOException e) {
+                        JOptionPane.showMessageDialog(frame, e, "Error", JOptionPane.ERROR_MESSAGE);
+                        e.printStackTrace(); // NOPMD: allowed as this is just an exercise
                     }
-                } catch (final IOException e) {
-                    JOptionPane.showMessageDialog(frame, e, "Error", JOptionPane.ERROR_MESSAGE);
-                    e.printStackTrace(); // NOPMD: allowed as this is just an exercise
                 }
             }
-        });
+        );
     }
 
     private void display() {
