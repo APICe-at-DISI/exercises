@@ -20,8 +20,6 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
     /**
      * Constructor.
      *
-     * @param configFile
-     *            the configuration file path
      * @param views
      *            the views to attach
      */
