@@ -24,6 +24,6 @@ tasks.test {
 }
 
 application {
-    val mainClass: String by project
-    mainClass.set(mainClass)
+    val main: String by project
+    mainClass.set(main)
 }
