@@ -1,9 +1,10 @@
 package it.unibo.oop.lab.streams;
 
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.Set;
@@ -16,8 +17,8 @@ import java.util.stream.Stream;
  */
 public final class MusicGroupImpl implements MusicGroup {
 
-    private final Map<String, Integer> albums = new HashMap<>();
-    private final Set<Song> songs = new HashSet<>();
+    private final Map<String, Integer> albums = new LinkedHashMap<>();
+    private final Set<Song> songs = new LinkedHashSet<>();
 
     @Override
     public void addAlbum(final String albumName, final int year) {
@@ -53,11 +54,10 @@ public final class MusicGroupImpl implements MusicGroup {
 
     @Override
     public int countSongs(final String albumName) {
-        return this.songs.stream()
-            .filter(s -> s.getAlbumName().isPresent())
-            .filter(s -> s.getAlbumName().get().equals(albumName))
-            .mapToInt(it -> 1)
-            .sum();
+        return (int) this.songs.stream()
+            .map(s -> s.getAlbumName().filter(albumName::equals))
+            .filter(Optional::isPresent)
+            .count();
     }
 
     @Override
@@ -121,19 +121,17 @@ public final class MusicGroupImpl implements MusicGroup {
         @Override
         public int hashCode() {
             if (hash == 0) {
-                hash = songName.hashCode() ^ albumName.hashCode() ^ Double.hashCode(duration);
+                hash = Objects.hash(songName, albumName, duration);
             }
             return hash;
         }
 
         @Override
         public boolean equals(final Object obj) {
-            if (obj instanceof Song) {
-                final Song other = (Song) obj;
-                return albumName.equals(other.albumName) && songName.equals(other.songName)
-                        && duration == other.duration;
-            }
-            return false;
+            return obj instanceof Song other
+                && albumName.equals(other.albumName)
+                && songName.equals(other.songName)
+                && duration == other.duration;
         }
 
         @Override

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -89,8 +91,8 @@ final class TestMusicGroup {
      */
     @Test
     void testAlbumInYear() {
-        final List<String> result = Arrays.asList(II, I);
-        final List<String> actual = lz.albumInYear(1969).collect(toList());
+        final Set<String> result = Set.of(I, II);
+        final Set<String> actual = lz.albumInYear(1969).collect(Collectors.toSet());
         assertEquals(result, actual);
     }
 
