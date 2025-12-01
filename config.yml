@@ -410,9 +410,10 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab07
     contents:
-      # Design with abstract classes
-      - from: java/inheritance/guided-design/
-        to: 01-abstract-classes/
+      - from: java/io/read-write-text-file
+        to: 01-read-write-text-file/
+      - from: java/io/from-classpath-to-files
+        to: 02-from-classpath-to-files/
   pss-lab08:
     format:
       - repo
