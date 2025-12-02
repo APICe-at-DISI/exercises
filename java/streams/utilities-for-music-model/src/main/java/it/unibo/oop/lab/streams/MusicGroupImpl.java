@@ -1,6 +1,5 @@
 package it.unibo.oop.lab.streams;
 
-import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
