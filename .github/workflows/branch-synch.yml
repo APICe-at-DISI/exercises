@@ -9,7 +9,7 @@ concurrency:
 
 jobs:
   sync-branch:
-    runs-on: ubuntu-lite
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v6.0.1
       - name: Merge master -> exercises
