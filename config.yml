@@ -420,14 +420,10 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab08
     contents:
-      - from: java/collections/use-set/
-        to: 01-use-set/
-      - from: java/collections/custom-comparator/
-        to: 02-custom-comparator/
-      - from: java/generics/utilities-with-generic-pair/
-        to: 03-generic-pair/
-      - from: java/exceptions/use-and-design-exceptions/
-        to: 04-exceptions/
+      - from: java/streams/utilities-for-music-model
+        to: 103-stream-utilities-for-music-model
+      - from: git/instructions-clone.md
+        to: README.md
   pss-lab09:
     format:
       - repo
