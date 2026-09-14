@@ -74,7 +74,6 @@ public final class MultiThreadedListSumClassic implements SumList {
          *            the no. of elems to sum up for this worker
          */
         Worker(final List<Integer> list, final int startpos, final int nelem) {
-            super();
             this.list = list;
             this.startpos = startpos;
             this.nelem = nelem;
