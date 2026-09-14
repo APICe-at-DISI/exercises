@@ -88,7 +88,7 @@ public final class MultiThreadedListSumWithStreams implements SumList {
          *
          * @return the sum of every element in the array
          */
-        public synchronized long getResult() {
+        synchronized long getResult() {
             return this.res;
         }
 
