@@ -84,15 +84,15 @@ public final class MusicGroupImpl implements MusicGroup {
             this.duration = len;
         }
 
-        public String getSongName() {
+        String getSongName() {
             return songName;
         }
 
-        public Optional<String> getAlbumName() {
+        Optional<String> getAlbumName() {
             return albumName;
         }
 
-        public double getDuration() {
+        double getDuration() {
             return duration;
         }
 
