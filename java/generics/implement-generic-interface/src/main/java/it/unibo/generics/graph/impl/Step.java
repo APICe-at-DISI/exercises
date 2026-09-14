@@ -43,7 +43,7 @@ class Step<N> {
      *
      * @return a list of visited nodes
      */
-    public List<N> getPath() {
+    List<N> getPath() {
         final List<N> result = new LinkedList<>();
         Step<N> curr = this;
         do {
@@ -53,7 +53,7 @@ class Step<N> {
         return result;
     }
 
-    public N getPosition() {
+    N getPosition() {
         return position;
     }
 
