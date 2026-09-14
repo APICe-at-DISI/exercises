@@ -43,7 +43,7 @@ public final class MonthSorterNested implements MonthSorter {
             this.days = days;
         }
 
-        public static Month fromString(final String name) {
+        static Month fromString(final String name) {
             Objects.requireNonNull(name);
             try {
                 return valueOf(name);
