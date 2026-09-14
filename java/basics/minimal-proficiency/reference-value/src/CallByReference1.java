@@ -11,6 +11,6 @@ class CallByReference1 {
         p.build(1, 2, 3);
         CallByReference1 cbv2 = new CallByReference1();
         cbv2.increment(p);
-        System.out.println("x=" + p.x + ";y=" + p.y + ";z=" + p.z);
+        IO.println("x=" + p.x + ";y=" + p.y + ";z=" + p.z);
     }
 }

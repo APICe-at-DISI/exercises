@@ -44,8 +44,8 @@ public class TestBankAccount {
         /*
          * 7) Stampare in stdout l'ammontare corrente
          */
-        System.out.println(aRossi.getName() + " " + aRossi.getSurname() + ACCOUNT + rossisAccount.getBalance());
-        System.out.println(aBianchi.getName() + " " + aBianchi.getSurname() + ACCOUNT + bianchisAccount.getBalance());
+        IO.println(aRossi.getName() + " " + aRossi.getSurname() + ACCOUNT + rossisAccount.getBalance());
+        IO.println(aBianchi.getName() + " " + aBianchi.getSurname() + ACCOUNT + bianchisAccount.getBalance());
         /*
          * 8) Qual è il risultato e perché?
          * 
@@ -64,8 +64,8 @@ public class TestBankAccount {
         /*
          * 11) Stampare a video l'ammontare corrente
          */
-        System.out.println(aRossi.getName() + " " + aRossi.getSurname() + ACCOUNT + rossisAccount.getBalance());
-        System.out.println(aBianchi.getName() + " " + aBianchi.getSurname() + ACCOUNT + bianchisAccount.getBalance());
+        IO.println(aRossi.getName() + " " + aRossi.getSurname() + ACCOUNT + rossisAccount.getBalance());
+        IO.println(aBianchi.getName() + " " + aBianchi.getSurname() + ACCOUNT + bianchisAccount.getBalance());
         /*
          * 12) Qual è il risultato e perché?
          * 

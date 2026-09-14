@@ -36,6 +36,6 @@ public final class UseSetWithOrder {
         /*
          * 3) Prints the set, which must be ordered
          */
-        System.out.println(set); // NOPMD
+        IO.println(set);
     }
 }

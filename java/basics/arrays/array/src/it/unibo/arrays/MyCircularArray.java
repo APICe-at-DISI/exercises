@@ -47,7 +47,7 @@ class MyCircularArray {
             circularArray.add(i);
         }
         circularArray.printArray();
-        System.out.println();
+        IO.println();
         
         // 3) Aggiungere gli elementi da 11 a 15 e stampare il contenuto
         // dell'array circolare
@@ -55,14 +55,14 @@ class MyCircularArray {
             circularArray.add(i);
         }
         circularArray.printArray();
-        System.out.println();
+        IO.println();
         
         // 4) Invocare il metodo reset
         circularArray.reset();
         
         // 5) Stampare il contenuto dell'array circolare
         circularArray.printArray();
-        System.out.println();
+        IO.println();
         
         // 6) Aggiungere altri elementi a piacere e stampare il contenuto
         // dell'array circolare

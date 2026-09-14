@@ -35,7 +35,7 @@ public final class SimpleController implements Controller {
             throw new IllegalStateException("There is no string set");
         }
         stringHistory.add(this.nextString);
-        System.out.println(this.nextString); // NOPMD: allowed in exercises
+        IO.println(this.nextString);
     }
 
 }

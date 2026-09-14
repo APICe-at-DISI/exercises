@@ -55,14 +55,14 @@ public class Smartphone {
     }
 
     public void printStringRep() {
-        System.out.println("n CPU(s): " + cpuCount);
-        System.out.println("RAM amount: " + ram);
-        System.out.println("SD size: " + sdSize);
-        System.out.println("brand: " + brand);
-        System.out.println("model: " + model);
-        System.out.println("hasGPS: " + hasGPS);
-        System.out.println("has3G: " + has3G);
-        System.out.println("hasNFC: " + hasNFC + "\n");
+        IO.println("n CPU(s): " + cpuCount);
+        IO.println("RAM amount: " + ram);
+        IO.println("SD size: " + sdSize);
+        IO.println("brand: " + brand);
+        IO.println("model: " + model);
+        IO.println("hasGPS: " + hasGPS);
+        IO.println("has3G: " + has3G);
+        IO.println("hasNFC: " + hasNFC + "\n");
     }
 
     public int getCPUCount() {

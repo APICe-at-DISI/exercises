@@ -18,7 +18,7 @@ public class RobotArm extends AbstractPartWithCommands {
     protected boolean doOperation(final String command) {
         if (PICK.equals(command)) {
             if (grabbing) {
-                System.out.println(this + " is already grabbing an object");
+                IO.println(this + " is already grabbing an object");
                 return false;
             }
             grabbing = true;
@@ -29,10 +29,10 @@ public class RobotArm extends AbstractPartWithCommands {
                 grabbing = false;
                 return true;
             }
-            System.out.println(this + " is not grabbing an object");
+            IO.println(this + " is not grabbing an object");
             return false;
         }
-        System.out.println(this + " does not know what " + command + " is");
+        IO.println(this + " does not know what " + command + " is");
         return false;
     }
 

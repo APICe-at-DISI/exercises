@@ -50,7 +50,7 @@ class UseConstructors {
         // di default sia consistente (ossia che ci sia un numero positivo di
         // posti totali, e che la somma dei posti in prima e seconda classe dia
         // il totale dei posti sul treno).
-        System.out.println(t4.getTotalSeats() > 0 ? "OK!" : "There is a bug.");
-        System.out.println(t4.getTotalSeats() == t4.getFirstClassSeats() + t4.getSecondClassSeats() ? "OK!" : "There is a bug.");
+        IO.println(t4.getTotalSeats() > 0 ? "OK!" : "There is a bug.");
+        IO.println(t4.getTotalSeats() == t4.getFirstClassSeats() + t4.getSecondClassSeats() ? "OK!" : "There is a bug.");
     }
 }

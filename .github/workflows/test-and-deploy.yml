@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-java@v5.2.0
       with:
         distribution: temurin
-        java-version: 21
+        java-version: 25
     - name: Setup WSL
       if: runner.os == 'Windows'
       uses: Vampire/setup-wsl@v7.0.0

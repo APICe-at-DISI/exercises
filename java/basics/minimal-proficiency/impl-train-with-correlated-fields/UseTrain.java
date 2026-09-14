@@ -17,15 +17,15 @@ class UseTrain {
        * 3) A seguito di ciascuna prenotazione stampare la ratio di
        * occupazione totale e per ciascuna classe.
        */
-      System.out.println("Total occupancy ration: " + train.getTotOccupancyRatio() + "%");
-      System.out.println("First class occupancy ratio: " + train.getFirstClassOccupancyRatio() + "%");
-      System.out.println("Second class occupancy ratio: " + train.getSecondClassOccupancyRatio() + "%\n");
+      IO.println("Total occupancy ration: " + train.getTotOccupancyRatio() + "%");
+      IO.println("First class occupancy ratio: " + train.getFirstClassOccupancyRatio() + "%");
+      IO.println("Second class occupancy ratio: " + train.getSecondClassOccupancyRatio() + "%\n");
 
       /*
        * 4) Cancellare tutte le prenotazioni
        */
       train.deleteAllReservations();
-      System.out.println("Cleared all reservations.\n");
+      IO.println("Cleared all reservations.\n");
 
       /*
        * 5) Prenotare nuovamente dei posti e stampare le nuove percentuali di
@@ -33,8 +33,8 @@ class UseTrain {
        */
       train.reserveFirstClassSeats(25);
       train.reserveSecondClassSeats(100);
-      System.out.println("Total occupancy ration: " + train.getTotOccupancyRatio() + "%");
-      System.out.println("First class occupancy ratio: " + train.getFirstClassOccupancyRatio() + "%");
-      System.out.println("Second class occupancy ratio: " + train.getSecondClassOccupancyRatio() + "%\n");
+      IO.println("Total occupancy ration: " + train.getTotOccupancyRatio() + "%");
+      IO.println("First class occupancy ratio: " + train.getFirstClassOccupancyRatio() + "%");
+      IO.println("Second class occupancy ratio: " + train.getSecondClassOccupancyRatio() + "%\n");
   }
 }

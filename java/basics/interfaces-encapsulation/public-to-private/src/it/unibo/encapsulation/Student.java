@@ -31,9 +31,9 @@ public class Student {
     }
 
     public void printStudentInfo() {
-        System.out.println("Student id: " + this.id);
-        System.out.println("Student name: " + this.name);
-        System.out.println("Student surname: " + this.surname);
-        System.out.println("Student matriculationYear: " + this.matriculationYear + "\n");
+        IO.println("Student id: " + this.id);
+        IO.println("Student name: " + this.name);
+        IO.println("Student surname: " + this.surname);
+        IO.println("Student matriculationYear: " + this.matriculationYear + "\n");
     }
 }

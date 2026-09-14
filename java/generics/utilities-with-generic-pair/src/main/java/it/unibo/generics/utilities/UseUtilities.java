@@ -50,7 +50,7 @@ public final class UseUtilities {
             Objects.equals(expected, actual) ? new Object() : null,
             "ERROR! Expected " + expected + ", but got " + actual + "!"
         );
-        System.out.println("OK: " + expected + " is the same of " + actual); // NOPMD
+        IO.println("OK: " + expected + " is the same of " + actual);
     }
 
     private static <T> void assertContains(final Collection<? super T> collection, final T element) {
@@ -58,6 +58,6 @@ public final class UseUtilities {
             collection.contains(element) ? new Object() : null,
             "ERROR! " + collection + " does not contain " + element + "!"
         );
-        System.out.println("OK: " + collection + " contains " + element); // NOPMD
+        IO.println("OK: " + collection + " contains " + element);
     }
 }

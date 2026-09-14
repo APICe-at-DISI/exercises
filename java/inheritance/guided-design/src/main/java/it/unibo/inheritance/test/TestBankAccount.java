@@ -17,7 +17,7 @@ public class TestBankAccount {
 
     private static void requireSame(final String what, final Object first, final Object second) {
         if (first.equals(second)) {
-            System.out.println("# CORRECT: " + what + " " + first + " is equal to " + what + " " + second);
+            IO.println("# CORRECT: " + what + " " + first + " is equal to " + what + " " + second);
         } else {
             final var error = "# ERROR: " + what + " " + first + " is not equal to " + what + " " + second + " #";
             final var decorationBuilder = new StringBuilder(error.length());
@@ -25,9 +25,9 @@ public class TestBankAccount {
                 decorationBuilder.append("#");
             }
             final var decoration = decorationBuilder.toString();
-            System.out.println(decoration);
-            System.out.println(error);
-            System.out.println(decoration);
+            IO.println(decoration);
+            IO.println(error);
+            IO.println(decoration);
             System.exit(1);
         }
     }

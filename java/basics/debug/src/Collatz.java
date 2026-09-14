@@ -2,9 +2,9 @@ public class Collatz {
     public static void main(String[] args) {
         // 670617279
         var number = args.length > 0 ? Integer.parseInt(args[0]) : 1;
-        System.out.println("Collatz sequence for " + number + ":");
+        IO.println("Collatz sequence for " + number + ":");
         while (number != 1) {
-            System.out.print(number + " -> ");
+            IO.print(number + " -> ");
             if (number % 2 == 0) {
                 number /= 2;
             } else {
@@ -13,6 +13,6 @@ public class Collatz {
                 number = number * 3 + 1;
             }
         }
-        System.out.println("1");
+        IO.println("1");
     }
 }

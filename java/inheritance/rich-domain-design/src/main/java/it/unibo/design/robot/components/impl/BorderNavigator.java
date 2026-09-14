@@ -29,7 +29,7 @@ public class BorderNavigator extends AbstractPart {
         case WEST:
             return getRobot().moveLeft();
         default:
-            System.out.println("There is a bug in " + getClass());
+            IO.println("There is a bug in " + getClass());
             return false;
         }
     }

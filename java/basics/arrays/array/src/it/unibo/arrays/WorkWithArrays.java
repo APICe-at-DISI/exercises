@@ -192,13 +192,13 @@ class WorkWithArrays {
     }
 
     public static void main(final String[] args) {
-        System.out.println("testCountOccurr: " + testCountOccurrencies());
-        System.out.println("testEvenElems: " + testEvenElements());
-        System.out.println("testOddElems: " + testOddElements());
-        System.out.println("testGetMostRecurringElem: " + testMostRecurringElement());
-        System.out.println("testSortArray: " + testSortArray());
-        System.out.println("testComputeVariance: " + testComputeVariance());
-        System.out.println("testRevertUpTo: " + testRevertUpTo());
-        System.out.println("testDupElems: " + testDuplicateElements());
+        IO.println("testCountOccurr: " + testCountOccurrencies());
+        IO.println("testEvenElems: " + testEvenElements());
+        IO.println("testOddElems: " + testOddElements());
+        IO.println("testGetMostRecurringElem: " + testMostRecurringElement());
+        IO.println("testSortArray: " + testSortArray());
+        IO.println("testComputeVariance: " + testComputeVariance());
+        IO.println("testRevertUpTo: " + testRevertUpTo());
+        IO.println("testDupElems: " + testDuplicateElements());
     }
 }

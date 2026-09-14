@@ -20,10 +20,10 @@ class TestComplexNum {
         * 5) Stampare in standard output la rappresentazione testuale di
         * c1,c2,c3,c4
         */
-        System.out.println(c1.toStringRep());
-        System.out.println(c2.toStringRep());
-        System.out.println(c3.toStringRep());
-        System.out.println(c4.toStringRep() + "\n");
+        IO.println(c1.toStringRep());
+        IO.println(c2.toStringRep());
+        IO.println(c3.toStringRep());
+        IO.println(c4.toStringRep() + "\n");
 
         /*
         * 6) Sommare a c1 c2
@@ -38,53 +38,53 @@ class TestComplexNum {
         * 8) Stampare nuovamente in standard output la rappresentazione
         * testuale di c1,c2,c3,c4
         */
-        System.out.println(c1.toStringRep());
-        System.out.println(c2.toStringRep());
-        System.out.println(c3.toStringRep());
-        System.out.println(c4.toStringRep() + "\n");
+        IO.println(c1.toStringRep());
+        IO.println(c2.toStringRep());
+        IO.println(c3.toStringRep());
+        IO.println(c4.toStringRep() + "\n");
 
         /*
         * 10) Invocare il metodo equals su c3 per tre volte, passando come
         * input c1,c2,c4. Stampare il risultato di ciascuna invocazione in
         * standard output
         */
-        System.out.println(c3.equal(c1));
-        System.out.println(c3.equal(c2));
-        System.out.println(c3.equal(c4));
+        IO.println(c3.equal(c1));
+        IO.println(c3.equal(c2));
+        IO.println(c3.equal(c4));
         
         /*
         * Additional test for toStringRep()
         */
         ComplexNum toPrint = new ComplexNum();
         toPrint.build(0, 0);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(2, 2);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(2, -2);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(-2, 2);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(-2, -2);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(0, -2);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(0, 2);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(0, -1);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(0, 1);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(2, 1);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(2, -1);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(-2, 1);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(-2, -1);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(2, 0);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
         toPrint.build(-2, 0);
-        System.out.println(toPrint.toStringRep());
+        IO.println(toPrint.toStringRep());
     }
 }

@@ -8,13 +8,13 @@ class Scopes {
         System.out.print("[build method:] I can access the field a (" + this.a + "),");
         System.out.print(" the field b (" + this.b + "),");
         System.out.print(" the input parameter a (" + a + ")");
-        System.out.println(" and the input parameter b (" + b + ").");
+        IO.println(" and the input parameter b (" + b + ").");
     }
 
     void dummyMethod(int c) {
         System.out.print("[dummyMethod:] I can access the field a (" + this.a + "),");
         System.out.print(" the field b (" + this.b + ")");
-        System.out.println(" and the input parameter c (" + c + ").");
+        IO.println(" and the input parameter c (" + c + ").");
     }
 
     void dummyMethod2(int a) {
@@ -23,6 +23,6 @@ class Scopes {
         System.out.print(" the field b (" + this.b + "),");
         System.out.print(" the input parameter a (" + a + "),");
         System.out.print(" and the local variable b (" + b + ").");
-        System.out.println("I have no access to c, dummyMethod's input parameter.");
+        IO.println("I have no access to c, dummyMethod's input parameter.");
     }
 }

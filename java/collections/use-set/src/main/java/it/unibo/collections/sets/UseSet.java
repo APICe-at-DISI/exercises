@@ -37,7 +37,7 @@ public final class UseSet {
         /*
          * 3) Prints its content
          */
-        System.out.println("Initial set: " + set); // NOPMD
+        IO.println("Initial set: " + set);
         /*
          * 4) Removes all those strings whose represented number is divisible by three.
          * Note: the method removeIf(Predicate) is not allowed.
@@ -55,11 +55,11 @@ public final class UseSet {
         for (final var element: set) {
             builder.append(element).append(' ');
         }
-        System.out.println(builder); // NOPMD
+        IO.println(builder);
         /*
          * 6) Verifies whether all the numbers left in the set are even
          */
-        System.out.println(// NOPMD
+        IO.println(
             "The collection does " + (onlyContainsEvenNumbers(set) ? "" : "not ") + "contain only even numbers"
         );
     }

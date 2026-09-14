@@ -33,15 +33,15 @@ public class TestSimpleBankAccount {
          * 5) Stampare a video l'ammontare dei due conti e verificare la
          * correttezza del risultato
          */
-        System.out.println("Account 1 balance is: " + rossisAccount.getBalance());
-        System.out.println("Account 2 balance is: " + bianchisAccount.getBalance());
+        IO.println("Account 1 balance is: " + rossisAccount.getBalance());
+        IO.println("Account 2 balance is: " + bianchisAccount.getBalance());
 
         // 6) Provare a prelevare fornendo un id utente sbagliato
         rossisAccount.withdraw(7, 340);
         bianchisAccount.deposit(8, 900);
 
         // 7) Controllare nuovamente l'ammontare
-        System.out.println("\nAccount 1 balance is: " + rossisAccount.getBalance());
-        System.out.println("Account 2 balance is: " + bianchisAccount.getBalance());
+        IO.println("\nAccount 1 balance is: " + rossisAccount.getBalance());
+        IO.println("Account 2 balance is: " + bianchisAccount.getBalance());
     }
 }

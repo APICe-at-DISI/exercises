@@ -110,9 +110,9 @@ class SeqRecognizer {
     }
 
     public static void main(final String[] args) {
-        System.out.println("testCheckSeq1: " + testCheckSeq1());
-        System.out.println("testCheckSeq2: " + testCheckSeq2());
-        System.out.println("testCheckSeq3: " + testCheckSeq3());
-        System.out.println("testCheckSeq4: " + testCheckSeq4());
+        IO.println("testCheckSeq1: " + testCheckSeq1());
+        IO.println("testCheckSeq2: " + testCheckSeq2());
+        IO.println("testCheckSeq3: " + testCheckSeq3());
+        IO.println("testCheckSeq4: " + testCheckSeq4());
     }
 }

@@ -14,9 +14,9 @@ class Student {
     }
 
     void printStudentInfo() {
-        System.out.println("Student name: " + name);
-        System.out.println("Student surname: " + surname);
-        System.out.println("Student id: " + id);
-        System.out.println("Student matriculationYear: " + matriculationYear);
+        IO.println("Student name: " + name);
+        IO.println("Student surname: " + surname);
+        IO.println("Student id: " + id);
+        IO.println("Student matriculationYear: " + matriculationYear);
     }
 }

@@ -148,6 +148,6 @@ public final class UseListsAndMaps {
     }
 
     private static void log(final Object message) {
-        System.out.println(message); // NOPMD
+        IO.println(message);
     }
 }

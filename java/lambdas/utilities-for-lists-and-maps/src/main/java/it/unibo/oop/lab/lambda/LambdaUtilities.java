@@ -123,19 +123,18 @@ public final class LambdaUtilities {
      * @param args
      *            ignored
      */
-    @SuppressWarnings("PMD.SystemPrintln")
     public static void main(final String[] args) {
         final List<Integer> li = IntStream.range(1, 8).boxed().collect(Collectors.toList());
-        System.out.println(dup(li, x -> x + 100));
+        IO.println(dup(li, x -> x + 100));
         /*
          * [1, 101, 2, 102, 3, 103, 4, 104, 5, 105, 6, 106, 7, 107]
          */
-        System.out.println(group(li, x -> x % 2 == 0 ? "even" : "odd"));
+        IO.println(group(li, x -> x % 2 == 0 ? "even" : "odd"));
         /*
          * {odd=[1, 3, 5, 7], even=[2, 4, 6]}
          */
         final List<Optional<Integer>> opt = optFilter(li, x -> x % 3 == 0);
-        System.out.println(opt);
+        IO.println(opt);
         /*
          * [Optional.empty, Optional.empty, Optional[3], Optional.empty,
          * Optional.empty, Optional[6], Optional.empty]
@@ -144,7 +143,7 @@ public final class LambdaUtilities {
         for (int i = 0; i < opt.size(); i++) {
             map.put(i, opt.get(i));
         }
-        System.out.println(fill(map, () -> (int) (-Math.random() * 10)));
+        IO.println(fill(map, () -> (int) (-Math.random() * 10)));
         /*
          * {0=-2, 1=-7, 2=3, 3=-3, 4=-7, 5=6, 6=-3}
          */

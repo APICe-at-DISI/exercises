@@ -9,7 +9,7 @@ public class AtomicBattery extends AbstractPart {
     public boolean doOperation() {
         if (isOn() && isPlugged()) {
             getRobot().recharge();
-            System.out.println(this + " charged the battery to " + getRobot().getBatteryLevel());
+            IO.println(this + " charged the battery to " + getRobot().getBatteryLevel());
             return true;
         }
         return false;

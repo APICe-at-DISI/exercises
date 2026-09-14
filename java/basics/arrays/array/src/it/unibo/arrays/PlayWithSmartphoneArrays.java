@@ -54,9 +54,9 @@ class PlayWithSmartphoneArrays {
 
         // 6) Eseuguire diverse operazioni di ricerca con i metodi search implementati e
         // controllare la corrispondenza del numero dei telefoni facenti match
-        System.out.println("The number of HTC smartphones is: " + search(phones, "HTC"));
-        System.out.println("The number of smartphones with NFC & GPS is: " + search(phones, true, true));
-        System.out.println("The number of smartphones with 1 CPU 2048 MB sd and 3g is: "
+        IO.println("The number of HTC smartphones is: " + search(phones, "HTC"));
+        IO.println("The number of smartphones with NFC & GPS is: " + search(phones, true, true));
+        IO.println("The number of smartphones with 1 CPU 2048 MB sd and 3g is: "
                 + search(phones, 2, 8192, true));
     }
 }

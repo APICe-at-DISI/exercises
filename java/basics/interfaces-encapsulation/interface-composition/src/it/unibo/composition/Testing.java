@@ -37,7 +37,7 @@ public class Testing {
         finfa.registerStudent(aBracci);
 
         // 6) Stampare in stdout la rapresentazione in stringa dei due esami
-        System.out.println(oop.toString());
-        System.out.println(finfa.toString());
+        IO.println(oop.toString());
+        IO.println(finfa.toString());
     }
 }
