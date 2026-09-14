@@ -20,5 +20,6 @@ Obiettivo: prendere familiarità con la compilazione e l'esecuzione da linea di 
 9. Si aggiunga al messaggio modificato anche la stampa della computazione di `50 + 50 * 50`.
   * NOTA 1: la computazione deve essere svolta dall'interprete Java (ovvero non deve essere inserito il risultato precalcolato nella stringa di output)
   * NOTA 2: il risultato atteso in standard output è qualcosa del tipo: `Hello, world! 2550`
-  * NOTA 3: quanto richiesto al punto (9) deve essere risolto in una sola riga di codice: non si possono dichiarare variabili e  tutte le operazioni devono essere svolte *internamente* alla chiamata a `System.out.println()`
+  * NOTA 3: quanto richiesto al punto (9) deve essere risolto in una sola riga di codice: non si possono dichiarare variabili
+    e  tutte le operazioni devono essere svolte *internamente* alla chiamata a `IO.println()`
 11. Si compili e si esegua, verificando il funzionamento

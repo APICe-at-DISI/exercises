@@ -43,7 +43,7 @@ public final class GUI extends JFrame {
         });
         final JButton ok = new JButton("Print");
         this.getContentPane().add(ok);
-        ok.addActionListener(e -> System.out.println(logics.result())); // NOPMD: required by the exercise
+        ok.addActionListener(e -> IO.println(logics.result()));
         // Make the frame visible
         pack();
         this.setVisible(true);

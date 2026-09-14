@@ -32,18 +32,18 @@ class ComplexNum {
         c3.build(-2, 3);
         final ComplexNum c4 = new ComplexNum();
         c4.build(-2, 3);
-        System.out.println(c1.toStringRep());
-        System.out.println(c2.toStringRep());
-        System.out.println(c3.toStringRep());
-        System.out.println(c4.toStringRep() + "\n");
+        IO.println(c1.toStringRep());
+        IO.println(c2.toStringRep());
+        IO.println(c3.toStringRep());
+        IO.println(c4.toStringRep() + "\n");
         c1.add(c2);
         c2.add(c4);
-        System.out.println(c1.toStringRep());
-        System.out.println(c2.toStringRep());
-        System.out.println(c3.toStringRep());
-        System.out.println(c4.toStringRep() + "\n");
-        System.out.println(c3.equal(c1));
-        System.out.println(c3.equal(c2));
-        System.out.println(c3.equal(c4));
+        IO.println(c1.toStringRep());
+        IO.println(c2.toStringRep());
+        IO.println(c3.toStringRep());
+        IO.println(c4.toStringRep() + "\n");
+        IO.println(c3.equal(c1));
+        IO.println(c3.equal(c2));
+        IO.println(c3.equal(c4));
     }
 }

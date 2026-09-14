@@ -19,15 +19,15 @@ class Smartphone {
     boolean hasNFC;
 
     void printStringRep() {
-        System.out.println("Smartphone info:");
-        System.out.println("n CPU(s): " + this.nCPU);
-        System.out.println("RAM amount: " + this.ram);
-        System.out.println("SD size: " + this.sdSize);
-        System.out.println("brand: " + this.brand);
-        System.out.println("model: " + this.model);
-        System.out.println("hasGPS: " + this.hasGPS);
-        System.out.println("has3G: " + this.has3G);
-        System.out.println("hasNFC: " + this.hasNFC + "\n");
+        IO.println("Smartphone info:");
+        IO.println("n CPU(s): " + this.nCPU);
+        IO.println("RAM amount: " + this.ram);
+        IO.println("SD size: " + this.sdSize);
+        IO.println("brand: " + this.brand);
+        IO.println("model: " + this.model);
+        IO.println("hasGPS: " + this.hasGPS);
+        IO.println("has3G: " + this.has3G);
+        IO.println("hasNFC: " + this.hasNFC + "\n");
     }
 
     public static void main(final String[] args) {

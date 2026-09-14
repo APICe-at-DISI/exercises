@@ -90,7 +90,7 @@ public final class TestSocialNetworkUser {
 
     private static void assertTrue(final String message, final boolean value) {
         if (value) {
-            System.out.println("OK: " + message); // NOPMD
+            IO.println("OK: " + message);
         } else {
             throw new AssertionError("ERROR, the following is false: " + message);
         }

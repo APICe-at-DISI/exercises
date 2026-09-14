@@ -32,6 +32,6 @@ public final class Assertions {
     }
 
     private static void onCorrect(final String propertyName, final Object actual) {
-        System.out.println(propertyName + ": " + actual + " (CORRECT)");
+        IO.println(propertyName + ": " + actual + " (CORRECT)");
     }
 }

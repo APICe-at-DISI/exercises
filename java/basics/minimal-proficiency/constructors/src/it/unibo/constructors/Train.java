@@ -42,12 +42,12 @@ class Train {
     }
 
     void printTrainInfo() {
-        System.out.println("Train info:");
-        System.out.println("-nTotSeats: " + this.seats);
-        System.out.println("-nFCSeats: " + this.firstClassSeats);
-        System.out.println("-nSCSeats: " + this.secondClassSeats);
-        System.out.println("-nFCReservedSeats: " + this.firstClassReserved);
-        System.out.println("-nSCReservedSeats: " + this.secondClassReserved + "\n");
+        IO.println("Train info:");
+        IO.println("-nTotSeats: " + this.seats);
+        IO.println("-nFCSeats: " + this.firstClassSeats);
+        IO.println("-nSCSeats: " + this.secondClassSeats);
+        IO.println("-nFCReservedSeats: " + this.firstClassReserved);
+        IO.println("-nSCReservedSeats: " + this.secondClassReserved + "\n");
     }
 
     void reserveFirstClassSeats(final int nSeats) {

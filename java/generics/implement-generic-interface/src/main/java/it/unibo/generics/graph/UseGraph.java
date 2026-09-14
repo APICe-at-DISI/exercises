@@ -64,7 +64,7 @@ public final class UseGraph {
     private static void assertIsAnyOf(final Object actual, final Object... valid) {
         for (final var target: Objects.requireNonNull(valid)) {
             if (Objects.equals(target, actual)) {
-                System.out.println("OK: " + actual + " matches " + target); // NOPMD
+                IO.println("OK: " + actual + " matches " + target);
                 return;
             }
         }

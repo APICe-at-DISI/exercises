@@ -86,7 +86,7 @@ public class BaseRobot implements Robot {
      * @param msg
      */
     protected void log(final String msg) {
-        System.out.println("[" + this.robotName + "]: " + msg);
+        IO.println("[" + this.robotName + "]: " + msg);
     }
 
     private boolean move(final int dx, final int dy) {

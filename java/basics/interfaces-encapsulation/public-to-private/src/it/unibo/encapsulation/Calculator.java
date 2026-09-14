@@ -33,19 +33,19 @@ public class Calculator {
     }
 
     private static void printCalculatorStatus(final Calculator calc) {
-        System.out.println("operations performed: " + calc.operationsPerformed);
-        System.out.println("last result" + calc.lastResult + "\n");
+        IO.println("operations performed: " + calc.operationsPerformed);
+        IO.println("last result" + calc.lastResult + "\n");
     }
 
     public static void main(final String[] args) {
         final Calculator calc = new Calculator();
-        System.out.println("1+2=" + calc.add(1, 2));
+        IO.println("1+2=" + calc.add(1, 2));
         printCalculatorStatus(calc);
-        System.out.println("-1-(+2)=" + calc.sub(-1, 2));
+        IO.println("-1-(+2)=" + calc.sub(-1, 2));
         printCalculatorStatus(calc);
-        System.out.println("8*3=" + calc.mul(8, 3));
+        IO.println("8*3=" + calc.mul(8, 3));
         printCalculatorStatus(calc);
-        System.out.println("8/4=" + calc.div(8, 4));
+        IO.println("8/4=" + calc.div(8, 4));
         printCalculatorStatus(calc);
     }
 }

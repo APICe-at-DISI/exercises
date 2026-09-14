@@ -30,6 +30,6 @@ public class AccountHolder {
     }
 
     public static void main(final String[] args) {
-        System.out.println(new AccountHolder("Alex", "Ghini", 42));
+        IO.println(new AccountHolder("Alex", "Ghini", 42));
     }
 }
