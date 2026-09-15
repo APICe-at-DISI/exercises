@@ -95,9 +95,9 @@ final class TestLambdaUtilities {
             () -> random.nextInt(10) - 10
         );
         assertEquals(map.keySet(), Set.of(P_1, P_2, P_3, N_1, N_2));
-        assertEquals(map.get(P_1), 1);
-        assertEquals(map.get(P_2), 2);
-        assertEquals(map.get(P_3), 3);
+        assertEquals(1, map.get(P_1));
+        assertEquals(2, map.get(P_2));
+        assertEquals(3, map.get(P_3));
         assertTrue(map.get(N_1) < 0);
         assertTrue(map.get(N_2) < 0);
     }
