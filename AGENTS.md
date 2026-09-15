@@ -22,8 +22,7 @@ The `exercises` branch starts from `master` and removes the solutions.
   `settings.gradle.kts`) under `java/<category>/<exercise>`. There is no root Gradle build — reuse the
   templates in `gradle-buildfiles/` when scaffolding a new one instead of hand-writing the QA plugin setup.
 - A new exercise (or a new top-level category under `java/`) must be registered in `tests.main.kts`, or CI
-  will silently skip building/testing it. Don't assume every directory under `java/` is covered — e.g.
-  `java/inner-class` currently isn't listed there.
+  will silently skip building/testing it.
 - If the exercise should ship as part of a course, also add an entry under the relevant lab in `config.yml`
   (content entries are applied in order; later entries win over earlier ones for the same destination path).
 
