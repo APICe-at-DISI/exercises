@@ -38,7 +38,9 @@ File("java/inheritance/").inAllDirectories {
 
 fun GitCommands.branchContains(name: String) = name in currentBranch() || name in System.getenv("BRANCH").orEmpty()
 
-listOf("collections", "generics", "exceptions", "lambdas", "streams", "concurrency").forEach {
+listOf(
+    "collections", "concurrency", "exceptions", "generics", "inner-class", "lambdas", "streams",
+).forEach {
     File("java/$it").inAllDirectories {
         val tasks = arrayOf("build") + when {
             git.branchContains("exercises") -> arrayOf("-x", "test")
