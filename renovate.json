@@ -3,5 +3,8 @@
   "extends": [
     "github>DanySK/renovate-config"
   ],
-  "baseBranches": ["master", "exercises"]
+  "baseBranchPatterns": [
+    "master",
+    "exercises"
+  ]
 }
