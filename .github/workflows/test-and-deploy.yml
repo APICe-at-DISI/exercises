@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-java@v6.0.1
       with:
         distribution: temurin
-        java-version: 25
+        java-version: 26.0.2+10
     - name: Setup WSL
       if: runner.os == 'Windows'
       uses: Vampire/setup-wsl@v7.0.0
@@ -55,7 +55,7 @@ jobs:
         uses: actions/setup-java@v6.0.1
         with:
           distribution: temurin
-          java-version: 22.0.2+9
+          java-version: 26.0.2+10
       - name: Compute ref
         id: ref
         run: |
