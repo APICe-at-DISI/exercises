@@ -55,7 +55,7 @@ jobs:
         uses: actions/setup-java@v6.0.1
         with:
           distribution: temurin
-          java-version: 23.0.2+7
+          java-version: 24.0.2+12
       - name: Compute ref
         id: ref
         run: |
