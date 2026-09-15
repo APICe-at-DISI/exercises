@@ -25,6 +25,12 @@ The `exercises` branch starts from `master` and removes the solutions.
   will silently skip building/testing it.
 - If the exercise should ship as part of a course, also add an entry under the relevant lab in `config.yml`
   (content entries are applied in order; later entries win over earlier ones for the same destination path).
+- When resolving conflicts while merging `master` into `exercises`, don't backport `master`-only build
+  tooling (e.g. the `org.danilopianini.gradle-java-qa` plugin, or `application`/`spotbugs` blocks that come
+  with it) into an exercise's `build.gradle.kts` if `exercises` doesn't already have it — that plugin is
+  deliberately left off unfinished exercise code, since checkstyle/PMD/SpotBugs would fail on it. Keep
+  `exercises`'s side for that kind of conflict; only take `master`'s side for changes that apply equally to
+  both branches (e.g. GitHub Actions version bumps, `tests.main.kts`, docs).
 
 ## Code conventions
 - Use Java 25 APIs when the repository already targets them. Prefer the implicitly available
