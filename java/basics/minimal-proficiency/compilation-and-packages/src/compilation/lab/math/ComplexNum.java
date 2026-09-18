@@ -42,8 +42,8 @@ class ComplexNum {
         IO.println(c2.toStringRep());
         IO.println(c3.toStringRep());
         IO.println(c4.toStringRep() + "\n");
-        IO.println(c3.equal(c1));
-        IO.println(c3.equal(c2));
-        IO.println(c3.equal(c4));
+        IO.println(c3.isEqualTo(c1));
+        IO.println(c3.isEqualTo(c2));
+        IO.println(c3.isEqualTo(c4));
     }
 }

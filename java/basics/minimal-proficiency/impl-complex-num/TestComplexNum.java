@@ -48,9 +48,9 @@ class TestComplexNum {
         * input c1,c2,c4. Stampare il risultato di ciascuna invocazione in
         * standard output
         */
-        IO.println(c3.equal(c1));
-        IO.println(c3.equal(c2));
-        IO.println(c3.equal(c4));
+        IO.println(c3.isEqualTo(c1));
+        IO.println(c3.isEqualTo(c2));
+        IO.println(c3.isEqualTo(c4));
         
         /*
         * Additional test for toStringRep()
