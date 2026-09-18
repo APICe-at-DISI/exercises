@@ -10,7 +10,7 @@ class ComplexNum {
         this.im = im;
     }
 
-    boolean equal(final ComplexNum num) {
+    boolean isEqualTo(final ComplexNum num) {
         return re == num.re && im == num.im;
     }
 
