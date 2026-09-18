@@ -151,7 +151,7 @@ jobs:
           branch: ${{ matrix.ref }}
           repository-name: ${{ matrix.owner }}/${{ matrix.repo }}
   success:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs:
       - delivery
       - tests
