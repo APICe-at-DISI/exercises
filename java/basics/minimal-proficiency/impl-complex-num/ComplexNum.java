@@ -9,7 +9,8 @@ class ComplexNum {
          */
     }
 
-    boolean equal(ComplexNum num) {
+    boolean isEqualTo(ComplexNum num) {
+
         /*
          * Implementare il metodo in modo che restituisca true se e solo se il
          * numero complesso è uguale al parametro num passato in input
