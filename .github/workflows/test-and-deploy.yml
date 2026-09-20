@@ -6,6 +6,7 @@ on:
   pull_request:
 
 jobs:
+
   tests:
     defaults:
       run:
@@ -46,6 +47,7 @@ jobs:
       env:
         BRANCH: ${{ steps.branch-names.outputs.current_branch }}
       run: ./tests.main.kts
+
   prepare-deliveries:
     runs-on: ubuntu-latest
     outputs:
@@ -82,10 +84,54 @@ jobs:
         with:
           name: build
           path: build.tar
+
+  validate-deployment-token:
+    needs:
+      - prepare-deliveries
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify deployment token write access
+        env:
+          DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
+          MATRIX: ${{ needs.prepare-deliveries.outputs.matrix }}
+        run: |
+          set -euo pipefail
+          repos="$(
+            jq -r '.include[] | "\(.owner)/\(.repo)"' <<< "$MATRIX" | sort -u
+          )"
+          for repo in $repos; do
+            echo "Checking $repo..."
+            response="$(mktemp)"
+            status="$(
+              curl \
+                --silent \
+                --show-error \
+                --output "$response" \
+                --write-out '%{http_code}' \
+                --request POST \
+                --header "Authorization: Bearer ${DEPLOYMENT_TOKEN}" \
+                --header "Accept: application/vnd.github+json" \
+                --header "X-GitHub-Api-Version: 2026-03-10" \
+                "https://api.github.com/repos/${repo}/git/refs" \
+                --data '{
+                  "ref": "refs/heads/__deployment-token-permission-check__",
+                  "sha": "0000000000000000000000000000000000000000"
+                }'
+            )"
+            if [[ "$status" != "422" ]]; then
+              echo "::error::DEPLOYMENT_TOKEN does not have write access to ${repo} (HTTP ${status})"
+              cat "$response"
+              exit 1
+            fi
+            rm "$response"
+            echo "Write access confirmed for $repo"
+          done
+
   delivery:
     needs:
       - tests # Don't deliver if testing fails
       - prepare-deliveries
+      - validate-deployment-token
     runs-on: ubuntu-latest
     if: >-
       !github.event.repository.fork
