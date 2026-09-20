@@ -104,8 +104,9 @@ jobs:
             ' <<< "$MATRIX" | sort -u
           )"
           for repo in $repos; do
-            echo "Checking Git push access to $repo..."
+            echo "Checking real Git write access to $repo..."
             dir="$(mktemp -d)"
+            branch="__deployment-token-check-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
             git -C "$dir" init --quiet
             git -C "$dir" remote add origin \
               "https://x-access-token:${DEPLOYMENT_TOKEN}@github.com/${repo}.git"
@@ -114,13 +115,15 @@ jobs:
             git -C "$dir" config user.name "deployment-token-check"
             git -C "$dir" config user.email "noreply@unibo.it"
             git -C "$dir" commit --quiet --allow-empty -m "deployment token check"
-            git -C "$dir" push \
-              --dry-run \
-              --force \
-              origin \
-              HEAD:refs/heads/__deployment-token-permission-check__
+            # Real remote write.
+            git -C "$dir" push origin "HEAD:refs/heads/${branch}"
+            # Also verify force-update capability, matching the deployment action.
+            git -C "$dir" commit --quiet --allow-empty -m "deployment token force-push check"
+            git -C "$dir" push --force origin "HEAD:refs/heads/${branch}"
+            # Cleanup.
+            git -C "$dir" push origin --delete "$branch"
             rm -rf "$dir"
-            echo "Git push access confirmed for $repo"
+            echo "Real Git write access confirmed for $repo"
           done
 
   delivery:
