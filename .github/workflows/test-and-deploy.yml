@@ -106,12 +106,15 @@ jobs:
         uses: actions/checkout@v7.0.1
       - name: Checkout the target repo if it exists, initialize if needed
         if: matrix.type == 'repo'
+        env:
+          DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
         run: |
-          git clone https://${{ secrets.DEPLOYMENT_TOKEN }}@github.com/${{ matrix.owner }}/${{ matrix.repo }} target
+          git clone "https://x-access-token:${DEPLOYMENT_TOKEN}@github.com/${{ matrix.owner }}/${{ matrix.repo }}.git" target
           cd target
-          git checkout ${{ matrix.ref }} || git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} || git checkout -b ${{ matrix.ref }}
+          git checkout ${{ matrix.ref }} \
+            || git checkout ${{ matrix.ref }} origin/${{ matrix.ref }} \
+            || git checkout -b ${{ matrix.ref }}
           if ! git rev-parse HEAD &> /dev/null; then
-            echo 'The repository is empty, creating the target branch and adding a first commit'
             git config user.name 'pianinator[bot]'
             git config user.email 'noreply@unibo.it'
             git commit --allow-empty -m 'initialize the repository'
