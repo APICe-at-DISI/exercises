@@ -20,7 +20,7 @@ public final class TestRobotWithArms {
     private TestRobotWithArms() {
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         final RobotWithArms walle = new RobotWithTwoArms("Wall-e");
         final String wallePosition = walle + "'s position";
         final String walleItems = walle + "'s items carried";

@@ -107,10 +107,9 @@ public final class SimpleGUI {
     }
 
     /**
-     * @param args
-     *            ignored
+     * Program entry point.
      */
-    public static void main(final String[] args) {
+    public static void main() {
         new SimpleGUI(new SimpleController()).display();
     }
 }

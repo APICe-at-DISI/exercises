@@ -32,7 +32,7 @@ class PlayWithSmartphoneArrays {
         return returnValue;
     }
 
-    public static void main(String[] args) {
+    void main() {
         final Smartphone[] phones = new Smartphone[5];
         
         // 1) Creare lo smarthpone HTC One ram:1024 sdSize

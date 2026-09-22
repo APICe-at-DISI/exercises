@@ -28,10 +28,8 @@ public final class Test {
 
     /**
      * Main method to launch the GUI.
-     *
-     * @param args ignored
      */
-    public static void main(final String... args) {
+    public static void main() {
         new GUI(4);
     }
 

@@ -29,10 +29,9 @@ public final class UseListsAndMaps {
     }
 
     /**
-     * @param s
-     *            unused
+     * Program entry point.
      */
-    public static void main(final String... s) {
+    public static void main() {
         /*
          * 1) Create a new ArrayList<Integer>, and populate it with the numbers
          * from 1000 (included) to 2000 (excluded).

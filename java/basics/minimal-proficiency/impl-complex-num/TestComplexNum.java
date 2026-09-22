@@ -1,5 +1,5 @@
 class TestComplexNum {
-    public static void main(String[] args) {
+    void main() {
 
         /*
         * 1-4) creazione di c1,c2,c3,c4

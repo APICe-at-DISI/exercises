@@ -8,7 +8,7 @@ public class Testing {
          */
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
 
         // 1)Creare 3 studenti a piacere
         final Student aGentile = new Student(1015, "Alex", "Gentile", "1234", 2012);

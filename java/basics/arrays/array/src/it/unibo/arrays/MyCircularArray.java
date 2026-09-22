@@ -36,7 +36,7 @@ class MyCircularArray {
         System.out.print(this.array[this.array.length - 1] + "]");
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
 
         // 1) Creare un array circolare di dieci elementi
         MyCircularArray circularArray = new MyCircularArray(10);

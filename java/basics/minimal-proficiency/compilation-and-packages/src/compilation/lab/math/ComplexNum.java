@@ -23,7 +23,7 @@ class ComplexNum {
         return re + (im > 0 ? "+" : "") + im + "i";
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         final ComplexNum c1 = new ComplexNum();
         c1.build(3, 5);
         final ComplexNum c2 = new ComplexNum();

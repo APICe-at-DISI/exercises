@@ -24,10 +24,9 @@ public final class UseGraph {
     }
 
     /**
-     * @param args
-     *            ignored
+     * Program entry point.
      */
-    public static void main(final String... args) {
+    public static void main() {
         /*
          * Test your graph implementation(s) by calling testGraph
          */

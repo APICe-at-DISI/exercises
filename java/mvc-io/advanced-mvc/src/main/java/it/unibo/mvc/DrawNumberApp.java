@@ -118,11 +118,9 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
     /**
      * Application entry point.
      *
-     * @param args
-     *            ignored
      * @throws FileNotFoundException if the configuration file cannot be fetched
      */
-    public static void main(final String... args) throws FileNotFoundException {
+    public static void main() throws FileNotFoundException {
         new DrawNumberApp(
             "config.yml", // res is part of the classpath!
             new DrawNumberViewImpl(),

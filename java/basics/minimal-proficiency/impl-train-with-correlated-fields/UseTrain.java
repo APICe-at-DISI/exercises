@@ -1,5 +1,5 @@
 class UseTrain {
-  public static void main(String[] args) {
+  void main() {
       /*
        * 1) Creare un oggetto della classe Train
        */

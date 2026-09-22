@@ -5,7 +5,7 @@ class HelloWorld {
     /*
      * Main dell'applicazione
      */
-    public static void main(String[] argv) {
+    void main() {
         /*
          * Stampa "Hello World!" in standard output
          */

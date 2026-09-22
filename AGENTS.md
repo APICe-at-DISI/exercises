@@ -37,6 +37,10 @@ The `exercises` branch starts from `master` and removes the solutions.
   `java.lang.IO.println` over the legacy standard-output API.
 - Use compact source files only for standalone examples where the class wrapper is not part of the
   exercise; retain explicit classes for exercises that teach classes, packages, compilation, or reuse.
+- Declare `main` without the `String[]` parameter unless the exercise actually reads command-line
+  arguments. Use an instance `void main()` in the beginner standalone drivers under `java/basics`, and
+  `public static void main()` where the class is a utility holder with a private constructor, a domain
+  class under study, or lacks a non-private no-arg constructor.
 - Treat warning suppressions (checkstyle/PMD/SpotBugs, enforced via the `org.danilopianini.gradle-java-qa`
   plugin) as a last resort. If one is necessary, add a nearby comment explaining why.
 

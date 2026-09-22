@@ -17,7 +17,7 @@ class Point3D {
         return this.x == q.x && this.y == q.y && this.z == q.z;
     }
 
-    public static void main(final String[] s) {
+    public static void main() {
         Point3D p = new Point3D();
         p.build(10.0, 20.0, 30.0);
         Point3D q = new Point3D();

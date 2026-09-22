@@ -1,5 +1,5 @@
 class TestCalculator {
-  public static void main(String[] args) {
+  void main() {
 
       IO.println("--- Test Calculator V1 ---\n");
 

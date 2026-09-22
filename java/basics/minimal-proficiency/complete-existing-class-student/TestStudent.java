@@ -1,6 +1,6 @@
 class TestStudent {
 
-    public static void main(String[] args) {
+    void main() {
         Student mario = new Student();
         mario.build("Alex", "Balducci", 1015, 2019);
         mario.printStudentInfo();

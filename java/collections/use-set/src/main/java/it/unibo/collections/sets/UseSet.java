@@ -16,10 +16,9 @@ public final class UseSet {
     }
 
     /**
-     * @param args
-     *            ignored
+     * Program entry point.
      */
-    public static void main(final String[] args) {
+    public static void main() {
         /*
          * Considering the content of "UseCollection, write a program which, in
          * order:

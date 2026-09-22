@@ -6,7 +6,7 @@ class CallByReference2 {
         IO.println("[print] x=" + point.x + ";y=" + point.y + ";z=" + point.z);
     }
 
-    public static void main(final String[] args) {
+    void main() {
         Point3D p1 = new Point3D();
         p1.build(1, 2, 3);
         CallByReference2 cbr2 = new CallByReference2();

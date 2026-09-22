@@ -60,7 +60,7 @@ public class TestBankAccount {
         requireSameAmount(account1, account2);
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         final AccountHolder aRossi = new AccountHolder("Andrea", "Rossi", 1);
         final AccountHolder aBianchi = new AccountHolder("Alex", "Bianchi", 2);
         /*

@@ -19,10 +19,9 @@ public final class UseUtilities {
     private UseUtilities() { }
 
     /**
-     * @param s
-     *            unused
+     * Program entry point.
      */
-    public static void main(final String[] s) {
+    public static void main() {
         final var setA = Set.of(A, B, C, D);
         final var setB = Set.of(C, D, E);
         assertEquals(Set.of(A, B, C, D, E), Utilities.union(setA, setB));

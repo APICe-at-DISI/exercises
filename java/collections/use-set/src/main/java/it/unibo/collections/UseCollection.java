@@ -17,10 +17,9 @@ public final class UseCollection {
     }
 
     /**
-     * @param args
-     *            unused
+     * Program entry point.
      */
-    public static void main(final String[] args) {
+    public static void main() {
         /*
          * Unless you need to perform specific operations, always use the most
          * generic interface.

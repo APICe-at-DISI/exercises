@@ -19,10 +19,9 @@ public final class UseWarehouse {
     }
 
     /**
-     * @param args
-     *            unused
+     * Program entry point.
      */
-    public static void main(final String[] args) {
+    public static void main() {
         /*
          * Realize the classes:
          *

@@ -191,7 +191,7 @@ class WorkWithArrays {
             && Arrays.equals(duplicateElements(new int[] { 1, 2 }, 5), new int[] { 1, 1, 1, 1, 1, 2, 2, 2, 2, 2 });
     }
 
-    public static void main(final String[] args) {
+    void main() {
         IO.println("testCountOccurr: " + testCountOccurrencies());
         IO.println("testEvenElems: " + testEvenElements());
         IO.println("testOddElems: " + testOddElements());

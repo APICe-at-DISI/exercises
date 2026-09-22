@@ -2,7 +2,7 @@ package compilation.lab.math;
 
 public class UseComplex {
 
-    public static void main(final String[] args) {
+    void main() {
         final ComplexNum c1 = new ComplexNum();
         c1.build(1, -45);
         final ComplexNum c2 = new ComplexNum();

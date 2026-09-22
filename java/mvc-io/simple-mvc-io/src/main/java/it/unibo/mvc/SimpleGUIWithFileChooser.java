@@ -89,11 +89,8 @@ public final class SimpleGUIWithFileChooser {
 
     /**
      * Launches the application.
-     *
-     * @param a
-     *            unused
      */
-    public static void main(final String... a) {
+    public static void main() {
         final SimpleGUIWithFileChooser gui = new SimpleGUIWithFileChooser(new Controller());
         gui.display();
     }

@@ -97,7 +97,7 @@ public class Smartphone {
         return hasNFC;
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         // 1) Creare lo smarthpone HTC One sdSize:1024
         final Smartphone htcOne = new Smartphone("HTC", "One", 1024);
         // 2) Creare lo smarthpone Samsung Galaxy Note 3 ram:2048 cpu:4

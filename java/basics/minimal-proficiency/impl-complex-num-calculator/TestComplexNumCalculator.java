@@ -1,5 +1,5 @@
 class TestComplexNumCalculator {
-  public static void main(String[] args) {
+  void main() {
       ComplexNumCalculator calculator = new ComplexNumCalculator();
       calculator.build();
 

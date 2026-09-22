@@ -31,11 +31,8 @@ public final class TestSocialNetworkUser {
     /**
      * This is going to act as a test for
      * {@link SocialNetworkUserImpl}.
-     *
-     * @param args
-     *            ignored
      */
-    public static void main(final String... args) {
+    public static void main() {
         /*
          * create 5 social network users (SocialNetworkUser):
          *

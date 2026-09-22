@@ -25,7 +25,7 @@ public class WorkWithShapes {
         return "Perimeter = " + s.getPerimeter() + ", area = " + s.getArea();
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         final Shape circle = new Circle(CIRCLE_RADIUS);
         final Polygon square = new Square(SQUARE_EDGE);
         final Polygon rectangle = new Rectangle(RECT_WIDTH, RECT_HEIGHT);
