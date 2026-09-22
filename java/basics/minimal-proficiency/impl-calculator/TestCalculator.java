@@ -1,5 +1,5 @@
 class TestCalculator {
-  public static void main(String[] args) {
+  public static void main() {
 	  /*
 	   * Uncomment the code below once Calculator has been created!
 	   */

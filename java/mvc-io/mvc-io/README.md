@@ -23,3 +23,4 @@ SUGGESTION: Use a `JPanel` with `BorderLayout`
 4. By default, if the graphical interface is closed the program must exit (call `setDefaultCloseOperation`) 
 5. The behavior of the program is that, if "Print" is pressed, the controller is asked to show the string contained in the text field on standard output.
 If "show history" is pressed instead, the GUI must show all the prints that have been done to this moment in the text area.
+6. 

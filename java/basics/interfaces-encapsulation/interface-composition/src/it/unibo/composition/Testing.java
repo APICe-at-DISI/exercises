@@ -2,7 +2,7 @@ package it.unibo.composition;
 
 public class Testing {
 
-    public static void main(final String[] args) {
+    public static void main() {
 
         // 1)Creare 3 studenti a piacere
 

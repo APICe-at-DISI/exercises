@@ -24,10 +24,8 @@ public final class Test {
 
     /**
      * Main method.
-     *
-     * @param args command line arguments (ignored)
      */
-    public static void main(final String... args) {
+    public static void main() {
         new GUI(10); // only use odd numbers as arguments!
     }
 }

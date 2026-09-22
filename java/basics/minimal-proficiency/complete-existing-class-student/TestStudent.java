@@ -1,6 +1,6 @@
 class TestStudent {
 
-    public static void main(String[] args) {
+    void main() {
         Student someone = new Student();
         someone.build();
         someone.printStudentInfo();

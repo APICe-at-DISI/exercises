@@ -29,7 +29,7 @@ public class AccountHolder {
         return null;
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         IO.println(new AccountHolder("Alex", "Ghini", 42));
     }
 }

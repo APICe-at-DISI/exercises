@@ -17,7 +17,7 @@ public final class TestRobots {
     private TestRobots() {
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         final var stepsDefault = (int) (BaseRobot.BATTERY_FULL / BaseRobot.MOVEMENT_DELTA_CONSUMPTION);
         final var r0 = new BaseRobot("R2D2");
         final var r0pos = r0 + " position";

@@ -23,9 +23,9 @@ public final class UseArithmeticService {
     private UseArithmeticService() { }
 
     /**
-     * @param args unused
+     * Program entry point.
      */
-    public static void main(final String[] args) {
+    public static void main() {
         try {
             new ServiceBehindUnstableNetwork(1);
             throw new AssertionError("Expected an IllegalArgumentException, but no Exception was thrown");

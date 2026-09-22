@@ -1,5 +1,5 @@
 class UseTrain {
-    public static void main(String[] args) {
+    void main() {
         /*
          * Premesse per un corretto testing della classe. Per ragioni di
          * coerenza e semplicità:
@@ -12,15 +12,19 @@ class UseTrain {
          *
          * Testing: 1) Creare un oggetto della classe Train specificando valori
          * a piacere per i parametri
-         *
+         */
+        /*
          * 2) Effettuare delle prenotazioni in prima e seconda classe
          * specificando un numero di posti da prenotare consistente
-         *
+         */
+        /*
          * 3) A seguito di ciascuna prenotazione stampare la ratio di
          * occupazione totale e per ciascuna classe.
-         *
+         */
+        /*
          * 4) Cancellare tutte le prenotazioni
-         *
+         */
+        /*
          * 5) Prenotare nuovamente dei posti e stampare le nuove percentuali di
          * occupazione
          */

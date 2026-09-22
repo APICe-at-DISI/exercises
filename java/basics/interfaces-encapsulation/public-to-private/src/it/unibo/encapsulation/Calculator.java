@@ -37,7 +37,7 @@ public class Calculator {
         IO.println("last result" + calc.lastResult + "\n");
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         final Calculator calc = new Calculator();
         IO.println("1+2=" + calc.add(1, 2));
         printCalculatorStatus(calc);

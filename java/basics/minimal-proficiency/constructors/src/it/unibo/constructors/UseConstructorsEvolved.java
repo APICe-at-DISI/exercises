@@ -2,7 +2,7 @@ package it.unibo.constructors;
 
 class UseConstructorsEvolved {
 
-    public static void main(final String[] args) {
+    void main() {
         // 1) Creare un treno con numero di posti di default, come nel caso
         // precedente (serve a verificare la nuova implementazione di Train()).
 

@@ -16,7 +16,7 @@ public final class TestRobotWithArms {
     private TestRobotWithArms() {
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         // Uncomment the method
         /*
         final RobotWithArms walle = new RobotWithTwoArms("Wall-e");

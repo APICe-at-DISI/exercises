@@ -1,5 +1,5 @@
 class TestComplexNum {
-    public static void main(String[] args) {
+    void main() {
       /*
        * Testare la classe come segue:
        *

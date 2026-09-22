@@ -2,7 +2,7 @@ package it.unibo.constructors;
 
 class UseConstructors {
 
-    public static void main(final String[] args) {
+    void main() {
         // NB: Per verificare la correttezza dei costruttori implementati
         // stampare a video le informazioni relative agli studenti (metodo
         // printStudentInfo) e ai treni (a tal fine implementare un metodo

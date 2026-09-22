@@ -17,10 +17,9 @@ public final class UseOrderedWarehouse {
     private UseOrderedWarehouse() { }
 
     /**
-     * @param args
-     *            unused
+     * Program entry point.
      */
-    public static void main(final String[] args) {
+    public static void main() {
         /*
          * 4. First, solve the points in UseWarehouse, and ask the teacher for a correction.
          * Then continue with these exercises.

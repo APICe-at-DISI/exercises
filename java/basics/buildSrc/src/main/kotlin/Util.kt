@@ -12,7 +12,9 @@ object Util {
     /*
      * roughly matches classes with a main method
      */
-    private const val mainRegex = "public\\s+static\\s+void\\s+main\\s*\\(String(\\[\\]|\\.\\.\\.)\\s+\\w+\\)\\s*\\{"
+    private const val mainRegex =
+        "(public\\s+|static\\s+|final\\s+)*void\\s+main\\s*" +
+            "\\(\\s*((final\\s+)?String(\\[\\]|\\.\\.\\.)\\s+\\w+)?\\s*\\)\\s*\\{"
 
     private val main = Regex(mainRegex)
 

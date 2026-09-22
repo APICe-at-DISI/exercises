@@ -108,10 +108,9 @@ public final class LambdaUtilities {
     }
 
     /**
-     * @param args
-     *            ignored
+     * Program entry point.
      */
-    public static void main(final String[] args) {
+    public static void main() {
         final List<Integer> li = IntStream.range(1, 8).boxed().collect(Collectors.toList());
         IO.println(dup(li, x -> x + 100));
         /*

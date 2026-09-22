@@ -87,7 +87,7 @@ class SeqRecognizer {
             && !checkSeq4(new int[] { 4, 4, 4 });
     }
 
-    public static void main(final String[] args) {
+    void main() {
         IO.println("testCheckSeq1: " + testCheckSeq1());
         IO.println("testCheckSeq2: " + testCheckSeq2());
         IO.println("testCheckSeq3: " + testCheckSeq3());

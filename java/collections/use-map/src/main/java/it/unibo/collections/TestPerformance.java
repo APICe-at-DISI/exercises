@@ -15,10 +15,9 @@ public final class TestPerformance {
     private TestPerformance() { }
 
     /**
-     * @param s
-     *            ignored
+     * Program entry point.
      */
-    public static void main(final String... s) {
+    public static void main() {
         /*
          * Set up the data structures
          */

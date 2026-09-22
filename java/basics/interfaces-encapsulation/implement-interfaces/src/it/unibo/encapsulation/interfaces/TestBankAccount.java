@@ -5,7 +5,7 @@ public class TestBankAccount {
     private TestBankAccount() {
     }
 
-    public static void main(final String[] args) {
+    public static void main() {
         /*
          * 1) Creare l' AccountHolder relativo a Andrea Rossi con id 1
          */

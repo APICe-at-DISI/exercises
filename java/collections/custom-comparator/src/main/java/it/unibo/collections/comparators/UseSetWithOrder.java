@@ -12,10 +12,9 @@ public final class UseSetWithOrder {
     }
 
     /**
-     * @param s
-     *            ignored
+     * Program entry point.
      */
-    public static void main(final String[] s) {
+    public static void main() {
 
         /*
          * Write a program which:

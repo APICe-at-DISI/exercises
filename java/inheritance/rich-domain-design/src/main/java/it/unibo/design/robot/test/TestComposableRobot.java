@@ -9,7 +9,7 @@ public final class TestComposableRobot {
 
     private TestComposableRobot() { }
 
-    public static void main(final String[] args) {
+    public static void main() {
         /*
          * Uncomment the method parts by moving the comment-ending token
         final ComposableRobot r0 = new SimpleComposableRobot("Evangelion Unit 01");

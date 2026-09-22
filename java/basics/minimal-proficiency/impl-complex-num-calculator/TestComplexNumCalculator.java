@@ -1,5 +1,5 @@
 class TestComplexNumCalculator {
-  public static void main(String[] args) {
+  void main() {
       /*
        * 1) Testare la classe ComplexNumCalculator con le seguenti operazioni
        *    tra numeri complessi:
