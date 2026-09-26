@@ -29,11 +29,11 @@ class MyCircularArray {
     }
 
     void printArray() {
-        System.out.print("[");
+        IO.print("[");
         for (int i = 0; i < this.array.length - 1; i++) {
-            System.out.print(this.array[i] + ",");
+            IO.print(this.array[i] + ",");
         }
-        System.out.print(this.array[this.array.length - 1] + "]");
+        IO.print(this.array[this.array.length - 1] + "]");
     }
 
     public static void main() {
