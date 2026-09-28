@@ -315,28 +315,28 @@ packages:
       - from: java/basics/minimal-proficiency/command-line-arguments/src
         to: 04-program-arguments/src/main/java
         excluding: README.md
-      # - <<: *clean-gradle-wrapper
-      #   to: 04-program-arguments
-      # - from: gradle-buildfiles/java-minimal/build.gradle.kts
-      #   to: 04-program-arguments/build.gradle.kts
+      - <<: *clean-gradle-wrapper
+        to: 04-program-arguments
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 04-program-arguments/build.gradle.kts
         # Constructors + Gradle
       - from: java/basics/minimal-proficiency/constructors/README.md
         to: 05-constructors/README.md
       - from: java/basics/minimal-proficiency/constructors/src
         to: 05-constructors/src/main/java
-      # - <<: *clean-gradle-wrapper
-      #   to: 05-constructors
-      # - from: gradle-buildfiles/java-minimal/build.gradle.kts
-      #   to: 05-constructors/build.gradle.kts
+      - <<: *clean-gradle-wrapper
+        to: 05-constructors
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 05-constructors/build.gradle.kts
         # Arrays + Gradle
       - from: java/basics/arrays/array/README.md
         to: 06-array/README.md
       - from: java/basics/arrays/array/src
         to: 06-array/src/main/java
-      # - <<: *clean-gradle-wrapper
-      #   to: 06-array
-      # - from: gradle-buildfiles/java-minimal/build.gradle.kts
-      #   to: 06-array/build.gradle.kts
+      - <<: *clean-gradle-wrapper
+        to: 06-array
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 06-array/build.gradle.kts
   pss-lab03:
     format:
       - zip
