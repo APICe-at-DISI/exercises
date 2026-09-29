@@ -15,4 +15,4 @@
   - Oh-oh... Errore. Lo si legga attentamente: perché l'interprete ha dato errore? (Nota: se non dà errore, chiamare il docente, è stato necessariamente commesso un errore al punto 3).
 5. Si esegua la classe `compilation.lab.math.UseComplex` usando opportunamente più percorsi nel classpath, a tal proposito si ricorda che:
     - Il separatore di percorsi è `:` su Linux e `;` su Windows
-    - Il comando `java -cp bin:../21-compilation-with-packages/bin NOMEDELLACLASSE` (formato Unix, usare `;` come separatore in Windows) istruisce l'interprete Java dicendogli di andare a caricare classi non solo dalla posizione corrente, ma anche dalla cartella `bin`, e dalla cartella `../01-packages/bin`
+    - Il comando `java -cp bin:../21-compilation-with-packages/bin NOMEDELLACLASSE` (formato Unix, usare `;` come separatore in Windows) istruisce l'interprete Java dicendogli di andare a caricare classi non solo dalla posizione corrente, ma anche dalla cartella `bin`, e dalla cartella `../21-compilation-with-packages/bin`
