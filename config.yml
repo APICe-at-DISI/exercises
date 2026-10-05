@@ -347,9 +347,9 @@ packages:
         to: 00-application/src
       - from: java/basics/automation/application/README.md
         to: 00-application/README.md
-      - from: java/basics/checkstyle/quality-assurance/src
+      - from: java/basics/automation/checkstyle/quality-assurance/src
         to: 01-quality-assurance/src
-      - from: java/basics/checkstyle/quality-assurance/README.md
+      - from: java/basics/automation/checkstyle/quality-assurance/README.md
         to: 01-quality-assurance/README.md
       - <<: *clean-gradle-wrapper
         to: 01-quality-assurance
