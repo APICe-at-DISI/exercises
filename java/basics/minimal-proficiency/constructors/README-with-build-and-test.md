@@ -13,7 +13,7 @@
 
 # FASE 2 - Aggiungere la build Gradle al progetto
 
-1. Scaricare il Gradle Wrapper (il link è disponibile alla slide 34 del blocco di slide 05)
+1. Scaricare il Gradle Wrapper: https://github.com/DanySK/Gradle-Wrapper/archive/refs/heads/master.zip
 2. Configurare correttamente il file build.gradle.kts
 3. Lanciare l'applicazione prima tramite java e poi da Gradle
 
