@@ -343,14 +343,42 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab
     contents:
-      - from: java/basics/minimal-proficiency/constructors/README-with-build-and-test.md
-        to: 01-constructors/README.md
-      - from: java/basics/minimal-proficiency/constructors/src
-        to: 01-constructors/src/main/java
-      - from: java/basics/arrays/array/README-with-build-and-test.md
-        to: 02-array/README.md
-      - from: java/basics/arrays/array/src
-        to: 02-array/src/main/java
+      - from: java/basics/automation/application/src
+        to: 00-application/src
+      - from: java/basics/automation/application/README.md
+        to: 00-application/README.md
+      - from: java/basics/checkstyle/quality-assurance/src
+        to: 01-quality-assurance/src
+      - from: java/basics/checkstyle/quality-assurance/README.md
+        to: 01-quality-assurance/README.md
+      - <<: *clean-gradle-wrapper
+        to: 01-quality-assurance
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 01-quality-assurance/build.gradle.kts
+      - from: java/basics/interfaces-encapsulation/public-to-private/README.md
+        to: 02-encapsulation/README.md
+      - from: java/basics/interfaces-encapsulation/public-to-private/src
+        to: 02-encapsulation/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 02-encapsulation
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 02-encapsulation/build.gradle.kts
+      - from: java/basics/interfaces-encapsulation/from-scratch/README.md
+        to: 03-design-from-scratch/README.md
+      - from: java/basics/interfaces-encapsulation/from-scratch/src
+        to: 03-design-from-scratch/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 03-design-from-scratch
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 03-design-from-scratch/build.gradle.kts
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
+        to: 04-interfaces/README.md
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
+        to: 04-interfaces/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 04-interfaces
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 04-interfaces/build.gradle.kts
   pss-lab04:
     format:
       - repo
@@ -363,6 +391,12 @@ packages:
         to: Esercizio2.md
       - from: git/group-exercise.md
         to: Esercizio-in-Gruppo.md
+      # - from: java/basics/minimal-proficiency/constructors/src
+      #   to: 01-constructors/src/main/java
+      # - from: java/basics/arrays/array/README-with-build-and-test.md
+      #   to: 02-array/README.md
+      # - from: java/basics/arrays/array/src
+      #   to: 02-array/src/main/java
   pss-lab04b:
     format:
       - repo
