@@ -382,7 +382,7 @@ packages:
   pss-lab04:
     format:
       - zip
-      destinations:
+    destinations:
       - unibo-lptsi-pss/pss-lab
     contents:
       - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
