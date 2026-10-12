@@ -381,16 +381,28 @@ packages:
         to: 04-interfaces/build.gradle.kts
   pss-lab04:
     format:
-      - repo
+      - zip
     destinations:
       - unibo-lptsi-pss/pss-lab-git
     contents:
-      - from: git/branching.md
-        to: Esercizio1.md
-      - from: git/merge-conflict.md
-        to: Esercizio2.md
-      - from: git/group-exercise.md
-        to: Esercizio-in-Gruppo.md
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
+        to: 00-interfaces/README.md
+      - from: java/basics/interfaces-encapsulation/implement-interfaces/src
+        to: 00-interfaces/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 00-interfaces
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 00-interfaces/build.gradle.kts
+      - from: java/inheritance/improve-design/
+        to: 01-inheritance-dry/
+      - from: java/inheritance/guided-design/
+        to: 02-abstract-classes/
+      # - from: git/branching.md
+      #   to: Esercizio1.md
+      # - from: git/merge-conflict.md
+      #   to: Esercizio2.md
+      # - from: git/group-exercise.md
+      #   to: Esercizio-in-Gruppo.md
       # - from: java/basics/minimal-proficiency/constructors/src
       #   to: 01-constructors/src/main/java
       # - from: java/basics/arrays/array/README-with-build-and-test.md
