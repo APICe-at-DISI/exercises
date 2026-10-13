@@ -29,7 +29,7 @@ jobs:
         java-version: 27.0.0+35
     - name: Setup WSL
       if: runner.os == 'Windows'
-      uses: Vampire/setup-wsl@v7.0.0
+      uses: Vampire/setup-wsl@v7.1.1
       with:
         distribution: Ubuntu-22.04
     - name: Configure WSL
