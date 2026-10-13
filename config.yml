@@ -395,8 +395,14 @@ packages:
         to: 00-interfaces/build.gradle.kts
       - from: java/inheritance/improve-design/
         to: 01-inheritance-dry/
-      - from: java/inheritance/guided-design/
-        to: 02-abstract-classes/
+      - from: java/basics/interfaces-encapsulation/interface-composition/README.md
+        to: 02-composition/README.md
+      - from: java/basics/interfaces-encapsulation/interface-composition/src
+        to: 02-composition/src/main/java
+      - <<: *clean-gradle-wrapper
+        to: 02-composition
+      - from: gradle-buildfiles/java-minimal/build.gradle.kts
+        to: 02-composition/build.gradle.kts
       # - from: git/branching.md
       #   to: Esercizio1.md
       # - from: git/merge-conflict.md
