@@ -1,8 +1,5 @@
 package it.unibo.collections.comparators;
 
-import java.util.Set;
-import java.util.TreeSet;
-
 /**
  * 
  */
