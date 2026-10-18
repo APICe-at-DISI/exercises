@@ -5,6 +5,12 @@ plugins {
     application
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
 tasks.javadoc {
     isFailOnError = false
 }
