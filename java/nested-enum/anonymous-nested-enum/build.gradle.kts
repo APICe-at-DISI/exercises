@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.danilopianini.gradle-java-qa") version "1.197.0"
+    id("org.danilopianini.gradle-java-qa") version "1.199.0"
 }
 
 repositories {
@@ -20,6 +20,12 @@ tasks.test {
     useJUnitPlatform()
     testLogging { events("passed", "skipped", "failed") }
     testLogging.showStandardStreams = true
+}
+
+spotbugs {
+    // FindOverridableMethodCall flags the double-brace initialization in the tests,
+    // which is used on purpose to showcase anonymous classes
+    omitVisitors.set(listOf("FindOverridableMethodCall"))
 }
 
 tasks.javadoc {
