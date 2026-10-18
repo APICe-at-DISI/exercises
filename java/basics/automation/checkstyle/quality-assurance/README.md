@@ -19,5 +19,5 @@
     I principi di incapsulamento, in ogni caso, valgono sempre.
     È possibile quindi fare cambiamenti sensati se si notano imperfezioni nel codice.
 * Solo una volta sistemata la classe, aggiungere Checkstyle al progetto, e verificare se sono state rispettate tutte le convenzioni;
-  * Si può utilizzare il plugin `id("org.danilopianini.gradle-java-qa") version "1.197.0"` (richiede di usare anche il seguente comando `repositories { mavenCentral() }`)
+  * Si può utilizzare il plugin `id("org.danilopianini.gradle-java-qa") version "1.199.0"` (richiede di usare anche il seguente comando `repositories { mavenCentral() }`)
   * Se i controlli non passano, capire quali sono i problemi e correggerli.

@@ -1,7 +1,5 @@
 package it.unibo.es3;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Collections;
@@ -24,10 +22,6 @@ public class LogicsImpl implements Logics, Serializable {
      *
      * @param gridSize the size of the grid
      */
-    @SuppressFBWarnings(
-        value = "DMI_RANDOM_USED_ONLY_ONCE",
-        justification = "False positive, see: https://github.com/spotbugs/spotbugs/issues/3830"
-    )
     public LogicsImpl(final int gridSize) {
         this.gridSize = gridSize;
         final Random random = new Random(0);
