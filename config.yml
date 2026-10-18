@@ -92,6 +92,8 @@ packages:
         to: 32-toString
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 32-toString/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 32-toString/settings.gradle.kts
         # Public to private fields
       - from: java/basics/interfaces-encapsulation/public-to-private/README.md
         to: 33-encapsulation/README.md
@@ -101,6 +103,8 @@ packages:
         to: 33-encapsulation
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 33-encapsulation/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 33-encapsulation/settings.gradle.kts
         # Implement interfaces
       - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
         to: 34-interfaces/README.md
@@ -110,6 +114,8 @@ packages:
         to: 34-interfaces
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 34-interfaces/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 34-interfaces/settings.gradle.kts
         # Composition of interfaces
       - from: java/basics/interfaces-encapsulation/interface-composition/README.md
         to: 35-composition/README.md
@@ -119,6 +125,8 @@ packages:
         to: 35-composition
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 35-composition/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 35-composition/settings.gradle.kts
         # Design from scratch
       - from: java/basics/interfaces-encapsulation/from-scratch/README.md
         to: 36-design-from-scratch/README.md
@@ -128,6 +136,8 @@ packages:
         to: 36-design-from-scratch
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 36-design-from-scratch/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 36-design-from-scratch/settings.gradle.kts
   oop-lab04:
     format:
       - zip
@@ -319,6 +329,8 @@ packages:
         to: 04-program-arguments
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 04-program-arguments/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 04-program-arguments/settings.gradle.kts
         # Constructors + Gradle
       - from: java/basics/minimal-proficiency/constructors/README.md
         to: 05-constructors/README.md
@@ -328,6 +340,8 @@ packages:
         to: 05-constructors
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 05-constructors/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 05-constructors/settings.gradle.kts
         # Arrays + Gradle
       - from: java/basics/arrays/array/README.md
         to: 06-array/README.md
@@ -337,6 +351,8 @@ packages:
         to: 06-array
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 06-array/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 06-array/settings.gradle.kts
   pss-lab03:
     format:
       - zip
@@ -355,6 +371,8 @@ packages:
         to: 01-quality-assurance
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 01-quality-assurance/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 01-quality-assurance/settings.gradle.kts
       - from: java/basics/interfaces-encapsulation/public-to-private/README.md
         to: 02-encapsulation/README.md
       - from: java/basics/interfaces-encapsulation/public-to-private/src
@@ -363,6 +381,8 @@ packages:
         to: 02-encapsulation
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 02-encapsulation/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 02-encapsulation/settings.gradle.kts
       - from: java/basics/interfaces-encapsulation/from-scratch/README.md
         to: 03-design-from-scratch/README.md
       - from: java/basics/interfaces-encapsulation/from-scratch/src
@@ -371,6 +391,8 @@ packages:
         to: 03-design-from-scratch
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 03-design-from-scratch/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 03-design-from-scratch/settings.gradle.kts
       - from: java/basics/interfaces-encapsulation/implement-interfaces/README.md
         to: 04-interfaces/README.md
       - from: java/basics/interfaces-encapsulation/implement-interfaces/src
@@ -379,6 +401,8 @@ packages:
         to: 04-interfaces
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 04-interfaces/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 04-interfaces/settings.gradle.kts
   pss-lab04:
     format:
       - zip
@@ -393,6 +417,8 @@ packages:
         to: 00-interfaces
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 00-interfaces/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 00-interfaces/settings.gradle.kts
       - from: java/inheritance/improve-design/
         to: 01-inheritance-dry/
       - from: java/basics/interfaces-encapsulation/interface-composition/README.md
@@ -403,6 +429,8 @@ packages:
         to: 02-composition
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 02-composition/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 02-composition/settings.gradle.kts
       # - from: git/branching.md
       #   to: Esercizio1.md
       # - from: git/merge-conflict.md
@@ -438,6 +466,8 @@ packages:
         to: 01-inheritance-dry
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
         to: 01-inheritance-dry/build.gradle.kts
+      - from: gradle-buildfiles/java-minimal/settings.gradle.kts
+        to: 01-inheritance-dry/settings.gradle.kts
       - from: java/inheritance/improve-design/
         to: 01-inheritance-dry/
       - from: java/inheritance/guided-design/
