@@ -461,18 +461,22 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab05
     contents:
+      - <<: *clean-gradle-wrapper
+        to: 00-abstract-classes
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 01-abstract-classes/build.gradle.kts
+        to: 00-abstract-classes/build.gradle.kts
       - from: java/inheritance/guided-design/src
-        to: 01-abstract-classes/src
+        to: 00-abstract-classes/src
       - from: java/inheritance/guided-design/README.it.md
-        to: 01-abstract-classes/README.md
+        to: 00-abstract-classes/README.md
+      - <<: *clean-gradle-wrapper
+        to: 01-design
       - from: gradle-buildfiles/java-minimal/build.gradle.kts
-        to: 02-design/build.gradle.kts
+        to: 01-design/build.gradle.kts
       - from: java/inheritance/rich-domain-design/src
-        to: 02-design/src
+        to: 01-design/src
       - from: java/inheritance/rich-domain-design/README-domain.it.md
-        to: 02-design/README.md
+        to: 01-design/README.md
   pss-lab06:
     format:
       - repo
