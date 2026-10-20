@@ -90,7 +90,7 @@ classDiagram
 https://mermaid.live/edit#pako:eNp9U8FuwjAM_ZUqJ5CAw44VQhpUTEgcEGzapZe0cdtoTVwlKQgx_n0pLZCMQk6J37P9nq2cSIoMSEjSkmodcZorKmIZ2LPFBE0w_Z1MgjnVcHm2yO1p0fG4JX5zU3we8F0J7ae7hDs6na6kAZXRFGazwKndA_iZXqiV90KAEw3QSmmk20fLuHjuhJ7aUHME7uGrGgyDBLEEKn0kwoN8hq0hM8-wLc-LXlBBWlCVg8X2yNkdyMHMqbHDOK5hD6XFGdZJCR5jg5objo2k6_UtahnnB5e3sTluK57-9LtlCqtnbm3nlQGhF1QpDsxSuDSv2l6X4HT-jw12RnGZD3vKdGtzs7uQn9Qcrj8UTRIb7BN-s-vP2vH6sIQFSl2LqhntEtXmWqBnGT4zutd0udYYGREBSlDO7M-7eIqJKUBATEJ7ZZDRujQxieXZUmltcHeUKQmNqmFE6opRA91fJWFGSw3nP1ZXNI0
 
 Using (without modifying) the existing classes and the provided UML design scheme,
-create a new `class BasicArm` which models a robotic arm.
+create a new `class BaseArm` which models a robotic arm.
 Every arm can lift a single object at a time, and it requires some power to lift an object and some power to drop it down.
 
 Using (without modifying) the existing classes and the provided UML design scheme,
