@@ -172,6 +172,8 @@ packages:
       # Sets
       - from: java/collections/use-set/
         to: 51-set/
+        excluding:
+          - README.it.md
       - from: java/collections/custom-comparator/
         to: 52-comparator/
       - from: java/collections/implement-classes-with-collections/
@@ -194,6 +196,8 @@ packages:
         to: 64-design-with-maps/
       - from: java/generics/implement-generic-interface
         to: 65-implement-generic-class/
+        excluding:
+          - README.it.md
       - from: git/instructions-clone.md
         to: README.md
   oop-lab07:
@@ -443,18 +447,6 @@ packages:
       #   to: 02-array/README.md
       # - from: java/basics/arrays/array/src
       #   to: 02-array/src/main/java
-  # pss-lab04b:
-  #   format:
-  #     - repo
-  #   destinations:
-  #     - unibo-lptsi-pss/pss-lab04
-  #   contents:
-  #     - from: java/collections/use-set/
-  #       to: 01-use-set/
-  #     - from: java/collections/custom-comparator/
-  #       to: 02-custom-comparator/
-  #     - from: java/generics/utilities-with-generic-pair/
-  #       to: 03-generic-pair/
   pss-lab05:
     format:
       - repo
@@ -483,14 +475,38 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab06
     contents:
-      - from: java/testing/junit/
-        to: 01-junit-bankaccounts/
-      - from: java/nested-enum/anonymous-nested-enum
-        to: 02-anonymous-nested-enum
-      - from: java/lambdas/utilities-for-lists-and-maps
-        to: 03-lambda-utilities-for-list
-      - from: java/exceptions/use-and-design-exceptions/
-        to: 04-exceptions/
+      - <<: *clean-gradle-wrapper
+        to: 00-use-set
+      - from: java/collections/use-set/src
+        to: 00-use-set/src
+      - from: java/collections/use-set/README.it.md
+        to: 00-use-set/README.md
+      - <<: *clean-gradle-wrapper
+        to: 01-utilities
+      - from: java/collections/utilities-with-generic-pair/src
+        to: 01-utilities/src
+      - from: java/collections/utilities-with-generic-pair/README.it.md
+        to: 01-utilities/README.md
+      - <<: *clean-gradle-wrapper
+        to: 02-generic-graph
+      - from: java/generics/implement-generic-interface/src
+        to: 02-generic-graph/src
+      - from: java/generics/implement-generic-interface/README.it.md
+        to: 02-generic-graph/README.md
+  # pss-lab06:
+  #   format:
+  #     - repo
+  #   destinations:
+  #     - unibo-lptsi-pss/pss-lab06
+  #   contents:
+  #     - from: java/testing/junit/
+  #       to: 01-junit-bankaccounts/
+  #     - from: java/nested-enum/anonymous-nested-enum
+  #       to: 02-anonymous-nested-enum
+  #     - from: java/lambdas/utilities-for-lists-and-maps
+  #       to: 03-lambda-utilities-for-list
+  #     - from: java/exceptions/use-and-design-exceptions/
+  #       to: 04-exceptions/
   pss-lab07:
     format:
       - repo
