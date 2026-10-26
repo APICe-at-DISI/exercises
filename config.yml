@@ -483,9 +483,9 @@ packages:
         to: 00-use-set/README.md
       - <<: *clean-gradle-wrapper
         to: 01-utilities
-      - from: java/collections/utilities-with-generic-pair/src
+      - from: java/generics/utilities-with-generic-pair/src
         to: 01-utilities/src
-      - from: java/collections/utilities-with-generic-pair/README.it.md
+      - from: java/generics/utilities-with-generic-pair/README.it.md
         to: 01-utilities/README.md
       - <<: *clean-gradle-wrapper
         to: 02-generic-graph
