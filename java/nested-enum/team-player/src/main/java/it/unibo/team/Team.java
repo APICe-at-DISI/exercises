@@ -1,7 +1,5 @@
 package it.unibo.team;
 
-import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -9,23 +7,19 @@ import java.util.Set;
  */
 public final class Team {
 
-    private final String name;
-    private final Set<Player> players = new HashSet<>();
-
     /**
      * Creates an empty team.
      *
      * @param name the name of the team
      */
     public Team(final String name) {
-        this.name = Objects.requireNonNull(name);
     }
 
     /**
      * @return the name of the team
      */
     public String getName() {
-        return name;
+        return null;
     }
 
     /**
@@ -35,7 +29,7 @@ public final class Team {
      * @return true if the player was added, false if an equal player was already in the team
      */
     public boolean addPlayer(final Player player) {
-        return players.add(Objects.requireNonNull(player));
+        return false;
     }
 
     /**
@@ -43,7 +37,7 @@ public final class Team {
      * @return true if the team contains a player equal to the given one
      */
     public boolean contains(final Player player) {
-        return players.contains(player);
+        return false;
     }
 
     /**
@@ -51,20 +45,14 @@ public final class Team {
      * @return the players of the team having the given role
      */
     public Set<Player> getPlayersByRole(final Role role) {
-        final Set<Player> result = new HashSet<>();
-        for (final Player player : players) {
-            if (player.getRole() == role) {
-                result.add(player);
-            }
-        }
-        return result;
+        return null;
     }
 
     /**
      * @return a new, empty lineup for this team
      */
     public Lineup newLineup() {
-        return new Lineup();
+        return null;
     }
 
     /**
@@ -95,10 +83,6 @@ public final class Team {
      */
     public static final class Player {
 
-        private final String name;
-        private final int number;
-        private final Role role;
-
         /**
          * Creates a new player.
          *
@@ -107,51 +91,27 @@ public final class Team {
          * @param role the role of the player
          */
         public Player(final String name, final int number, final Role role) {
-            this.name = Objects.requireNonNull(name);
-            this.number = number;
-            this.role = Objects.requireNonNull(role);
         }
 
         /**
          * @return the name of the player
          */
         public String getName() {
-            return name;
+            return null;
         }
 
         /**
          * @return the shirt number of the player
          */
         public int getNumber() {
-            return number;
+            return 0;
         }
 
         /**
          * @return the role of the player
          */
         public Role getRole() {
-            return role;
-        }
-
-        @Override
-        public boolean equals(final Object obj) {
-            if (this == obj) {
-                return true;
-            }
-            if (obj instanceof final Player other) {
-                return number == other.number && name.equals(other.name);
-            }
-            return false;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(name, number);
-        }
-
-        @Override
-        public String toString() {
-            return name + " (" + number + ", " + role + ")";
+            return null;
         }
     }
 
@@ -161,10 +121,6 @@ public final class Team {
      */
     public final class Lineup {
 
-        private static final int SIZE = 11;
-
-        private final Set<Player> starters = new HashSet<>();
-
         /**
          * Adds a starting player to the lineup.
          *
@@ -172,34 +128,21 @@ public final class Team {
          * @return false if the procedure failed; true otherwise
          */
         public boolean addStarter(final Player player) {
-            if (!players.contains(player)) {
-                return false;
-            }
-            if (starters.size() == SIZE) {
-                return false;
-            }
-            starters.add(player);
-            return true;
+            return false;
         }
 
         /**
          * @return true if the lineup has eleven players and exactly one goalkeeper
          */
         public boolean isComplete() {
-            int goalkeepers = 0;
-            for (final Player player : starters) {
-                if (player.getRole() == Role.GOALKEEPER) {
-                    goalkeepers++;
-                }
-            }
-            return starters.size() == SIZE && goalkeepers == 1;
+            return false;
         }
 
         /**
          * @return the team this lineup belongs to
          */
         public Team getTeam() {
-            return Team.this;
+            return null;
         }
     }
 }
