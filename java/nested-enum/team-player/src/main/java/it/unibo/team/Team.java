@@ -169,17 +169,17 @@ public final class Team {
          * Adds a starting player to the lineup.
          *
          * @param player the player to add
-         * @throws IllegalArgumentException if the player does not belong to the team
-         * @throws IllegalStateException if the lineup is already full
+         * @return false if the procedure failed; true otherwise
          */
-        public void addStarter(final Player player) {
+        public boolean addStarter(final Player player) {
             if (!players.contains(player)) {
-                throw new IllegalArgumentException(player + " does not play for " + name);
+                return false;
             }
             if (starters.size() == SIZE) {
-                throw new IllegalStateException("The lineup is already full");
+                return false;
             }
             starters.add(player);
+            return true;
         }
 
         /**
