@@ -10,7 +10,6 @@ import static it.unibo.team.test.Assertions.assertEquals;
 import static it.unibo.team.test.Assertions.assertFalse;
 import static it.unibo.team.test.Assertions.assertNotEquals;
 import static it.unibo.team.test.Assertions.assertSame;
-import static it.unibo.team.test.Assertions.assertThrows;
 import static it.unibo.team.test.Assertions.assertTrue;
 
 /**
@@ -93,8 +92,8 @@ public final class TestTeam {
         assertSame(team, lineup.getTeam());
         team.addPlayer(PLAYER_ROSSI);
         lineup.addStarter(new Player(ROSSI, ROSSI_NUMBER, Role.FORWARD));
-        assertThrows(IllegalArgumentException.class, () -> lineup.addStarter(PLAYER_VERDI));
-        assertThrows(IllegalArgumentException.class, () -> new Team("Rimini").newLineup().addStarter(PLAYER_ROSSI));
+        assertFalse(lineup.addStarter(PLAYER_VERDI));
+        assertFalse(new Team("Rimini").newLineup().addStarter(PLAYER_ROSSI));
     }
 
     private static void testCompleteLineup() {
@@ -110,7 +109,7 @@ public final class TestTeam {
         }
         assertTrue(lineup.isComplete());
         team.addPlayer(PLAYER_ROSSI);
-        assertThrows(IllegalStateException.class, () -> lineup.addStarter(PLAYER_ROSSI));
+        assertFalse(lineup.addStarter(PLAYER_ROSSI));
     }
 
     private static void testLineupWithTwoGoalkeepers() {
