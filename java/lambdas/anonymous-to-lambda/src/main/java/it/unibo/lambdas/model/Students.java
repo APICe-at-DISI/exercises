@@ -2,7 +2,6 @@ package it.unibo.lambdas.model;
 
 import it.unibo.lambdas.api.Criterion;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,12 +20,6 @@ public final class Students {
      *     students
      */
     public static List<Student> select(final List<Student> students, final Criterion criterion) {
-        final List<Student> selected = new ArrayList<>();
-        for (final Student student : students) {
-            if (criterion.accepts(student)) {
-                selected.add(student);
-            }
-        }
-        return selected;
+        return null;
     }
 }

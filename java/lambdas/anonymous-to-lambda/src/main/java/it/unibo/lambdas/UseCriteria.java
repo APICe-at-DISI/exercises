@@ -30,12 +30,7 @@ public final class UseCriteria {
         /*
          * 1) Con una classe anonima, creare un criterio che accetti gli studenti con media almeno 28.
          */
-        final Criterion excellent = new Criterion() {
-            @Override
-            public boolean accepts(final Student student) {
-                return student.getAverageGrade() >= 28;
-            }
-        };
+        final Criterion excellent = null;
         assertContentEqualsInOrder(
             List.of(ANNA_BIANCHI, GIULIA_ROSSI, SARA_ESPOSITO),
             Students.select(students, excellent)
@@ -43,14 +38,14 @@ public final class UseCriteria {
         /*
          * 2) Con una lambda, creare un criterio che accetti gli studenti con cognome "Rossi".
          */
-        final Criterion namedRossi = student -> "Rossi".equals(student.getLastName());
+        final Criterion namedRossi = null;
         assertContentEqualsInOrder(List.of(MARIO_ROSSI, GIULIA_ROSSI), Students.select(students, namedRossi));
         /*
          * 3) Con una lambda, creare un criterio che accetti gli studenti con almeno minCredits crediti.
          * La lambda deve usare la variabile locale minCredits.
          */
         final int minCredits = 100;
-        final Criterion enoughCredits = student -> student.getCredits() >= minCredits;
+        final Criterion enoughCredits = null;
         assertContentEqualsInOrder(
             List.of(MARIO_ROSSI, LUCA_VERDI, SARA_ESPOSITO),
             Students.select(students, enoughCredits)
@@ -59,8 +54,7 @@ public final class UseCriteria {
          * 4) Con una lambda, creare un criterio che accetti gli studenti con almeno 90 crediti e media
          * inferiore a 27.
          */
-        final Criterion manyCreditsLowAverage =
-            student -> student.getCredits() >= 90 && student.getAverageGrade() < 27;
+        final Criterion manyCreditsLowAverage = null;
         assertContentEqualsInOrder(
             List.of(LUCA_VERDI, PAOLO_NERI),
             Students.select(students, manyCreditsLowAverage)
