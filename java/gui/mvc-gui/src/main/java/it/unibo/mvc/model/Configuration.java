@@ -61,6 +61,9 @@ public final class Configuration {
     }
 
     /**
+     * The builder for creating a {@link Configuration}.
+     *
+     * <p>
      * Pattern <i>builder</i> used here because:
      * <ul>
      * <li>

@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- *
+ * This class implements the MusicGroup interface, representing a music group with albums and songs.
  */
 public final class MusicGroupImpl implements MusicGroup {
 

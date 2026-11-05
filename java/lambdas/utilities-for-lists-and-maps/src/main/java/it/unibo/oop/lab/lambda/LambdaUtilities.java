@@ -30,6 +30,8 @@ public final class LambdaUtilities {
     }
 
     /**
+     * Duplicates each element of a list, and applies a process to it.
+     *
      * @param list
      *            the input list
      * @param op
@@ -49,6 +51,8 @@ public final class LambdaUtilities {
     }
 
     /**
+     * Filters a list based on a predicate, returning a list of Optional values.
+     *
      * @param list
      *            input list
      * @param pre
@@ -69,6 +73,8 @@ public final class LambdaUtilities {
     }
 
     /**
+     * Groups the elements of a list into categories based on a key function.
+     *
      * @param list
      *            input list
      * @param op
@@ -97,6 +103,8 @@ public final class LambdaUtilities {
     }
 
     /**
+     * Fills a map with default values for missing keys.
+     *
      * @param map
      *            input map
      * @param def

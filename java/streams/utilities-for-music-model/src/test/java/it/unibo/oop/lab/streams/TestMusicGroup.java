@@ -19,8 +19,7 @@ import static java.util.stream.Collectors.toList;
  * The above comment shuts down checkstyle: in a test suite, magic numbers may be tolerated.
  */
 /**
- *
- *
+ * This class tests the MusicGroup implementation.
  */
 final class TestMusicGroup {
 
