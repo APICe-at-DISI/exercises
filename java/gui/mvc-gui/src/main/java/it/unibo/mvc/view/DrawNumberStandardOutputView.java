@@ -1,7 +1,3 @@
-/**
- *
- */
-
 package it.unibo.mvc.view;
 
 import it.unibo.mvc.api.DrawNumberView;

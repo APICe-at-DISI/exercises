@@ -6,8 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- *
- *
+ * A simple implementation of the {@link Controller} interface.
  */
 public final class SimpleController implements Controller {
 
