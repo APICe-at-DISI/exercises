@@ -214,6 +214,8 @@ packages:
         to: README.md
       - from: java/testing/junit
         to: 73-junit
+        excluding:
+          - README.it.md
   oop-lab08:
     format:
       - repo
@@ -224,6 +226,8 @@ packages:
         to: 81-simple-gui
       - from: java/testing/tdd-deathnote
         to: 82-tdd-deathnote
+        excluding:
+          - README.it.md
       - from: java/gui/mvc-gui
         to: 83-mvc-gui-reflection
       - from: git/instructions-clone.md
@@ -493,14 +497,6 @@ packages:
         to: 02-generic-graph/src
       - from: java/generics/implement-generic-interface/README.it.md
         to: 02-generic-graph/README.md
-  # pss-lab06:
-  #   format:
-  #     - repo
-  #   destinations:
-  #     - unibo-lptsi-pss/pss-lab06
-  #   contents:
-  #     - from: java/testing/junit/
-  #       to: 01-junit-bankaccounts/
   #     - from: java/nested-enum/anonymous-nested-enum
   #       to: 02-anonymous-nested-enum
   #     - from: java/lambdas/utilities-for-lists-and-maps
@@ -533,10 +529,24 @@ packages:
     destinations:
       - unibo-lptsi-pss/pss-lab08
     contents:
-      - from: java/streams/utilities-for-music-model
-        to: 103-stream-utilities-for-music-model
-      - from: git/instructions-clone.md
-        to: README.md
+      - from: java/testing/junit/
+        to: 00-junit-bankaccounts/
+        excluding:
+          - README.md
+      - from: java/testing/tdd/
+        to: 01-junit-passwords/
+        excluding:
+          - README.md
+  # pss-lab08:
+  #   format:
+  #     - repo
+  #   destinations:
+  #     - unibo-lptsi-pss/pss-lab08
+  #   contents:
+  #     - from: java/streams/utilities-for-music-model
+  #       to: 103-stream-utilities-for-music-model
+  #     - from: git/instructions-clone.md
+  #       to: README.md
   pss-lab09:
     format:
       - repo
